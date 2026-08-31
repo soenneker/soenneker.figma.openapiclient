@@ -14,7 +14,7 @@ dotnet add package Soenneker.Figma.OpenApiClient
 
 ## Recommended setup
 
-For dependency injection, authenticated transport, and client reuse, install the companion utility:
+For managed authentication and cached client reuse, install the companion package:
 
 ```bash
 dotnet add package Soenneker.Figma.OpenApiClientUtil
