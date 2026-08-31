@@ -17530,12 +17530,6 @@
           "resetInteractiveComponents": {
             "type": "boolean",
             "description": "Whether the state of any interactive components in the current screen or overlay reset when navigating to the destination. This is applicable if there are interactive components in the destination frame."
-          },
-          "amountToSkip": {
-            "type": "number"
-          },
-          "newTimestamp": {
-            "type": "number"
           }
         },
         "description": "An action that is performed when a trigger is activated."
