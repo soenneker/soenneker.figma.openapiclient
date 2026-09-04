@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Figma.OpenApiClient.Models
 {
     /// <summary>
-    /// Horizontal and vertical layout constraints for node.
+    /// Layout constraint relative to containing Frame
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class LayoutConstraint : IAdditionalDataHolder, IParsable

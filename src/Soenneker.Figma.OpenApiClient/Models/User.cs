@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Figma.OpenApiClient.Models
 {
     /// <summary>
-    /// The user who last updated the component.
+    /// A description of a user.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class User : IAdditionalDataHolder, IParsable

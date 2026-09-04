@@ -6109,6 +6109,9 @@
         }
       },
       "Node": {
+        "required": [
+          "type"
+        ],
         "type": "object",
         "oneOf": [
           {
@@ -6710,6 +6713,9 @@
             "items": {
               "$ref": "#/components/schemas/Measurement"
             }
+          },
+          "type": {
+            "type": "string"
           }
         },
         "discriminator": {
@@ -6945,6 +6951,9 @@
         }
       },
       "SubcanvasNode": {
+        "required": [
+          "type"
+        ],
         "type": "object",
         "oneOf": [
           {
@@ -7508,6 +7517,9 @@
               "type": "number"
             },
             "description": "An array with the same number of elements as lines in the text node, where lines are delimited by newline or paragraph separator characters. Each element in the array corresponds to the indentation level of a specific line."
+          },
+          "type": {
+            "type": "string"
           }
         },
         "discriminator": {
@@ -16258,6 +16270,9 @@
         }
       },
       "Effect": {
+        "required": [
+          "type"
+        ],
         "type": "object",
         "oneOf": [
           {
@@ -16337,6 +16352,9 @@
           },
           "secondaryColor": {
             "$ref": "#/components/schemas/Rgba"
+          },
+          "type": {
+            "type": "string"
           }
         },
         "discriminator": {
@@ -17530,6 +17548,12 @@
           "resetInteractiveComponents": {
             "type": "boolean",
             "description": "Whether the state of any interactive components in the current screen or overlay reset when navigating to the destination. This is applicable if there are interactive components in the destination frame."
+          },
+          "amountToSkip": {
+            "type": "number"
+          },
+          "newTimestamp": {
+            "type": "number"
           }
         },
         "description": "An action that is performed when a trigger is activated."
@@ -20426,6 +20450,9 @@
         "description": "An object that contains details about deleting a \u0060VariableCollection\u0060."
       },
       "VariableCollectionChange": {
+        "required": [
+          "action"
+        ],
         "type": "object",
         "oneOf": [
           {
@@ -20462,6 +20489,9 @@
           },
           "initialModeIdToParentModeIdMapping": {
             "$ref": "#/components/schemas/VariableCollectionCreateInitialModeIdToParentModeIdMappingProperty"
+          },
+          "action": {
+            "type": "string"
           }
         },
         "discriminator": {
@@ -20546,6 +20576,9 @@
         "description": "An object that contains details about deleting a \u0060VariableMode\u0060."
       },
       "VariableModeChange": {
+        "required": [
+          "action"
+        ],
         "type": "object",
         "oneOf": [
           {
@@ -20570,6 +20603,9 @@
           "variableCollectionId": {
             "type": "string",
             "description": "The variable collection that will contain the mode. You can use the temporary id of a variable collection. New modes cannot be created on extended collections."
+          },
+          "action": {
+            "type": "string"
           }
         },
         "discriminator": {
@@ -20694,6 +20730,9 @@
         "description": "An object that contains details about deleting a \u0060Variable\u0060."
       },
       "VariableChange": {
+        "required": [
+          "action"
+        ],
         "type": "object",
         "oneOf": [
           {
@@ -20742,6 +20781,9 @@
           "codeSyntax": {
             "description": "An object containing platform-specific code syntax definitions for a variable. All platforms are optional.",
             "$ref": "#/components/schemas/VariableCodeSyntax"
+          },
+          "action": {
+            "type": "string"
           }
         },
         "discriminator": {
@@ -24201,6 +24243,9 @@
         }
       },
       "ActivityLogEntity": {
+        "required": [
+          "type"
+        ],
         "type": "object",
         "oneOf": [
           {
@@ -24258,6 +24303,9 @@
           "main_file_key": {
             "type": "string",
             "description": "Key of the main file."
+          },
+          "type": {
+            "type": "string"
           }
         },
         "description": "The resource the actor took the action on. It can be a user, file, project or other resource types.",

@@ -7,11 +7,10 @@ using System.IO;
 using System;
 namespace Soenneker.Figma.OpenApiClient.Models
 {
-    /// <summary>
-    /// Style of text including font family and weight.
-    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+    #pragma warning disable CS1591
     public partial class TextPathTypeStyle : IAdditionalDataHolder, IParsable
+    #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }

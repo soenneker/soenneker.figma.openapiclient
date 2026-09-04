@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Figma.OpenApiClient.Models
 {
     /// <summary>
-    /// The easing curve of the transition.
+    /// Describes an easing curve.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Easing : IAdditionalDataHolder, IParsable

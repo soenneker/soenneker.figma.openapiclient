@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Figma.OpenApiClient.Models
 {
     /// <summary>
-    /// Link to a URL or frame.
+    /// A link to either a URL or another frame (node) in the document.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Hyperlink : IAdditionalDataHolder, IParsable

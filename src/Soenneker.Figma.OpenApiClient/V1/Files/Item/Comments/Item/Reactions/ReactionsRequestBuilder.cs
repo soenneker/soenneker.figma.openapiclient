@@ -201,12 +201,16 @@ namespace Soenneker.Figma.OpenApiClient.V1.Files.Item.Comments.Item.Reactions
         {
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
+            #pragma warning disable CS1591
             [QueryParameter("emoji")]
             public string? Emoji { get; set; }
+            #pragma warning restore CS1591
 #nullable restore
 #else
+            #pragma warning disable CS1591
             [QueryParameter("emoji")]
             public string Emoji { get; set; }
+            #pragma warning restore CS1591
 #endif
         }
         /// <summary>

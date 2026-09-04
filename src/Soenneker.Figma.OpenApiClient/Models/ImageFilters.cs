@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Figma.OpenApiClient.Models
 {
     /// <summary>
-    /// Defines what image filters have been applied to this paint, if any. If this property is not defined, no filters have been applied.
+    /// Image filters to apply to the node.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ImageFilters : IAdditionalDataHolder, IParsable

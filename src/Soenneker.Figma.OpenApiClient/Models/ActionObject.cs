@@ -79,30 +79,6 @@ namespace Soenneker.Figma.OpenApiClient.Models
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
             var result = new global::Soenneker.Figma.OpenApiClient.Models.ActionObject();
-            if("ActionOneOf1".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-            {
-                result.ActionOneOf1 = new global::Soenneker.Figma.OpenApiClient.Models.ActionOneOf1();
-            }
-            else if("ConditionalAction".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-            {
-                result.ConditionalAction = new global::Soenneker.Figma.OpenApiClient.Models.ConditionalAction();
-            }
-            else if("NodeAction".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-            {
-                result.NodeAction = new global::Soenneker.Figma.OpenApiClient.Models.NodeAction();
-            }
-            else if("OpenUrlAction".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-            {
-                result.OpenUrlAction = new global::Soenneker.Figma.OpenApiClient.Models.OpenUrlAction();
-            }
-            else if("SetVariableAction".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-            {
-                result.SetVariableAction = new global::Soenneker.Figma.OpenApiClient.Models.SetVariableAction();
-            }
-            else if("SetVariableModeAction".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-            {
-                result.SetVariableModeAction = new global::Soenneker.Figma.OpenApiClient.Models.SetVariableModeAction();
-            }
             return result;
         }
         /// <summary>

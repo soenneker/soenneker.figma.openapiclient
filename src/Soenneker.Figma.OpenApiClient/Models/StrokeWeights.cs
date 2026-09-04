@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Figma.OpenApiClient.Models
 {
     /// <summary>
-    /// An object including the top, bottom, left, and right stroke weights. Only returned if individual stroke weights are used.
+    /// Individual stroke weights
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class StrokeWeights : IAdditionalDataHolder, IParsable

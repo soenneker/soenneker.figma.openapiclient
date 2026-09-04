@@ -44,10 +44,10 @@ namespace Soenneker.Figma.OpenApiClient.Models
         /// <summary>The transition property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.NodeActionTransition? Transition { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.Transition? Transition { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.NodeActionTransition Transition { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.Transition Transition { get; set; }
 #endif
         /// <summary>The type property</summary>
         public global::Soenneker.Figma.OpenApiClient.Models.NodeType? Type { get; set; }
@@ -83,7 +83,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
                 { "resetInteractiveComponents", n => { ResetInteractiveComponents = n.GetBoolValue(); } },
                 { "resetScrollPosition", n => { ResetScrollPosition = n.GetBoolValue(); } },
                 { "resetVideoPosition", n => { ResetVideoPosition = n.GetBoolValue(); } },
-                { "transition", n => { Transition = n.GetObjectValue<global::Soenneker.Figma.OpenApiClient.Models.NodeActionTransition>(global::Soenneker.Figma.OpenApiClient.Models.NodeActionTransition.CreateFromDiscriminatorValue); } },
+                { "transition", n => { Transition = n.GetObjectValue<global::Soenneker.Figma.OpenApiClient.Models.Transition>(global::Soenneker.Figma.OpenApiClient.Models.Transition.CreateFromDiscriminatorValue); } },
                 { "type", n => { Type = n.GetEnumValue<global::Soenneker.Figma.OpenApiClient.Models.NodeType>(); } },
             };
         }
@@ -101,7 +101,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
             writer.WriteBoolValue("resetInteractiveComponents", ResetInteractiveComponents);
             writer.WriteBoolValue("resetScrollPosition", ResetScrollPosition);
             writer.WriteBoolValue("resetVideoPosition", ResetVideoPosition);
-            writer.WriteObjectValue<global::Soenneker.Figma.OpenApiClient.Models.NodeActionTransition>("transition", Transition);
+            writer.WriteObjectValue<global::Soenneker.Figma.OpenApiClient.Models.Transition>("transition", Transition);
             writer.WriteEnumValue<global::Soenneker.Figma.OpenApiClient.Models.NodeType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }

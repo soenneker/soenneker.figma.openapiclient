@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Figma.OpenApiClient.Models
 {
     /// <summary>
-    /// An array of the interactions on this node, each containing a trigger and one or more actions.
+    /// An interaction in the Figma viewer, containing a trigger and one or more actions.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Interaction : IAdditionalDataHolder, IParsable
@@ -26,10 +26,10 @@ namespace Soenneker.Figma.OpenApiClient.Models
         /// <summary>The user event that initiates the interaction.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.InteractionTrigger? Trigger { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.Trigger? Trigger { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.InteractionTrigger Trigger { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.Trigger Trigger { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Figma.OpenApiClient.Models.Interaction"/> and sets the default values.
@@ -57,7 +57,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "actions", n => { Actions = n.GetCollectionOfObjectValues<global::Soenneker.Figma.OpenApiClient.Models.ActionObject>(global::Soenneker.Figma.OpenApiClient.Models.ActionObject.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "trigger", n => { Trigger = n.GetObjectValue<global::Soenneker.Figma.OpenApiClient.Models.InteractionTrigger>(global::Soenneker.Figma.OpenApiClient.Models.InteractionTrigger.CreateFromDiscriminatorValue); } },
+                { "trigger", n => { Trigger = n.GetObjectValue<global::Soenneker.Figma.OpenApiClient.Models.Trigger>(global::Soenneker.Figma.OpenApiClient.Models.Trigger.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -68,7 +68,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.Figma.OpenApiClient.Models.ActionObject>("actions", Actions);
-            writer.WriteObjectValue<global::Soenneker.Figma.OpenApiClient.Models.InteractionTrigger>("trigger", Trigger);
+            writer.WriteObjectValue<global::Soenneker.Figma.OpenApiClient.Models.Trigger>("trigger", Trigger);
             writer.WriteAdditionalData(AdditionalData);
         }
     }
