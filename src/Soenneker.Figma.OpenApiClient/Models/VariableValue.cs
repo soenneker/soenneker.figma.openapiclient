@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Figma.OpenApiClient.Models
 {
     /// <summary>
-    /// Composed type wrapper for classes <see cref="global::Soenneker.Figma.OpenApiClient.Models.Rgb"/>, <see cref="global::Soenneker.Figma.OpenApiClient.Models.Rgba"/>, <see cref="global::Soenneker.Figma.OpenApiClient.Models.VariableAlias"/>, <see cref="global::Soenneker.Figma.OpenApiClient.Models.VariableValueBranch1"/>, <see cref="global::Soenneker.Figma.OpenApiClient.Models.VariableValueBranch2"/>, <see cref="global::Soenneker.Figma.OpenApiClient.Models.VariableValueBranch3"/>, <see cref="global::Soenneker.Figma.OpenApiClient.Models.VariableValueMember1"/>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Figma.OpenApiClient.Models.Rgb"/>, <see cref="global::Soenneker.Figma.OpenApiClient.Models.Rgba"/>, <see cref="global::Soenneker.Figma.OpenApiClient.Models.VariableAlias"/>, <see cref="global::Soenneker.Figma.OpenApiClient.Models.VariableComposedColor"/>, <see cref="global::Soenneker.Figma.OpenApiClient.Models.VariableValueBranch1"/>, <see cref="global::Soenneker.Figma.OpenApiClient.Models.VariableValueBranch2"/>, <see cref="global::Soenneker.Figma.OpenApiClient.Models.VariableValueBranch3"/>, <see cref="global::Soenneker.Figma.OpenApiClient.Models.VariableValueMember1"/>
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class VariableValue : IComposedTypeWrapper, IParsable
@@ -36,6 +36,14 @@ namespace Soenneker.Figma.OpenApiClient.Models
 #nullable restore
 #else
         public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias VariableAlias { get; set; }
+#endif
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Figma.OpenApiClient.Models.VariableComposedColor"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Figma.OpenApiClient.Models.VariableComposedColor? VariableComposedColor { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Figma.OpenApiClient.Models.VariableComposedColor VariableComposedColor { get; set; }
 #endif
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Figma.OpenApiClient.Models.VariableValueBranch1"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -123,6 +131,10 @@ namespace Soenneker.Figma.OpenApiClient.Models
             {
                 return VariableAlias.GetFieldDeserializers();
             }
+            else if(VariableComposedColor != null)
+            {
+                return VariableComposedColor.GetFieldDeserializers();
+            }
             else if(VariableValueBranch1 != null)
             {
                 return VariableValueBranch1.GetFieldDeserializers();
@@ -159,6 +171,10 @@ namespace Soenneker.Figma.OpenApiClient.Models
             else if(VariableAlias != null)
             {
                 writer.WriteObjectValue<global::Soenneker.Figma.OpenApiClient.Models.VariableAlias>(null, VariableAlias);
+            }
+            else if(VariableComposedColor != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Figma.OpenApiClient.Models.VariableComposedColor>(null, VariableComposedColor);
             }
             else if(VariableValueBranch1 != null)
             {

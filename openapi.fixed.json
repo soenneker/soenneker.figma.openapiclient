@@ -7,7 +7,7 @@
     "contact": {
       "email": "support@figma.com"
     },
-    "version": "0.42.0"
+    "version": "0.43.0"
   },
   "servers": [
     {
@@ -3193,7 +3193,7 @@
           "Variables"
         ],
         "summary": "Create/modify/delete variables",
-        "description": "**This API is available to full members of Enterprise orgs with Editor seats.**\n\nThe \u0060POST /v1/files/:file_key/variables\u0060 endpoint lets you bulk create, update, and delete variables and variable collections.\n\nThe request body supports the following 4 top-level arrays. Changes from these arrays will be applied in the below order, and within each array, by array order.\n\n- **variableCollections**: For creating, updating, and deleting variable collections\n- **variableModes**: For creating, updating, and deleting modes within variable collections\n  - Each collection can have a maximum of 40 modes\n  - Mode names cannot be longer than 40 characters\n- **variables**: For creating, updating, and deleting variables\n  - Each collection can have a maximum of 5000 variables\n  - Variable names must be unique within a collection and cannot contain certain special characters such as \u0060.{}\u0060\n- **variableModeValues**: For setting a variable value under a specific mode.\n  - When setting aliases, a variable cannot be aliased to itself or form an alias cycle\n\nTemporary ids can be used to reference an object later in the same POST request body. They can be used at create time in the \u0060id\u0060 property of variable collections, modes, variables, and in the \u0060initialModeId\u0060 property of variable collections. They are scoped to a single request body, and must be unique within the body. The mapping of temporary ids to real ids is returned in the response.\n\nThis endpoint has the following key behaviors:\n\n- The request body must be 4MB or less.\n- Must include an \u0060action\u0060 property for collections, modes, and variables to tell the API whether to create, update, or delete the object.\n- When creating a collection, mode, or variable, you can include a temporary \u0060id\u0060 that can be referenced in dependent objects in the same request. For example, you can create a new collection with the id \u0060\u0022my_new_collection\u0022\u0060. You can then set \u0060variableCollectionId\u0060 to \u0060\u0022my_new_collection\u0022\u0060 in new modes or variables. Temporary ids must be unique in the request body.\n- New collections always come with one mode. You can reference this mode by setting \u0060initialModeId\u0060 to a temporary id in the request body. This is useful if you want to set values for variables in the mode in the \u0060variableModeValues\u0060 array.\n  - The \u0060tempIdToRealId\u0060 array returns a mapping of the temporary ids in the request, to the real ids of the newly created objects.\n- When adding new modes or variables, default variable values will be applied, consistent with what happens in the UI.\n- Everything to be created, updated, and deleted in the request body is treated as one atomic operation. If there is any validation failure, you will get a 400 status code response, and no changes will be persisted.\n- You will not be able to update remote variables or variable collections. You can only update variables in the file where they were originally created.",
+        "description": "**This API is available to full members of Enterprise orgs with Editor seats.**\n\nThe \u0060POST /v1/files/:file_key/variables\u0060 endpoint lets you bulk create, update, and delete variables and variable collections.\n\nThe request body supports the following 4 top-level arrays. Changes from these arrays will be applied in the below order, and within each array, by array order.\n\n- **variableCollections**: For creating, updating, and deleting variable collections\n- **variableModes**: For creating, updating, and deleting modes within variable collections\n  - Each collection can have a maximum of 40 modes\n  - Mode names cannot be longer than 40 characters\n- **variables**: For creating, updating, and deleting variables\n  - Each collection can have a maximum of 5000 variables\n  - Variable names must be unique within a collection and cannot contain certain special characters such as \u0060.{}\u0060\n- **variableModeValues**: For setting a variable value under a specific mode.\n  - When setting aliases, a variable cannot be aliased to itself or form an alias cycle\n  - Color variables can use a composed color value with \u0060color\u0060 and \u0060opacity\u0060 fields. At least one field must be a variable alias.\n\nTemporary ids can be used to reference an object later in the same POST request body. They can be used at create time in the \u0060id\u0060 property of variable collections, modes, variables, and in the \u0060initialModeId\u0060 property of variable collections. They are scoped to a single request body, and must be unique within the body. The mapping of temporary ids to real ids is returned in the response.\n\nThis endpoint has the following key behaviors:\n\n- The request body must be 4MB or less.\n- Must include an \u0060action\u0060 property for collections, modes, and variables to tell the API whether to create, update, or delete the object.\n- When creating a collection, mode, or variable, you can include a temporary \u0060id\u0060 that can be referenced in dependent objects in the same request. For example, you can create a new collection with the id \u0060\u0022my_new_collection\u0022\u0060. You can then set \u0060variableCollectionId\u0060 to \u0060\u0022my_new_collection\u0022\u0060 in new modes or variables. Temporary ids must be unique in the request body.\n- New collections always come with one mode. You can reference this mode by setting \u0060initialModeId\u0060 to a temporary id in the request body. This is useful if you want to set values for variables in the mode in the \u0060variableModeValues\u0060 array.\n  - The \u0060tempIdToRealId\u0060 array returns a mapping of the temporary ids in the request, to the real ids of the newly created objects.\n- When adding new modes or variables, default variable values will be applied, consistent with what happens in the UI.\n- Everything to be created, updated, and deleted in the request body is treated as one atomic operation. If there is any validation failure, you will get a 400 status code response, and no changes will be persisted.\n- You will not be able to update remote variables or variable collections. You can only update variables in the file where they were originally created.",
         "operationId": "PostVariables",
         "parameters": [
           {
@@ -19956,6 +19956,7 @@
           "EFFECT_FLOAT",
           "EFFECT_COLOR",
           "OPACITY",
+          "COLOR_OPACITY",
           "FONT_FAMILY",
           "FONT_STYLE",
           "FONT_WEIGHT",
@@ -19968,7 +19969,7 @@
         ],
         "type": "string",
         "additionalProperties": false,
-        "description": "Scopes allow a variable to be shown or hidden in the variable picker for various fields. This declutters the Figma UI if you have a large number of variables. Variable scopes are currently supported on \u0060FLOAT\u0060, \u0060STRING\u0060, and \u0060COLOR\u0060 variables.\n\n\u0060ALL_SCOPES\u0060 is a special scope that means that the variable will be shown in the variable picker for all variable fields. If \u0060ALL_SCOPES\u0060 is set, no additional scopes can be set.\n\n\u0060ALL_FILLS\u0060 is a special scope that means that the variable will be shown in the variable picker for all fill fields. If \u0060ALL_FILLS\u0060 is set, no additional fill scopes can be set.\n\nValid scopes for \u0060FLOAT\u0060 variables:\n- \u0060ALL_SCOPES\u0060\n- \u0060TEXT_CONTENT\u0060\n- \u0060WIDTH_HEIGHT\u0060\n- \u0060GAP\u0060\n- \u0060STROKE_FLOAT\u0060\n- \u0060EFFECT_FLOAT\u0060\n- \u0060OPACITY\u0060\n- \u0060FONT_WEIGHT\u0060\n- \u0060FONT_SIZE\u0060\n- \u0060LINE_HEIGHT\u0060\n- \u0060LETTER_SPACING\u0060\n- \u0060PARAGRAPH_SPACING\u0060\n- \u0060PARAGRAPH_INDENT\u0060\n\nValid scopes for \u0060STRING\u0060 variables:\n- \u0060ALL_SCOPES\u0060\n- \u0060TEXT_CONTENT\u0060\n- \u0060FONT_FAMILY\u0060\n- \u0060FONT_STYLE\u0060\n\nValid scopes for \u0060COLOR\u0060 variables:\n- \u0060ALL_SCOPES\u0060\n- \u0060ALL_FILLS\u0060\n- \u0060FRAME_FILL\u0060\n- \u0060SHAPE_FILL\u0060\n- \u0060TEXT_FILL\u0060\n- \u0060STROKE_COLOR\u0060\n- \u0060EFFECT_COLOR\u0060",
+        "description": "Scopes allow a variable to be shown or hidden in the variable picker for various fields. This declutters the Figma UI if you have a large number of variables. Variable scopes are currently supported on \u0060FLOAT\u0060, \u0060STRING\u0060, and \u0060COLOR\u0060 variables.\n\n\u0060ALL_SCOPES\u0060 is a special scope that means that the variable will be shown in the variable picker for all variable fields. If \u0060ALL_SCOPES\u0060 is set, no additional scopes can be set.\n\n\u0060ALL_FILLS\u0060 is a special scope that means that the variable will be shown in the variable picker for all fill fields. If \u0060ALL_FILLS\u0060 is set, no additional fill scopes can be set.\n\nValid scopes for \u0060FLOAT\u0060 variables:\n- \u0060ALL_SCOPES\u0060\n- \u0060TEXT_CONTENT\u0060\n- \u0060WIDTH_HEIGHT\u0060\n- \u0060GAP\u0060\n- \u0060STROKE_FLOAT\u0060\n- \u0060EFFECT_FLOAT\u0060\n- \u0060OPACITY\u0060\n- \u0060COLOR_OPACITY\u0060\n- \u0060FONT_WEIGHT\u0060\n- \u0060FONT_SIZE\u0060\n- \u0060LINE_HEIGHT\u0060\n- \u0060LETTER_SPACING\u0060\n- \u0060PARAGRAPH_SPACING\u0060\n- \u0060PARAGRAPH_INDENT\u0060\n\n\u0060OPACITY\u0060 corresponds to layer opacity, while \u0060COLOR_OPACITY\u0060 corresponds to the opacity channel of a color.\n\nValid scopes for \u0060STRING\u0060 variables:\n- \u0060ALL_SCOPES\u0060\n- \u0060TEXT_CONTENT\u0060\n- \u0060FONT_FAMILY\u0060\n- \u0060FONT_STYLE\u0060\n\nValid scopes for \u0060COLOR\u0060 variables:\n- \u0060ALL_SCOPES\u0060\n- \u0060ALL_FILLS\u0060\n- \u0060FRAME_FILL\u0060\n- \u0060SHAPE_FILL\u0060\n- \u0060TEXT_FILL\u0060\n- \u0060STROKE_COLOR\u0060\n- \u0060EFFECT_COLOR\u0060",
         "x-ms-enum": {
           "name": "VariableScope",
           "modelAsString": false,
@@ -20028,6 +20029,10 @@
             {
               "value": "OPACITY",
               "name": "Opacity"
+            },
+            {
+              "value": "COLOR_OPACITY",
+              "name": "ColorOpacity"
             },
             {
               "value": "FONT_FAMILY",
@@ -20775,6 +20780,9 @@
             "$ref": "#/components/schemas/VariableAlias"
           },
           {
+            "$ref": "#/components/schemas/VariableComposedColor"
+          },
+          {
             "type": "null"
           }
         ],
@@ -20812,6 +20820,18 @@
           }
         },
         "description": "The value for the variable. The value must match the variable\u0027s type. If setting to a variable alias, the alias must resolve to this type. If overriding a value, the value type must match the variable\u0027s type. If removing an overridden value, the value must be \u0060null\u0060."
+      },
+      "VariableComposedColor": {
+        "type": "object",
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/VariableComposedColorOneOf1"
+          },
+          {
+            "$ref": "#/components/schemas/VariableComposedColorOneOf2"
+          }
+        ],
+        "description": "A color with an independently authored opacity."
       },
       "DevResource": {
         "required": [
@@ -24355,6 +24375,9 @@
           },
           {
             "$ref": "#/components/schemas/VariableAlias"
+          },
+          {
+            "$ref": "#/components/schemas/VariableComposedColor"
           }
         ],
         "properties": {
@@ -24388,6 +24411,38 @@
           "id": {
             "type": "string",
             "description": "The id of the variable that the current variable is aliased to. This variable can be a local or remote variable, and both can be retrieved via the GET /v1/files/:file_key/variables/local endpoint."
+          }
+        }
+      },
+      "VariableComposedColorOneOf1": {
+        "required": [
+          "color",
+          "opacity"
+        ],
+        "type": "object",
+        "properties": {
+          "color": {
+            "$ref": "#/components/schemas/VariableComposedColorOneOf1Color"
+          },
+          "opacity": {
+            "description": "Contains a variable alias",
+            "$ref": "#/components/schemas/VariableAlias"
+          }
+        }
+      },
+      "VariableComposedColorOneOf2": {
+        "required": [
+          "color",
+          "opacity"
+        ],
+        "type": "object",
+        "properties": {
+          "color": {
+            "description": "Contains a variable alias",
+            "$ref": "#/components/schemas/VariableAlias"
+          },
+          "opacity": {
+            "$ref": "#/components/schemas/VariableComposedColorOneOf2Opacity"
           }
         }
       },
@@ -24664,6 +24719,66 @@
           "inheritFillStyleId": {
             "type": "string",
             "description": "ID of style node, if any, that this inherits fill data from."
+          }
+        }
+      },
+      "VariableComposedColorOneOf1Color": {
+        "type": "object",
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Rgb"
+          },
+          {
+            "$ref": "#/components/schemas/Rgba"
+          }
+        ],
+        "properties": {
+          "r": {
+            "maximum": 1,
+            "minimum": 0,
+            "type": "number",
+            "description": "Red channel value, between 0 and 1."
+          },
+          "g": {
+            "maximum": 1,
+            "minimum": 0,
+            "type": "number",
+            "description": "Green channel value, between 0 and 1."
+          },
+          "b": {
+            "maximum": 1,
+            "minimum": 0,
+            "type": "number",
+            "description": "Blue channel value, between 0 and 1."
+          },
+          "a": {
+            "maximum": 1,
+            "minimum": 0,
+            "type": "number",
+            "description": "Alpha channel value, between 0 and 1."
+          }
+        }
+      },
+      "VariableComposedColorOneOf2Opacity": {
+        "type": "object",
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/VariableComposedColorOneOf2OpacityBranch1"
+          },
+          {
+            "$ref": "#/components/schemas/VariableAlias"
+          }
+        ],
+        "properties": {
+          "value": {
+            "type": "number"
+          },
+          "type": {
+            "$ref": "#/components/schemas/VariableAliasType"
+          },
+          "id": {
+            "type": "string",
+            "description": "The id of the variable that the current variable is aliased to. This variable can be a local or remote variable, and both can be retrieved via the GET /v1/files/:file_key/variables/local endpoint."
           }
         }
       },
@@ -26203,6 +26318,17 @@
         "properties": {
           "value": {
             "type": "string"
+          }
+        }
+      },
+      "VariableComposedColorOneOf2OpacityBranch1": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "number"
           }
         }
       },

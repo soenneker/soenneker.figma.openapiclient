@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Figma.OpenApiClient.Models
 {
-    /// <summary>Scopes allow a variable to be shown or hidden in the variable picker for various fields. This declutters the Figma UI if you have a large number of variables. Variable scopes are currently supported on `FLOAT`, `STRING`, and `COLOR` variables.`ALL_SCOPES` is a special scope that means that the variable will be shown in the variable picker for all variable fields. If `ALL_SCOPES` is set, no additional scopes can be set.`ALL_FILLS` is a special scope that means that the variable will be shown in the variable picker for all fill fields. If `ALL_FILLS` is set, no additional fill scopes can be set.Valid scopes for `FLOAT` variables:- `ALL_SCOPES`- `TEXT_CONTENT`- `WIDTH_HEIGHT`- `GAP`- `STROKE_FLOAT`- `EFFECT_FLOAT`- `OPACITY`- `FONT_WEIGHT`- `FONT_SIZE`- `LINE_HEIGHT`- `LETTER_SPACING`- `PARAGRAPH_SPACING`- `PARAGRAPH_INDENT`Valid scopes for `STRING` variables:- `ALL_SCOPES`- `TEXT_CONTENT`- `FONT_FAMILY`- `FONT_STYLE`Valid scopes for `COLOR` variables:- `ALL_SCOPES`- `ALL_FILLS`- `FRAME_FILL`- `SHAPE_FILL`- `TEXT_FILL`- `STROKE_COLOR`- `EFFECT_COLOR`</summary>
+    /// <summary>Scopes allow a variable to be shown or hidden in the variable picker for various fields. This declutters the Figma UI if you have a large number of variables. Variable scopes are currently supported on `FLOAT`, `STRING`, and `COLOR` variables.`ALL_SCOPES` is a special scope that means that the variable will be shown in the variable picker for all variable fields. If `ALL_SCOPES` is set, no additional scopes can be set.`ALL_FILLS` is a special scope that means that the variable will be shown in the variable picker for all fill fields. If `ALL_FILLS` is set, no additional fill scopes can be set.Valid scopes for `FLOAT` variables:- `ALL_SCOPES`- `TEXT_CONTENT`- `WIDTH_HEIGHT`- `GAP`- `STROKE_FLOAT`- `EFFECT_FLOAT`- `OPACITY`- `COLOR_OPACITY`- `FONT_WEIGHT`- `FONT_SIZE`- `LINE_HEIGHT`- `LETTER_SPACING`- `PARAGRAPH_SPACING`- `PARAGRAPH_INDENT``OPACITY` corresponds to layer opacity, while `COLOR_OPACITY` corresponds to the opacity channel of a color.Valid scopes for `STRING` variables:- `ALL_SCOPES`- `TEXT_CONTENT`- `FONT_FAMILY`- `FONT_STYLE`Valid scopes for `COLOR` variables:- `ALL_SCOPES`- `ALL_FILLS`- `FRAME_FILL`- `SHAPE_FILL`- `TEXT_FILL`- `STROKE_COLOR`- `EFFECT_COLOR`</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum VariableScope
     {
@@ -62,6 +62,10 @@ namespace Soenneker.Figma.OpenApiClient.Models
         [EnumMember(Value = "OPACITY")]
         #pragma warning disable CS1591
         Opacity,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "COLOR_OPACITY")]
+        #pragma warning disable CS1591
+        ColorOpacity,
         #pragma warning restore CS1591
         [EnumMember(Value = "FONT_FAMILY")]
         #pragma warning disable CS1591
