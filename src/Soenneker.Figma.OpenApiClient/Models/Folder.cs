@@ -15,6 +15,8 @@ namespace Soenneker.Figma.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The time at which the folder was created.</summary>
+        public DateTimeOffset? CreatedAt { get; set; }
         /// <summary>The ID of the folder.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -39,6 +41,8 @@ namespace Soenneker.Figma.OpenApiClient.Models
 #else
         public string ParentFolderId { get; set; }
 #endif
+        /// <summary>The audience that can access the folder.</summary>
+        public global::Soenneker.Figma.OpenApiClient.Models.FolderSharingAudienceControl? SharingAudienceControl { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Figma.OpenApiClient.Models.Folder"/> and sets the default values.
         /// </summary>
@@ -64,9 +68,11 @@ namespace Soenneker.Figma.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "created_at", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "parent_folder_id", n => { ParentFolderId = n.GetStringValue(); } },
+                { "sharing_audience_control", n => { SharingAudienceControl = n.GetEnumValue<global::Soenneker.Figma.OpenApiClient.Models.FolderSharingAudienceControl>(); } },
             };
         }
         /// <summary>
@@ -76,9 +82,11 @@ namespace Soenneker.Figma.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteDateTimeOffsetValue("created_at", CreatedAt);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("parent_folder_id", ParentFolderId);
+            writer.WriteEnumValue<global::Soenneker.Figma.OpenApiClient.Models.FolderSharingAudienceControl>("sharing_audience_control", SharingAudienceControl);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -7,7 +7,7 @@
     "contact": {
       "email": "support@figma.com"
     },
-    "version": "0.43.0"
+    "version": "0.44.0"
   },
   "servers": [
     {
@@ -18688,6 +18688,14 @@
               "string"
             ],
             "description": "The ID of the folder\u0027s parent folder, or null if the folder is a top-level folder in the team."
+          },
+          "sharing_audience_control": {
+            "$ref": "#/components/schemas/FolderSharingAudienceControl"
+          },
+          "created_at": {
+            "type": "string",
+            "description": "The time at which the folder was created.",
+            "format": "date-time"
           }
         },
         "description": "A Folder (previously called a \u0022Project\u0022) is a collection of files and subfolders. Folders can be nested; a folder\u0027s parent is identified by \u0060parent_folder_id\u0060."
@@ -30116,6 +30124,44 @@
             {
               "value": "bottom-right",
               "name": "BottomRight"
+            }
+          ]
+        }
+      },
+      "FolderSharingAudienceControl": {
+        "enum": [
+          "plan_view",
+          "plan_edit",
+          "invite_only",
+          "workspace_view",
+          "workspace_edit"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "description": "The audience that can access the folder.",
+        "x-ms-enum": {
+          "name": "FolderSharingAudienceControl",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "plan_view",
+              "name": "PlanView"
+            },
+            {
+              "value": "plan_edit",
+              "name": "PlanEdit"
+            },
+            {
+              "value": "invite_only",
+              "name": "InviteOnly"
+            },
+            {
+              "value": "workspace_view",
+              "name": "WorkspaceView"
+            },
+            {
+              "value": "workspace_edit",
+              "name": "WorkspaceEdit"
             }
           ]
         }
