@@ -7,7 +7,7 @@
     "contact": {
       "email": "support@figma.com"
     },
-    "version": "0.44.0"
+    "version": "0.45.0"
   },
   "servers": [
     {
@@ -16861,7 +16861,8 @@
           "BOOLEAN",
           "INSTANCE_SWAP",
           "TEXT",
-          "VARIANT"
+          "VARIANT",
+          "SLOT"
         ],
         "type": "string",
         "additionalProperties": false,
@@ -16885,6 +16886,10 @@
             {
               "value": "VARIANT",
               "name": "Variant"
+            },
+            {
+              "value": "SLOT",
+              "name": "Slot"
             }
           ]
         }
@@ -16905,6 +16910,52 @@
           }
         },
         "description": "Instance swap preferred value."
+      },
+      "SlotSettings": {
+        "type": "object",
+        "properties": {
+          "stretchChildOnInsert": {
+            "type": "boolean",
+            "description": "Whether layers inserted into the slot fill its counter axis."
+          },
+          "displayEmptyByDefault": {
+            "type": "boolean",
+            "description": "Whether an empty slot is shown by default."
+          },
+          "minChildren": {
+            "minimum": 0,
+            "type": [
+              "null",
+              "integer"
+            ],
+            "description": "Minimum number of children allowed in the slot. null means no minimum."
+          },
+          "maxChildren": {
+            "minimum": 0,
+            "type": [
+              "null",
+              "integer"
+            ],
+            "description": "Maximum number of children allowed in the slot. null means no maximum."
+          },
+          "allowPreferredValuesOnly": {
+            "type": "boolean",
+            "description": "Whether slot contents are limited to preferred values."
+          }
+        },
+        "description": "Slot-specific configuration for a SLOT component property."
+      },
+      "SlotContentId": {
+        "required": [
+          "guid"
+        ],
+        "type": "object",
+        "properties": {
+          "guid": {
+            "$ref": "#/components/schemas/SlotContentIdGuid"
+          }
+        },
+        "description": "Identifier for the content of a slot component property."
       },
       "ComponentPropertyDefinition": {
         "required": [
@@ -16932,7 +16983,11 @@
             "items": {
               "$ref": "#/components/schemas/InstanceSwapPreferredValue"
             },
-            "description": "Preferred values for this property. Only applicable if type is \u0060INSTANCE_SWAP\u0060."
+            "description": "Preferred values for this property. Only applicable if type is \u0060INSTANCE_SWAP\u0060 or \u0060SLOT\u0060."
+          },
+          "slotSettings": {
+            "description": "Settings for a SLOT property.",
+            "$ref": "#/components/schemas/SlotSettings"
           }
         },
         "description": "A property of a component."
@@ -16956,7 +17011,7 @@
             "items": {
               "$ref": "#/components/schemas/InstanceSwapPreferredValue"
             },
-            "description": "Preferred values for this property. Only applicable if type is \u0060INSTANCE_SWAP\u0060."
+            "description": "Preferred values for this property. Only applicable if type is \u0060INSTANCE_SWAP\u0060 or \u0060SLOT\u0060."
           },
           "boundVariables": {
             "$ref": "#/components/schemas/ComponentPropertyBoundVariables"
@@ -23605,24 +23660,40 @@
         "type": "object",
         "oneOf": [
           {
-            "type": "boolean"
+            "$ref": "#/components/schemas/ComponentPropertyDefinitionDefaultValueBranch1"
           },
           {
-            "type": "string"
+            "$ref": "#/components/schemas/ComponentPropertyDefinitionDefaultValueBranch2"
+          },
+          {
+            "$ref": "#/components/schemas/SlotContentId"
           }
         ],
+        "properties": {
+          "guid": {
+            "$ref": "#/components/schemas/SlotContentIdGuid"
+          }
+        },
         "description": "Initial value of this property for instances."
       },
       "ComponentPropertyValue": {
         "type": "object",
         "oneOf": [
           {
-            "type": "boolean"
+            "$ref": "#/components/schemas/ComponentPropertyValueBranch1"
           },
           {
-            "type": "string"
+            "$ref": "#/components/schemas/ComponentPropertyValueBranch2"
+          },
+          {
+            "$ref": "#/components/schemas/SlotContentId"
           }
         ],
+        "properties": {
+          "guid": {
+            "$ref": "#/components/schemas/SlotContentIdGuid"
+          }
+        },
         "description": "Value of the property for this component instance."
       },
       "ConnectorEndpointOneOf1": {
@@ -25087,6 +25158,22 @@
         },
         "description": "A map of OpenType feature flags to 1 or 0, 1 if it is enabled and 0 if it is disabled. Note that some flags aren\u0027t reflected here. For example, SMCP (small caps) is still represented by the \u0060textCase\u0060 field."
       },
+      "SlotContentIdGuid": {
+        "required": [
+          "sessionID",
+          "localID"
+        ],
+        "type": "object",
+        "properties": {
+          "sessionID": {
+            "type": "integer"
+          },
+          "localID": {
+            "type": "integer"
+          }
+        },
+        "description": "Identifier for the slot content."
+      },
       "ComponentPropertyBoundVariables": {
         "type": "object",
         "properties": {
@@ -26253,6 +26340,50 @@
         }
       },
       "VariableValueBranch3": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        }
+      },
+      "ComponentPropertyDefinitionDefaultValueBranch1": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "boolean"
+          }
+        }
+      },
+      "ComponentPropertyDefinitionDefaultValueBranch2": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string"
+          }
+        }
+      },
+      "ComponentPropertyValueBranch1": {
+        "required": [
+          "value"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "boolean"
+          }
+        }
+      },
+      "ComponentPropertyValueBranch2": {
         "required": [
           "value"
         ],
