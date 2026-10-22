@@ -8,6 +8,7 @@ using Soenneker.Figma.OpenApiClient.V1.Files.Item.Comments;
 using Soenneker.Figma.OpenApiClient.V1.Files.Item.Component_sets;
 using Soenneker.Figma.OpenApiClient.V1.Files.Item.Components;
 using Soenneker.Figma.OpenApiClient.V1.Files.Item.Dev_resources;
+using Soenneker.Figma.OpenApiClient.V1.Files.Item.Duplicate;
 using Soenneker.Figma.OpenApiClient.V1.Files.Item.Images;
 using Soenneker.Figma.OpenApiClient.V1.Files.Item.Meta;
 using Soenneker.Figma.OpenApiClient.V1.Files.Item.Nodes;
@@ -46,6 +47,11 @@ namespace Soenneker.Figma.OpenApiClient.V1.Files.Item
         public global::Soenneker.Figma.OpenApiClient.V1.Files.Item.Dev_resources.Dev_resourcesRequestBuilder Dev_resources
         {
             get => new global::Soenneker.Figma.OpenApiClient.V1.Files.Item.Dev_resources.Dev_resourcesRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The duplicate property</summary>
+        public global::Soenneker.Figma.OpenApiClient.V1.Files.Item.Duplicate.DuplicateRequestBuilder Duplicate
+        {
+            get => new global::Soenneker.Figma.OpenApiClient.V1.Files.Item.Duplicate.DuplicateRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The images property</summary>
         public global::Soenneker.Figma.OpenApiClient.V1.Files.Item.Images.ImagesRequestBuilder Images

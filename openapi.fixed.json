@@ -7,7 +7,7 @@
     "contact": {
       "email": "support@figma.com"
     },
-    "version": "0.45.0"
+    "version": "0.46.0"
   },
   "servers": [
     {
@@ -499,6 +499,271 @@
         ]
       }
     },
+    "/v1/files/{fileKey}/duplicate": {
+      "post": {
+        "tags": [
+          "Files"
+        ],
+        "summary": "Duplicate a file",
+        "description": "Duplicates a main file or branch into the specified folder as a new standalone file. The source file and destination folder must belong to the Enterprise plan associated with the private OAuth app. The authenticated user must be able to export the source file, edit the destination folder, and create files of the source editor type.\n\nThe copy uses the source\u0027s latest saved checkpoint and may not include recent unsaved changes. This endpoint is available only to Enterprise plans.",
+        "operationId": "PostFileDuplicate",
+        "parameters": [
+          {
+            "name": "fileKey",
+            "in": "path",
+            "description": "The key of the main file or branch to duplicate.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "The destination for the duplicated file.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PostFileDuplicateRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Response from the POST /v1/files/{file_key}/duplicate endpoint.",
+            "$ref": "#/components/responses/PostFileDuplicateResponse"
+          },
+          "400": {
+            "description": "The request body is invalid (for example, \u0060folder_id\u0060 is missing or isn\u0027t a string), or this type of file can\u0027t be duplicated.",
+            "$ref": "#/components/responses/BadRequestErrorResponseWithErrorBoolean"
+          },
+          "401": {
+            "description": "The request is not authenticated.",
+            "$ref": "#/components/responses/PostFileDuplicateErrorResponse"
+          },
+          "403": {
+            "description": "The token, OAuth app, or user does not have permission to duplicate this file into the destination folder.",
+            "$ref": "#/components/responses/PostFileDuplicateErrorResponse"
+          },
+          "404": {
+            "description": "The source file or destination folder was not found, or the endpoint is not enabled.",
+            "$ref": "#/components/responses/PostFileDuplicateErrorResponse"
+          },
+          "429": {
+            "description": "The request was throttled or rate limited. Please wait before attempting the request again.",
+            "$ref": "#/components/responses/PostFileDuplicateErrorResponse"
+          },
+          "500": {
+            "description": "An internal server error occurred.",
+            "$ref": "#/components/responses/PostFileDuplicateErrorResponse"
+          }
+        },
+        "security": [
+          {
+            "OAuth2": [
+              "file_duplicate:write"
+            ]
+          }
+        ]
+      }
+    },
+    "/v1/teams": {
+      "post": {
+        "tags": [
+          "Teams"
+        ],
+        "summary": "Create a team",
+        "description": "Creates a team in the Enterprise plan associated with a private OAuth app. The app uses the authenticated user\u0027s permissions, and that user becomes the team owner. The request is subject to the same team-creation controls and permissions as team creation in Figma.",
+        "operationId": "PostTeam",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateTeamRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Response containing a Team resource.",
+            "$ref": "#/components/responses/TeamResponse"
+          },
+          "400": {
+            "description": "The request parameters are invalid.",
+            "$ref": "#/components/responses/BadRequestErrorResponseWithErrMessage"
+          },
+          "401": {
+            "description": "The access token is missing or incorrect.",
+            "$ref": "#/components/responses/UnauthorizedErrorResponseWithErrMessage"
+          },
+          "403": {
+            "description": "The caller does not have permission to create the team.",
+            "$ref": "#/components/responses/ForbiddenErrorResponseWithErrMessage"
+          },
+          "429": {
+            "description": "The request was rate-limited.",
+            "$ref": "#/components/responses/TooManyRequestsErrorResponseWithErrMessage"
+          },
+          "500": {
+            "description": "An internal server error occurred.",
+            "$ref": "#/components/responses/InternalServerErrorResponseWithErrMessage"
+          }
+        },
+        "security": [
+          {
+            "OAuth2": [
+              "teams:write"
+            ]
+          }
+        ]
+      }
+    },
+    "/v1/teams/{teamId}": {
+      "get": {
+        "tags": [
+          "Teams"
+        ],
+        "summary": "Get a team",
+        "description": "Returns metadata for a team the caller can access. Private OAuth apps can use this endpoint for Professional, Organization, and Enterprise plans. Plan access tokens can use it for Organization and Enterprise plans.",
+        "operationId": "GetTeam",
+        "parameters": [
+          {
+            "name": "teamId",
+            "in": "path",
+            "description": "The ID of the team.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Response containing a Team resource.",
+            "$ref": "#/components/responses/TeamResponse"
+          },
+          "401": {
+            "description": "The access token is missing or incorrect.",
+            "$ref": "#/components/responses/UnauthorizedErrorResponseWithErrMessage"
+          },
+          "403": {
+            "description": "The caller does not have permission to access the team.",
+            "$ref": "#/components/responses/ForbiddenErrorResponseWithErrMessage"
+          },
+          "429": {
+            "description": "The request was rate-limited.",
+            "$ref": "#/components/responses/TooManyRequestsErrorResponseWithErrMessage"
+          },
+          "500": {
+            "description": "An internal server error occurred.",
+            "$ref": "#/components/responses/InternalServerErrorResponseWithErrMessage"
+          }
+        },
+        "security": [
+          {
+            "PlanAccessToken": []
+          },
+          {
+            "OAuth2": [
+              "teams:read"
+            ]
+          }
+        ]
+      }
+    },
+    "/v1/teams/{teamId}/invites": {
+      "post": {
+        "tags": [
+          "Teams"
+        ],
+        "summary": "Invite users to a team",
+        "description": "Invites users to a team with the requested role. This endpoint is available only to private OAuth apps associated with an Enterprise plan, and the team must belong to that plan. The authenticated user must be allowed to grant the requested role on the team.\n\nEach email address is processed independently. Per-address failures are returned in \u0060errors\u0060 with HTTP 200, even if \u0060invites\u0060 is empty. Always check \u0060errors\u0060 to determine which addresses could not be invited.\n\nExisting team members keep their current role when it is higher than the requested role.",
+        "operationId": "PostTeamInvites",
+        "parameters": [
+          {
+            "name": "teamId",
+            "in": "path",
+            "description": "The ID of the team to invite users to.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "The users to invite and the team role to grant them.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/InviteTeamMembersRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Response from the POST /v1/teams/{team_id}/invites endpoint. Per-address failures return HTTP 200. Always inspect \u0060errors\u0060; \u0060invites\u0060 may be empty.",
+            "$ref": "#/components/responses/InviteTeamMembersResponse"
+          },
+          "400": {
+            "description": "Bad request. The response may be JSON or HTML.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PostTeamInvites400Response"
+                }
+              },
+              "text/html": {
+                "schema": {
+                  "$ref": "#/components/schemas/PostTeamInvites400HtmlResponseSchema"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Error response from the POST /v1/teams/{team_id}/invites endpoint. The error payload depends on where the request failed.",
+            "$ref": "#/components/responses/PostTeamInvitesErrorResponse"
+          },
+          "403": {
+            "description": "Error response from the POST /v1/teams/{team_id}/invites endpoint. The error payload depends on where the request failed.",
+            "$ref": "#/components/responses/PostTeamInvitesErrorResponse"
+          },
+          "404": {
+            "description": "Error response from the POST /v1/teams/{team_id}/invites endpoint. The error payload depends on where the request failed.",
+            "$ref": "#/components/responses/PostTeamInvitesErrorResponse"
+          },
+          "413": {
+            "description": "Request body too large.",
+            "content": {
+              "text/html": {
+                "schema": {
+                  "$ref": "#/components/schemas/PostTeamInvites413HtmlResponseSchema"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Error response from the POST /v1/teams/{team_id}/invites endpoint. The error payload depends on where the request failed.",
+            "$ref": "#/components/responses/PostTeamInvitesErrorResponse"
+          },
+          "500": {
+            "description": "Error response from the POST /v1/teams/{team_id}/invites endpoint. The error payload depends on where the request failed.",
+            "$ref": "#/components/responses/PostTeamInvitesErrorResponse"
+          }
+        },
+        "security": [
+          {
+            "OAuth2": [
+              "team_members:write"
+            ]
+          }
+        ]
+      }
+    },
     "/v1/teams/{teamId}/projects": {
       "get": {
         "tags": [
@@ -676,6 +941,74 @@
             "OAuth2": [
               "projects:read",
               "files:read"
+            ]
+          }
+        ]
+      }
+    },
+    "/v1/teams/{teamId}/folders": {
+      "post": {
+        "tags": [
+          "Folders"
+        ],
+        "summary": "Create a folder",
+        "description": "Creates a top-level folder in a team. The team must belong to the Enterprise plan associated with the private OAuth app, and the authenticated user must be allowed to create a folder in the team.",
+        "operationId": "PostTeamFolder",
+        "parameters": [
+          {
+            "name": "teamId",
+            "in": "path",
+            "description": "The ID of the team in which to create the folder.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateFolderRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Response containing the created Folder resource.",
+            "$ref": "#/components/responses/CreateFolderResponse"
+          },
+          "400": {
+            "description": "The request parameters are invalid.",
+            "$ref": "#/components/responses/BadRequestErrorResponseWithErrMessage"
+          },
+          "401": {
+            "description": "The access token is missing or incorrect.",
+            "$ref": "#/components/responses/UnauthorizedErrorResponseWithErrMessage"
+          },
+          "403": {
+            "description": "The caller does not have permission to create the folder.",
+            "$ref": "#/components/responses/ForbiddenErrorResponseWithErrMessage"
+          },
+          "404": {
+            "description": "The requested resource was not found.",
+            "$ref": "#/components/responses/NotFoundErrorResponseWithErrMessage"
+          },
+          "429": {
+            "description": "The request was rate-limited.",
+            "$ref": "#/components/responses/TooManyRequestsErrorResponseWithErrMessage"
+          },
+          "500": {
+            "description": "An internal server error occurred.",
+            "$ref": "#/components/responses/InternalServerErrorResponseWithErrMessage"
+          }
+        },
+        "security": [
+          {
+            "OAuth2": [
+              "folders:write"
             ]
           }
         ]
@@ -18721,6 +19054,24 @@
         },
         "description": "A version of a file"
       },
+      "CreateFolderRequest": {
+        "required": [
+          "name",
+          "sharing_audience_control"
+        ],
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the folder."
+          },
+          "sharing_audience_control": {
+            "$ref": "#/components/schemas/CreateFolderRequestSharingAudienceControl"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Properties for the folder to create."
+      },
       "Folder": {
         "required": [
           "id",
@@ -21492,6 +21843,121 @@
           ]
         }
       },
+      "CreateTeamRequest": {
+        "required": [
+          "name",
+          "sharing_audience_control"
+        ],
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the team."
+          },
+          "description": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "description": "A description of the team."
+          },
+          "sharing_audience_control": {
+            "$ref": "#/components/schemas/CreateTeamRequestSharingAudienceControl"
+          },
+          "org_discoverability": {
+            "$ref": "#/components/schemas/CreateTeamRequestOrgDiscoverability"
+          },
+          "workspace_id": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "description": "The workspace in which to create the team. Required for workspace audiences."
+          }
+        },
+        "additionalProperties": false,
+        "description": "Properties for the team to create."
+      },
+      "InviteTeamMembersRequest": {
+        "required": [
+          "emails",
+          "role"
+        ],
+        "type": "object",
+        "properties": {
+          "emails": {
+            "maxItems": 99,
+            "minItems": 1,
+            "type": "array",
+            "items": {
+              "type": "string",
+              "format": "email"
+            },
+            "description": "The email addresses to invite."
+          },
+          "role": {
+            "$ref": "#/components/schemas/InviteTeamMembersRequestRole"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Members to invite to a team and the role to assign them."
+      },
+      "Team": {
+        "required": [
+          "id",
+          "name",
+          "description",
+          "sharing_audience_control",
+          "org_discoverability",
+          "workspace_id",
+          "owner_user_id",
+          "created_at"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "The unique identifier of the team."
+          },
+          "name": {
+            "type": "string",
+            "description": "The name of the team."
+          },
+          "description": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "description": "A description of the team."
+          },
+          "sharing_audience_control": {
+            "$ref": "#/components/schemas/TeamSharingAudienceControl"
+          },
+          "org_discoverability": {
+            "$ref": "#/components/schemas/TeamOrgDiscoverability"
+          },
+          "workspace_id": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "description": "The workspace containing the team."
+          },
+          "owner_user_id": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "description": "The ID of the user who owns the team."
+          },
+          "created_at": {
+            "type": "string",
+            "description": "The time at which the team was created.",
+            "format": "date-time"
+          }
+        },
+        "description": "A Figma team."
+      },
       "GetFileResponseResponse": {
         "required": [
           "name",
@@ -21652,6 +22118,66 @@
           }
         }
       },
+      "PostFileDuplicateResponseResponse": {
+        "required": [
+          "file_key",
+          "name",
+          "folder_id",
+          "editor_type",
+          "created_at"
+        ],
+        "type": "object",
+        "properties": {
+          "file_key": {
+            "type": "string",
+            "description": "The key of the newly created standalone file."
+          },
+          "name": {
+            "type": "string",
+            "description": "The name of the duplicated file."
+          },
+          "folder_id": {
+            "type": "string",
+            "description": "The ID of the folder containing the duplicated file."
+          },
+          "editor_type": {
+            "$ref": "#/components/schemas/PostFileDuplicateResponseResponseEditorType"
+          },
+          "created_at": {
+            "type": "string",
+            "description": "The UTC ISO 8601 time at which the duplicated file was created.",
+            "format": "date-time"
+          }
+        }
+      },
+      "PostFileDuplicateErrorResponseResponse": {
+        "type": "object",
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/ErrorResponsePayloadWithErrMessage"
+          },
+          {
+            "$ref": "#/components/schemas/ErrorResponsePayloadWithErrorBoolean"
+          }
+        ],
+        "properties": {
+          "status": {
+            "type": "number",
+            "description": "Status code"
+          },
+          "err": {
+            "type": "string",
+            "description": "A string describing the error"
+          },
+          "error": {
+            "$ref": "#/components/schemas/ErrorResponsePayloadWithErrorBooleanError"
+          },
+          "message": {
+            "type": "string",
+            "description": "A string describing the error"
+          }
+        }
+      },
       "GetTeamProjectsResponseResponse": {
         "required": [
           "name",
@@ -21731,6 +22257,41 @@
               "$ref": "#/components/schemas/GetProjectFilesResponseResponseFilesItem"
             },
             "description": "An array of files."
+          }
+        }
+      },
+      "CreateFolderResponseResponse": {
+        "required": [
+          "id",
+          "name",
+          "parent_folder_id",
+          "sharing_audience_control",
+          "created_at"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "The ID of the folder."
+          },
+          "name": {
+            "type": "string",
+            "description": "The name of the folder."
+          },
+          "parent_folder_id": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "description": "The ID of the folder\u0027s parent folder, or null if the folder is a top-level folder in the team."
+          },
+          "sharing_audience_control": {
+            "$ref": "#/components/schemas/FolderSharingAudienceControl"
+          },
+          "created_at": {
+            "type": "string",
+            "description": "The time at which the folder was created.",
+            "format": "date-time"
           }
         }
       },
@@ -22640,6 +23201,23 @@
           }
         }
       },
+      "UnauthorizedErrorResponseWithErrMessageResponse": {
+        "required": [
+          "status",
+          "err"
+        ],
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "number",
+            "description": "Status code"
+          },
+          "err": {
+            "type": "string",
+            "description": "A string describing the error"
+          }
+        }
+      },
       "ForbiddenErrorResponseWithErrMessageResponse": {
         "required": [
           "status",
@@ -22802,6 +23380,57 @@
           "status": {
             "type": "number",
             "description": "Status code"
+          },
+          "message": {
+            "type": "string",
+            "description": "A string describing the error"
+          }
+        }
+      },
+      "InviteTeamMembersResponseResponse": {
+        "required": [
+          "invites",
+          "errors"
+        ],
+        "type": "object",
+        "properties": {
+          "invites": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/InviteTeamMembersResponseResponseInvitesItem"
+            },
+            "description": "The email addresses that were invited, including users already on the team, whose role is kept or raised. An invitation can still require approval from an organization admin before the user joins the team."
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/InviteTeamMembersResponseResponseErrorsItem"
+            },
+            "description": "The email addresses that could not be invited. The other addresses in the request are still processed."
+          }
+        }
+      },
+      "PostTeamInvitesErrorResponseResponse": {
+        "type": "object",
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/ErrorResponsePayloadWithErrMessage"
+          },
+          {
+            "$ref": "#/components/schemas/ErrorResponsePayloadWithErrorBoolean"
+          }
+        ],
+        "properties": {
+          "status": {
+            "type": "number",
+            "description": "Status code"
+          },
+          "err": {
+            "type": "string",
+            "description": "A string describing the error"
+          },
+          "error": {
+            "$ref": "#/components/schemas/ErrorResponsePayloadWithErrorBooleanError"
           },
           "message": {
             "type": "string",
@@ -24525,6 +25154,23 @@
           }
         }
       },
+      "CreateFolderResponseResponseAllOf2": {
+        "required": [
+          "sharing_audience_control",
+          "created_at"
+        ],
+        "type": "object",
+        "properties": {
+          "sharing_audience_control": {
+            "$ref": "#/components/schemas/CreateFolderResponseResponseAllOf2SharingAudienceControl"
+          },
+          "created_at": {
+            "type": "string",
+            "description": "The time at which the folder was created.",
+            "format": "date-time"
+          }
+        }
+      },
       "GetMeResponseResponseAllOf2": {
         "required": [
           "email"
@@ -24675,6 +25321,17 @@
         "properties": {
           "status": {
             "$ref": "#/components/schemas/UnauthorizedErrorResponseWithErrorBooleanResponseAllOf2Status"
+          }
+        }
+      },
+      "UnauthorizedErrorResponseWithErrMessageResponseAllOf2": {
+        "required": [
+          "status"
+        ],
+        "type": "object",
+        "properties": {
+          "status": {
+            "$ref": "#/components/schemas/UnauthorizedErrorResponseWithErrMessageResponseAllOf2Status"
           }
         }
       },
@@ -25818,6 +26475,41 @@
           }
         }
       },
+      "InviteTeamMembersResponseResponseInvitesItem": {
+        "required": [
+          "email",
+          "role"
+        ],
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string",
+            "description": "The normalized email address that was invited.",
+            "format": "email"
+          },
+          "role": {
+            "$ref": "#/components/schemas/InviteTeamMembersResponseResponseInvitesItemRole"
+          }
+        }
+      },
+      "InviteTeamMembersResponseResponseErrorsItem": {
+        "required": [
+          "email",
+          "error"
+        ],
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string",
+            "description": "The normalized email address that could not be invited.",
+            "format": "email"
+          },
+          "error": {
+            "type": "string",
+            "description": "A human-readable explanation of the failure."
+          }
+        }
+      },
       "HasGeometryTraitAllOf3FillOverrideTable": {
         "type": "object",
         "additionalProperties": {
@@ -26100,6 +26792,45 @@
           "$ref": "#/components/schemas/Style"
         },
         "description": "A mapping from style IDs to style metadata."
+      },
+      "PostFileDuplicateRequest": {
+        "required": [
+          "folder_id"
+        ],
+        "type": "object",
+        "properties": {
+          "folder_id": {
+            "type": "string",
+            "description": "The ID of the folder to create the duplicated file in."
+          }
+        }
+      },
+      "PostTeamInvites400Response": {
+        "required": [
+          "error",
+          "status",
+          "message"
+        ],
+        "type": "object",
+        "properties": {
+          "error": {
+            "$ref": "#/components/schemas/ErrorResponsePayloadWithErrorBooleanError"
+          },
+          "status": {
+            "type": "number",
+            "description": "Status code"
+          },
+          "message": {
+            "type": "string",
+            "description": "A string describing the error"
+          }
+        }
+      },
+      "PostTeamInvites400HtmlResponse": {
+        "type": "string"
+      },
+      "PostTeamInvites413HtmlResponse": {
+        "type": "string"
       },
       "PostCommentRequest": {
         "required": [
@@ -26470,6 +27201,12 @@
             "type": "number"
           }
         }
+      },
+      "PostTeamInvites400HtmlResponseSchema": {
+        "type": "string"
+      },
+      "PostTeamInvites413HtmlResponseSchema": {
+        "type": "string"
       },
       "PostCommentRequestClientMeta": {
         "type": "object",
@@ -30259,6 +30996,44 @@
           ]
         }
       },
+      "CreateFolderRequestSharingAudienceControl": {
+        "enum": [
+          "plan_view",
+          "plan_edit",
+          "invite_only",
+          "workspace_view",
+          "workspace_edit"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "description": "The audience that can access the folder. Workspace audiences require the specified team to belong to a workspace.",
+        "x-ms-enum": {
+          "name": "CreateFolderRequestSharingAudienceControl",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "plan_view",
+              "name": "PlanView"
+            },
+            {
+              "value": "plan_edit",
+              "name": "PlanEdit"
+            },
+            {
+              "value": "invite_only",
+              "name": "InviteOnly"
+            },
+            {
+              "value": "workspace_view",
+              "name": "WorkspaceView"
+            },
+            {
+              "value": "workspace_edit",
+              "name": "WorkspaceEdit"
+            }
+          ]
+        }
+      },
       "FolderSharingAudienceControl": {
         "enum": [
           "plan_view",
@@ -30924,6 +31699,164 @@
         "additionalProperties": false,
         "description": "For erroneous requests, this value is always \u0060true\u0060."
       },
+      "CreateTeamRequestSharingAudienceControl": {
+        "enum": [
+          "org_view",
+          "org_edit",
+          "invite_only",
+          "workspace_view",
+          "workspace_edit"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "description": "The audience that can discover and join the team. Workspace audiences require a workspace_id.",
+        "x-ms-enum": {
+          "name": "CreateTeamRequestSharingAudienceControl",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "org_view",
+              "name": "OrgView"
+            },
+            {
+              "value": "org_edit",
+              "name": "OrgEdit"
+            },
+            {
+              "value": "invite_only",
+              "name": "InviteOnly"
+            },
+            {
+              "value": "workspace_view",
+              "name": "WorkspaceView"
+            },
+            {
+              "value": "workspace_edit",
+              "name": "WorkspaceEdit"
+            }
+          ]
+        }
+      },
+      "CreateTeamRequestOrgDiscoverability": {
+        "enum": [
+          "hidden",
+          "discoverable",
+          null
+        ],
+        "type": [
+          "null",
+          "string"
+        ],
+        "additionalProperties": false,
+        "description": "Whether organization members can discover an invite-only team. Required for invite_only and not accepted for other audiences.",
+        "x-ms-enum": {
+          "name": "CreateTeamRequestOrgDiscoverability",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "hidden",
+              "name": "Hidden"
+            },
+            {
+              "value": "discoverable",
+              "name": "Discoverable"
+            }
+          ]
+        }
+      },
+      "InviteTeamMembersRequestRole": {
+        "enum": [
+          "viewer",
+          "editor",
+          "admin"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "description": "The role to grant each invited member. Existing roles are never downgraded.",
+        "x-ms-enum": {
+          "name": "InviteTeamMembersRequestRole",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "viewer",
+              "name": "Viewer"
+            },
+            {
+              "value": "editor",
+              "name": "Editor"
+            },
+            {
+              "value": "admin",
+              "name": "Admin"
+            }
+          ]
+        }
+      },
+      "TeamSharingAudienceControl": {
+        "enum": [
+          "org_view",
+          "org_edit",
+          "invite_only",
+          "workspace_view",
+          "workspace_edit"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "description": "The audience that can discover and join the team.",
+        "x-ms-enum": {
+          "name": "TeamSharingAudienceControl",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "org_view",
+              "name": "OrgView"
+            },
+            {
+              "value": "org_edit",
+              "name": "OrgEdit"
+            },
+            {
+              "value": "invite_only",
+              "name": "InviteOnly"
+            },
+            {
+              "value": "workspace_view",
+              "name": "WorkspaceView"
+            },
+            {
+              "value": "workspace_edit",
+              "name": "WorkspaceEdit"
+            }
+          ]
+        }
+      },
+      "TeamOrgDiscoverability": {
+        "enum": [
+          "hidden",
+          "discoverable",
+          null
+        ],
+        "type": [
+          "null",
+          "string"
+        ],
+        "additionalProperties": false,
+        "description": "Whether organization members can discover an invite-only team.",
+        "x-ms-enum": {
+          "name": "TeamOrgDiscoverability",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "hidden",
+              "name": "Hidden"
+            },
+            {
+              "value": "discoverable",
+              "name": "Discoverable"
+            }
+          ]
+        }
+      },
       "GetFileResponseResponseEditorType": {
         "enum": [
           "figma",
@@ -30985,6 +31918,44 @@
         "type": "number",
         "additionalProperties": false,
         "description": "Status code"
+      },
+      "PostFileDuplicateResponseResponseEditorType": {
+        "enum": [
+          "figma",
+          "figjam",
+          "slides",
+          "buzz",
+          "make"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "description": "The type of editor associated with the duplicated file.",
+        "x-ms-enum": {
+          "name": "PostFileDuplicateResponseResponseEditorType",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "figma",
+              "name": "Figma"
+            },
+            {
+              "value": "figjam",
+              "name": "Figjam"
+            },
+            {
+              "value": "slides",
+              "name": "Slides"
+            },
+            {
+              "value": "buzz",
+              "name": "Buzz"
+            },
+            {
+              "value": "make",
+              "name": "Make"
+            }
+          ]
+        }
       },
       "DeleteCommentResponseResponseStatus": {
         "enum": [
@@ -31518,6 +32489,44 @@
           ]
         }
       },
+      "CreateFolderResponseResponseAllOf2SharingAudienceControl": {
+        "enum": [
+          "plan_view",
+          "plan_edit",
+          "invite_only",
+          "workspace_view",
+          "workspace_edit"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "description": "The audience that can access the folder.",
+        "x-ms-enum": {
+          "name": "CreateFolderResponseResponseAllOf2SharingAudienceControl",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "plan_view",
+              "name": "PlanView"
+            },
+            {
+              "value": "plan_edit",
+              "name": "PlanEdit"
+            },
+            {
+              "value": "invite_only",
+              "name": "InviteOnly"
+            },
+            {
+              "value": "workspace_view",
+              "name": "WorkspaceView"
+            },
+            {
+              "value": "workspace_edit",
+              "name": "WorkspaceEdit"
+            }
+          ]
+        }
+      },
       "BadRequestErrorResponseWithErrMessageResponseAllOf2Status": {
         "enum": [
           400
@@ -31535,6 +32544,14 @@
         "description": "Status code"
       },
       "UnauthorizedErrorResponseWithErrorBooleanResponseAllOf2Status": {
+        "enum": [
+          401
+        ],
+        "type": "number",
+        "additionalProperties": false,
+        "description": "Status code"
+      },
+      "UnauthorizedErrorResponseWithErrMessageResponseAllOf2Status": {
         "enum": [
           401
         ],
@@ -31680,6 +32697,34 @@
             {
               "value": "make",
               "name": "Make"
+            }
+          ]
+        }
+      },
+      "InviteTeamMembersResponseResponseInvitesItemRole": {
+        "enum": [
+          "viewer",
+          "editor",
+          "admin"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "description": "The requested team role. Existing roles are never downgraded, so a user already on the team can have a higher role.",
+        "x-ms-enum": {
+          "name": "InviteTeamMembersResponseResponseInvitesItemRole",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "viewer",
+              "name": "Viewer"
+            },
+            {
+              "value": "editor",
+              "name": "Editor"
+            },
+            {
+              "value": "admin",
+              "name": "Admin"
             }
           ]
         }
@@ -32001,6 +33046,26 @@
           }
         }
       },
+      "PostFileDuplicateResponse": {
+        "description": "Response from the POST /v1/files/{file_key}/duplicate endpoint.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/PostFileDuplicateResponseResponse"
+            }
+          }
+        }
+      },
+      "PostFileDuplicateErrorResponse": {
+        "description": "The request failed. The error payload depends on where the request failed.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/PostFileDuplicateErrorResponseResponse"
+            }
+          }
+        }
+      },
       "GetTeamProjectsResponse": {
         "description": "Response from the GET /v1/teams/{team_id}/projects endpoint.",
         "content": {
@@ -32027,6 +33092,16 @@
           "application/json": {
             "schema": {
               "$ref": "#/components/schemas/GetProjectFilesResponseResponse"
+            }
+          }
+        }
+      },
+      "CreateFolderResponse": {
+        "description": "Response containing the created Folder resource.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/CreateFolderResponseResponse"
             }
           }
         }
@@ -32514,6 +33589,16 @@
           }
         }
       },
+      "UnauthorizedErrorResponseWithErrMessage": {
+        "description": "Token is missing or incorrect.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/UnauthorizedErrorResponseWithErrMessageResponse"
+            }
+          }
+        }
+      },
       "ForbiddenErrorResponseWithErrMessage": {
         "description": "The request was valid, but the server is refusing action. The user might not have the necessary permissions for a resource, or may need an account of some sort.",
         "content": {
@@ -32603,6 +33688,50 @@
             }
           }
         }
+      },
+      "TeamResponse": {
+        "description": "Response containing a Team resource.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Team"
+            }
+          }
+        }
+      },
+      "InviteTeamMembersResponse": {
+        "description": "Response from the POST /v1/teams/{team_id}/invites endpoint. Per-address failures return HTTP 200. Always inspect \u0060errors\u0060; \u0060invites\u0060 may be empty.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/InviteTeamMembersResponseResponse"
+            },
+            "example": {
+              "invites": [
+                {
+                  "email": "alex@example.com",
+                  "role": "editor"
+                }
+              ],
+              "errors": [
+                {
+                  "email": "sam@example.com",
+                  "error": "Unable to invite this email address."
+                }
+              ]
+            }
+          }
+        }
+      },
+      "PostTeamInvitesErrorResponse": {
+        "description": "Error response from the POST /v1/teams/{team_id}/invites endpoint. The error payload depends on where the request failed.",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/PostTeamInvitesErrorResponseResponse"
+            }
+          }
+        }
       }
     },
     "securitySchemes": {
@@ -32628,6 +33757,7 @@
               "file_comments:read": "Read the comments for files.",
               "file_comments:write": "Post and delete comments and comment reactions in files.",
               "file_content:read": "Read the contents of files, such as nodes and the editor type.",
+              "file_duplicate:write": "Duplicate files into folders. Available only to private OAuth apps in an Enterprise plan.",
               "file_dev_resources:read": "Read dev resources in files.",
               "file_dev_resources:write": "Write to dev resources in files.",
               "file_metadata:read": "Read metadata of files.",
@@ -32640,9 +33770,13 @@
               "library_content:read": "Read published components and styles of files.",
               "project_metadata:read": "Read metadata of projects.",
               "projects:read": "List projects and files in projects.",
-              "folders:read": "List folders and files in folders.",
               "folder_metadata:read": "Read metadata of folders.",
+              "folders:read": "List folders and files in folders.",
+              "folders:write": "Create folders. Available only to private OAuth apps in an Enterprise plan.",
               "team_library_content:read": "Read published components and styles of teams.",
+              "team_members:write": "Invite members to teams. Available only to private OAuth apps in an Enterprise plan.",
+              "teams:read": "Read team metadata. Available to private OAuth apps in Professional, Organization, and Enterprise plans, and to plan access tokens in Organization and Enterprise plans.",
+              "teams:write": "Create teams. Available only to private OAuth apps in an Enterprise plan.",
               "webhooks:read": "Read metadata of webhooks.",
               "webhooks:write": "Create and manage webhooks."
             }
@@ -32695,6 +33829,14 @@
       "externalDocs": {
         "description": "Project endpoints documentation",
         "url": "https://developers.figma.com/docs/rest-api/projects-endpoints/"
+      }
+    },
+    {
+      "name": "Teams",
+      "description": "Create and manage teams.",
+      "externalDocs": {
+        "description": "Team endpoints documentation",
+        "url": "https://developers.figma.com/docs/rest-api/teams-endpoints/"
       }
     },
     {
