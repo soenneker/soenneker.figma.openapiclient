@@ -8,11 +8,15 @@ using System;
 namespace Soenneker.Figma.OpenApiClient.Models
 {
     /// <summary>
-    /// Composed type wrapper for classes <see cref="global::Soenneker.Figma.OpenApiClient.Models.Expression"/>, <see cref="global::Soenneker.Figma.OpenApiClient.Models.Rgb"/>, <see cref="global::Soenneker.Figma.OpenApiClient.Models.Rgba"/>, <see cref="global::Soenneker.Figma.OpenApiClient.Models.VariableAlias"/>, <see cref="global::Soenneker.Figma.OpenApiClient.Models.VariableDataValueBranch1"/>, <see cref="global::Soenneker.Figma.OpenApiClient.Models.VariableDataValueBranch2"/>, <see cref="global::Soenneker.Figma.OpenApiClient.Models.VariableDataValueBranch3"/>
+    /// Composed type wrapper for classes <see cref="bool"/>, <see cref="double"/>, <see cref="global::Soenneker.Figma.OpenApiClient.Models.Expression"/>, <see cref="global::Soenneker.Figma.OpenApiClient.Models.Rgb"/>, <see cref="global::Soenneker.Figma.OpenApiClient.Models.Rgba"/>, <see cref="global::Soenneker.Figma.OpenApiClient.Models.VariableAlias"/>, <see cref="string"/>
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class VariableDataValue : IComposedTypeWrapper, IParsable
     {
+        /// <summary>Composed type representation for type <see cref="bool"/></summary>
+        public bool? Boolean { get; set; }
+        /// <summary>Composed type representation for type <see cref="double"/></summary>
+        public double? Double { get; set; }
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Figma.OpenApiClient.Models.Expression"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -37,6 +41,14 @@ namespace Soenneker.Figma.OpenApiClient.Models
 #else
         public global::Soenneker.Figma.OpenApiClient.Models.Rgba Rgba { get; set; }
 #endif
+        /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? String { get; set; }
+#nullable restore
+#else
+        public string String { get; set; }
+#endif
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Figma.OpenApiClient.Models.VariableAlias"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -44,30 +56,6 @@ namespace Soenneker.Figma.OpenApiClient.Models
 #nullable restore
 #else
         public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias VariableAlias { get; set; }
-#endif
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Figma.OpenApiClient.Models.VariableDataValueBranch1"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableDataValueBranch1? VariableDataValueBranch1 { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableDataValueBranch1 VariableDataValueBranch1 { get; set; }
-#endif
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Figma.OpenApiClient.Models.VariableDataValueBranch2"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableDataValueBranch2? VariableDataValueBranch2 { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableDataValueBranch2 VariableDataValueBranch2 { get; set; }
-#endif
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Figma.OpenApiClient.Models.VariableDataValueBranch3"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableDataValueBranch3? VariableDataValueBranch3 { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableDataValueBranch3 VariableDataValueBranch3 { get; set; }
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -95,17 +83,17 @@ namespace Soenneker.Figma.OpenApiClient.Models
             {
                 result.VariableAlias = new global::Soenneker.Figma.OpenApiClient.Models.VariableAlias();
             }
-            else if("VariableDataValueBranch1".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            else if(parseNode.GetBoolValue() is bool booleanValue)
             {
-                result.VariableDataValueBranch1 = new global::Soenneker.Figma.OpenApiClient.Models.VariableDataValueBranch1();
+                result.Boolean = booleanValue;
             }
-            else if("VariableDataValueBranch2".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            else if(parseNode.GetDoubleValue() is double doubleValue)
             {
-                result.VariableDataValueBranch2 = new global::Soenneker.Figma.OpenApiClient.Models.VariableDataValueBranch2();
+                result.Double = doubleValue;
             }
-            else if("VariableDataValueBranch3".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            else if(parseNode.GetStringValue() is string stringValue)
             {
-                result.VariableDataValueBranch3 = new global::Soenneker.Figma.OpenApiClient.Models.VariableDataValueBranch3();
+                result.String = stringValue;
             }
             return result;
         }
@@ -130,18 +118,6 @@ namespace Soenneker.Figma.OpenApiClient.Models
             else if(VariableAlias != null)
             {
                 return VariableAlias.GetFieldDeserializers();
-            }
-            else if(VariableDataValueBranch1 != null)
-            {
-                return VariableDataValueBranch1.GetFieldDeserializers();
-            }
-            else if(VariableDataValueBranch2 != null)
-            {
-                return VariableDataValueBranch2.GetFieldDeserializers();
-            }
-            else if(VariableDataValueBranch3 != null)
-            {
-                return VariableDataValueBranch3.GetFieldDeserializers();
             }
             return new Dictionary<string, Action<IParseNode>>();
         }
@@ -168,17 +144,17 @@ namespace Soenneker.Figma.OpenApiClient.Models
             {
                 writer.WriteObjectValue<global::Soenneker.Figma.OpenApiClient.Models.VariableAlias>(null, VariableAlias);
             }
-            else if(VariableDataValueBranch1 != null)
+            else if(Boolean != null)
             {
-                writer.WriteObjectValue<global::Soenneker.Figma.OpenApiClient.Models.VariableDataValueBranch1>(null, VariableDataValueBranch1);
+                writer.WriteBoolValue(null, Boolean);
             }
-            else if(VariableDataValueBranch2 != null)
+            else if(Double != null)
             {
-                writer.WriteObjectValue<global::Soenneker.Figma.OpenApiClient.Models.VariableDataValueBranch2>(null, VariableDataValueBranch2);
+                writer.WriteDoubleValue(null, Double);
             }
-            else if(VariableDataValueBranch3 != null)
+            else if(String != null)
             {
-                writer.WriteObjectValue<global::Soenneker.Figma.OpenApiClient.Models.VariableDataValueBranch3>(null, VariableDataValueBranch3);
+                writer.WriteStringValue(null, String);
             }
         }
     }

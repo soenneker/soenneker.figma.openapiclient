@@ -37,13 +37,13 @@ namespace Soenneker.Figma.OpenApiClient.Models
         public static global::Soenneker.Figma.OpenApiClient.Models.MeasurementOffset CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
+            var mappingValue = parseNode.GetChildNode("type")?.GetStringValue();
             var result = new global::Soenneker.Figma.OpenApiClient.Models.MeasurementOffset();
-            if("MeasurementOffsetInner".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            if("INNER".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
                 result.MeasurementOffsetInner = new global::Soenneker.Figma.OpenApiClient.Models.MeasurementOffsetInner();
             }
-            else if("MeasurementOffsetOuter".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            else if("OUTER".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
                 result.MeasurementOffsetOuter = new global::Soenneker.Figma.OpenApiClient.Models.MeasurementOffsetOuter();
             }

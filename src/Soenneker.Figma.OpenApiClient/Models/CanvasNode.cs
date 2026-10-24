@@ -99,6 +99,14 @@ namespace Soenneker.Figma.OpenApiClient.Models
 #else
         public string Name { get; set; }
 #endif
+        /// <summary>Data written by plugins that is visible only to the plugin that wrote it. Requires the `pluginData` to include the ID of the plugin.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public UntypedNode? PluginData { get; set; }
+#nullable restore
+#else
+        public UntypedNode PluginData { get; set; }
+#endif
         /// <summary>The background color of the prototype (currently only supports a single solid color paint).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -128,7 +136,15 @@ namespace Soenneker.Figma.OpenApiClient.Models
         public double? Rotation { get; set; }
         /// <summary>How layer should be treated when the frame is resized</summary>
         public global::Soenneker.Figma.OpenApiClient.Models.IsLayerTraitScrollBehavior? ScrollBehavior { get; set; }
-        /// <summary>The type property</summary>
+        /// <summary>Data written by plugins that is visible to all plugins. Requires the `pluginData` parameter to include the string &quot;shared&quot;.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public UntypedNode? SharedPluginData { get; set; }
+#nullable restore
+#else
+        public UntypedNode SharedPluginData { get; set; }
+#endif
+        /// <summary>The type of the node</summary>
         public global::Soenneker.Figma.OpenApiClient.Models.CanvasType? Type { get; set; }
         /// <summary>Whether or not the node is visible on the canvas.</summary>
         public bool? Visible { get; set; }
@@ -173,11 +189,13 @@ namespace Soenneker.Figma.OpenApiClient.Models
                 { "locked", n => { Locked = n.GetBoolValue(); } },
                 { "measurements", n => { Measurements = n.GetCollectionOfObjectValues<global::Soenneker.Figma.OpenApiClient.Models.Measurement>(global::Soenneker.Figma.OpenApiClient.Models.Measurement.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
+                { "pluginData", n => { PluginData = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "prototypeBackgrounds", n => { PrototypeBackgrounds = n.GetCollectionOfObjectValues<global::Soenneker.Figma.OpenApiClient.Models.Rgba>(global::Soenneker.Figma.OpenApiClient.Models.Rgba.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "prototypeDevice", n => { PrototypeDevice = n.GetObjectValue<global::Soenneker.Figma.OpenApiClient.Models.PrototypeDevice>(global::Soenneker.Figma.OpenApiClient.Models.PrototypeDevice.CreateFromDiscriminatorValue); } },
                 { "prototypeStartNodeID", n => { PrototypeStartNodeID = n.GetStringValue(); } },
                 { "rotation", n => { Rotation = n.GetDoubleValue(); } },
                 { "scrollBehavior", n => { ScrollBehavior = n.GetEnumValue<global::Soenneker.Figma.OpenApiClient.Models.IsLayerTraitScrollBehavior>(); } },
+                { "sharedPluginData", n => { SharedPluginData = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "type", n => { Type = n.GetEnumValue<global::Soenneker.Figma.OpenApiClient.Models.CanvasType>(); } },
                 { "visible", n => { Visible = n.GetBoolValue(); } },
             };
@@ -201,11 +219,13 @@ namespace Soenneker.Figma.OpenApiClient.Models
             writer.WriteBoolValue("locked", Locked);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Figma.OpenApiClient.Models.Measurement>("measurements", Measurements);
             writer.WriteStringValue("name", Name);
+            writer.WriteObjectValue<UntypedNode>("pluginData", PluginData);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Figma.OpenApiClient.Models.Rgba>("prototypeBackgrounds", PrototypeBackgrounds);
             writer.WriteObjectValue<global::Soenneker.Figma.OpenApiClient.Models.PrototypeDevice>("prototypeDevice", PrototypeDevice);
             writer.WriteStringValue("prototypeStartNodeID", PrototypeStartNodeID);
             writer.WriteDoubleValue("rotation", Rotation);
             writer.WriteEnumValue<global::Soenneker.Figma.OpenApiClient.Models.IsLayerTraitScrollBehavior>("scrollBehavior", ScrollBehavior);
+            writer.WriteObjectValue<UntypedNode>("sharedPluginData", SharedPluginData);
             writer.WriteEnumValue<global::Soenneker.Figma.OpenApiClient.Models.CanvasType>("type", Type);
             writer.WriteBoolValue("visible", Visible);
             writer.WriteAdditionalData(AdditionalData);

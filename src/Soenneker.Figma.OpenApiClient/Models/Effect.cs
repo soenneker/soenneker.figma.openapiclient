@@ -63,11 +63,11 @@ namespace Soenneker.Figma.OpenApiClient.Models
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             var mappingValue = parseNode.GetChildNode("type")?.GetStringValue();
             var result = new global::Soenneker.Figma.OpenApiClient.Models.Effect();
-            if("DropShadowEffect".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            if("DROP_SHADOW".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
                 result.DropShadowEffect = new global::Soenneker.Figma.OpenApiClient.Models.DropShadowEffect();
             }
-            else if("InnerShadowEffect".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            else if("INNER_SHADOW".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
                 result.InnerShadowEffect = new global::Soenneker.Figma.OpenApiClient.Models.InnerShadowEffect();
             }

@@ -184,6 +184,14 @@ namespace Soenneker.Figma.OpenApiClient.Models
 #endif
         /// <summary>Opacity of the node</summary>
         public double? Opacity { get; set; }
+        /// <summary>Data written by plugins that is visible only to the plugin that wrote it. Requires the `pluginData` to include the ID of the plugin.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public UntypedNode? PluginData { get; set; }
+#nullable restore
+#else
+        public UntypedNode PluginData { get; set; }
+#endif
         /// <summary>Keep height and width constrained to same ratio.</summary>
         public bool? PreserveRatio { get; set; }
         /// <summary>Array of length 4 of the radius of each corner of the frame, starting in the top left and proceeding clockwise.Values are given in the order top-left, top-right, bottom-right, bottom-left.</summary>
@@ -208,6 +216,14 @@ namespace Soenneker.Figma.OpenApiClient.Models
         public global::Soenneker.Figma.OpenApiClient.Models.IsLayerTraitScrollBehavior? ScrollBehavior { get; set; }
         /// <summary>Geometric shape type. Most shape types have the same name as their tooltip but there are a few exceptions. ENG_DATABASE: Cylinder, ENG_QUEUE: Horizontal cylinder, ENG_FILE: File, ENG_FOLDER: Folder.</summary>
         public global::Soenneker.Figma.OpenApiClient.Models.ShapeType? ShapeType { get; set; }
+        /// <summary>Data written by plugins that is visible to all plugins. Requires the `pluginData` parameter to include the string &quot;shared&quot;.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public UntypedNode? SharedPluginData { get; set; }
+#nullable restore
+#else
+        public UntypedNode SharedPluginData { get; set; }
+#endif
         /// <summary>Width and height of element. This is different from the width and height of the bounding box in that the absolute bounding box represents the element after scaling and rotation. Only present if `geometry=paths` is passed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -338,12 +354,14 @@ namespace Soenneker.Figma.OpenApiClient.Models
                 { "minWidth", n => { MinWidth = n.GetDoubleValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "opacity", n => { Opacity = n.GetDoubleValue(); } },
+                { "pluginData", n => { PluginData = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "preserveRatio", n => { PreserveRatio = n.GetBoolValue(); } },
                 { "rectangleCornerRadii", n => { RectangleCornerRadii = n.GetCollectionOfPrimitiveValues<double?>()?.AsList(); } },
                 { "relativeTransform", n => { RelativeTransform = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "rotation", n => { Rotation = n.GetDoubleValue(); } },
                 { "scrollBehavior", n => { ScrollBehavior = n.GetEnumValue<global::Soenneker.Figma.OpenApiClient.Models.IsLayerTraitScrollBehavior>(); } },
                 { "shapeType", n => { ShapeType = n.GetEnumValue<global::Soenneker.Figma.OpenApiClient.Models.ShapeType>(); } },
+                { "sharedPluginData", n => { SharedPluginData = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "size", n => { Size = n.GetObjectValue<global::Soenneker.Figma.OpenApiClient.Models.Vector>(global::Soenneker.Figma.OpenApiClient.Models.Vector.CreateFromDiscriminatorValue); } },
                 { "strokeAlign", n => { StrokeAlign = n.GetEnumValue<global::Soenneker.Figma.OpenApiClient.Models.HasGeometryTraitStrokeAlign>(); } },
                 { "strokeDashes", n => { StrokeDashes = n.GetCollectionOfPrimitiveValues<double?>()?.AsList(); } },
@@ -404,12 +422,14 @@ namespace Soenneker.Figma.OpenApiClient.Models
             writer.WriteDoubleValue("minWidth", MinWidth);
             writer.WriteStringValue("name", Name);
             writer.WriteDoubleValue("opacity", Opacity);
+            writer.WriteObjectValue<UntypedNode>("pluginData", PluginData);
             writer.WriteBoolValue("preserveRatio", PreserveRatio);
             writer.WriteCollectionOfPrimitiveValues<double?>("rectangleCornerRadii", RectangleCornerRadii);
             writer.WriteObjectValue<UntypedNode>("relativeTransform", RelativeTransform);
             writer.WriteDoubleValue("rotation", Rotation);
             writer.WriteEnumValue<global::Soenneker.Figma.OpenApiClient.Models.IsLayerTraitScrollBehavior>("scrollBehavior", ScrollBehavior);
             writer.WriteEnumValue<global::Soenneker.Figma.OpenApiClient.Models.ShapeType>("shapeType", ShapeType);
+            writer.WriteObjectValue<UntypedNode>("sharedPluginData", SharedPluginData);
             writer.WriteObjectValue<global::Soenneker.Figma.OpenApiClient.Models.Vector>("size", Size);
             writer.WriteEnumValue<global::Soenneker.Figma.OpenApiClient.Models.HasGeometryTraitStrokeAlign>("strokeAlign", StrokeAlign);
             writer.WriteCollectionOfPrimitiveValues<double?>("strokeDashes", StrokeDashes);

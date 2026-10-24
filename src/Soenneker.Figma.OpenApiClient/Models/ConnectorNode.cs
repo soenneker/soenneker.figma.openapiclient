@@ -187,6 +187,14 @@ namespace Soenneker.Figma.OpenApiClient.Models
 #endif
         /// <summary>Opacity of the node</summary>
         public double? Opacity { get; set; }
+        /// <summary>Data written by plugins that is visible only to the plugin that wrote it. Requires the `pluginData` to include the ID of the plugin.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public UntypedNode? PluginData { get; set; }
+#nullable restore
+#else
+        public UntypedNode PluginData { get; set; }
+#endif
         /// <summary>Keep height and width constrained to same ratio.</summary>
         public bool? PreserveRatio { get; set; }
         /// <summary>A transformation matrix is standard way in computer graphics to represent translation and rotation. These are the top two rows of a 3x3 matrix. The bottom row of the matrix is assumed to be [0, 0, 1]. This is known as an affine transform and is enough to represent translation, rotation, and skew.The identity transform is [[1, 0, 0], [0, 1, 0]].A translation matrix will typically look like:```[[1, 0, tx],  [0, 1, ty]]```and a rotation matrix will typically look like:```[[cos(angle), sin(angle), 0],  [-sin(angle), cos(angle), 0]]```Another way to think about this transform is as three vectors:- The x axis (t[0][0], t[1][0])- The y axis (t[0][1], t[1][1])- The translation offset (t[0][2], t[1][2])The most common usage of the Transform matrix is the `relativeTransform property`. This particular usage of the matrix has a few additional restrictions. The translation offset can take on any value but we do enforce that the axis vectors are unit vectors (i.e. have length 1). The axes are not required to be at 90° angles to each other.</summary>
@@ -201,6 +209,14 @@ namespace Soenneker.Figma.OpenApiClient.Models
         public double? Rotation { get; set; }
         /// <summary>How layer should be treated when the frame is resized</summary>
         public global::Soenneker.Figma.OpenApiClient.Models.IsLayerTraitScrollBehavior? ScrollBehavior { get; set; }
+        /// <summary>Data written by plugins that is visible to all plugins. Requires the `pluginData` parameter to include the string &quot;shared&quot;.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public UntypedNode? SharedPluginData { get; set; }
+#nullable restore
+#else
+        public UntypedNode SharedPluginData { get; set; }
+#endif
         /// <summary>Width and height of element. This is different from the width and height of the bounding box in that the absolute bounding box represents the element after scaling and rotation. Only present if `geometry=paths` is passed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -327,10 +343,12 @@ namespace Soenneker.Figma.OpenApiClient.Models
                 { "minWidth", n => { MinWidth = n.GetDoubleValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "opacity", n => { Opacity = n.GetDoubleValue(); } },
+                { "pluginData", n => { PluginData = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "preserveRatio", n => { PreserveRatio = n.GetBoolValue(); } },
                 { "relativeTransform", n => { RelativeTransform = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "rotation", n => { Rotation = n.GetDoubleValue(); } },
                 { "scrollBehavior", n => { ScrollBehavior = n.GetEnumValue<global::Soenneker.Figma.OpenApiClient.Models.IsLayerTraitScrollBehavior>(); } },
+                { "sharedPluginData", n => { SharedPluginData = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "size", n => { Size = n.GetObjectValue<global::Soenneker.Figma.OpenApiClient.Models.Vector>(global::Soenneker.Figma.OpenApiClient.Models.Vector.CreateFromDiscriminatorValue); } },
                 { "strokeAlign", n => { StrokeAlign = n.GetEnumValue<global::Soenneker.Figma.OpenApiClient.Models.HasGeometryTraitStrokeAlign>(); } },
                 { "strokeDashes", n => { StrokeDashes = n.GetCollectionOfPrimitiveValues<double?>()?.AsList(); } },
@@ -390,10 +408,12 @@ namespace Soenneker.Figma.OpenApiClient.Models
             writer.WriteDoubleValue("minWidth", MinWidth);
             writer.WriteStringValue("name", Name);
             writer.WriteDoubleValue("opacity", Opacity);
+            writer.WriteObjectValue<UntypedNode>("pluginData", PluginData);
             writer.WriteBoolValue("preserveRatio", PreserveRatio);
             writer.WriteObjectValue<UntypedNode>("relativeTransform", RelativeTransform);
             writer.WriteDoubleValue("rotation", Rotation);
             writer.WriteEnumValue<global::Soenneker.Figma.OpenApiClient.Models.IsLayerTraitScrollBehavior>("scrollBehavior", ScrollBehavior);
+            writer.WriteObjectValue<UntypedNode>("sharedPluginData", SharedPluginData);
             writer.WriteObjectValue<global::Soenneker.Figma.OpenApiClient.Models.Vector>("size", Size);
             writer.WriteEnumValue<global::Soenneker.Figma.OpenApiClient.Models.HasGeometryTraitStrokeAlign>("strokeAlign", StrokeAlign);
             writer.WriteCollectionOfPrimitiveValues<double?>("strokeDashes", StrokeDashes);

@@ -59,10 +59,10 @@ namespace Soenneker.Figma.OpenApiClient.Models
         /// <summary>A mapping of a layer&apos;s property to component property name of component properties attached to this node. The component property name can be used to look up more information on the corresponding component&apos;s or component set&apos;s componentPropertyDefinitions.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.TextNodeComponentPropertyReferences? ComponentPropertyReferences { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.DefaultShapeTraitsComponentPropertyReferences? ComponentPropertyReferences { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.TextNodeComponentPropertyReferences ComponentPropertyReferences { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.DefaultShapeTraitsComponentPropertyReferences ComponentPropertyReferences { get; set; }
 #endif
         /// <summary>Horizontal and vertical layout constraints for node.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -83,10 +83,10 @@ namespace Soenneker.Figma.OpenApiClient.Models
         /// <summary>A mapping of variable collection ID to mode ID representing the explicitly set modes for this node.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.TextNodeExplicitVariableModes? ExplicitVariableModes { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.DefaultShapeTraitsExplicitVariableModes? ExplicitVariableModes { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.TextNodeExplicitVariableModes ExplicitVariableModes { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.DefaultShapeTraitsExplicitVariableModes ExplicitVariableModes { get; set; }
 #endif
         /// <summary>An array of export settings representing images to export from the node.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -107,10 +107,10 @@ namespace Soenneker.Figma.OpenApiClient.Models
         /// <summary>Map from ID to PaintOverride for looking up fill overrides. To see which regions are overridden, you must use the `geometry=paths` option. Each path returned may have an `overrideID` which maps to this table.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.TextNodeFillOverrideTable? FillOverrideTable { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.DefaultShapeTraitsFillOverrideTable? FillOverrideTable { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.TextNodeFillOverrideTable FillOverrideTable { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.DefaultShapeTraitsFillOverrideTable FillOverrideTable { get; set; }
 #endif
         /// <summary>An array of fill paints applied to the node.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -230,6 +230,14 @@ namespace Soenneker.Figma.OpenApiClient.Models
 #endif
         /// <summary>Opacity of the node</summary>
         public double? Opacity { get; set; }
+        /// <summary>Data written by plugins that is visible only to the plugin that wrote it. Requires the `pluginData` to include the ID of the plugin.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public UntypedNode? PluginData { get; set; }
+#nullable restore
+#else
+        public UntypedNode PluginData { get; set; }
+#endif
         /// <summary>Keep height and width constrained to same ratio.</summary>
         public bool? PreserveRatio { get; set; }
         /// <summary>A transformation matrix is standard way in computer graphics to represent translation and rotation. These are the top two rows of a 3x3 matrix. The bottom row of the matrix is assumed to be [0, 0, 1]. This is known as an affine transform and is enough to represent translation, rotation, and skew.The identity transform is [[1, 0, 0], [0, 1, 0]].A translation matrix will typically look like:```[[1, 0, tx],  [0, 1, ty]]```and a rotation matrix will typically look like:```[[cos(angle), sin(angle), 0],  [-sin(angle), cos(angle), 0]]```Another way to think about this transform is as three vectors:- The x axis (t[0][0], t[1][0])- The y axis (t[0][1], t[1][1])- The translation offset (t[0][2], t[1][2])The most common usage of the Transform matrix is the `relativeTransform property`. This particular usage of the matrix has a few additional restrictions. The translation offset can take on any value but we do enforce that the axis vectors are unit vectors (i.e. have length 1). The axes are not required to be at 90° angles to each other.</summary>
@@ -244,6 +252,14 @@ namespace Soenneker.Figma.OpenApiClient.Models
         public double? Rotation { get; set; }
         /// <summary>How layer should be treated when the frame is resized</summary>
         public global::Soenneker.Figma.OpenApiClient.Models.IsLayerTraitScrollBehavior? ScrollBehavior { get; set; }
+        /// <summary>Data written by plugins that is visible to all plugins. Requires the `pluginData` parameter to include the string &quot;shared&quot;.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public UntypedNode? SharedPluginData { get; set; }
+#nullable restore
+#else
+        public UntypedNode SharedPluginData { get; set; }
+#endif
         /// <summary>Width and height of element. This is different from the width and height of the bounding box in that the absolute bounding box represents the element after scaling and rotation. Only present if `geometry=paths` is passed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -305,10 +321,10 @@ namespace Soenneker.Figma.OpenApiClient.Models
         /// <summary>A mapping of a StyleType to style ID (see Style) of styles present on this node. The style ID can be used to look up more information about the style in the top-level styles field.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.TextNodeStyles? Styles { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.DefaultShapeTraitsStyles? Styles { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.TextNodeStyles Styles { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.DefaultShapeTraitsStyles Styles { get; set; }
 #endif
         /// <summary>The duration of the prototyping transition on this node (in milliseconds). This will override the default transition duration on the prototype, for this node.</summary>
         public double? TransitionDuration { get; set; }
@@ -323,7 +339,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
         public string TransitionNodeID { get; set; }
 #endif
         /// <summary>The type of this node, represented by the string literal &quot;TEXT&quot;</summary>
-        public global::Soenneker.Figma.OpenApiClient.Models.TextType? Type { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.TextNode_type? Type { get; set; }
         /// <summary>Whether or not the node is visible on the canvas.</summary>
         public bool? Visible { get; set; }
         /// <summary>
@@ -378,13 +394,13 @@ namespace Soenneker.Figma.OpenApiClient.Models
                 { "boundVariables", n => { BoundVariables = n.GetObjectValue<global::Soenneker.Figma.OpenApiClient.Models.IsLayerTraitBoundVariables>(global::Soenneker.Figma.OpenApiClient.Models.IsLayerTraitBoundVariables.CreateFromDiscriminatorValue); } },
                 { "characterStyleOverrides", n => { CharacterStyleOverrides = n.GetCollectionOfPrimitiveValues<double?>()?.AsList(); } },
                 { "characters", n => { Characters = n.GetStringValue(); } },
-                { "componentPropertyReferences", n => { ComponentPropertyReferences = n.GetObjectValue<global::Soenneker.Figma.OpenApiClient.Models.TextNodeComponentPropertyReferences>(global::Soenneker.Figma.OpenApiClient.Models.TextNodeComponentPropertyReferences.CreateFromDiscriminatorValue); } },
+                { "componentPropertyReferences", n => { ComponentPropertyReferences = n.GetObjectValue<global::Soenneker.Figma.OpenApiClient.Models.DefaultShapeTraitsComponentPropertyReferences>(global::Soenneker.Figma.OpenApiClient.Models.DefaultShapeTraitsComponentPropertyReferences.CreateFromDiscriminatorValue); } },
                 { "constraints", n => { Constraints = n.GetObjectValue<global::Soenneker.Figma.OpenApiClient.Models.LayoutConstraint>(global::Soenneker.Figma.OpenApiClient.Models.LayoutConstraint.CreateFromDiscriminatorValue); } },
                 { "effects", n => { Effects = n.GetCollectionOfObjectValues<global::Soenneker.Figma.OpenApiClient.Models.Effect>(global::Soenneker.Figma.OpenApiClient.Models.Effect.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "explicitVariableModes", n => { ExplicitVariableModes = n.GetObjectValue<global::Soenneker.Figma.OpenApiClient.Models.TextNodeExplicitVariableModes>(global::Soenneker.Figma.OpenApiClient.Models.TextNodeExplicitVariableModes.CreateFromDiscriminatorValue); } },
+                { "explicitVariableModes", n => { ExplicitVariableModes = n.GetObjectValue<global::Soenneker.Figma.OpenApiClient.Models.DefaultShapeTraitsExplicitVariableModes>(global::Soenneker.Figma.OpenApiClient.Models.DefaultShapeTraitsExplicitVariableModes.CreateFromDiscriminatorValue); } },
                 { "exportSettings", n => { ExportSettings = n.GetCollectionOfObjectValues<global::Soenneker.Figma.OpenApiClient.Models.ExportSetting>(global::Soenneker.Figma.OpenApiClient.Models.ExportSetting.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "fillGeometry", n => { FillGeometry = n.GetCollectionOfObjectValues<global::Soenneker.Figma.OpenApiClient.Models.PathObject>(global::Soenneker.Figma.OpenApiClient.Models.PathObject.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "fillOverrideTable", n => { FillOverrideTable = n.GetObjectValue<global::Soenneker.Figma.OpenApiClient.Models.TextNodeFillOverrideTable>(global::Soenneker.Figma.OpenApiClient.Models.TextNodeFillOverrideTable.CreateFromDiscriminatorValue); } },
+                { "fillOverrideTable", n => { FillOverrideTable = n.GetObjectValue<global::Soenneker.Figma.OpenApiClient.Models.DefaultShapeTraitsFillOverrideTable>(global::Soenneker.Figma.OpenApiClient.Models.DefaultShapeTraitsFillOverrideTable.CreateFromDiscriminatorValue); } },
                 { "fills", n => { Fills = n.GetCollectionOfObjectValues<global::Soenneker.Figma.OpenApiClient.Models.Paint>(global::Soenneker.Figma.OpenApiClient.Models.Paint.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "gridChildHorizontalAlign", n => { GridChildHorizontalAlign = n.GetEnumValue<global::Soenneker.Figma.OpenApiClient.Models.HasLayoutTraitGridChildHorizontalAlign>(); } },
                 { "gridChildVerticalAlign", n => { GridChildVerticalAlign = n.GetEnumValue<global::Soenneker.Figma.OpenApiClient.Models.HasLayoutTraitGridChildVerticalAlign>(); } },
@@ -419,10 +435,12 @@ namespace Soenneker.Figma.OpenApiClient.Models
                 { "minWidth", n => { MinWidth = n.GetDoubleValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "opacity", n => { Opacity = n.GetDoubleValue(); } },
+                { "pluginData", n => { PluginData = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "preserveRatio", n => { PreserveRatio = n.GetBoolValue(); } },
                 { "relativeTransform", n => { RelativeTransform = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "rotation", n => { Rotation = n.GetDoubleValue(); } },
                 { "scrollBehavior", n => { ScrollBehavior = n.GetEnumValue<global::Soenneker.Figma.OpenApiClient.Models.IsLayerTraitScrollBehavior>(); } },
+                { "sharedPluginData", n => { SharedPluginData = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "size", n => { Size = n.GetObjectValue<global::Soenneker.Figma.OpenApiClient.Models.Vector>(global::Soenneker.Figma.OpenApiClient.Models.Vector.CreateFromDiscriminatorValue); } },
                 { "strokeAlign", n => { StrokeAlign = n.GetEnumValue<global::Soenneker.Figma.OpenApiClient.Models.HasGeometryTraitStrokeAlign>(); } },
                 { "strokeCap", n => { StrokeCap = n.GetEnumValue<global::Soenneker.Figma.OpenApiClient.Models.HasGeometryTraitStrokeCap>(); } },
@@ -434,11 +452,11 @@ namespace Soenneker.Figma.OpenApiClient.Models
                 { "strokes", n => { Strokes = n.GetCollectionOfObjectValues<global::Soenneker.Figma.OpenApiClient.Models.Paint>(global::Soenneker.Figma.OpenApiClient.Models.Paint.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "style", n => { Style = n.GetObjectValue<global::Soenneker.Figma.OpenApiClient.Models.TypeStyle>(global::Soenneker.Figma.OpenApiClient.Models.TypeStyle.CreateFromDiscriminatorValue); } },
                 { "styleOverrideTable", n => { StyleOverrideTable = n.GetObjectValue<global::Soenneker.Figma.OpenApiClient.Models.TextNodeStyleOverrideTable>(global::Soenneker.Figma.OpenApiClient.Models.TextNodeStyleOverrideTable.CreateFromDiscriminatorValue); } },
-                { "styles", n => { Styles = n.GetObjectValue<global::Soenneker.Figma.OpenApiClient.Models.TextNodeStyles>(global::Soenneker.Figma.OpenApiClient.Models.TextNodeStyles.CreateFromDiscriminatorValue); } },
+                { "styles", n => { Styles = n.GetObjectValue<global::Soenneker.Figma.OpenApiClient.Models.DefaultShapeTraitsStyles>(global::Soenneker.Figma.OpenApiClient.Models.DefaultShapeTraitsStyles.CreateFromDiscriminatorValue); } },
                 { "transitionDuration", n => { TransitionDuration = n.GetDoubleValue(); } },
                 { "transitionEasing", n => { TransitionEasing = n.GetEnumValue<global::Soenneker.Figma.OpenApiClient.Models.EasingType>(); } },
                 { "transitionNodeID", n => { TransitionNodeID = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Figma.OpenApiClient.Models.TextType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Figma.OpenApiClient.Models.TextNode_type>(); } },
                 { "visible", n => { Visible = n.GetBoolValue(); } },
             };
         }
@@ -455,13 +473,13 @@ namespace Soenneker.Figma.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Figma.OpenApiClient.Models.IsLayerTraitBoundVariables>("boundVariables", BoundVariables);
             writer.WriteStringValue("characters", Characters);
             writer.WriteCollectionOfPrimitiveValues<double?>("characterStyleOverrides", CharacterStyleOverrides);
-            writer.WriteObjectValue<global::Soenneker.Figma.OpenApiClient.Models.TextNodeComponentPropertyReferences>("componentPropertyReferences", ComponentPropertyReferences);
+            writer.WriteObjectValue<global::Soenneker.Figma.OpenApiClient.Models.DefaultShapeTraitsComponentPropertyReferences>("componentPropertyReferences", ComponentPropertyReferences);
             writer.WriteObjectValue<global::Soenneker.Figma.OpenApiClient.Models.LayoutConstraint>("constraints", Constraints);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Figma.OpenApiClient.Models.Effect>("effects", Effects);
-            writer.WriteObjectValue<global::Soenneker.Figma.OpenApiClient.Models.TextNodeExplicitVariableModes>("explicitVariableModes", ExplicitVariableModes);
+            writer.WriteObjectValue<global::Soenneker.Figma.OpenApiClient.Models.DefaultShapeTraitsExplicitVariableModes>("explicitVariableModes", ExplicitVariableModes);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Figma.OpenApiClient.Models.ExportSetting>("exportSettings", ExportSettings);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Figma.OpenApiClient.Models.PathObject>("fillGeometry", FillGeometry);
-            writer.WriteObjectValue<global::Soenneker.Figma.OpenApiClient.Models.TextNodeFillOverrideTable>("fillOverrideTable", FillOverrideTable);
+            writer.WriteObjectValue<global::Soenneker.Figma.OpenApiClient.Models.DefaultShapeTraitsFillOverrideTable>("fillOverrideTable", FillOverrideTable);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Figma.OpenApiClient.Models.Paint>("fills", Fills);
             writer.WriteEnumValue<global::Soenneker.Figma.OpenApiClient.Models.HasLayoutTraitGridChildHorizontalAlign>("gridChildHorizontalAlign", GridChildHorizontalAlign);
             writer.WriteEnumValue<global::Soenneker.Figma.OpenApiClient.Models.HasLayoutTraitGridChildVerticalAlign>("gridChildVerticalAlign", GridChildVerticalAlign);
@@ -496,10 +514,12 @@ namespace Soenneker.Figma.OpenApiClient.Models
             writer.WriteDoubleValue("minWidth", MinWidth);
             writer.WriteStringValue("name", Name);
             writer.WriteDoubleValue("opacity", Opacity);
+            writer.WriteObjectValue<UntypedNode>("pluginData", PluginData);
             writer.WriteBoolValue("preserveRatio", PreserveRatio);
             writer.WriteObjectValue<UntypedNode>("relativeTransform", RelativeTransform);
             writer.WriteDoubleValue("rotation", Rotation);
             writer.WriteEnumValue<global::Soenneker.Figma.OpenApiClient.Models.IsLayerTraitScrollBehavior>("scrollBehavior", ScrollBehavior);
+            writer.WriteObjectValue<UntypedNode>("sharedPluginData", SharedPluginData);
             writer.WriteObjectValue<global::Soenneker.Figma.OpenApiClient.Models.Vector>("size", Size);
             writer.WriteEnumValue<global::Soenneker.Figma.OpenApiClient.Models.HasGeometryTraitStrokeAlign>("strokeAlign", StrokeAlign);
             writer.WriteEnumValue<global::Soenneker.Figma.OpenApiClient.Models.HasGeometryTraitStrokeCap>("strokeCap", StrokeCap);
@@ -511,11 +531,11 @@ namespace Soenneker.Figma.OpenApiClient.Models
             writer.WriteDoubleValue("strokeWeight", StrokeWeight);
             writer.WriteObjectValue<global::Soenneker.Figma.OpenApiClient.Models.TypeStyle>("style", Style);
             writer.WriteObjectValue<global::Soenneker.Figma.OpenApiClient.Models.TextNodeStyleOverrideTable>("styleOverrideTable", StyleOverrideTable);
-            writer.WriteObjectValue<global::Soenneker.Figma.OpenApiClient.Models.TextNodeStyles>("styles", Styles);
+            writer.WriteObjectValue<global::Soenneker.Figma.OpenApiClient.Models.DefaultShapeTraitsStyles>("styles", Styles);
             writer.WriteDoubleValue("transitionDuration", TransitionDuration);
             writer.WriteEnumValue<global::Soenneker.Figma.OpenApiClient.Models.EasingType>("transitionEasing", TransitionEasing);
             writer.WriteStringValue("transitionNodeID", TransitionNodeID);
-            writer.WriteEnumValue<global::Soenneker.Figma.OpenApiClient.Models.TextType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Figma.OpenApiClient.Models.TextNode_type>("type", Type);
             writer.WriteBoolValue("visible", Visible);
             writer.WriteAdditionalData(AdditionalData);
         }

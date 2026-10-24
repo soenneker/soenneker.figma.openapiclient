@@ -78,10 +78,10 @@ namespace Soenneker.Figma.OpenApiClient.Models
         /// <summary>A mapping of a layer&apos;s property to component property name of component properties attached to this node. The component property name can be used to look up more information on the corresponding component&apos;s or component set&apos;s componentPropertyDefinitions.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.ComponentNodeComponentPropertyReferences? ComponentPropertyReferences { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.FrameTraitsComponentPropertyReferences? ComponentPropertyReferences { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.ComponentNodeComponentPropertyReferences ComponentPropertyReferences { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.FrameTraitsComponentPropertyReferences ComponentPropertyReferences { get; set; }
 #endif
         /// <summary>Horizontal and vertical layout constraints for node.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -122,10 +122,10 @@ namespace Soenneker.Figma.OpenApiClient.Models
         /// <summary>A mapping of variable collection ID to mode ID representing the explicitly set modes for this node.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.ComponentNodeExplicitVariableModes? ExplicitVariableModes { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.FrameTraitsExplicitVariableModes? ExplicitVariableModes { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.ComponentNodeExplicitVariableModes ExplicitVariableModes { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.FrameTraitsExplicitVariableModes ExplicitVariableModes { get; set; }
 #endif
         /// <summary>An array of export settings representing images to export from the node.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -146,10 +146,10 @@ namespace Soenneker.Figma.OpenApiClient.Models
         /// <summary>Map from ID to PaintOverride for looking up fill overrides. To see which regions are overridden, you must use the `geometry=paths` option. Each path returned may have an `overrideID` which maps to this table.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.ComponentNodeFillOverrideTable? FillOverrideTable { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.FrameTraitsFillOverrideTable? FillOverrideTable { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.ComponentNodeFillOverrideTable FillOverrideTable { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.FrameTraitsFillOverrideTable FillOverrideTable { get; set; }
 #endif
         /// <summary>An array of fill paints applied to the node.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -285,6 +285,14 @@ namespace Soenneker.Figma.OpenApiClient.Models
         public double? PaddingRight { get; set; }
         /// <summary>The padding between the top border of the frame and its children. This property is only applicable for auto-layout frames.</summary>
         public double? PaddingTop { get; set; }
+        /// <summary>Data written by plugins that is visible only to the plugin that wrote it. Requires the `pluginData` to include the ID of the plugin.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public UntypedNode? PluginData { get; set; }
+#nullable restore
+#else
+        public UntypedNode PluginData { get; set; }
+#endif
         /// <summary>Keep height and width constrained to same ratio.</summary>
         public bool? PreserveRatio { get; set; }
         /// <summary>Determines how the auto-layout frame&apos;s children should be aligned in the primary axis direction. This property is only applicable for auto-layout frames.</summary>
@@ -311,6 +319,14 @@ namespace Soenneker.Figma.OpenApiClient.Models
         public double? Rotation { get; set; }
         /// <summary>How layer should be treated when the frame is resized</summary>
         public global::Soenneker.Figma.OpenApiClient.Models.IsLayerTraitScrollBehavior? ScrollBehavior { get; set; }
+        /// <summary>Data written by plugins that is visible to all plugins. Requires the `pluginData` parameter to include the string &quot;shared&quot;.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public UntypedNode? SharedPluginData { get; set; }
+#nullable restore
+#else
+        public UntypedNode SharedPluginData { get; set; }
+#endif
         /// <summary>Width and height of element. This is different from the width and height of the bounding box in that the absolute bounding box represents the element after scaling and rotation. Only present if `geometry=paths` is passed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -358,10 +374,10 @@ namespace Soenneker.Figma.OpenApiClient.Models
         /// <summary>A mapping of a StyleType to style ID (see Style) of styles present on this node. The style ID can be used to look up more information about the style in the top-level styles field.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.ComponentNodeStyles? Styles { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.FrameTraitsStyles? Styles { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.ComponentNodeStyles Styles { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.FrameTraitsStyles Styles { get; set; }
 #endif
         /// <summary>The duration of the prototyping transition on this node (in milliseconds). This will override the default transition duration on the prototype, for this node.</summary>
         public double? TransitionDuration { get; set; }
@@ -376,7 +392,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
         public string TransitionNodeID { get; set; }
 #endif
         /// <summary>The type of this node, represented by the string literal &quot;COMPONENT&quot;</summary>
-        public global::Soenneker.Figma.OpenApiClient.Models.ComponentType? Type { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.ComponentNode_type? Type { get; set; }
         /// <summary>Whether or not the node is visible on the canvas.</summary>
         public bool? Visible { get; set; }
         /// <summary>
@@ -442,7 +458,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
                 { "children", n => { Children = n.GetCollectionOfObjectValues<global::Soenneker.Figma.OpenApiClient.Models.SubcanvasNode>(global::Soenneker.Figma.OpenApiClient.Models.SubcanvasNode.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "clipsContent", n => { ClipsContent = n.GetBoolValue(); } },
                 { "componentPropertyDefinitions", n => { ComponentPropertyDefinitions = n.GetObjectValue<global::Soenneker.Figma.OpenApiClient.Models.ComponentNodeComponentPropertyDefinitions>(global::Soenneker.Figma.OpenApiClient.Models.ComponentNodeComponentPropertyDefinitions.CreateFromDiscriminatorValue); } },
-                { "componentPropertyReferences", n => { ComponentPropertyReferences = n.GetObjectValue<global::Soenneker.Figma.OpenApiClient.Models.ComponentNodeComponentPropertyReferences>(global::Soenneker.Figma.OpenApiClient.Models.ComponentNodeComponentPropertyReferences.CreateFromDiscriminatorValue); } },
+                { "componentPropertyReferences", n => { ComponentPropertyReferences = n.GetObjectValue<global::Soenneker.Figma.OpenApiClient.Models.FrameTraitsComponentPropertyReferences>(global::Soenneker.Figma.OpenApiClient.Models.FrameTraitsComponentPropertyReferences.CreateFromDiscriminatorValue); } },
                 { "constraints", n => { Constraints = n.GetObjectValue<global::Soenneker.Figma.OpenApiClient.Models.LayoutConstraint>(global::Soenneker.Figma.OpenApiClient.Models.LayoutConstraint.CreateFromDiscriminatorValue); } },
                 { "cornerRadius", n => { CornerRadius = n.GetDoubleValue(); } },
                 { "cornerSmoothing", n => { CornerSmoothing = n.GetDoubleValue(); } },
@@ -452,10 +468,10 @@ namespace Soenneker.Figma.OpenApiClient.Models
                 { "counterAxisSpacing", n => { CounterAxisSpacing = n.GetDoubleValue(); } },
                 { "devStatus", n => { DevStatus = n.GetObjectValue<global::Soenneker.Figma.OpenApiClient.Models.DevStatusTraitDevStatus>(global::Soenneker.Figma.OpenApiClient.Models.DevStatusTraitDevStatus.CreateFromDiscriminatorValue); } },
                 { "effects", n => { Effects = n.GetCollectionOfObjectValues<global::Soenneker.Figma.OpenApiClient.Models.Effect>(global::Soenneker.Figma.OpenApiClient.Models.Effect.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "explicitVariableModes", n => { ExplicitVariableModes = n.GetObjectValue<global::Soenneker.Figma.OpenApiClient.Models.ComponentNodeExplicitVariableModes>(global::Soenneker.Figma.OpenApiClient.Models.ComponentNodeExplicitVariableModes.CreateFromDiscriminatorValue); } },
+                { "explicitVariableModes", n => { ExplicitVariableModes = n.GetObjectValue<global::Soenneker.Figma.OpenApiClient.Models.FrameTraitsExplicitVariableModes>(global::Soenneker.Figma.OpenApiClient.Models.FrameTraitsExplicitVariableModes.CreateFromDiscriminatorValue); } },
                 { "exportSettings", n => { ExportSettings = n.GetCollectionOfObjectValues<global::Soenneker.Figma.OpenApiClient.Models.ExportSetting>(global::Soenneker.Figma.OpenApiClient.Models.ExportSetting.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "fillGeometry", n => { FillGeometry = n.GetCollectionOfObjectValues<global::Soenneker.Figma.OpenApiClient.Models.PathObject>(global::Soenneker.Figma.OpenApiClient.Models.PathObject.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "fillOverrideTable", n => { FillOverrideTable = n.GetObjectValue<global::Soenneker.Figma.OpenApiClient.Models.ComponentNodeFillOverrideTable>(global::Soenneker.Figma.OpenApiClient.Models.ComponentNodeFillOverrideTable.CreateFromDiscriminatorValue); } },
+                { "fillOverrideTable", n => { FillOverrideTable = n.GetObjectValue<global::Soenneker.Figma.OpenApiClient.Models.FrameTraitsFillOverrideTable>(global::Soenneker.Figma.OpenApiClient.Models.FrameTraitsFillOverrideTable.CreateFromDiscriminatorValue); } },
                 { "fills", n => { Fills = n.GetCollectionOfObjectValues<global::Soenneker.Figma.OpenApiClient.Models.Paint>(global::Soenneker.Figma.OpenApiClient.Models.Paint.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "gridChildHorizontalAlign", n => { GridChildHorizontalAlign = n.GetEnumValue<global::Soenneker.Figma.OpenApiClient.Models.HasLayoutTraitGridChildHorizontalAlign>(); } },
                 { "gridChildVerticalAlign", n => { GridChildVerticalAlign = n.GetEnumValue<global::Soenneker.Figma.OpenApiClient.Models.HasLayoutTraitGridChildVerticalAlign>(); } },
@@ -498,6 +514,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
                 { "paddingLeft", n => { PaddingLeft = n.GetDoubleValue(); } },
                 { "paddingRight", n => { PaddingRight = n.GetDoubleValue(); } },
                 { "paddingTop", n => { PaddingTop = n.GetDoubleValue(); } },
+                { "pluginData", n => { PluginData = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "preserveRatio", n => { PreserveRatio = n.GetBoolValue(); } },
                 { "primaryAxisAlignItems", n => { PrimaryAxisAlignItems = n.GetEnumValue<global::Soenneker.Figma.OpenApiClient.Models.HasFramePropertiesTraitPrimaryAxisAlignItems>(); } },
                 { "primaryAxisSizingMode", n => { PrimaryAxisSizingMode = n.GetEnumValue<global::Soenneker.Figma.OpenApiClient.Models.HasFramePropertiesTraitPrimaryAxisSizingMode>(); } },
@@ -505,6 +522,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
                 { "relativeTransform", n => { RelativeTransform = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "rotation", n => { Rotation = n.GetDoubleValue(); } },
                 { "scrollBehavior", n => { ScrollBehavior = n.GetEnumValue<global::Soenneker.Figma.OpenApiClient.Models.IsLayerTraitScrollBehavior>(); } },
+                { "sharedPluginData", n => { SharedPluginData = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "size", n => { Size = n.GetObjectValue<global::Soenneker.Figma.OpenApiClient.Models.Vector>(global::Soenneker.Figma.OpenApiClient.Models.Vector.CreateFromDiscriminatorValue); } },
                 { "strokeAlign", n => { StrokeAlign = n.GetEnumValue<global::Soenneker.Figma.OpenApiClient.Models.HasGeometryTraitStrokeAlign>(); } },
                 { "strokeCap", n => { StrokeCap = n.GetEnumValue<global::Soenneker.Figma.OpenApiClient.Models.HasGeometryTraitStrokeCap>(); } },
@@ -515,11 +533,11 @@ namespace Soenneker.Figma.OpenApiClient.Models
                 { "strokeWeight", n => { StrokeWeight = n.GetDoubleValue(); } },
                 { "strokes", n => { Strokes = n.GetCollectionOfObjectValues<global::Soenneker.Figma.OpenApiClient.Models.Paint>(global::Soenneker.Figma.OpenApiClient.Models.Paint.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "strokesIncludedInLayout", n => { StrokesIncludedInLayout = n.GetBoolValue(); } },
-                { "styles", n => { Styles = n.GetObjectValue<global::Soenneker.Figma.OpenApiClient.Models.ComponentNodeStyles>(global::Soenneker.Figma.OpenApiClient.Models.ComponentNodeStyles.CreateFromDiscriminatorValue); } },
+                { "styles", n => { Styles = n.GetObjectValue<global::Soenneker.Figma.OpenApiClient.Models.FrameTraitsStyles>(global::Soenneker.Figma.OpenApiClient.Models.FrameTraitsStyles.CreateFromDiscriminatorValue); } },
                 { "transitionDuration", n => { TransitionDuration = n.GetDoubleValue(); } },
                 { "transitionEasing", n => { TransitionEasing = n.GetEnumValue<global::Soenneker.Figma.OpenApiClient.Models.EasingType>(); } },
                 { "transitionNodeID", n => { TransitionNodeID = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Figma.OpenApiClient.Models.ComponentType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Figma.OpenApiClient.Models.ComponentNode_type>(); } },
                 { "visible", n => { Visible = n.GetBoolValue(); } },
             };
         }
@@ -539,7 +557,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Figma.OpenApiClient.Models.SubcanvasNode>("children", Children);
             writer.WriteBoolValue("clipsContent", ClipsContent);
             writer.WriteObjectValue<global::Soenneker.Figma.OpenApiClient.Models.ComponentNodeComponentPropertyDefinitions>("componentPropertyDefinitions", ComponentPropertyDefinitions);
-            writer.WriteObjectValue<global::Soenneker.Figma.OpenApiClient.Models.ComponentNodeComponentPropertyReferences>("componentPropertyReferences", ComponentPropertyReferences);
+            writer.WriteObjectValue<global::Soenneker.Figma.OpenApiClient.Models.FrameTraitsComponentPropertyReferences>("componentPropertyReferences", ComponentPropertyReferences);
             writer.WriteObjectValue<global::Soenneker.Figma.OpenApiClient.Models.LayoutConstraint>("constraints", Constraints);
             writer.WriteDoubleValue("cornerRadius", CornerRadius);
             writer.WriteDoubleValue("cornerSmoothing", CornerSmoothing);
@@ -549,10 +567,10 @@ namespace Soenneker.Figma.OpenApiClient.Models
             writer.WriteDoubleValue("counterAxisSpacing", CounterAxisSpacing);
             writer.WriteObjectValue<global::Soenneker.Figma.OpenApiClient.Models.DevStatusTraitDevStatus>("devStatus", DevStatus);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Figma.OpenApiClient.Models.Effect>("effects", Effects);
-            writer.WriteObjectValue<global::Soenneker.Figma.OpenApiClient.Models.ComponentNodeExplicitVariableModes>("explicitVariableModes", ExplicitVariableModes);
+            writer.WriteObjectValue<global::Soenneker.Figma.OpenApiClient.Models.FrameTraitsExplicitVariableModes>("explicitVariableModes", ExplicitVariableModes);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Figma.OpenApiClient.Models.ExportSetting>("exportSettings", ExportSettings);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Figma.OpenApiClient.Models.PathObject>("fillGeometry", FillGeometry);
-            writer.WriteObjectValue<global::Soenneker.Figma.OpenApiClient.Models.ComponentNodeFillOverrideTable>("fillOverrideTable", FillOverrideTable);
+            writer.WriteObjectValue<global::Soenneker.Figma.OpenApiClient.Models.FrameTraitsFillOverrideTable>("fillOverrideTable", FillOverrideTable);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Figma.OpenApiClient.Models.Paint>("fills", Fills);
             writer.WriteEnumValue<global::Soenneker.Figma.OpenApiClient.Models.HasLayoutTraitGridChildHorizontalAlign>("gridChildHorizontalAlign", GridChildHorizontalAlign);
             writer.WriteEnumValue<global::Soenneker.Figma.OpenApiClient.Models.HasLayoutTraitGridChildVerticalAlign>("gridChildVerticalAlign", GridChildVerticalAlign);
@@ -595,6 +613,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
             writer.WriteDoubleValue("paddingLeft", PaddingLeft);
             writer.WriteDoubleValue("paddingRight", PaddingRight);
             writer.WriteDoubleValue("paddingTop", PaddingTop);
+            writer.WriteObjectValue<UntypedNode>("pluginData", PluginData);
             writer.WriteBoolValue("preserveRatio", PreserveRatio);
             writer.WriteEnumValue<global::Soenneker.Figma.OpenApiClient.Models.HasFramePropertiesTraitPrimaryAxisAlignItems>("primaryAxisAlignItems", PrimaryAxisAlignItems);
             writer.WriteEnumValue<global::Soenneker.Figma.OpenApiClient.Models.HasFramePropertiesTraitPrimaryAxisSizingMode>("primaryAxisSizingMode", PrimaryAxisSizingMode);
@@ -602,6 +621,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
             writer.WriteObjectValue<UntypedNode>("relativeTransform", RelativeTransform);
             writer.WriteDoubleValue("rotation", Rotation);
             writer.WriteEnumValue<global::Soenneker.Figma.OpenApiClient.Models.IsLayerTraitScrollBehavior>("scrollBehavior", ScrollBehavior);
+            writer.WriteObjectValue<UntypedNode>("sharedPluginData", SharedPluginData);
             writer.WriteObjectValue<global::Soenneker.Figma.OpenApiClient.Models.Vector>("size", Size);
             writer.WriteEnumValue<global::Soenneker.Figma.OpenApiClient.Models.HasGeometryTraitStrokeAlign>("strokeAlign", StrokeAlign);
             writer.WriteEnumValue<global::Soenneker.Figma.OpenApiClient.Models.HasGeometryTraitStrokeCap>("strokeCap", StrokeCap);
@@ -612,11 +632,11 @@ namespace Soenneker.Figma.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Figma.OpenApiClient.Models.Paint>("strokes", Strokes);
             writer.WriteBoolValue("strokesIncludedInLayout", StrokesIncludedInLayout);
             writer.WriteDoubleValue("strokeWeight", StrokeWeight);
-            writer.WriteObjectValue<global::Soenneker.Figma.OpenApiClient.Models.ComponentNodeStyles>("styles", Styles);
+            writer.WriteObjectValue<global::Soenneker.Figma.OpenApiClient.Models.FrameTraitsStyles>("styles", Styles);
             writer.WriteDoubleValue("transitionDuration", TransitionDuration);
             writer.WriteEnumValue<global::Soenneker.Figma.OpenApiClient.Models.EasingType>("transitionEasing", TransitionEasing);
             writer.WriteStringValue("transitionNodeID", TransitionNodeID);
-            writer.WriteEnumValue<global::Soenneker.Figma.OpenApiClient.Models.ComponentType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Figma.OpenApiClient.Models.ComponentNode_type>("type", Type);
             writer.WriteBoolValue("visible", Visible);
             writer.WriteAdditionalData(AdditionalData);
         }

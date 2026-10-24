@@ -67,11 +67,27 @@ namespace Soenneker.Figma.OpenApiClient.Models
 #else
         public string Name { get; set; }
 #endif
+        /// <summary>Data written by plugins that is visible only to the plugin that wrote it. Requires the `pluginData` to include the ID of the plugin.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public UntypedNode? PluginData { get; set; }
+#nullable restore
+#else
+        public UntypedNode PluginData { get; set; }
+#endif
         /// <summary>The rotation of the node, if not 0.</summary>
         public double? Rotation { get; set; }
         /// <summary>How layer should be treated when the frame is resized</summary>
         public global::Soenneker.Figma.OpenApiClient.Models.IsLayerTraitScrollBehavior? ScrollBehavior { get; set; }
-        /// <summary>The type property</summary>
+        /// <summary>Data written by plugins that is visible to all plugins. Requires the `pluginData` parameter to include the string &quot;shared&quot;.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public UntypedNode? SharedPluginData { get; set; }
+#nullable restore
+#else
+        public UntypedNode SharedPluginData { get; set; }
+#endif
+        /// <summary>The type of the node</summary>
         public global::Soenneker.Figma.OpenApiClient.Models.DocumentType? Type { get; set; }
         /// <summary>Whether or not the node is visible on the canvas.</summary>
         public bool? Visible { get; set; }
@@ -112,8 +128,10 @@ namespace Soenneker.Figma.OpenApiClient.Models
                 { "isFixed", n => { IsFixed = n.GetBoolValue(); } },
                 { "locked", n => { Locked = n.GetBoolValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
+                { "pluginData", n => { PluginData = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "rotation", n => { Rotation = n.GetDoubleValue(); } },
                 { "scrollBehavior", n => { ScrollBehavior = n.GetEnumValue<global::Soenneker.Figma.OpenApiClient.Models.IsLayerTraitScrollBehavior>(); } },
+                { "sharedPluginData", n => { SharedPluginData = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "type", n => { Type = n.GetEnumValue<global::Soenneker.Figma.OpenApiClient.Models.DocumentType>(); } },
                 { "visible", n => { Visible = n.GetBoolValue(); } },
             };
@@ -133,8 +151,10 @@ namespace Soenneker.Figma.OpenApiClient.Models
             writer.WriteBoolValue("isFixed", IsFixed);
             writer.WriteBoolValue("locked", Locked);
             writer.WriteStringValue("name", Name);
+            writer.WriteObjectValue<UntypedNode>("pluginData", PluginData);
             writer.WriteDoubleValue("rotation", Rotation);
             writer.WriteEnumValue<global::Soenneker.Figma.OpenApiClient.Models.IsLayerTraitScrollBehavior>("scrollBehavior", ScrollBehavior);
+            writer.WriteObjectValue<UntypedNode>("sharedPluginData", SharedPluginData);
             writer.WriteEnumValue<global::Soenneker.Figma.OpenApiClient.Models.DocumentType>("type", Type);
             writer.WriteBoolValue("visible", Visible);
             writer.WriteAdditionalData(AdditionalData);

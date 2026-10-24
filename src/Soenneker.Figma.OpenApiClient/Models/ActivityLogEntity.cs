@@ -95,39 +95,39 @@ namespace Soenneker.Figma.OpenApiClient.Models
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             var mappingValue = parseNode.GetChildNode("type")?.GetStringValue();
             var result = new global::Soenneker.Figma.OpenApiClient.Models.ActivityLogEntity();
-            if("ActivityLogFileEntity".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            if("file".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
                 result.ActivityLogFileEntity = new global::Soenneker.Figma.OpenApiClient.Models.ActivityLogFileEntity();
             }
-            else if("ActivityLogFileRepoEntity".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            else if("file_repo".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
                 result.ActivityLogFileRepoEntity = new global::Soenneker.Figma.OpenApiClient.Models.ActivityLogFileRepoEntity();
             }
-            else if("ActivityLogOrgEntity".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            else if("org".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
                 result.ActivityLogOrgEntity = new global::Soenneker.Figma.OpenApiClient.Models.ActivityLogOrgEntity();
             }
-            else if("ActivityLogPluginEntity".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            else if("plugin".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
                 result.ActivityLogPluginEntity = new global::Soenneker.Figma.OpenApiClient.Models.ActivityLogPluginEntity();
             }
-            else if("ActivityLogProjectEntity".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            else if("project".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
                 result.ActivityLogProjectEntity = new global::Soenneker.Figma.OpenApiClient.Models.ActivityLogProjectEntity();
             }
-            else if("ActivityLogTeamEntity".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            else if("team".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
                 result.ActivityLogTeamEntity = new global::Soenneker.Figma.OpenApiClient.Models.ActivityLogTeamEntity();
             }
-            else if("ActivityLogUserEntity".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            else if("user".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
                 result.ActivityLogUserEntity = new global::Soenneker.Figma.OpenApiClient.Models.ActivityLogUserEntity();
             }
-            else if("ActivityLogWidgetEntity".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            else if("widget".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
                 result.ActivityLogWidgetEntity = new global::Soenneker.Figma.OpenApiClient.Models.ActivityLogWidgetEntity();
             }
-            else if("ActivityLogWorkspaceEntity".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            else if("workspace".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
                 result.ActivityLogWorkspaceEntity = new global::Soenneker.Figma.OpenApiClient.Models.ActivityLogWorkspaceEntity();
             }

@@ -8,11 +8,15 @@ using System;
 namespace Soenneker.Figma.OpenApiClient.Models
 {
     /// <summary>
-    /// Composed type wrapper for classes <see cref="global::Soenneker.Figma.OpenApiClient.Models.Rgb"/>, <see cref="global::Soenneker.Figma.OpenApiClient.Models.Rgba"/>, <see cref="global::Soenneker.Figma.OpenApiClient.Models.VariableAlias"/>, <see cref="global::Soenneker.Figma.OpenApiClient.Models.VariableComposedColor"/>, <see cref="global::Soenneker.Figma.OpenApiClient.Models.VariableValueBranch1"/>, <see cref="global::Soenneker.Figma.OpenApiClient.Models.VariableValueBranch2"/>, <see cref="global::Soenneker.Figma.OpenApiClient.Models.VariableValueBranch3"/>, <see cref="global::Soenneker.Figma.OpenApiClient.Models.VariableValueMember1"/>
+    /// Composed type wrapper for classes <see cref="bool"/>, <see cref="double"/>, <see cref="global::Soenneker.Figma.OpenApiClient.Models.Rgb"/>, <see cref="global::Soenneker.Figma.OpenApiClient.Models.Rgba"/>, <see cref="global::Soenneker.Figma.OpenApiClient.Models.VariableAlias"/>, <see cref="global::Soenneker.Figma.OpenApiClient.Models.VariableComposedColor"/>, <see cref="global::Soenneker.Figma.OpenApiClient.Models.VariableValueMember1"/>, <see cref="string"/>
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class VariableValue : IComposedTypeWrapper, IParsable
     {
+        /// <summary>Composed type representation for type <see cref="bool"/></summary>
+        public bool? Boolean { get; set; }
+        /// <summary>Composed type representation for type <see cref="double"/></summary>
+        public double? Double { get; set; }
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Figma.OpenApiClient.Models.Rgb"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -29,6 +33,14 @@ namespace Soenneker.Figma.OpenApiClient.Models
 #else
         public global::Soenneker.Figma.OpenApiClient.Models.Rgba Rgba { get; set; }
 #endif
+        /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? String { get; set; }
+#nullable restore
+#else
+        public string String { get; set; }
+#endif
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Figma.OpenApiClient.Models.VariableAlias"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -44,30 +56,6 @@ namespace Soenneker.Figma.OpenApiClient.Models
 #nullable restore
 #else
         public global::Soenneker.Figma.OpenApiClient.Models.VariableComposedColor VariableComposedColor { get; set; }
-#endif
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Figma.OpenApiClient.Models.VariableValueBranch1"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableValueBranch1? VariableValueBranch1 { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableValueBranch1 VariableValueBranch1 { get; set; }
-#endif
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Figma.OpenApiClient.Models.VariableValueBranch2"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableValueBranch2? VariableValueBranch2 { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableValueBranch2 VariableValueBranch2 { get; set; }
-#endif
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Figma.OpenApiClient.Models.VariableValueBranch3"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableValueBranch3? VariableValueBranch3 { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableValueBranch3 VariableValueBranch3 { get; set; }
 #endif
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Figma.OpenApiClient.Models.VariableValueMember1"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -99,17 +87,17 @@ namespace Soenneker.Figma.OpenApiClient.Models
             {
                 result.VariableAlias = new global::Soenneker.Figma.OpenApiClient.Models.VariableAlias();
             }
-            else if("VariableValueBranch1".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            else if(parseNode.GetBoolValue() is bool booleanValue)
             {
-                result.VariableValueBranch1 = new global::Soenneker.Figma.OpenApiClient.Models.VariableValueBranch1();
+                result.Boolean = booleanValue;
             }
-            else if("VariableValueBranch2".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            else if(parseNode.GetDoubleValue() is double doubleValue)
             {
-                result.VariableValueBranch2 = new global::Soenneker.Figma.OpenApiClient.Models.VariableValueBranch2();
+                result.Double = doubleValue;
             }
-            else if("VariableValueBranch3".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            else if(parseNode.GetStringValue() is string stringValue)
             {
-                result.VariableValueBranch3 = new global::Soenneker.Figma.OpenApiClient.Models.VariableValueBranch3();
+                result.String = stringValue;
             }
             return result;
         }
@@ -134,18 +122,6 @@ namespace Soenneker.Figma.OpenApiClient.Models
             else if(VariableComposedColor != null)
             {
                 return VariableComposedColor.GetFieldDeserializers();
-            }
-            else if(VariableValueBranch1 != null)
-            {
-                return VariableValueBranch1.GetFieldDeserializers();
-            }
-            else if(VariableValueBranch2 != null)
-            {
-                return VariableValueBranch2.GetFieldDeserializers();
-            }
-            else if(VariableValueBranch3 != null)
-            {
-                return VariableValueBranch3.GetFieldDeserializers();
             }
             else if(VariableValueMember1 != null)
             {
@@ -176,21 +152,21 @@ namespace Soenneker.Figma.OpenApiClient.Models
             {
                 writer.WriteObjectValue<global::Soenneker.Figma.OpenApiClient.Models.VariableComposedColor>(null, VariableComposedColor);
             }
-            else if(VariableValueBranch1 != null)
-            {
-                writer.WriteObjectValue<global::Soenneker.Figma.OpenApiClient.Models.VariableValueBranch1>(null, VariableValueBranch1);
-            }
-            else if(VariableValueBranch2 != null)
-            {
-                writer.WriteObjectValue<global::Soenneker.Figma.OpenApiClient.Models.VariableValueBranch2>(null, VariableValueBranch2);
-            }
-            else if(VariableValueBranch3 != null)
-            {
-                writer.WriteObjectValue<global::Soenneker.Figma.OpenApiClient.Models.VariableValueBranch3>(null, VariableValueBranch3);
-            }
             else if(VariableValueMember1 != null)
             {
                 writer.WriteObjectValue<global::Soenneker.Figma.OpenApiClient.Models.VariableValueMember1>(null, VariableValueMember1);
+            }
+            else if(Boolean != null)
+            {
+                writer.WriteBoolValue(null, Boolean);
+            }
+            else if(Double != null)
+            {
+                writer.WriteDoubleValue(null, Double);
+            }
+            else if(String != null)
+            {
+                writer.WriteStringValue(null, String);
             }
         }
     }
