@@ -39,11 +39,11 @@ namespace Soenneker.Figma.OpenApiClient.Models
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
             var result = new global::Soenneker.Figma.OpenApiClient.Models.GetLibraryAnalyticsComponentActionsResponseResponseRows();
-            if(parseNode.GetCollectionOfObjectValues<global::Soenneker.Figma.OpenApiClient.Models.LibraryAnalyticsComponentActionsByAsset>(global::Soenneker.Figma.OpenApiClient.Models.LibraryAnalyticsComponentActionsByAsset.CreateFromDiscriminatorValue)?.AsList() is List<global::Soenneker.Figma.OpenApiClient.Models.LibraryAnalyticsComponentActionsByAsset> libraryAnalyticsComponentActionsByAssetValue)
+            if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedArray && parseNode.GetCollectionOfObjectValues<global::Soenneker.Figma.OpenApiClient.Models.LibraryAnalyticsComponentActionsByAsset>(global::Soenneker.Figma.OpenApiClient.Models.LibraryAnalyticsComponentActionsByAsset.CreateFromDiscriminatorValue)?.AsList() is List<global::Soenneker.Figma.OpenApiClient.Models.LibraryAnalyticsComponentActionsByAsset> libraryAnalyticsComponentActionsByAssetValue)
             {
                 result.LibraryAnalyticsComponentActionsByAsset = libraryAnalyticsComponentActionsByAssetValue;
             }
-            else if(parseNode.GetCollectionOfObjectValues<global::Soenneker.Figma.OpenApiClient.Models.LibraryAnalyticsComponentActionsByTeam>(global::Soenneker.Figma.OpenApiClient.Models.LibraryAnalyticsComponentActionsByTeam.CreateFromDiscriminatorValue)?.AsList() is List<global::Soenneker.Figma.OpenApiClient.Models.LibraryAnalyticsComponentActionsByTeam> libraryAnalyticsComponentActionsByTeamValue)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedArray && parseNode.GetCollectionOfObjectValues<global::Soenneker.Figma.OpenApiClient.Models.LibraryAnalyticsComponentActionsByTeam>(global::Soenneker.Figma.OpenApiClient.Models.LibraryAnalyticsComponentActionsByTeam.CreateFromDiscriminatorValue)?.AsList() is List<global::Soenneker.Figma.OpenApiClient.Models.LibraryAnalyticsComponentActionsByTeam> libraryAnalyticsComponentActionsByTeamValue)
             {
                 result.LibraryAnalyticsComponentActionsByTeam = libraryAnalyticsComponentActionsByTeamValue;
             }
