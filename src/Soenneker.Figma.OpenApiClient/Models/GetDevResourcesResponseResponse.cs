@@ -17,7 +17,8 @@ namespace Soenneker.Figma.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("dev_resources") is { } nullNodeDevResources && nullNodeDevResources.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DevResources = null;
+            if (parseNode.GetChildNode("dev_resources") is null) { _explicitNullValueDevResources = default!; _explicitNullProperties?.Remove("dev_resources"); }
+            else if (parseNode.GetChildNode("dev_resources") is { } nullNodeDevResources && nullNodeDevResources.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DevResources = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Figma.OpenApiClient.Models
         /// <summary>An array of dev resources.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Figma.OpenApiClient.Models.DevResource>? DevResources { get => _explicitNullValueDevResources; set { _explicitNullValueDevResources = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dev_resources"); else _explicitNullProperties?.Remove("dev_resources"); } }
+        public List<global::Soenneker.Figma.OpenApiClient.Models.DevResource>? DevResources { get => _explicitNullValueDevResources; set { _explicitNullValueDevResources = value; AdditionalData?.Remove("dev_resources"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dev_resources"); else _explicitNullProperties?.Remove("dev_resources"); } }
         private List<global::Soenneker.Figma.OpenApiClient.Models.DevResource>? _explicitNullValueDevResources = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Figma.OpenApiClient.Models.DevResource> DevResources { get => _explicitNullValueDevResources; set { _explicitNullValueDevResources = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dev_resources"); else _explicitNullProperties?.Remove("dev_resources"); } }
+        public List<global::Soenneker.Figma.OpenApiClient.Models.DevResource> DevResources { get => _explicitNullValueDevResources; set { _explicitNullValueDevResources = value; AdditionalData?.Remove("dev_resources"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dev_resources"); else _explicitNullProperties?.Remove("dev_resources"); } }
         private List<global::Soenneker.Figma.OpenApiClient.Models.DevResource> _explicitNullValueDevResources = default!;
 #endif
         /// <summary>

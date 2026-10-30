@@ -17,7 +17,31 @@ namespace Soenneker.Figma.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
+            if (parseNode.GetChildNode("week") is null) { _explicitNullValueWeek = default!; _explicitNullProperties?.Remove("week"); }
+            else if (parseNode.GetChildNode("week") is { } nullNodeWeek && nullNodeWeek.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Week = null;
+            if (parseNode.GetChildNode("team_name") is null) { _explicitNullValueTeamName = default!; _explicitNullProperties?.Remove("team_name"); }
+            else if (parseNode.GetChildNode("team_name") is { } nullNodeTeamName && nullNodeTeamName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TeamName = null;
+            if (parseNode.GetChildNode("workspace_name") is null) { _explicitNullValueWorkspaceName = default!; _explicitNullProperties?.Remove("workspace_name"); }
+            else if (parseNode.GetChildNode("workspace_name") is { } nullNodeWorkspaceName && nullNodeWorkspaceName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkspaceName = null;
+            if (parseNode.GetChildNode("detachments") is null) { _explicitNullValueDetachments = default!; _explicitNullProperties?.Remove("detachments"); }
+            else if (parseNode.GetChildNode("detachments") is { } nullNodeDetachments && nullNodeDetachments.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Detachments = null;
+            if (parseNode.GetChildNode("insertions") is null) { _explicitNullValueInsertions = default!; _explicitNullProperties?.Remove("insertions"); }
+            else if (parseNode.GetChildNode("insertions") is { } nullNodeInsertions && nullNodeInsertions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Insertions = null;
         }
+
+        // Restore fields omitted by the generator's model-depth limit.
+#nullable enable
+        public string? Week { get => _explicitNullValueWeek; set { _explicitNullValueWeek = value; AdditionalData?.Remove("week"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("week"); else _explicitNullProperties?.Remove("week"); } }
+        private string? _explicitNullValueWeek = default!;
+        public string? TeamName { get => _explicitNullValueTeamName; set { _explicitNullValueTeamName = value; AdditionalData?.Remove("team_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("team_name"); else _explicitNullProperties?.Remove("team_name"); } }
+        private string? _explicitNullValueTeamName = default!;
+        public string? WorkspaceName { get => _explicitNullValueWorkspaceName; set { _explicitNullValueWorkspaceName = value; AdditionalData?.Remove("workspace_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workspace_name"); else _explicitNullProperties?.Remove("workspace_name"); } }
+        private string? _explicitNullValueWorkspaceName = default!;
+        public double? Detachments { get => _explicitNullValueDetachments; set { _explicitNullValueDetachments = value; AdditionalData?.Remove("detachments"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("detachments"); else _explicitNullProperties?.Remove("detachments"); } }
+        private double? _explicitNullValueDetachments = default!;
+        public double? Insertions { get => _explicitNullValueInsertions; set { _explicitNullValueInsertions = value; AdditionalData?.Remove("insertions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("insertions"); else _explicitNullProperties?.Remove("insertions"); } }
+        private double? _explicitNullValueInsertions = default!;
+#nullable restore
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
@@ -46,6 +70,11 @@ namespace Soenneker.Figma.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "week", n => { Week = n.GetStringValue(); } },
+                { "team_name", n => { TeamName = n.GetStringValue(); } },
+                { "workspace_name", n => { WorkspaceName = n.GetStringValue(); } },
+                { "detachments", n => { Detachments = n.GetDoubleValue(); } },
+                { "insertions", n => { Insertions = n.GetDoubleValue(); } },
             };
         }
         /// <summary>
@@ -55,6 +84,11 @@ namespace Soenneker.Figma.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteStringValue("week", Week);
+            writer.WriteStringValue("team_name", TeamName);
+            writer.WriteStringValue("workspace_name", WorkspaceName);
+            writer.WriteDoubleValue("detachments", Detachments);
+            writer.WriteDoubleValue("insertions", Insertions);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

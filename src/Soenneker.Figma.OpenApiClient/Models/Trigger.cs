@@ -18,45 +18,52 @@ namespace Soenneker.Figma.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("delay") is { } nullNodeDelay && nullNodeDelay.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Delay = null;
-            if (parseNode.GetChildNode("deprecatedVersion") is { } nullNodeDeprecatedVersion && nullNodeDeprecatedVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeprecatedVersion = null;
-            if (parseNode.GetChildNode("device") is { } nullNodeDevice && nullNodeDevice.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Device = null;
-            if (parseNode.GetChildNode("keyCodes") is { } nullNodeKeyCodes && nullNodeKeyCodes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) KeyCodes = null;
-            if (parseNode.GetChildNode("mediaHitTime") is { } nullNodeMediaHitTime && nullNodeMediaHitTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MediaHitTime = null;
-            if (parseNode.GetChildNode("timeout") is { } nullNodeTimeout && nullNodeTimeout.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Timeout = null;
-            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("delay") is null) { _explicitNullValueDelay = default!; _explicitNullProperties?.Remove("delay"); }
+            else if (parseNode.GetChildNode("delay") is { } nullNodeDelay && nullNodeDelay.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Delay = null;
+            if (parseNode.GetChildNode("deprecatedVersion") is null) { _explicitNullValueDeprecatedVersion = default!; _explicitNullProperties?.Remove("deprecatedVersion"); }
+            else if (parseNode.GetChildNode("deprecatedVersion") is { } nullNodeDeprecatedVersion && nullNodeDeprecatedVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeprecatedVersion = null;
+            if (parseNode.GetChildNode("device") is null) { _explicitNullValueDevice = default!; _explicitNullProperties?.Remove("device"); }
+            else if (parseNode.GetChildNode("device") is { } nullNodeDevice && nullNodeDevice.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Device = null;
+            if (parseNode.GetChildNode("keyCodes") is null) { _explicitNullValueKeyCodes = default!; _explicitNullProperties?.Remove("keyCodes"); }
+            else if (parseNode.GetChildNode("keyCodes") is { } nullNodeKeyCodes && nullNodeKeyCodes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) KeyCodes = null;
+            if (parseNode.GetChildNode("mediaHitTime") is null) { _explicitNullValueMediaHitTime = default!; _explicitNullProperties?.Remove("mediaHitTime"); }
+            else if (parseNode.GetChildNode("mediaHitTime") is { } nullNodeMediaHitTime && nullNodeMediaHitTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MediaHitTime = null;
+            if (parseNode.GetChildNode("timeout") is null) { _explicitNullValueTimeout = default!; _explicitNullProperties?.Remove("timeout"); }
+            else if (parseNode.GetChildNode("timeout") is { } nullNodeTimeout && nullNodeTimeout.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Timeout = null;
+            if (parseNode.GetChildNode("type") is null) { _explicitNullValueType = default!; _explicitNullProperties?.Remove("type"); }
+            else if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The delay property</summary>
-        public double? Delay { get => _explicitNullValueDelay; set { _explicitNullValueDelay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("delay"); else _explicitNullProperties?.Remove("delay"); } }
+        public double? Delay { get => _explicitNullValueDelay; set { _explicitNullValueDelay = value; AdditionalData?.Remove("delay"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("delay"); else _explicitNullProperties?.Remove("delay"); } }
         private double? _explicitNullValueDelay = default!;
         /// <summary>Whether this is a [deprecated version](https://help.figma.com/hc/en-us/articles/360040035834-Prototype-triggers#h_01HHN04REHJNP168R26P1CMP0A) of the trigger that was left unchanged for backwards compatibility.If not present, the trigger is the latest version.</summary>
-        public bool? DeprecatedVersion { get => _explicitNullValueDeprecatedVersion; set { _explicitNullValueDeprecatedVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deprecatedVersion"); else _explicitNullProperties?.Remove("deprecatedVersion"); } }
+        public bool? DeprecatedVersion { get => _explicitNullValueDeprecatedVersion; set { _explicitNullValueDeprecatedVersion = value; AdditionalData?.Remove("deprecatedVersion"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deprecatedVersion"); else _explicitNullProperties?.Remove("deprecatedVersion"); } }
         private bool? _explicitNullValueDeprecatedVersion = default!;
         /// <summary>The device property</summary>
-        public global::Soenneker.Figma.OpenApiClient.Models.OnKeyDownTriggerDevice? Device { get => _explicitNullValueDevice; set { _explicitNullValueDevice = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("device"); else _explicitNullProperties?.Remove("device"); } }
+        public global::Soenneker.Figma.OpenApiClient.Models.OnKeyDownTriggerDevice? Device { get => _explicitNullValueDevice; set { _explicitNullValueDevice = value; AdditionalData?.Remove("device"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("device"); else _explicitNullProperties?.Remove("device"); } }
         private global::Soenneker.Figma.OpenApiClient.Models.OnKeyDownTriggerDevice? _explicitNullValueDevice = default!;
         /// <summary>The keyCodes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<double?>? KeyCodes { get => _explicitNullValueKeyCodes; set { _explicitNullValueKeyCodes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("keyCodes"); else _explicitNullProperties?.Remove("keyCodes"); } }
+        public List<double?>? KeyCodes { get => _explicitNullValueKeyCodes; set { _explicitNullValueKeyCodes = value; AdditionalData?.Remove("keyCodes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("keyCodes"); else _explicitNullProperties?.Remove("keyCodes"); } }
         private List<double?>? _explicitNullValueKeyCodes = default!;
 #nullable restore
 #else
-        public List<double?> KeyCodes { get => _explicitNullValueKeyCodes; set { _explicitNullValueKeyCodes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("keyCodes"); else _explicitNullProperties?.Remove("keyCodes"); } }
+        public List<double?> KeyCodes { get => _explicitNullValueKeyCodes; set { _explicitNullValueKeyCodes = value; AdditionalData?.Remove("keyCodes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("keyCodes"); else _explicitNullProperties?.Remove("keyCodes"); } }
         private List<double?> _explicitNullValueKeyCodes = default!;
 #endif
         /// <summary>The mediaHitTime property</summary>
-        public double? MediaHitTime { get => _explicitNullValueMediaHitTime; set { _explicitNullValueMediaHitTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mediaHitTime"); else _explicitNullProperties?.Remove("mediaHitTime"); } }
+        public double? MediaHitTime { get => _explicitNullValueMediaHitTime; set { _explicitNullValueMediaHitTime = value; AdditionalData?.Remove("mediaHitTime"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mediaHitTime"); else _explicitNullProperties?.Remove("mediaHitTime"); } }
         private double? _explicitNullValueMediaHitTime = default!;
         /// <summary>The timeout property</summary>
-        public double? Timeout { get => _explicitNullValueTimeout; set { _explicitNullValueTimeout = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timeout"); else _explicitNullProperties?.Remove("timeout"); } }
+        public double? Timeout { get => _explicitNullValueTimeout; set { _explicitNullValueTimeout = value; AdditionalData?.Remove("timeout"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timeout"); else _explicitNullProperties?.Remove("timeout"); } }
         private double? _explicitNullValueTimeout = default!;
         /// <summary>The type property</summary>
 #nullable enable
-        public string? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        public string? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
         private string? _explicitNullValueType = default!;
 #nullable restore
         /// <summary>
@@ -86,7 +93,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
             {
                 { "delay", n => { Delay = n.GetDoubleValue(); } },
                 { "deprecatedVersion", n => { DeprecatedVersion = n.GetBoolValue(); } },
-                { "device", n => { Device = n.GetEnumValue<global::Soenneker.Figma.OpenApiClient.Models.OnKeyDownTriggerDevice>(); } },
+                { "device", n => { var parsed = n.GetEnumValue<global::Soenneker.Figma.OpenApiClient.Models.OnKeyDownTriggerDevice>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueDevice = default; _explicitNullProperties?.Remove("device"); AdditionalData["device"] = unknown; } else { Device = parsed; AdditionalData.Remove("device"); } } },
                 { "keyCodes", n => { KeyCodes = n.GetCollectionOfPrimitiveValues<double?>()?.AsList(); } },
                 { "mediaHitTime", n => { MediaHitTime = n.GetDoubleValue(); } },
                 { "timeout", n => { Timeout = n.GetDoubleValue(); } },

@@ -17,8 +17,10 @@ namespace Soenneker.Figma.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("endpointNodeId") is { } nullNodeEndpointNodeId && nullNodeEndpointNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EndpointNodeId = null;
-            if (parseNode.GetChildNode("magnet") is { } nullNodeMagnet && nullNodeMagnet.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Magnet = null;
+            if (parseNode.GetChildNode("endpointNodeId") is null) { _explicitNullValueEndpointNodeId = default!; _explicitNullProperties?.Remove("endpointNodeId"); }
+            else if (parseNode.GetChildNode("endpointNodeId") is { } nullNodeEndpointNodeId && nullNodeEndpointNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EndpointNodeId = null;
+            if (parseNode.GetChildNode("magnet") is null) { _explicitNullValueMagnet = default!; _explicitNullProperties?.Remove("magnet"); }
+            else if (parseNode.GetChildNode("magnet") is { } nullNodeMagnet && nullNodeMagnet.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Magnet = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,15 +28,15 @@ namespace Soenneker.Figma.OpenApiClient.Models
         /// <summary>Node ID that this endpoint attaches to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EndpointNodeId { get => _explicitNullValueEndpointNodeId; set { _explicitNullValueEndpointNodeId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("endpointNodeId"); else _explicitNullProperties?.Remove("endpointNodeId"); } }
+        public string? EndpointNodeId { get => _explicitNullValueEndpointNodeId; set { _explicitNullValueEndpointNodeId = value; AdditionalData?.Remove("endpointNodeId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("endpointNodeId"); else _explicitNullProperties?.Remove("endpointNodeId"); } }
         private string? _explicitNullValueEndpointNodeId = default!;
 #nullable restore
 #else
-        public string EndpointNodeId { get => _explicitNullValueEndpointNodeId; set { _explicitNullValueEndpointNodeId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("endpointNodeId"); else _explicitNullProperties?.Remove("endpointNodeId"); } }
+        public string EndpointNodeId { get => _explicitNullValueEndpointNodeId; set { _explicitNullValueEndpointNodeId = value; AdditionalData?.Remove("endpointNodeId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("endpointNodeId"); else _explicitNullProperties?.Remove("endpointNodeId"); } }
         private string _explicitNullValueEndpointNodeId = default!;
 #endif
         /// <summary>The magnet type is a string enum.</summary>
-        public global::Soenneker.Figma.OpenApiClient.Models.ConnectorEndpointOneOf2Magnet? Magnet { get => _explicitNullValueMagnet; set { _explicitNullValueMagnet = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("magnet"); else _explicitNullProperties?.Remove("magnet"); } }
+        public global::Soenneker.Figma.OpenApiClient.Models.ConnectorEndpointOneOf2Magnet? Magnet { get => _explicitNullValueMagnet; set { _explicitNullValueMagnet = value; AdditionalData?.Remove("magnet"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("magnet"); else _explicitNullProperties?.Remove("magnet"); } }
         private global::Soenneker.Figma.OpenApiClient.Models.ConnectorEndpointOneOf2Magnet? _explicitNullValueMagnet = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Figma.OpenApiClient.Models.ConnectorEndpointOneOf2"/> and sets the default values.
@@ -62,7 +64,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "endpointNodeId", n => { EndpointNodeId = n.GetStringValue(); } },
-                { "magnet", n => { Magnet = n.GetEnumValue<global::Soenneker.Figma.OpenApiClient.Models.ConnectorEndpointOneOf2Magnet>(); } },
+                { "magnet", n => { var parsed = n.GetEnumValue<global::Soenneker.Figma.OpenApiClient.Models.ConnectorEndpointOneOf2Magnet>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueMagnet = default; _explicitNullProperties?.Remove("magnet"); AdditionalData["magnet"] = unknown; } else { Magnet = parsed; AdditionalData.Remove("magnet"); } } },
             };
         }
         /// <summary>

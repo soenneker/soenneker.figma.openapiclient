@@ -17,8 +17,10 @@ namespace Soenneker.Figma.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("errors") is { } nullNodeErrors && nullNodeErrors.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Errors = null;
-            if (parseNode.GetChildNode("invites") is { } nullNodeInvites && nullNodeInvites.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Invites = null;
+            if (parseNode.GetChildNode("errors") is null) { _explicitNullValueErrors = default!; _explicitNullProperties?.Remove("errors"); }
+            else if (parseNode.GetChildNode("errors") is { } nullNodeErrors && nullNodeErrors.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Errors = null;
+            if (parseNode.GetChildNode("invites") is null) { _explicitNullValueInvites = default!; _explicitNullProperties?.Remove("invites"); }
+            else if (parseNode.GetChildNode("invites") is { } nullNodeInvites && nullNodeInvites.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Invites = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.Figma.OpenApiClient.Models
         /// <summary>The email addresses that could not be invited. The other addresses in the request are still processed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Figma.OpenApiClient.Models.InviteTeamMembersResponseResponseErrorsItem>? Errors { get => _explicitNullValueErrors; set { _explicitNullValueErrors = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errors"); else _explicitNullProperties?.Remove("errors"); } }
+        public List<global::Soenneker.Figma.OpenApiClient.Models.InviteTeamMembersResponseResponseErrorsItem>? Errors { get => _explicitNullValueErrors; set { _explicitNullValueErrors = value; AdditionalData?.Remove("errors"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errors"); else _explicitNullProperties?.Remove("errors"); } }
         private List<global::Soenneker.Figma.OpenApiClient.Models.InviteTeamMembersResponseResponseErrorsItem>? _explicitNullValueErrors = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Figma.OpenApiClient.Models.InviteTeamMembersResponseResponseErrorsItem> Errors { get => _explicitNullValueErrors; set { _explicitNullValueErrors = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errors"); else _explicitNullProperties?.Remove("errors"); } }
+        public List<global::Soenneker.Figma.OpenApiClient.Models.InviteTeamMembersResponseResponseErrorsItem> Errors { get => _explicitNullValueErrors; set { _explicitNullValueErrors = value; AdditionalData?.Remove("errors"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errors"); else _explicitNullProperties?.Remove("errors"); } }
         private List<global::Soenneker.Figma.OpenApiClient.Models.InviteTeamMembersResponseResponseErrorsItem> _explicitNullValueErrors = default!;
 #endif
         /// <summary>The email addresses that were invited, including users already on the team, whose role is kept or raised. An invitation can still require approval from an organization admin before the user joins the team.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Figma.OpenApiClient.Models.InviteTeamMembersResponseResponseInvitesItem>? Invites { get => _explicitNullValueInvites; set { _explicitNullValueInvites = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invites"); else _explicitNullProperties?.Remove("invites"); } }
+        public List<global::Soenneker.Figma.OpenApiClient.Models.InviteTeamMembersResponseResponseInvitesItem>? Invites { get => _explicitNullValueInvites; set { _explicitNullValueInvites = value; AdditionalData?.Remove("invites"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invites"); else _explicitNullProperties?.Remove("invites"); } }
         private List<global::Soenneker.Figma.OpenApiClient.Models.InviteTeamMembersResponseResponseInvitesItem>? _explicitNullValueInvites = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Figma.OpenApiClient.Models.InviteTeamMembersResponseResponseInvitesItem> Invites { get => _explicitNullValueInvites; set { _explicitNullValueInvites = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invites"); else _explicitNullProperties?.Remove("invites"); } }
+        public List<global::Soenneker.Figma.OpenApiClient.Models.InviteTeamMembersResponseResponseInvitesItem> Invites { get => _explicitNullValueInvites; set { _explicitNullValueInvites = value; AdditionalData?.Remove("invites"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invites"); else _explicitNullProperties?.Remove("invites"); } }
         private List<global::Soenneker.Figma.OpenApiClient.Models.InviteTeamMembersResponseResponseInvitesItem> _explicitNullValueInvites = default!;
 #endif
         /// <summary>

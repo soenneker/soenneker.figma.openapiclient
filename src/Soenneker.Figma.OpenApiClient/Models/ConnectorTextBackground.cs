@@ -17,49 +17,54 @@ namespace Soenneker.Figma.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("cornerRadius") is { } nullNodeCornerRadius && nullNodeCornerRadius.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CornerRadius = null;
-            if (parseNode.GetChildNode("cornerSmoothing") is { } nullNodeCornerSmoothing && nullNodeCornerSmoothing.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CornerSmoothing = null;
-            if (parseNode.GetChildNode("fills") is { } nullNodeFills && nullNodeFills.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Fills = null;
-            if (parseNode.GetChildNode("rectangleCornerRadii") is { } nullNodeRectangleCornerRadii && nullNodeRectangleCornerRadii.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RectangleCornerRadii = null;
-            if (parseNode.GetChildNode("styles") is { } nullNodeStyles && nullNodeStyles.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Styles = null;
+            if (parseNode.GetChildNode("cornerRadius") is null) { _explicitNullValueCornerRadius = default!; _explicitNullProperties?.Remove("cornerRadius"); }
+            else if (parseNode.GetChildNode("cornerRadius") is { } nullNodeCornerRadius && nullNodeCornerRadius.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CornerRadius = null;
+            if (parseNode.GetChildNode("cornerSmoothing") is null) { _explicitNullValueCornerSmoothing = default!; _explicitNullProperties?.Remove("cornerSmoothing"); }
+            else if (parseNode.GetChildNode("cornerSmoothing") is { } nullNodeCornerSmoothing && nullNodeCornerSmoothing.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CornerSmoothing = null;
+            if (parseNode.GetChildNode("fills") is null) { _explicitNullValueFills = default!; _explicitNullProperties?.Remove("fills"); }
+            else if (parseNode.GetChildNode("fills") is { } nullNodeFills && nullNodeFills.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Fills = null;
+            if (parseNode.GetChildNode("rectangleCornerRadii") is null) { _explicitNullValueRectangleCornerRadii = default!; _explicitNullProperties?.Remove("rectangleCornerRadii"); }
+            else if (parseNode.GetChildNode("rectangleCornerRadii") is { } nullNodeRectangleCornerRadii && nullNodeRectangleCornerRadii.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RectangleCornerRadii = null;
+            if (parseNode.GetChildNode("styles") is null) { _explicitNullValueStyles = default!; _explicitNullProperties?.Remove("styles"); }
+            else if (parseNode.GetChildNode("styles") is { } nullNodeStyles && nullNodeStyles.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Styles = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Radius of each corner if a single radius is set for all corners</summary>
-        public double? CornerRadius { get => _explicitNullValueCornerRadius; set { _explicitNullValueCornerRadius = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cornerRadius"); else _explicitNullProperties?.Remove("cornerRadius"); } }
+        public double? CornerRadius { get => _explicitNullValueCornerRadius; set { _explicitNullValueCornerRadius = value; AdditionalData?.Remove("cornerRadius"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cornerRadius"); else _explicitNullProperties?.Remove("cornerRadius"); } }
         private double? _explicitNullValueCornerRadius = default!;
         /// <summary>A value that lets you control how &quot;smooth&quot; the corners are. Ranges from 0 to 1. 0 is the default and means that the corner is perfectly circular. A value of 0.6 means the corner matches the iOS 7 &quot;squircle&quot; icon shape. Other values produce various other curves.</summary>
-        public double? CornerSmoothing { get => _explicitNullValueCornerSmoothing; set { _explicitNullValueCornerSmoothing = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cornerSmoothing"); else _explicitNullProperties?.Remove("cornerSmoothing"); } }
+        public double? CornerSmoothing { get => _explicitNullValueCornerSmoothing; set { _explicitNullValueCornerSmoothing = value; AdditionalData?.Remove("cornerSmoothing"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cornerSmoothing"); else _explicitNullProperties?.Remove("cornerSmoothing"); } }
         private double? _explicitNullValueCornerSmoothing = default!;
         /// <summary>An array of fill paints applied to the node.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Figma.OpenApiClient.Models.Paint>? Fills { get => _explicitNullValueFills; set { _explicitNullValueFills = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fills"); else _explicitNullProperties?.Remove("fills"); } }
+        public List<global::Soenneker.Figma.OpenApiClient.Models.Paint>? Fills { get => _explicitNullValueFills; set { _explicitNullValueFills = value; AdditionalData?.Remove("fills"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fills"); else _explicitNullProperties?.Remove("fills"); } }
         private List<global::Soenneker.Figma.OpenApiClient.Models.Paint>? _explicitNullValueFills = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Figma.OpenApiClient.Models.Paint> Fills { get => _explicitNullValueFills; set { _explicitNullValueFills = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fills"); else _explicitNullProperties?.Remove("fills"); } }
+        public List<global::Soenneker.Figma.OpenApiClient.Models.Paint> Fills { get => _explicitNullValueFills; set { _explicitNullValueFills = value; AdditionalData?.Remove("fills"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fills"); else _explicitNullProperties?.Remove("fills"); } }
         private List<global::Soenneker.Figma.OpenApiClient.Models.Paint> _explicitNullValueFills = default!;
 #endif
         /// <summary>Array of length 4 of the radius of each corner of the frame, starting in the top left and proceeding clockwise.Values are given in the order top-left, top-right, bottom-right, bottom-left.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<double?>? RectangleCornerRadii { get => _explicitNullValueRectangleCornerRadii; set { _explicitNullValueRectangleCornerRadii = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rectangleCornerRadii"); else _explicitNullProperties?.Remove("rectangleCornerRadii"); } }
+        public List<double?>? RectangleCornerRadii { get => _explicitNullValueRectangleCornerRadii; set { _explicitNullValueRectangleCornerRadii = value; AdditionalData?.Remove("rectangleCornerRadii"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rectangleCornerRadii"); else _explicitNullProperties?.Remove("rectangleCornerRadii"); } }
         private List<double?>? _explicitNullValueRectangleCornerRadii = default!;
 #nullable restore
 #else
-        public List<double?> RectangleCornerRadii { get => _explicitNullValueRectangleCornerRadii; set { _explicitNullValueRectangleCornerRadii = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rectangleCornerRadii"); else _explicitNullProperties?.Remove("rectangleCornerRadii"); } }
+        public List<double?> RectangleCornerRadii { get => _explicitNullValueRectangleCornerRadii; set { _explicitNullValueRectangleCornerRadii = value; AdditionalData?.Remove("rectangleCornerRadii"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rectangleCornerRadii"); else _explicitNullProperties?.Remove("rectangleCornerRadii"); } }
         private List<double?> _explicitNullValueRectangleCornerRadii = default!;
 #endif
         /// <summary>A mapping of a StyleType to style ID (see Style) of styles present on this node. The style ID can be used to look up more information about the style in the top-level styles field.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.ConnectorTextBackgroundStyles? Styles { get => _explicitNullValueStyles; set { _explicitNullValueStyles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("styles"); else _explicitNullProperties?.Remove("styles"); } }
+        public global::Soenneker.Figma.OpenApiClient.Models.ConnectorTextBackgroundStyles? Styles { get => _explicitNullValueStyles; set { _explicitNullValueStyles = value; AdditionalData?.Remove("styles"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("styles"); else _explicitNullProperties?.Remove("styles"); } }
         private global::Soenneker.Figma.OpenApiClient.Models.ConnectorTextBackgroundStyles? _explicitNullValueStyles = default!;
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.ConnectorTextBackgroundStyles Styles { get => _explicitNullValueStyles; set { _explicitNullValueStyles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("styles"); else _explicitNullProperties?.Remove("styles"); } }
+        public global::Soenneker.Figma.OpenApiClient.Models.ConnectorTextBackgroundStyles Styles { get => _explicitNullValueStyles; set { _explicitNullValueStyles = value; AdditionalData?.Remove("styles"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("styles"); else _explicitNullProperties?.Remove("styles"); } }
         private global::Soenneker.Figma.OpenApiClient.Models.ConnectorTextBackgroundStyles _explicitNullValueStyles = default!;
 #endif
         /// <summary>

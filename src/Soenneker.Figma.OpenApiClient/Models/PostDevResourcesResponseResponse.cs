@@ -17,8 +17,10 @@ namespace Soenneker.Figma.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("errors") is { } nullNodeErrors && nullNodeErrors.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Errors = null;
-            if (parseNode.GetChildNode("links_created") is { } nullNodeLinksCreated && nullNodeLinksCreated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LinksCreated = null;
+            if (parseNode.GetChildNode("errors") is null) { _explicitNullValueErrors = default!; _explicitNullProperties?.Remove("errors"); }
+            else if (parseNode.GetChildNode("errors") is { } nullNodeErrors && nullNodeErrors.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Errors = null;
+            if (parseNode.GetChildNode("links_created") is null) { _explicitNullValueLinksCreated = default!; _explicitNullProperties?.Remove("links_created"); }
+            else if (parseNode.GetChildNode("links_created") is { } nullNodeLinksCreated && nullNodeLinksCreated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LinksCreated = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.Figma.OpenApiClient.Models
         /// <summary>An array of errors.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Figma.OpenApiClient.Models.PostDevResourcesResponseResponseErrorsItem>? Errors { get => _explicitNullValueErrors; set { _explicitNullValueErrors = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errors"); else _explicitNullProperties?.Remove("errors"); } }
+        public List<global::Soenneker.Figma.OpenApiClient.Models.PostDevResourcesResponseResponseErrorsItem>? Errors { get => _explicitNullValueErrors; set { _explicitNullValueErrors = value; AdditionalData?.Remove("errors"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errors"); else _explicitNullProperties?.Remove("errors"); } }
         private List<global::Soenneker.Figma.OpenApiClient.Models.PostDevResourcesResponseResponseErrorsItem>? _explicitNullValueErrors = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Figma.OpenApiClient.Models.PostDevResourcesResponseResponseErrorsItem> Errors { get => _explicitNullValueErrors; set { _explicitNullValueErrors = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errors"); else _explicitNullProperties?.Remove("errors"); } }
+        public List<global::Soenneker.Figma.OpenApiClient.Models.PostDevResourcesResponseResponseErrorsItem> Errors { get => _explicitNullValueErrors; set { _explicitNullValueErrors = value; AdditionalData?.Remove("errors"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errors"); else _explicitNullProperties?.Remove("errors"); } }
         private List<global::Soenneker.Figma.OpenApiClient.Models.PostDevResourcesResponseResponseErrorsItem> _explicitNullValueErrors = default!;
 #endif
         /// <summary>An array of links created.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Figma.OpenApiClient.Models.DevResource>? LinksCreated { get => _explicitNullValueLinksCreated; set { _explicitNullValueLinksCreated = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("links_created"); else _explicitNullProperties?.Remove("links_created"); } }
+        public List<global::Soenneker.Figma.OpenApiClient.Models.DevResource>? LinksCreated { get => _explicitNullValueLinksCreated; set { _explicitNullValueLinksCreated = value; AdditionalData?.Remove("links_created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("links_created"); else _explicitNullProperties?.Remove("links_created"); } }
         private List<global::Soenneker.Figma.OpenApiClient.Models.DevResource>? _explicitNullValueLinksCreated = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Figma.OpenApiClient.Models.DevResource> LinksCreated { get => _explicitNullValueLinksCreated; set { _explicitNullValueLinksCreated = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("links_created"); else _explicitNullProperties?.Remove("links_created"); } }
+        public List<global::Soenneker.Figma.OpenApiClient.Models.DevResource> LinksCreated { get => _explicitNullValueLinksCreated; set { _explicitNullValueLinksCreated = value; AdditionalData?.Remove("links_created"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("links_created"); else _explicitNullProperties?.Remove("links_created"); } }
         private List<global::Soenneker.Figma.OpenApiClient.Models.DevResource> _explicitNullValueLinksCreated = default!;
 #endif
         /// <summary>

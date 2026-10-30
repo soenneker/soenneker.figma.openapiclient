@@ -18,21 +18,24 @@ namespace Soenneker.Figma.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("endingAngle") is { } nullNodeEndingAngle && nullNodeEndingAngle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EndingAngle = null;
-            if (parseNode.GetChildNode("innerRadius") is { } nullNodeInnerRadius && nullNodeInnerRadius.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InnerRadius = null;
-            if (parseNode.GetChildNode("startingAngle") is { } nullNodeStartingAngle && nullNodeStartingAngle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartingAngle = null;
+            if (parseNode.GetChildNode("endingAngle") is null) { _explicitNullValueEndingAngle = default!; _explicitNullProperties?.Remove("endingAngle"); }
+            else if (parseNode.GetChildNode("endingAngle") is { } nullNodeEndingAngle && nullNodeEndingAngle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EndingAngle = null;
+            if (parseNode.GetChildNode("innerRadius") is null) { _explicitNullValueInnerRadius = default!; _explicitNullProperties?.Remove("innerRadius"); }
+            else if (parseNode.GetChildNode("innerRadius") is { } nullNodeInnerRadius && nullNodeInnerRadius.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InnerRadius = null;
+            if (parseNode.GetChildNode("startingAngle") is null) { _explicitNullValueStartingAngle = default!; _explicitNullProperties?.Remove("startingAngle"); }
+            else if (parseNode.GetChildNode("startingAngle") is { } nullNodeStartingAngle && nullNodeStartingAngle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartingAngle = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>End of the sweep in radians.</summary>
-        public double? EndingAngle { get => _explicitNullValueEndingAngle; set { _explicitNullValueEndingAngle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("endingAngle"); else _explicitNullProperties?.Remove("endingAngle"); } }
+        public double? EndingAngle { get => _explicitNullValueEndingAngle; set { _explicitNullValueEndingAngle = value; AdditionalData?.Remove("endingAngle"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("endingAngle"); else _explicitNullProperties?.Remove("endingAngle"); } }
         private double? _explicitNullValueEndingAngle = default!;
         /// <summary>Inner radius value between 0 and 1</summary>
-        public double? InnerRadius { get => _explicitNullValueInnerRadius; set { _explicitNullValueInnerRadius = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("innerRadius"); else _explicitNullProperties?.Remove("innerRadius"); } }
+        public double? InnerRadius { get => _explicitNullValueInnerRadius; set { _explicitNullValueInnerRadius = value; AdditionalData?.Remove("innerRadius"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("innerRadius"); else _explicitNullProperties?.Remove("innerRadius"); } }
         private double? _explicitNullValueInnerRadius = default!;
         /// <summary>Start of the sweep in radians.</summary>
-        public double? StartingAngle { get => _explicitNullValueStartingAngle; set { _explicitNullValueStartingAngle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startingAngle"); else _explicitNullProperties?.Remove("startingAngle"); } }
+        public double? StartingAngle { get => _explicitNullValueStartingAngle; set { _explicitNullValueStartingAngle = value; AdditionalData?.Remove("startingAngle"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startingAngle"); else _explicitNullProperties?.Remove("startingAngle"); } }
         private double? _explicitNullValueStartingAngle = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Figma.OpenApiClient.Models.ArcData"/> and sets the default values.

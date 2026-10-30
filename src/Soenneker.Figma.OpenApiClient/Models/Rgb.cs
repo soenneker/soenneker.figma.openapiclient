@@ -18,21 +18,24 @@ namespace Soenneker.Figma.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("b") is { } nullNodeB && nullNodeB.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) B = null;
-            if (parseNode.GetChildNode("g") is { } nullNodeG && nullNodeG.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) G = null;
-            if (parseNode.GetChildNode("r") is { } nullNodeR && nullNodeR.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) R = null;
+            if (parseNode.GetChildNode("b") is null) { _explicitNullValueB = default!; _explicitNullProperties?.Remove("b"); }
+            else if (parseNode.GetChildNode("b") is { } nullNodeB && nullNodeB.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) B = null;
+            if (parseNode.GetChildNode("g") is null) { _explicitNullValueG = default!; _explicitNullProperties?.Remove("g"); }
+            else if (parseNode.GetChildNode("g") is { } nullNodeG && nullNodeG.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) G = null;
+            if (parseNode.GetChildNode("r") is null) { _explicitNullValueR = default!; _explicitNullProperties?.Remove("r"); }
+            else if (parseNode.GetChildNode("r") is { } nullNodeR && nullNodeR.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) R = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Blue channel value, between 0 and 1.</summary>
-        public double? B { get => _explicitNullValueB; set { _explicitNullValueB = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("b"); else _explicitNullProperties?.Remove("b"); } }
+        public double? B { get => _explicitNullValueB; set { _explicitNullValueB = value; AdditionalData?.Remove("b"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("b"); else _explicitNullProperties?.Remove("b"); } }
         private double? _explicitNullValueB = default!;
         /// <summary>Green channel value, between 0 and 1.</summary>
-        public double? G { get => _explicitNullValueG; set { _explicitNullValueG = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("g"); else _explicitNullProperties?.Remove("g"); } }
+        public double? G { get => _explicitNullValueG; set { _explicitNullValueG = value; AdditionalData?.Remove("g"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("g"); else _explicitNullProperties?.Remove("g"); } }
         private double? _explicitNullValueG = default!;
         /// <summary>Red channel value, between 0 and 1.</summary>
-        public double? R { get => _explicitNullValueR; set { _explicitNullValueR = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("r"); else _explicitNullProperties?.Remove("r"); } }
+        public double? R { get => _explicitNullValueR; set { _explicitNullValueR = value; AdditionalData?.Remove("r"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("r"); else _explicitNullProperties?.Remove("r"); } }
         private double? _explicitNullValueR = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Figma.OpenApiClient.Models.Rgb"/> and sets the default values.

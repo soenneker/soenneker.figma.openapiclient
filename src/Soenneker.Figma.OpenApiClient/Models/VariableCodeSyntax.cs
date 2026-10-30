@@ -18,9 +18,12 @@ namespace Soenneker.Figma.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("ANDROID") is { } nullNodeANDROID && nullNodeANDROID.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ANDROID = null;
-            if (parseNode.GetChildNode("iOS") is { } nullNodeIOS && nullNodeIOS.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IOS = null;
-            if (parseNode.GetChildNode("WEB") is { } nullNodeWEB && nullNodeWEB.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WEB = null;
+            if (parseNode.GetChildNode("ANDROID") is null) { _explicitNullValueANDROID = default!; _explicitNullProperties?.Remove("ANDROID"); }
+            else if (parseNode.GetChildNode("ANDROID") is { } nullNodeANDROID && nullNodeANDROID.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ANDROID = null;
+            if (parseNode.GetChildNode("iOS") is null) { _explicitNullValueIOS = default!; _explicitNullProperties?.Remove("iOS"); }
+            else if (parseNode.GetChildNode("iOS") is { } nullNodeIOS && nullNodeIOS.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IOS = null;
+            if (parseNode.GetChildNode("WEB") is null) { _explicitNullValueWEB = default!; _explicitNullProperties?.Remove("WEB"); }
+            else if (parseNode.GetChildNode("WEB") is { } nullNodeWEB && nullNodeWEB.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WEB = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,31 +31,31 @@ namespace Soenneker.Figma.OpenApiClient.Models
         /// <summary>The ANDROID property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ANDROID { get => _explicitNullValueANDROID; set { _explicitNullValueANDROID = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ANDROID"); else _explicitNullProperties?.Remove("ANDROID"); } }
+        public string? ANDROID { get => _explicitNullValueANDROID; set { _explicitNullValueANDROID = value; AdditionalData?.Remove("ANDROID"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ANDROID"); else _explicitNullProperties?.Remove("ANDROID"); } }
         private string? _explicitNullValueANDROID = default!;
 #nullable restore
 #else
-        public string ANDROID { get => _explicitNullValueANDROID; set { _explicitNullValueANDROID = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ANDROID"); else _explicitNullProperties?.Remove("ANDROID"); } }
+        public string ANDROID { get => _explicitNullValueANDROID; set { _explicitNullValueANDROID = value; AdditionalData?.Remove("ANDROID"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ANDROID"); else _explicitNullProperties?.Remove("ANDROID"); } }
         private string _explicitNullValueANDROID = default!;
 #endif
         /// <summary>The iOS property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IOS { get => _explicitNullValueIOS; set { _explicitNullValueIOS = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("iOS"); else _explicitNullProperties?.Remove("iOS"); } }
+        public string? IOS { get => _explicitNullValueIOS; set { _explicitNullValueIOS = value; AdditionalData?.Remove("iOS"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("iOS"); else _explicitNullProperties?.Remove("iOS"); } }
         private string? _explicitNullValueIOS = default!;
 #nullable restore
 #else
-        public string IOS { get => _explicitNullValueIOS; set { _explicitNullValueIOS = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("iOS"); else _explicitNullProperties?.Remove("iOS"); } }
+        public string IOS { get => _explicitNullValueIOS; set { _explicitNullValueIOS = value; AdditionalData?.Remove("iOS"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("iOS"); else _explicitNullProperties?.Remove("iOS"); } }
         private string _explicitNullValueIOS = default!;
 #endif
         /// <summary>The WEB property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WEB { get => _explicitNullValueWEB; set { _explicitNullValueWEB = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("WEB"); else _explicitNullProperties?.Remove("WEB"); } }
+        public string? WEB { get => _explicitNullValueWEB; set { _explicitNullValueWEB = value; AdditionalData?.Remove("WEB"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("WEB"); else _explicitNullProperties?.Remove("WEB"); } }
         private string? _explicitNullValueWEB = default!;
 #nullable restore
 #else
-        public string WEB { get => _explicitNullValueWEB; set { _explicitNullValueWEB = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("WEB"); else _explicitNullProperties?.Remove("WEB"); } }
+        public string WEB { get => _explicitNullValueWEB; set { _explicitNullValueWEB = value; AdditionalData?.Remove("WEB"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("WEB"); else _explicitNullProperties?.Remove("WEB"); } }
         private string _explicitNullValueWEB = default!;
 #endif
         /// <summary>

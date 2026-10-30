@@ -18,27 +18,30 @@ namespace Soenneker.Figma.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("resolvedType") is { } nullNodeResolvedType && nullNodeResolvedType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResolvedType = null;
-            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
-            if (parseNode.GetChildNode("value") is { } nullNodeValue && nullNodeValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Value = null;
+            if (parseNode.GetChildNode("resolvedType") is null) { _explicitNullValueResolvedType = default!; _explicitNullProperties?.Remove("resolvedType"); }
+            else if (parseNode.GetChildNode("resolvedType") is { } nullNodeResolvedType && nullNodeResolvedType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResolvedType = null;
+            if (parseNode.GetChildNode("type") is null) { _explicitNullValueType = default!; _explicitNullProperties?.Remove("type"); }
+            else if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("value") is null) { _explicitNullValueValue = default!; _explicitNullProperties?.Remove("value"); }
+            else if (parseNode.GetChildNode("value") is { } nullNodeValue && nullNodeValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Value = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Defines the types of data a VariableData object can eventually equal</summary>
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableResolvedDataType? ResolvedType { get => _explicitNullValueResolvedType; set { _explicitNullValueResolvedType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resolvedType"); else _explicitNullProperties?.Remove("resolvedType"); } }
+        public global::Soenneker.Figma.OpenApiClient.Models.VariableResolvedDataType? ResolvedType { get => _explicitNullValueResolvedType; set { _explicitNullValueResolvedType = value; AdditionalData?.Remove("resolvedType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resolvedType"); else _explicitNullProperties?.Remove("resolvedType"); } }
         private global::Soenneker.Figma.OpenApiClient.Models.VariableResolvedDataType? _explicitNullValueResolvedType = default!;
         /// <summary>Defines the types of data a VariableData object can hold</summary>
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableDataType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        public global::Soenneker.Figma.OpenApiClient.Models.VariableDataType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
         private global::Soenneker.Figma.OpenApiClient.Models.VariableDataType? _explicitNullValueType = default!;
         /// <summary>The value property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableDataValue? Value { get => _explicitNullValueValue; set { _explicitNullValueValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("value"); else _explicitNullProperties?.Remove("value"); } }
+        public global::Soenneker.Figma.OpenApiClient.Models.VariableDataValue? Value { get => _explicitNullValueValue; set { _explicitNullValueValue = value; AdditionalData?.Remove("value"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("value"); else _explicitNullProperties?.Remove("value"); } }
         private global::Soenneker.Figma.OpenApiClient.Models.VariableDataValue? _explicitNullValueValue = default!;
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableDataValue Value { get => _explicitNullValueValue; set { _explicitNullValueValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("value"); else _explicitNullProperties?.Remove("value"); } }
+        public global::Soenneker.Figma.OpenApiClient.Models.VariableDataValue Value { get => _explicitNullValueValue; set { _explicitNullValueValue = value; AdditionalData?.Remove("value"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("value"); else _explicitNullProperties?.Remove("value"); } }
         private global::Soenneker.Figma.OpenApiClient.Models.VariableDataValue _explicitNullValueValue = default!;
 #endif
         /// <summary>
@@ -66,8 +69,8 @@ namespace Soenneker.Figma.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "resolvedType", n => { ResolvedType = n.GetEnumValue<global::Soenneker.Figma.OpenApiClient.Models.VariableResolvedDataType>(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Figma.OpenApiClient.Models.VariableDataType>(); } },
+                { "resolvedType", n => { var parsed = n.GetEnumValue<global::Soenneker.Figma.OpenApiClient.Models.VariableResolvedDataType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueResolvedType = default; _explicitNullProperties?.Remove("resolvedType"); AdditionalData["resolvedType"] = unknown; } else { ResolvedType = parsed; AdditionalData.Remove("resolvedType"); } } },
+                { "type", n => { var parsed = n.GetEnumValue<global::Soenneker.Figma.OpenApiClient.Models.VariableDataType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueType = default; _explicitNullProperties?.Remove("type"); AdditionalData["type"] = unknown; } else { Type = parsed; AdditionalData.Remove("type"); } } },
                 { "value", n => { Value = n.GetObjectValue<global::Soenneker.Figma.OpenApiClient.Models.VariableDataValue>(global::Soenneker.Figma.OpenApiClient.Models.VariableDataValue.CreateFromDiscriminatorValue); } },
             };
         }

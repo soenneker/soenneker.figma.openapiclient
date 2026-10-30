@@ -18,9 +18,12 @@ namespace Soenneker.Figma.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("modeId") is { } nullNodeModeId && nullNodeModeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ModeId = null;
-            if (parseNode.GetChildNode("value") is { } nullNodeValue && nullNodeValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Value = null;
-            if (parseNode.GetChildNode("variableId") is { } nullNodeVariableId && nullNodeVariableId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VariableId = null;
+            if (parseNode.GetChildNode("modeId") is null) { _explicitNullValueModeId = default!; _explicitNullProperties?.Remove("modeId"); }
+            else if (parseNode.GetChildNode("modeId") is { } nullNodeModeId && nullNodeModeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ModeId = null;
+            if (parseNode.GetChildNode("value") is null) { _explicitNullValueValue = default!; _explicitNullProperties?.Remove("value"); }
+            else if (parseNode.GetChildNode("value") is { } nullNodeValue && nullNodeValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Value = null;
+            if (parseNode.GetChildNode("variableId") is null) { _explicitNullValueVariableId = default!; _explicitNullProperties?.Remove("variableId"); }
+            else if (parseNode.GetChildNode("variableId") is { } nullNodeVariableId && nullNodeVariableId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VariableId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,31 +31,31 @@ namespace Soenneker.Figma.OpenApiClient.Models
         /// <summary>Must correspond to a mode in the variable collection that contains the target variable.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ModeId { get => _explicitNullValueModeId; set { _explicitNullValueModeId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("modeId"); else _explicitNullProperties?.Remove("modeId"); } }
+        public string? ModeId { get => _explicitNullValueModeId; set { _explicitNullValueModeId = value; AdditionalData?.Remove("modeId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("modeId"); else _explicitNullProperties?.Remove("modeId"); } }
         private string? _explicitNullValueModeId = default!;
 #nullable restore
 #else
-        public string ModeId { get => _explicitNullValueModeId; set { _explicitNullValueModeId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("modeId"); else _explicitNullProperties?.Remove("modeId"); } }
+        public string ModeId { get => _explicitNullValueModeId; set { _explicitNullValueModeId = value; AdditionalData?.Remove("modeId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("modeId"); else _explicitNullProperties?.Remove("modeId"); } }
         private string _explicitNullValueModeId = default!;
 #endif
         /// <summary>The value for the variable. The value must match the variable&apos;s type. If setting to a variable alias, the alias must resolve to this type. If overriding a value, the value type must match the variable&apos;s type. If removing an overridden value, the value must be `null`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableValue? Value { get => _explicitNullValueValue; set { _explicitNullValueValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("value"); else _explicitNullProperties?.Remove("value"); } }
+        public global::Soenneker.Figma.OpenApiClient.Models.VariableValue? Value { get => _explicitNullValueValue; set { _explicitNullValueValue = value; AdditionalData?.Remove("value"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("value"); else _explicitNullProperties?.Remove("value"); } }
         private global::Soenneker.Figma.OpenApiClient.Models.VariableValue? _explicitNullValueValue = default!;
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableValue Value { get => _explicitNullValueValue; set { _explicitNullValueValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("value"); else _explicitNullProperties?.Remove("value"); } }
+        public global::Soenneker.Figma.OpenApiClient.Models.VariableValue Value { get => _explicitNullValueValue; set { _explicitNullValueValue = value; AdditionalData?.Remove("value"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("value"); else _explicitNullProperties?.Remove("value"); } }
         private global::Soenneker.Figma.OpenApiClient.Models.VariableValue _explicitNullValueValue = default!;
 #endif
         /// <summary>The target variable. You can use the temporary id of a variable.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? VariableId { get => _explicitNullValueVariableId; set { _explicitNullValueVariableId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("variableId"); else _explicitNullProperties?.Remove("variableId"); } }
+        public string? VariableId { get => _explicitNullValueVariableId; set { _explicitNullValueVariableId = value; AdditionalData?.Remove("variableId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("variableId"); else _explicitNullProperties?.Remove("variableId"); } }
         private string? _explicitNullValueVariableId = default!;
 #nullable restore
 #else
-        public string VariableId { get => _explicitNullValueVariableId; set { _explicitNullValueVariableId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("variableId"); else _explicitNullProperties?.Remove("variableId"); } }
+        public string VariableId { get => _explicitNullValueVariableId; set { _explicitNullValueVariableId = value; AdditionalData?.Remove("variableId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("variableId"); else _explicitNullProperties?.Remove("variableId"); } }
         private string _explicitNullValueVariableId = default!;
 #endif
         /// <summary>

@@ -17,7 +17,39 @@ namespace Soenneker.Figma.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
+            if (parseNode.GetChildNode("component_key") is null) { _explicitNullValueComponentKey = default!; _explicitNullProperties?.Remove("component_key"); }
+            else if (parseNode.GetChildNode("component_key") is { } nullNodeComponentKey && nullNodeComponentKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ComponentKey = null;
+            if (parseNode.GetChildNode("component_name") is null) { _explicitNullValueComponentName = default!; _explicitNullProperties?.Remove("component_name"); }
+            else if (parseNode.GetChildNode("component_name") is { } nullNodeComponentName && nullNodeComponentName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ComponentName = null;
+            if (parseNode.GetChildNode("component_set_key") is null) { _explicitNullValueComponentSetKey = default!; _explicitNullProperties?.Remove("component_set_key"); }
+            else if (parseNode.GetChildNode("component_set_key") is { } nullNodeComponentSetKey && nullNodeComponentSetKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ComponentSetKey = null;
+            if (parseNode.GetChildNode("component_set_name") is null) { _explicitNullValueComponentSetName = default!; _explicitNullProperties?.Remove("component_set_name"); }
+            else if (parseNode.GetChildNode("component_set_name") is { } nullNodeComponentSetName && nullNodeComponentSetName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ComponentSetName = null;
+            if (parseNode.GetChildNode("usages") is null) { _explicitNullValueUsages = default!; _explicitNullProperties?.Remove("usages"); }
+            else if (parseNode.GetChildNode("usages") is { } nullNodeUsages && nullNodeUsages.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Usages = null;
+            if (parseNode.GetChildNode("teams_using") is null) { _explicitNullValueTeamsUsing = default!; _explicitNullProperties?.Remove("teams_using"); }
+            else if (parseNode.GetChildNode("teams_using") is { } nullNodeTeamsUsing && nullNodeTeamsUsing.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TeamsUsing = null;
+            if (parseNode.GetChildNode("files_using") is null) { _explicitNullValueFilesUsing = default!; _explicitNullProperties?.Remove("files_using"); }
+            else if (parseNode.GetChildNode("files_using") is { } nullNodeFilesUsing && nullNodeFilesUsing.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FilesUsing = null;
         }
+
+        // Restore fields omitted by the generator's model-depth limit.
+#nullable enable
+        public string? ComponentKey { get => _explicitNullValueComponentKey; set { _explicitNullValueComponentKey = value; AdditionalData?.Remove("component_key"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("component_key"); else _explicitNullProperties?.Remove("component_key"); } }
+        private string? _explicitNullValueComponentKey = default!;
+        public string? ComponentName { get => _explicitNullValueComponentName; set { _explicitNullValueComponentName = value; AdditionalData?.Remove("component_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("component_name"); else _explicitNullProperties?.Remove("component_name"); } }
+        private string? _explicitNullValueComponentName = default!;
+        public string? ComponentSetKey { get => _explicitNullValueComponentSetKey; set { _explicitNullValueComponentSetKey = value; AdditionalData?.Remove("component_set_key"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("component_set_key"); else _explicitNullProperties?.Remove("component_set_key"); } }
+        private string? _explicitNullValueComponentSetKey = default!;
+        public string? ComponentSetName { get => _explicitNullValueComponentSetName; set { _explicitNullValueComponentSetName = value; AdditionalData?.Remove("component_set_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("component_set_name"); else _explicitNullProperties?.Remove("component_set_name"); } }
+        private string? _explicitNullValueComponentSetName = default!;
+        public double? Usages { get => _explicitNullValueUsages; set { _explicitNullValueUsages = value; AdditionalData?.Remove("usages"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("usages"); else _explicitNullProperties?.Remove("usages"); } }
+        private double? _explicitNullValueUsages = default!;
+        public double? TeamsUsing { get => _explicitNullValueTeamsUsing; set { _explicitNullValueTeamsUsing = value; AdditionalData?.Remove("teams_using"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("teams_using"); else _explicitNullProperties?.Remove("teams_using"); } }
+        private double? _explicitNullValueTeamsUsing = default!;
+        public double? FilesUsing { get => _explicitNullValueFilesUsing; set { _explicitNullValueFilesUsing = value; AdditionalData?.Remove("files_using"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("files_using"); else _explicitNullProperties?.Remove("files_using"); } }
+        private double? _explicitNullValueFilesUsing = default!;
+#nullable restore
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
@@ -46,6 +78,13 @@ namespace Soenneker.Figma.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "component_key", n => { ComponentKey = n.GetStringValue(); } },
+                { "component_name", n => { ComponentName = n.GetStringValue(); } },
+                { "component_set_key", n => { ComponentSetKey = n.GetStringValue(); } },
+                { "component_set_name", n => { ComponentSetName = n.GetStringValue(); } },
+                { "usages", n => { Usages = n.GetDoubleValue(); } },
+                { "teams_using", n => { TeamsUsing = n.GetDoubleValue(); } },
+                { "files_using", n => { FilesUsing = n.GetDoubleValue(); } },
             };
         }
         /// <summary>
@@ -55,6 +94,13 @@ namespace Soenneker.Figma.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteStringValue("component_key", ComponentKey);
+            writer.WriteStringValue("component_name", ComponentName);
+            writer.WriteStringValue("component_set_key", ComponentSetKey);
+            writer.WriteStringValue("component_set_name", ComponentSetName);
+            writer.WriteDoubleValue("usages", Usages);
+            writer.WriteDoubleValue("teams_using", TeamsUsing);
+            writer.WriteDoubleValue("files_using", FilesUsing);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -17,7 +17,8 @@ namespace Soenneker.Figma.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("tempIdToRealId") is { } nullNodeTempIdToRealId && nullNodeTempIdToRealId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TempIdToRealId = null;
+            if (parseNode.GetChildNode("tempIdToRealId") is null) { _explicitNullValueTempIdToRealId = default!; _explicitNullProperties?.Remove("tempIdToRealId"); }
+            else if (parseNode.GetChildNode("tempIdToRealId") is { } nullNodeTempIdToRealId && nullNodeTempIdToRealId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TempIdToRealId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Figma.OpenApiClient.Models
         /// <summary>A map of temporary ids in the request to the real ids of the newly created objects</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.PostVariablesResponseResponseMetaTempIdToRealIdProperty? TempIdToRealId { get => _explicitNullValueTempIdToRealId; set { _explicitNullValueTempIdToRealId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tempIdToRealId"); else _explicitNullProperties?.Remove("tempIdToRealId"); } }
+        public global::Soenneker.Figma.OpenApiClient.Models.PostVariablesResponseResponseMetaTempIdToRealIdProperty? TempIdToRealId { get => _explicitNullValueTempIdToRealId; set { _explicitNullValueTempIdToRealId = value; AdditionalData?.Remove("tempIdToRealId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tempIdToRealId"); else _explicitNullProperties?.Remove("tempIdToRealId"); } }
         private global::Soenneker.Figma.OpenApiClient.Models.PostVariablesResponseResponseMetaTempIdToRealIdProperty? _explicitNullValueTempIdToRealId = default!;
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.PostVariablesResponseResponseMetaTempIdToRealIdProperty TempIdToRealId { get => _explicitNullValueTempIdToRealId; set { _explicitNullValueTempIdToRealId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tempIdToRealId"); else _explicitNullProperties?.Remove("tempIdToRealId"); } }
+        public global::Soenneker.Figma.OpenApiClient.Models.PostVariablesResponseResponseMetaTempIdToRealIdProperty TempIdToRealId { get => _explicitNullValueTempIdToRealId; set { _explicitNullValueTempIdToRealId = value; AdditionalData?.Remove("tempIdToRealId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tempIdToRealId"); else _explicitNullProperties?.Remove("tempIdToRealId"); } }
         private global::Soenneker.Figma.OpenApiClient.Models.PostVariablesResponseResponseMetaTempIdToRealIdProperty _explicitNullValueTempIdToRealId = default!;
 #endif
         /// <summary>

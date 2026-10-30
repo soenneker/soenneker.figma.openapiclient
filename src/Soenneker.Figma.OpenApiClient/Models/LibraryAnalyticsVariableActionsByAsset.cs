@@ -17,7 +17,43 @@ namespace Soenneker.Figma.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
+            if (parseNode.GetChildNode("week") is null) { _explicitNullValueWeek = default!; _explicitNullProperties?.Remove("week"); }
+            else if (parseNode.GetChildNode("week") is { } nullNodeWeek && nullNodeWeek.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Week = null;
+            if (parseNode.GetChildNode("variable_key") is null) { _explicitNullValueVariableKey = default!; _explicitNullProperties?.Remove("variable_key"); }
+            else if (parseNode.GetChildNode("variable_key") is { } nullNodeVariableKey && nullNodeVariableKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VariableKey = null;
+            if (parseNode.GetChildNode("variable_name") is null) { _explicitNullValueVariableName = default!; _explicitNullProperties?.Remove("variable_name"); }
+            else if (parseNode.GetChildNode("variable_name") is { } nullNodeVariableName && nullNodeVariableName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VariableName = null;
+            if (parseNode.GetChildNode("variable_type") is null) { _explicitNullValueVariableType = default!; _explicitNullProperties?.Remove("variable_type"); }
+            else if (parseNode.GetChildNode("variable_type") is { } nullNodeVariableType && nullNodeVariableType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VariableType = null;
+            if (parseNode.GetChildNode("collection_key") is null) { _explicitNullValueCollectionKey = default!; _explicitNullProperties?.Remove("collection_key"); }
+            else if (parseNode.GetChildNode("collection_key") is { } nullNodeCollectionKey && nullNodeCollectionKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CollectionKey = null;
+            if (parseNode.GetChildNode("collection_name") is null) { _explicitNullValueCollectionName = default!; _explicitNullProperties?.Remove("collection_name"); }
+            else if (parseNode.GetChildNode("collection_name") is { } nullNodeCollectionName && nullNodeCollectionName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CollectionName = null;
+            if (parseNode.GetChildNode("detachments") is null) { _explicitNullValueDetachments = default!; _explicitNullProperties?.Remove("detachments"); }
+            else if (parseNode.GetChildNode("detachments") is { } nullNodeDetachments && nullNodeDetachments.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Detachments = null;
+            if (parseNode.GetChildNode("insertions") is null) { _explicitNullValueInsertions = default!; _explicitNullProperties?.Remove("insertions"); }
+            else if (parseNode.GetChildNode("insertions") is { } nullNodeInsertions && nullNodeInsertions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Insertions = null;
         }
+
+        // Restore fields omitted by the generator's model-depth limit.
+#nullable enable
+        public string? Week { get => _explicitNullValueWeek; set { _explicitNullValueWeek = value; AdditionalData?.Remove("week"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("week"); else _explicitNullProperties?.Remove("week"); } }
+        private string? _explicitNullValueWeek = default!;
+        public string? VariableKey { get => _explicitNullValueVariableKey; set { _explicitNullValueVariableKey = value; AdditionalData?.Remove("variable_key"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("variable_key"); else _explicitNullProperties?.Remove("variable_key"); } }
+        private string? _explicitNullValueVariableKey = default!;
+        public string? VariableName { get => _explicitNullValueVariableName; set { _explicitNullValueVariableName = value; AdditionalData?.Remove("variable_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("variable_name"); else _explicitNullProperties?.Remove("variable_name"); } }
+        private string? _explicitNullValueVariableName = default!;
+        public string? VariableType { get => _explicitNullValueVariableType; set { _explicitNullValueVariableType = value; AdditionalData?.Remove("variable_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("variable_type"); else _explicitNullProperties?.Remove("variable_type"); } }
+        private string? _explicitNullValueVariableType = default!;
+        public string? CollectionKey { get => _explicitNullValueCollectionKey; set { _explicitNullValueCollectionKey = value; AdditionalData?.Remove("collection_key"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("collection_key"); else _explicitNullProperties?.Remove("collection_key"); } }
+        private string? _explicitNullValueCollectionKey = default!;
+        public string? CollectionName { get => _explicitNullValueCollectionName; set { _explicitNullValueCollectionName = value; AdditionalData?.Remove("collection_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("collection_name"); else _explicitNullProperties?.Remove("collection_name"); } }
+        private string? _explicitNullValueCollectionName = default!;
+        public double? Detachments { get => _explicitNullValueDetachments; set { _explicitNullValueDetachments = value; AdditionalData?.Remove("detachments"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("detachments"); else _explicitNullProperties?.Remove("detachments"); } }
+        private double? _explicitNullValueDetachments = default!;
+        public double? Insertions { get => _explicitNullValueInsertions; set { _explicitNullValueInsertions = value; AdditionalData?.Remove("insertions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("insertions"); else _explicitNullProperties?.Remove("insertions"); } }
+        private double? _explicitNullValueInsertions = default!;
+#nullable restore
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
@@ -46,6 +82,14 @@ namespace Soenneker.Figma.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "week", n => { Week = n.GetStringValue(); } },
+                { "variable_key", n => { VariableKey = n.GetStringValue(); } },
+                { "variable_name", n => { VariableName = n.GetStringValue(); } },
+                { "variable_type", n => { VariableType = n.GetStringValue(); } },
+                { "collection_key", n => { CollectionKey = n.GetStringValue(); } },
+                { "collection_name", n => { CollectionName = n.GetStringValue(); } },
+                { "detachments", n => { Detachments = n.GetDoubleValue(); } },
+                { "insertions", n => { Insertions = n.GetDoubleValue(); } },
             };
         }
         /// <summary>
@@ -55,6 +99,14 @@ namespace Soenneker.Figma.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteStringValue("week", Week);
+            writer.WriteStringValue("variable_key", VariableKey);
+            writer.WriteStringValue("variable_name", VariableName);
+            writer.WriteStringValue("variable_type", VariableType);
+            writer.WriteStringValue("collection_key", CollectionKey);
+            writer.WriteStringValue("collection_name", CollectionName);
+            writer.WriteDoubleValue("detachments", Detachments);
+            writer.WriteDoubleValue("insertions", Insertions);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -17,8 +17,10 @@ namespace Soenneker.Figma.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("endpointNodeId") is { } nullNodeEndpointNodeId && nullNodeEndpointNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EndpointNodeId = null;
-            if (parseNode.GetChildNode("position") is { } nullNodePosition && nullNodePosition.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Position = null;
+            if (parseNode.GetChildNode("endpointNodeId") is null) { _explicitNullValueEndpointNodeId = default!; _explicitNullProperties?.Remove("endpointNodeId"); }
+            else if (parseNode.GetChildNode("endpointNodeId") is { } nullNodeEndpointNodeId && nullNodeEndpointNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EndpointNodeId = null;
+            if (parseNode.GetChildNode("position") is null) { _explicitNullValuePosition = default!; _explicitNullProperties?.Remove("position"); }
+            else if (parseNode.GetChildNode("position") is { } nullNodePosition && nullNodePosition.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Position = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.Figma.OpenApiClient.Models
         /// <summary>Node ID that this endpoint attaches to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EndpointNodeId { get => _explicitNullValueEndpointNodeId; set { _explicitNullValueEndpointNodeId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("endpointNodeId"); else _explicitNullProperties?.Remove("endpointNodeId"); } }
+        public string? EndpointNodeId { get => _explicitNullValueEndpointNodeId; set { _explicitNullValueEndpointNodeId = value; AdditionalData?.Remove("endpointNodeId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("endpointNodeId"); else _explicitNullProperties?.Remove("endpointNodeId"); } }
         private string? _explicitNullValueEndpointNodeId = default!;
 #nullable restore
 #else
-        public string EndpointNodeId { get => _explicitNullValueEndpointNodeId; set { _explicitNullValueEndpointNodeId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("endpointNodeId"); else _explicitNullProperties?.Remove("endpointNodeId"); } }
+        public string EndpointNodeId { get => _explicitNullValueEndpointNodeId; set { _explicitNullValueEndpointNodeId = value; AdditionalData?.Remove("endpointNodeId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("endpointNodeId"); else _explicitNullProperties?.Remove("endpointNodeId"); } }
         private string _explicitNullValueEndpointNodeId = default!;
 #endif
         /// <summary>The position of the endpoint relative to the node.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.Vector? Position { get => _explicitNullValuePosition; set { _explicitNullValuePosition = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("position"); else _explicitNullProperties?.Remove("position"); } }
+        public global::Soenneker.Figma.OpenApiClient.Models.Vector? Position { get => _explicitNullValuePosition; set { _explicitNullValuePosition = value; AdditionalData?.Remove("position"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("position"); else _explicitNullProperties?.Remove("position"); } }
         private global::Soenneker.Figma.OpenApiClient.Models.Vector? _explicitNullValuePosition = default!;
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.Vector Position { get => _explicitNullValuePosition; set { _explicitNullValuePosition = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("position"); else _explicitNullProperties?.Remove("position"); } }
+        public global::Soenneker.Figma.OpenApiClient.Models.Vector Position { get => _explicitNullValuePosition; set { _explicitNullValuePosition = value; AdditionalData?.Remove("position"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("position"); else _explicitNullProperties?.Remove("position"); } }
         private global::Soenneker.Figma.OpenApiClient.Models.Vector _explicitNullValuePosition = default!;
 #endif
         /// <summary>

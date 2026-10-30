@@ -18,40 +18,74 @@ namespace Soenneker.Figma.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("bottomLeftRadius") is { } nullNodeBottomLeftRadius && nullNodeBottomLeftRadius.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BottomLeftRadius = null;
-            if (parseNode.GetChildNode("bottomRightRadius") is { } nullNodeBottomRightRadius && nullNodeBottomRightRadius.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BottomRightRadius = null;
-            if (parseNode.GetChildNode("characters") is { } nullNodeCharacters && nullNodeCharacters.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Characters = null;
-            if (parseNode.GetChildNode("componentProperties") is { } nullNodeComponentProperties && nullNodeComponentProperties.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ComponentProperties = null;
-            if (parseNode.GetChildNode("counterAxisSpacing") is { } nullNodeCounterAxisSpacing && nullNodeCounterAxisSpacing.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CounterAxisSpacing = null;
-            if (parseNode.GetChildNode("effects") is { } nullNodeEffects && nullNodeEffects.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Effects = null;
-            if (parseNode.GetChildNode("fills") is { } nullNodeFills && nullNodeFills.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Fills = null;
-            if (parseNode.GetChildNode("fontFamily") is { } nullNodeFontFamily && nullNodeFontFamily.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FontFamily = null;
-            if (parseNode.GetChildNode("fontSize") is { } nullNodeFontSize && nullNodeFontSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FontSize = null;
-            if (parseNode.GetChildNode("fontStyle") is { } nullNodeFontStyle && nullNodeFontStyle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FontStyle = null;
-            if (parseNode.GetChildNode("fontWeight") is { } nullNodeFontWeight && nullNodeFontWeight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FontWeight = null;
-            if (parseNode.GetChildNode("individualStrokeWeights") is { } nullNodeIndividualStrokeWeights && nullNodeIndividualStrokeWeights.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IndividualStrokeWeights = null;
-            if (parseNode.GetChildNode("itemSpacing") is { } nullNodeItemSpacing && nullNodeItemSpacing.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ItemSpacing = null;
-            if (parseNode.GetChildNode("layoutGrids") is { } nullNodeLayoutGrids && nullNodeLayoutGrids.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LayoutGrids = null;
-            if (parseNode.GetChildNode("letterSpacing") is { } nullNodeLetterSpacing && nullNodeLetterSpacing.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LetterSpacing = null;
-            if (parseNode.GetChildNode("lineHeight") is { } nullNodeLineHeight && nullNodeLineHeight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LineHeight = null;
-            if (parseNode.GetChildNode("maxHeight") is { } nullNodeMaxHeight && nullNodeMaxHeight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxHeight = null;
-            if (parseNode.GetChildNode("maxWidth") is { } nullNodeMaxWidth && nullNodeMaxWidth.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxWidth = null;
-            if (parseNode.GetChildNode("minHeight") is { } nullNodeMinHeight && nullNodeMinHeight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MinHeight = null;
-            if (parseNode.GetChildNode("minWidth") is { } nullNodeMinWidth && nullNodeMinWidth.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MinWidth = null;
-            if (parseNode.GetChildNode("opacity") is { } nullNodeOpacity && nullNodeOpacity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Opacity = null;
-            if (parseNode.GetChildNode("paddingBottom") is { } nullNodePaddingBottom && nullNodePaddingBottom.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaddingBottom = null;
-            if (parseNode.GetChildNode("paddingLeft") is { } nullNodePaddingLeft && nullNodePaddingLeft.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaddingLeft = null;
-            if (parseNode.GetChildNode("paddingRight") is { } nullNodePaddingRight && nullNodePaddingRight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaddingRight = null;
-            if (parseNode.GetChildNode("paddingTop") is { } nullNodePaddingTop && nullNodePaddingTop.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaddingTop = null;
-            if (parseNode.GetChildNode("paragraphIndent") is { } nullNodeParagraphIndent && nullNodeParagraphIndent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ParagraphIndent = null;
-            if (parseNode.GetChildNode("paragraphSpacing") is { } nullNodeParagraphSpacing && nullNodeParagraphSpacing.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ParagraphSpacing = null;
-            if (parseNode.GetChildNode("rectangleCornerRadii") is { } nullNodeRectangleCornerRadii && nullNodeRectangleCornerRadii.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RectangleCornerRadii = null;
-            if (parseNode.GetChildNode("size") is { } nullNodeSize && nullNodeSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Size = null;
-            if (parseNode.GetChildNode("strokes") is { } nullNodeStrokes && nullNodeStrokes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Strokes = null;
-            if (parseNode.GetChildNode("textRangeFills") is { } nullNodeTextRangeFills && nullNodeTextRangeFills.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TextRangeFills = null;
-            if (parseNode.GetChildNode("topLeftRadius") is { } nullNodeTopLeftRadius && nullNodeTopLeftRadius.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TopLeftRadius = null;
-            if (parseNode.GetChildNode("topRightRadius") is { } nullNodeTopRightRadius && nullNodeTopRightRadius.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TopRightRadius = null;
-            if (parseNode.GetChildNode("visible") is { } nullNodeVisible && nullNodeVisible.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Visible = null;
+            if (parseNode.GetChildNode("bottomLeftRadius") is null) { _explicitNullValueBottomLeftRadius = default!; _explicitNullProperties?.Remove("bottomLeftRadius"); }
+            else if (parseNode.GetChildNode("bottomLeftRadius") is { } nullNodeBottomLeftRadius && nullNodeBottomLeftRadius.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BottomLeftRadius = null;
+            if (parseNode.GetChildNode("bottomRightRadius") is null) { _explicitNullValueBottomRightRadius = default!; _explicitNullProperties?.Remove("bottomRightRadius"); }
+            else if (parseNode.GetChildNode("bottomRightRadius") is { } nullNodeBottomRightRadius && nullNodeBottomRightRadius.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BottomRightRadius = null;
+            if (parseNode.GetChildNode("characters") is null) { _explicitNullValueCharacters = default!; _explicitNullProperties?.Remove("characters"); }
+            else if (parseNode.GetChildNode("characters") is { } nullNodeCharacters && nullNodeCharacters.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Characters = null;
+            if (parseNode.GetChildNode("componentProperties") is null) { _explicitNullValueComponentProperties = default!; _explicitNullProperties?.Remove("componentProperties"); }
+            else if (parseNode.GetChildNode("componentProperties") is { } nullNodeComponentProperties && nullNodeComponentProperties.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ComponentProperties = null;
+            if (parseNode.GetChildNode("counterAxisSpacing") is null) { _explicitNullValueCounterAxisSpacing = default!; _explicitNullProperties?.Remove("counterAxisSpacing"); }
+            else if (parseNode.GetChildNode("counterAxisSpacing") is { } nullNodeCounterAxisSpacing && nullNodeCounterAxisSpacing.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CounterAxisSpacing = null;
+            if (parseNode.GetChildNode("effects") is null) { _explicitNullValueEffects = default!; _explicitNullProperties?.Remove("effects"); }
+            else if (parseNode.GetChildNode("effects") is { } nullNodeEffects && nullNodeEffects.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Effects = null;
+            if (parseNode.GetChildNode("fills") is null) { _explicitNullValueFills = default!; _explicitNullProperties?.Remove("fills"); }
+            else if (parseNode.GetChildNode("fills") is { } nullNodeFills && nullNodeFills.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Fills = null;
+            if (parseNode.GetChildNode("fontFamily") is null) { _explicitNullValueFontFamily = default!; _explicitNullProperties?.Remove("fontFamily"); }
+            else if (parseNode.GetChildNode("fontFamily") is { } nullNodeFontFamily && nullNodeFontFamily.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FontFamily = null;
+            if (parseNode.GetChildNode("fontSize") is null) { _explicitNullValueFontSize = default!; _explicitNullProperties?.Remove("fontSize"); }
+            else if (parseNode.GetChildNode("fontSize") is { } nullNodeFontSize && nullNodeFontSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FontSize = null;
+            if (parseNode.GetChildNode("fontStyle") is null) { _explicitNullValueFontStyle = default!; _explicitNullProperties?.Remove("fontStyle"); }
+            else if (parseNode.GetChildNode("fontStyle") is { } nullNodeFontStyle && nullNodeFontStyle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FontStyle = null;
+            if (parseNode.GetChildNode("fontWeight") is null) { _explicitNullValueFontWeight = default!; _explicitNullProperties?.Remove("fontWeight"); }
+            else if (parseNode.GetChildNode("fontWeight") is { } nullNodeFontWeight && nullNodeFontWeight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FontWeight = null;
+            if (parseNode.GetChildNode("individualStrokeWeights") is null) { _explicitNullValueIndividualStrokeWeights = default!; _explicitNullProperties?.Remove("individualStrokeWeights"); }
+            else if (parseNode.GetChildNode("individualStrokeWeights") is { } nullNodeIndividualStrokeWeights && nullNodeIndividualStrokeWeights.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IndividualStrokeWeights = null;
+            if (parseNode.GetChildNode("itemSpacing") is null) { _explicitNullValueItemSpacing = default!; _explicitNullProperties?.Remove("itemSpacing"); }
+            else if (parseNode.GetChildNode("itemSpacing") is { } nullNodeItemSpacing && nullNodeItemSpacing.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ItemSpacing = null;
+            if (parseNode.GetChildNode("layoutGrids") is null) { _explicitNullValueLayoutGrids = default!; _explicitNullProperties?.Remove("layoutGrids"); }
+            else if (parseNode.GetChildNode("layoutGrids") is { } nullNodeLayoutGrids && nullNodeLayoutGrids.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LayoutGrids = null;
+            if (parseNode.GetChildNode("letterSpacing") is null) { _explicitNullValueLetterSpacing = default!; _explicitNullProperties?.Remove("letterSpacing"); }
+            else if (parseNode.GetChildNode("letterSpacing") is { } nullNodeLetterSpacing && nullNodeLetterSpacing.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LetterSpacing = null;
+            if (parseNode.GetChildNode("lineHeight") is null) { _explicitNullValueLineHeight = default!; _explicitNullProperties?.Remove("lineHeight"); }
+            else if (parseNode.GetChildNode("lineHeight") is { } nullNodeLineHeight && nullNodeLineHeight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LineHeight = null;
+            if (parseNode.GetChildNode("maxHeight") is null) { _explicitNullValueMaxHeight = default!; _explicitNullProperties?.Remove("maxHeight"); }
+            else if (parseNode.GetChildNode("maxHeight") is { } nullNodeMaxHeight && nullNodeMaxHeight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxHeight = null;
+            if (parseNode.GetChildNode("maxWidth") is null) { _explicitNullValueMaxWidth = default!; _explicitNullProperties?.Remove("maxWidth"); }
+            else if (parseNode.GetChildNode("maxWidth") is { } nullNodeMaxWidth && nullNodeMaxWidth.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxWidth = null;
+            if (parseNode.GetChildNode("minHeight") is null) { _explicitNullValueMinHeight = default!; _explicitNullProperties?.Remove("minHeight"); }
+            else if (parseNode.GetChildNode("minHeight") is { } nullNodeMinHeight && nullNodeMinHeight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MinHeight = null;
+            if (parseNode.GetChildNode("minWidth") is null) { _explicitNullValueMinWidth = default!; _explicitNullProperties?.Remove("minWidth"); }
+            else if (parseNode.GetChildNode("minWidth") is { } nullNodeMinWidth && nullNodeMinWidth.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MinWidth = null;
+            if (parseNode.GetChildNode("opacity") is null) { _explicitNullValueOpacity = default!; _explicitNullProperties?.Remove("opacity"); }
+            else if (parseNode.GetChildNode("opacity") is { } nullNodeOpacity && nullNodeOpacity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Opacity = null;
+            if (parseNode.GetChildNode("paddingBottom") is null) { _explicitNullValuePaddingBottom = default!; _explicitNullProperties?.Remove("paddingBottom"); }
+            else if (parseNode.GetChildNode("paddingBottom") is { } nullNodePaddingBottom && nullNodePaddingBottom.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaddingBottom = null;
+            if (parseNode.GetChildNode("paddingLeft") is null) { _explicitNullValuePaddingLeft = default!; _explicitNullProperties?.Remove("paddingLeft"); }
+            else if (parseNode.GetChildNode("paddingLeft") is { } nullNodePaddingLeft && nullNodePaddingLeft.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaddingLeft = null;
+            if (parseNode.GetChildNode("paddingRight") is null) { _explicitNullValuePaddingRight = default!; _explicitNullProperties?.Remove("paddingRight"); }
+            else if (parseNode.GetChildNode("paddingRight") is { } nullNodePaddingRight && nullNodePaddingRight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaddingRight = null;
+            if (parseNode.GetChildNode("paddingTop") is null) { _explicitNullValuePaddingTop = default!; _explicitNullProperties?.Remove("paddingTop"); }
+            else if (parseNode.GetChildNode("paddingTop") is { } nullNodePaddingTop && nullNodePaddingTop.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaddingTop = null;
+            if (parseNode.GetChildNode("paragraphIndent") is null) { _explicitNullValueParagraphIndent = default!; _explicitNullProperties?.Remove("paragraphIndent"); }
+            else if (parseNode.GetChildNode("paragraphIndent") is { } nullNodeParagraphIndent && nullNodeParagraphIndent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ParagraphIndent = null;
+            if (parseNode.GetChildNode("paragraphSpacing") is null) { _explicitNullValueParagraphSpacing = default!; _explicitNullProperties?.Remove("paragraphSpacing"); }
+            else if (parseNode.GetChildNode("paragraphSpacing") is { } nullNodeParagraphSpacing && nullNodeParagraphSpacing.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ParagraphSpacing = null;
+            if (parseNode.GetChildNode("rectangleCornerRadii") is null) { _explicitNullValueRectangleCornerRadii = default!; _explicitNullProperties?.Remove("rectangleCornerRadii"); }
+            else if (parseNode.GetChildNode("rectangleCornerRadii") is { } nullNodeRectangleCornerRadii && nullNodeRectangleCornerRadii.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RectangleCornerRadii = null;
+            if (parseNode.GetChildNode("size") is null) { _explicitNullValueSize = default!; _explicitNullProperties?.Remove("size"); }
+            else if (parseNode.GetChildNode("size") is { } nullNodeSize && nullNodeSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Size = null;
+            if (parseNode.GetChildNode("strokes") is null) { _explicitNullValueStrokes = default!; _explicitNullProperties?.Remove("strokes"); }
+            else if (parseNode.GetChildNode("strokes") is { } nullNodeStrokes && nullNodeStrokes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Strokes = null;
+            if (parseNode.GetChildNode("textRangeFills") is null) { _explicitNullValueTextRangeFills = default!; _explicitNullProperties?.Remove("textRangeFills"); }
+            else if (parseNode.GetChildNode("textRangeFills") is { } nullNodeTextRangeFills && nullNodeTextRangeFills.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TextRangeFills = null;
+            if (parseNode.GetChildNode("topLeftRadius") is null) { _explicitNullValueTopLeftRadius = default!; _explicitNullProperties?.Remove("topLeftRadius"); }
+            else if (parseNode.GetChildNode("topLeftRadius") is { } nullNodeTopLeftRadius && nullNodeTopLeftRadius.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TopLeftRadius = null;
+            if (parseNode.GetChildNode("topRightRadius") is null) { _explicitNullValueTopRightRadius = default!; _explicitNullProperties?.Remove("topRightRadius"); }
+            else if (parseNode.GetChildNode("topRightRadius") is { } nullNodeTopRightRadius && nullNodeTopRightRadius.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TopRightRadius = null;
+            if (parseNode.GetChildNode("visible") is null) { _explicitNullValueVisible = default!; _explicitNullProperties?.Remove("visible"); }
+            else if (parseNode.GetChildNode("visible") is { } nullNodeVisible && nullNodeVisible.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Visible = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -59,341 +93,341 @@ namespace Soenneker.Figma.OpenApiClient.Models
         /// <summary>Contains a variable alias</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? BottomLeftRadius { get => _explicitNullValueBottomLeftRadius; set { _explicitNullValueBottomLeftRadius = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bottomLeftRadius"); else _explicitNullProperties?.Remove("bottomLeftRadius"); } }
+        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? BottomLeftRadius { get => _explicitNullValueBottomLeftRadius; set { _explicitNullValueBottomLeftRadius = value; AdditionalData?.Remove("bottomLeftRadius"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bottomLeftRadius"); else _explicitNullProperties?.Remove("bottomLeftRadius"); } }
         private global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? _explicitNullValueBottomLeftRadius = default!;
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias BottomLeftRadius { get => _explicitNullValueBottomLeftRadius; set { _explicitNullValueBottomLeftRadius = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bottomLeftRadius"); else _explicitNullProperties?.Remove("bottomLeftRadius"); } }
+        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias BottomLeftRadius { get => _explicitNullValueBottomLeftRadius; set { _explicitNullValueBottomLeftRadius = value; AdditionalData?.Remove("bottomLeftRadius"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bottomLeftRadius"); else _explicitNullProperties?.Remove("bottomLeftRadius"); } }
         private global::Soenneker.Figma.OpenApiClient.Models.VariableAlias _explicitNullValueBottomLeftRadius = default!;
 #endif
         /// <summary>Contains a variable alias</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? BottomRightRadius { get => _explicitNullValueBottomRightRadius; set { _explicitNullValueBottomRightRadius = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bottomRightRadius"); else _explicitNullProperties?.Remove("bottomRightRadius"); } }
+        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? BottomRightRadius { get => _explicitNullValueBottomRightRadius; set { _explicitNullValueBottomRightRadius = value; AdditionalData?.Remove("bottomRightRadius"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bottomRightRadius"); else _explicitNullProperties?.Remove("bottomRightRadius"); } }
         private global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? _explicitNullValueBottomRightRadius = default!;
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias BottomRightRadius { get => _explicitNullValueBottomRightRadius; set { _explicitNullValueBottomRightRadius = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bottomRightRadius"); else _explicitNullProperties?.Remove("bottomRightRadius"); } }
+        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias BottomRightRadius { get => _explicitNullValueBottomRightRadius; set { _explicitNullValueBottomRightRadius = value; AdditionalData?.Remove("bottomRightRadius"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bottomRightRadius"); else _explicitNullProperties?.Remove("bottomRightRadius"); } }
         private global::Soenneker.Figma.OpenApiClient.Models.VariableAlias _explicitNullValueBottomRightRadius = default!;
 #endif
         /// <summary>Contains a variable alias</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? Characters { get => _explicitNullValueCharacters; set { _explicitNullValueCharacters = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("characters"); else _explicitNullProperties?.Remove("characters"); } }
+        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? Characters { get => _explicitNullValueCharacters; set { _explicitNullValueCharacters = value; AdditionalData?.Remove("characters"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("characters"); else _explicitNullProperties?.Remove("characters"); } }
         private global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? _explicitNullValueCharacters = default!;
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias Characters { get => _explicitNullValueCharacters; set { _explicitNullValueCharacters = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("characters"); else _explicitNullProperties?.Remove("characters"); } }
+        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias Characters { get => _explicitNullValueCharacters; set { _explicitNullValueCharacters = value; AdditionalData?.Remove("characters"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("characters"); else _explicitNullProperties?.Remove("characters"); } }
         private global::Soenneker.Figma.OpenApiClient.Models.VariableAlias _explicitNullValueCharacters = default!;
 #endif
         /// <summary>The componentProperties property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.IsLayerTraitBoundVariablesComponentPropertiesProperty? ComponentProperties { get => _explicitNullValueComponentProperties; set { _explicitNullValueComponentProperties = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("componentProperties"); else _explicitNullProperties?.Remove("componentProperties"); } }
+        public global::Soenneker.Figma.OpenApiClient.Models.IsLayerTraitBoundVariablesComponentPropertiesProperty? ComponentProperties { get => _explicitNullValueComponentProperties; set { _explicitNullValueComponentProperties = value; AdditionalData?.Remove("componentProperties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("componentProperties"); else _explicitNullProperties?.Remove("componentProperties"); } }
         private global::Soenneker.Figma.OpenApiClient.Models.IsLayerTraitBoundVariablesComponentPropertiesProperty? _explicitNullValueComponentProperties = default!;
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.IsLayerTraitBoundVariablesComponentPropertiesProperty ComponentProperties { get => _explicitNullValueComponentProperties; set { _explicitNullValueComponentProperties = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("componentProperties"); else _explicitNullProperties?.Remove("componentProperties"); } }
+        public global::Soenneker.Figma.OpenApiClient.Models.IsLayerTraitBoundVariablesComponentPropertiesProperty ComponentProperties { get => _explicitNullValueComponentProperties; set { _explicitNullValueComponentProperties = value; AdditionalData?.Remove("componentProperties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("componentProperties"); else _explicitNullProperties?.Remove("componentProperties"); } }
         private global::Soenneker.Figma.OpenApiClient.Models.IsLayerTraitBoundVariablesComponentPropertiesProperty _explicitNullValueComponentProperties = default!;
 #endif
         /// <summary>Contains a variable alias</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? CounterAxisSpacing { get => _explicitNullValueCounterAxisSpacing; set { _explicitNullValueCounterAxisSpacing = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("counterAxisSpacing"); else _explicitNullProperties?.Remove("counterAxisSpacing"); } }
+        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? CounterAxisSpacing { get => _explicitNullValueCounterAxisSpacing; set { _explicitNullValueCounterAxisSpacing = value; AdditionalData?.Remove("counterAxisSpacing"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("counterAxisSpacing"); else _explicitNullProperties?.Remove("counterAxisSpacing"); } }
         private global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? _explicitNullValueCounterAxisSpacing = default!;
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias CounterAxisSpacing { get => _explicitNullValueCounterAxisSpacing; set { _explicitNullValueCounterAxisSpacing = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("counterAxisSpacing"); else _explicitNullProperties?.Remove("counterAxisSpacing"); } }
+        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias CounterAxisSpacing { get => _explicitNullValueCounterAxisSpacing; set { _explicitNullValueCounterAxisSpacing = value; AdditionalData?.Remove("counterAxisSpacing"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("counterAxisSpacing"); else _explicitNullProperties?.Remove("counterAxisSpacing"); } }
         private global::Soenneker.Figma.OpenApiClient.Models.VariableAlias _explicitNullValueCounterAxisSpacing = default!;
 #endif
         /// <summary>The effects property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Figma.OpenApiClient.Models.VariableAlias>? Effects { get => _explicitNullValueEffects; set { _explicitNullValueEffects = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("effects"); else _explicitNullProperties?.Remove("effects"); } }
+        public List<global::Soenneker.Figma.OpenApiClient.Models.VariableAlias>? Effects { get => _explicitNullValueEffects; set { _explicitNullValueEffects = value; AdditionalData?.Remove("effects"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("effects"); else _explicitNullProperties?.Remove("effects"); } }
         private List<global::Soenneker.Figma.OpenApiClient.Models.VariableAlias>? _explicitNullValueEffects = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Figma.OpenApiClient.Models.VariableAlias> Effects { get => _explicitNullValueEffects; set { _explicitNullValueEffects = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("effects"); else _explicitNullProperties?.Remove("effects"); } }
+        public List<global::Soenneker.Figma.OpenApiClient.Models.VariableAlias> Effects { get => _explicitNullValueEffects; set { _explicitNullValueEffects = value; AdditionalData?.Remove("effects"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("effects"); else _explicitNullProperties?.Remove("effects"); } }
         private List<global::Soenneker.Figma.OpenApiClient.Models.VariableAlias> _explicitNullValueEffects = default!;
 #endif
         /// <summary>The fills property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Figma.OpenApiClient.Models.VariableAlias>? Fills { get => _explicitNullValueFills; set { _explicitNullValueFills = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fills"); else _explicitNullProperties?.Remove("fills"); } }
+        public List<global::Soenneker.Figma.OpenApiClient.Models.VariableAlias>? Fills { get => _explicitNullValueFills; set { _explicitNullValueFills = value; AdditionalData?.Remove("fills"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fills"); else _explicitNullProperties?.Remove("fills"); } }
         private List<global::Soenneker.Figma.OpenApiClient.Models.VariableAlias>? _explicitNullValueFills = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Figma.OpenApiClient.Models.VariableAlias> Fills { get => _explicitNullValueFills; set { _explicitNullValueFills = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fills"); else _explicitNullProperties?.Remove("fills"); } }
+        public List<global::Soenneker.Figma.OpenApiClient.Models.VariableAlias> Fills { get => _explicitNullValueFills; set { _explicitNullValueFills = value; AdditionalData?.Remove("fills"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fills"); else _explicitNullProperties?.Remove("fills"); } }
         private List<global::Soenneker.Figma.OpenApiClient.Models.VariableAlias> _explicitNullValueFills = default!;
 #endif
         /// <summary>The fontFamily property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Figma.OpenApiClient.Models.VariableAlias>? FontFamily { get => _explicitNullValueFontFamily; set { _explicitNullValueFontFamily = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fontFamily"); else _explicitNullProperties?.Remove("fontFamily"); } }
+        public List<global::Soenneker.Figma.OpenApiClient.Models.VariableAlias>? FontFamily { get => _explicitNullValueFontFamily; set { _explicitNullValueFontFamily = value; AdditionalData?.Remove("fontFamily"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fontFamily"); else _explicitNullProperties?.Remove("fontFamily"); } }
         private List<global::Soenneker.Figma.OpenApiClient.Models.VariableAlias>? _explicitNullValueFontFamily = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Figma.OpenApiClient.Models.VariableAlias> FontFamily { get => _explicitNullValueFontFamily; set { _explicitNullValueFontFamily = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fontFamily"); else _explicitNullProperties?.Remove("fontFamily"); } }
+        public List<global::Soenneker.Figma.OpenApiClient.Models.VariableAlias> FontFamily { get => _explicitNullValueFontFamily; set { _explicitNullValueFontFamily = value; AdditionalData?.Remove("fontFamily"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fontFamily"); else _explicitNullProperties?.Remove("fontFamily"); } }
         private List<global::Soenneker.Figma.OpenApiClient.Models.VariableAlias> _explicitNullValueFontFamily = default!;
 #endif
         /// <summary>The fontSize property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Figma.OpenApiClient.Models.VariableAlias>? FontSize { get => _explicitNullValueFontSize; set { _explicitNullValueFontSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fontSize"); else _explicitNullProperties?.Remove("fontSize"); } }
+        public List<global::Soenneker.Figma.OpenApiClient.Models.VariableAlias>? FontSize { get => _explicitNullValueFontSize; set { _explicitNullValueFontSize = value; AdditionalData?.Remove("fontSize"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fontSize"); else _explicitNullProperties?.Remove("fontSize"); } }
         private List<global::Soenneker.Figma.OpenApiClient.Models.VariableAlias>? _explicitNullValueFontSize = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Figma.OpenApiClient.Models.VariableAlias> FontSize { get => _explicitNullValueFontSize; set { _explicitNullValueFontSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fontSize"); else _explicitNullProperties?.Remove("fontSize"); } }
+        public List<global::Soenneker.Figma.OpenApiClient.Models.VariableAlias> FontSize { get => _explicitNullValueFontSize; set { _explicitNullValueFontSize = value; AdditionalData?.Remove("fontSize"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fontSize"); else _explicitNullProperties?.Remove("fontSize"); } }
         private List<global::Soenneker.Figma.OpenApiClient.Models.VariableAlias> _explicitNullValueFontSize = default!;
 #endif
         /// <summary>The fontStyle property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Figma.OpenApiClient.Models.VariableAlias>? FontStyle { get => _explicitNullValueFontStyle; set { _explicitNullValueFontStyle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fontStyle"); else _explicitNullProperties?.Remove("fontStyle"); } }
+        public List<global::Soenneker.Figma.OpenApiClient.Models.VariableAlias>? FontStyle { get => _explicitNullValueFontStyle; set { _explicitNullValueFontStyle = value; AdditionalData?.Remove("fontStyle"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fontStyle"); else _explicitNullProperties?.Remove("fontStyle"); } }
         private List<global::Soenneker.Figma.OpenApiClient.Models.VariableAlias>? _explicitNullValueFontStyle = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Figma.OpenApiClient.Models.VariableAlias> FontStyle { get => _explicitNullValueFontStyle; set { _explicitNullValueFontStyle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fontStyle"); else _explicitNullProperties?.Remove("fontStyle"); } }
+        public List<global::Soenneker.Figma.OpenApiClient.Models.VariableAlias> FontStyle { get => _explicitNullValueFontStyle; set { _explicitNullValueFontStyle = value; AdditionalData?.Remove("fontStyle"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fontStyle"); else _explicitNullProperties?.Remove("fontStyle"); } }
         private List<global::Soenneker.Figma.OpenApiClient.Models.VariableAlias> _explicitNullValueFontStyle = default!;
 #endif
         /// <summary>The fontWeight property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Figma.OpenApiClient.Models.VariableAlias>? FontWeight { get => _explicitNullValueFontWeight; set { _explicitNullValueFontWeight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fontWeight"); else _explicitNullProperties?.Remove("fontWeight"); } }
+        public List<global::Soenneker.Figma.OpenApiClient.Models.VariableAlias>? FontWeight { get => _explicitNullValueFontWeight; set { _explicitNullValueFontWeight = value; AdditionalData?.Remove("fontWeight"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fontWeight"); else _explicitNullProperties?.Remove("fontWeight"); } }
         private List<global::Soenneker.Figma.OpenApiClient.Models.VariableAlias>? _explicitNullValueFontWeight = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Figma.OpenApiClient.Models.VariableAlias> FontWeight { get => _explicitNullValueFontWeight; set { _explicitNullValueFontWeight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fontWeight"); else _explicitNullProperties?.Remove("fontWeight"); } }
+        public List<global::Soenneker.Figma.OpenApiClient.Models.VariableAlias> FontWeight { get => _explicitNullValueFontWeight; set { _explicitNullValueFontWeight = value; AdditionalData?.Remove("fontWeight"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fontWeight"); else _explicitNullProperties?.Remove("fontWeight"); } }
         private List<global::Soenneker.Figma.OpenApiClient.Models.VariableAlias> _explicitNullValueFontWeight = default!;
 #endif
         /// <summary>The individualStrokeWeights property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.IsLayerTraitBoundVariablesIndividualStrokeWeights? IndividualStrokeWeights { get => _explicitNullValueIndividualStrokeWeights; set { _explicitNullValueIndividualStrokeWeights = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("individualStrokeWeights"); else _explicitNullProperties?.Remove("individualStrokeWeights"); } }
+        public global::Soenneker.Figma.OpenApiClient.Models.IsLayerTraitBoundVariablesIndividualStrokeWeights? IndividualStrokeWeights { get => _explicitNullValueIndividualStrokeWeights; set { _explicitNullValueIndividualStrokeWeights = value; AdditionalData?.Remove("individualStrokeWeights"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("individualStrokeWeights"); else _explicitNullProperties?.Remove("individualStrokeWeights"); } }
         private global::Soenneker.Figma.OpenApiClient.Models.IsLayerTraitBoundVariablesIndividualStrokeWeights? _explicitNullValueIndividualStrokeWeights = default!;
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.IsLayerTraitBoundVariablesIndividualStrokeWeights IndividualStrokeWeights { get => _explicitNullValueIndividualStrokeWeights; set { _explicitNullValueIndividualStrokeWeights = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("individualStrokeWeights"); else _explicitNullProperties?.Remove("individualStrokeWeights"); } }
+        public global::Soenneker.Figma.OpenApiClient.Models.IsLayerTraitBoundVariablesIndividualStrokeWeights IndividualStrokeWeights { get => _explicitNullValueIndividualStrokeWeights; set { _explicitNullValueIndividualStrokeWeights = value; AdditionalData?.Remove("individualStrokeWeights"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("individualStrokeWeights"); else _explicitNullProperties?.Remove("individualStrokeWeights"); } }
         private global::Soenneker.Figma.OpenApiClient.Models.IsLayerTraitBoundVariablesIndividualStrokeWeights _explicitNullValueIndividualStrokeWeights = default!;
 #endif
         /// <summary>Contains a variable alias</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? ItemSpacing { get => _explicitNullValueItemSpacing; set { _explicitNullValueItemSpacing = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("itemSpacing"); else _explicitNullProperties?.Remove("itemSpacing"); } }
+        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? ItemSpacing { get => _explicitNullValueItemSpacing; set { _explicitNullValueItemSpacing = value; AdditionalData?.Remove("itemSpacing"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("itemSpacing"); else _explicitNullProperties?.Remove("itemSpacing"); } }
         private global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? _explicitNullValueItemSpacing = default!;
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias ItemSpacing { get => _explicitNullValueItemSpacing; set { _explicitNullValueItemSpacing = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("itemSpacing"); else _explicitNullProperties?.Remove("itemSpacing"); } }
+        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias ItemSpacing { get => _explicitNullValueItemSpacing; set { _explicitNullValueItemSpacing = value; AdditionalData?.Remove("itemSpacing"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("itemSpacing"); else _explicitNullProperties?.Remove("itemSpacing"); } }
         private global::Soenneker.Figma.OpenApiClient.Models.VariableAlias _explicitNullValueItemSpacing = default!;
 #endif
         /// <summary>The layoutGrids property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Figma.OpenApiClient.Models.VariableAlias>? LayoutGrids { get => _explicitNullValueLayoutGrids; set { _explicitNullValueLayoutGrids = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("layoutGrids"); else _explicitNullProperties?.Remove("layoutGrids"); } }
+        public List<global::Soenneker.Figma.OpenApiClient.Models.VariableAlias>? LayoutGrids { get => _explicitNullValueLayoutGrids; set { _explicitNullValueLayoutGrids = value; AdditionalData?.Remove("layoutGrids"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("layoutGrids"); else _explicitNullProperties?.Remove("layoutGrids"); } }
         private List<global::Soenneker.Figma.OpenApiClient.Models.VariableAlias>? _explicitNullValueLayoutGrids = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Figma.OpenApiClient.Models.VariableAlias> LayoutGrids { get => _explicitNullValueLayoutGrids; set { _explicitNullValueLayoutGrids = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("layoutGrids"); else _explicitNullProperties?.Remove("layoutGrids"); } }
+        public List<global::Soenneker.Figma.OpenApiClient.Models.VariableAlias> LayoutGrids { get => _explicitNullValueLayoutGrids; set { _explicitNullValueLayoutGrids = value; AdditionalData?.Remove("layoutGrids"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("layoutGrids"); else _explicitNullProperties?.Remove("layoutGrids"); } }
         private List<global::Soenneker.Figma.OpenApiClient.Models.VariableAlias> _explicitNullValueLayoutGrids = default!;
 #endif
         /// <summary>The letterSpacing property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Figma.OpenApiClient.Models.VariableAlias>? LetterSpacing { get => _explicitNullValueLetterSpacing; set { _explicitNullValueLetterSpacing = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("letterSpacing"); else _explicitNullProperties?.Remove("letterSpacing"); } }
+        public List<global::Soenneker.Figma.OpenApiClient.Models.VariableAlias>? LetterSpacing { get => _explicitNullValueLetterSpacing; set { _explicitNullValueLetterSpacing = value; AdditionalData?.Remove("letterSpacing"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("letterSpacing"); else _explicitNullProperties?.Remove("letterSpacing"); } }
         private List<global::Soenneker.Figma.OpenApiClient.Models.VariableAlias>? _explicitNullValueLetterSpacing = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Figma.OpenApiClient.Models.VariableAlias> LetterSpacing { get => _explicitNullValueLetterSpacing; set { _explicitNullValueLetterSpacing = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("letterSpacing"); else _explicitNullProperties?.Remove("letterSpacing"); } }
+        public List<global::Soenneker.Figma.OpenApiClient.Models.VariableAlias> LetterSpacing { get => _explicitNullValueLetterSpacing; set { _explicitNullValueLetterSpacing = value; AdditionalData?.Remove("letterSpacing"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("letterSpacing"); else _explicitNullProperties?.Remove("letterSpacing"); } }
         private List<global::Soenneker.Figma.OpenApiClient.Models.VariableAlias> _explicitNullValueLetterSpacing = default!;
 #endif
         /// <summary>The lineHeight property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Figma.OpenApiClient.Models.VariableAlias>? LineHeight { get => _explicitNullValueLineHeight; set { _explicitNullValueLineHeight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lineHeight"); else _explicitNullProperties?.Remove("lineHeight"); } }
+        public List<global::Soenneker.Figma.OpenApiClient.Models.VariableAlias>? LineHeight { get => _explicitNullValueLineHeight; set { _explicitNullValueLineHeight = value; AdditionalData?.Remove("lineHeight"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lineHeight"); else _explicitNullProperties?.Remove("lineHeight"); } }
         private List<global::Soenneker.Figma.OpenApiClient.Models.VariableAlias>? _explicitNullValueLineHeight = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Figma.OpenApiClient.Models.VariableAlias> LineHeight { get => _explicitNullValueLineHeight; set { _explicitNullValueLineHeight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lineHeight"); else _explicitNullProperties?.Remove("lineHeight"); } }
+        public List<global::Soenneker.Figma.OpenApiClient.Models.VariableAlias> LineHeight { get => _explicitNullValueLineHeight; set { _explicitNullValueLineHeight = value; AdditionalData?.Remove("lineHeight"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lineHeight"); else _explicitNullProperties?.Remove("lineHeight"); } }
         private List<global::Soenneker.Figma.OpenApiClient.Models.VariableAlias> _explicitNullValueLineHeight = default!;
 #endif
         /// <summary>Contains a variable alias</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? MaxHeight { get => _explicitNullValueMaxHeight; set { _explicitNullValueMaxHeight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("maxHeight"); else _explicitNullProperties?.Remove("maxHeight"); } }
+        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? MaxHeight { get => _explicitNullValueMaxHeight; set { _explicitNullValueMaxHeight = value; AdditionalData?.Remove("maxHeight"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("maxHeight"); else _explicitNullProperties?.Remove("maxHeight"); } }
         private global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? _explicitNullValueMaxHeight = default!;
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias MaxHeight { get => _explicitNullValueMaxHeight; set { _explicitNullValueMaxHeight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("maxHeight"); else _explicitNullProperties?.Remove("maxHeight"); } }
+        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias MaxHeight { get => _explicitNullValueMaxHeight; set { _explicitNullValueMaxHeight = value; AdditionalData?.Remove("maxHeight"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("maxHeight"); else _explicitNullProperties?.Remove("maxHeight"); } }
         private global::Soenneker.Figma.OpenApiClient.Models.VariableAlias _explicitNullValueMaxHeight = default!;
 #endif
         /// <summary>Contains a variable alias</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? MaxWidth { get => _explicitNullValueMaxWidth; set { _explicitNullValueMaxWidth = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("maxWidth"); else _explicitNullProperties?.Remove("maxWidth"); } }
+        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? MaxWidth { get => _explicitNullValueMaxWidth; set { _explicitNullValueMaxWidth = value; AdditionalData?.Remove("maxWidth"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("maxWidth"); else _explicitNullProperties?.Remove("maxWidth"); } }
         private global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? _explicitNullValueMaxWidth = default!;
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias MaxWidth { get => _explicitNullValueMaxWidth; set { _explicitNullValueMaxWidth = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("maxWidth"); else _explicitNullProperties?.Remove("maxWidth"); } }
+        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias MaxWidth { get => _explicitNullValueMaxWidth; set { _explicitNullValueMaxWidth = value; AdditionalData?.Remove("maxWidth"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("maxWidth"); else _explicitNullProperties?.Remove("maxWidth"); } }
         private global::Soenneker.Figma.OpenApiClient.Models.VariableAlias _explicitNullValueMaxWidth = default!;
 #endif
         /// <summary>Contains a variable alias</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? MinHeight { get => _explicitNullValueMinHeight; set { _explicitNullValueMinHeight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minHeight"); else _explicitNullProperties?.Remove("minHeight"); } }
+        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? MinHeight { get => _explicitNullValueMinHeight; set { _explicitNullValueMinHeight = value; AdditionalData?.Remove("minHeight"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minHeight"); else _explicitNullProperties?.Remove("minHeight"); } }
         private global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? _explicitNullValueMinHeight = default!;
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias MinHeight { get => _explicitNullValueMinHeight; set { _explicitNullValueMinHeight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minHeight"); else _explicitNullProperties?.Remove("minHeight"); } }
+        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias MinHeight { get => _explicitNullValueMinHeight; set { _explicitNullValueMinHeight = value; AdditionalData?.Remove("minHeight"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minHeight"); else _explicitNullProperties?.Remove("minHeight"); } }
         private global::Soenneker.Figma.OpenApiClient.Models.VariableAlias _explicitNullValueMinHeight = default!;
 #endif
         /// <summary>Contains a variable alias</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? MinWidth { get => _explicitNullValueMinWidth; set { _explicitNullValueMinWidth = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minWidth"); else _explicitNullProperties?.Remove("minWidth"); } }
+        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? MinWidth { get => _explicitNullValueMinWidth; set { _explicitNullValueMinWidth = value; AdditionalData?.Remove("minWidth"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minWidth"); else _explicitNullProperties?.Remove("minWidth"); } }
         private global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? _explicitNullValueMinWidth = default!;
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias MinWidth { get => _explicitNullValueMinWidth; set { _explicitNullValueMinWidth = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minWidth"); else _explicitNullProperties?.Remove("minWidth"); } }
+        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias MinWidth { get => _explicitNullValueMinWidth; set { _explicitNullValueMinWidth = value; AdditionalData?.Remove("minWidth"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minWidth"); else _explicitNullProperties?.Remove("minWidth"); } }
         private global::Soenneker.Figma.OpenApiClient.Models.VariableAlias _explicitNullValueMinWidth = default!;
 #endif
         /// <summary>Contains a variable alias</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? Opacity { get => _explicitNullValueOpacity; set { _explicitNullValueOpacity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("opacity"); else _explicitNullProperties?.Remove("opacity"); } }
+        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? Opacity { get => _explicitNullValueOpacity; set { _explicitNullValueOpacity = value; AdditionalData?.Remove("opacity"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("opacity"); else _explicitNullProperties?.Remove("opacity"); } }
         private global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? _explicitNullValueOpacity = default!;
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias Opacity { get => _explicitNullValueOpacity; set { _explicitNullValueOpacity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("opacity"); else _explicitNullProperties?.Remove("opacity"); } }
+        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias Opacity { get => _explicitNullValueOpacity; set { _explicitNullValueOpacity = value; AdditionalData?.Remove("opacity"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("opacity"); else _explicitNullProperties?.Remove("opacity"); } }
         private global::Soenneker.Figma.OpenApiClient.Models.VariableAlias _explicitNullValueOpacity = default!;
 #endif
         /// <summary>Contains a variable alias</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? PaddingBottom { get => _explicitNullValuePaddingBottom; set { _explicitNullValuePaddingBottom = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paddingBottom"); else _explicitNullProperties?.Remove("paddingBottom"); } }
+        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? PaddingBottom { get => _explicitNullValuePaddingBottom; set { _explicitNullValuePaddingBottom = value; AdditionalData?.Remove("paddingBottom"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paddingBottom"); else _explicitNullProperties?.Remove("paddingBottom"); } }
         private global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? _explicitNullValuePaddingBottom = default!;
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias PaddingBottom { get => _explicitNullValuePaddingBottom; set { _explicitNullValuePaddingBottom = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paddingBottom"); else _explicitNullProperties?.Remove("paddingBottom"); } }
+        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias PaddingBottom { get => _explicitNullValuePaddingBottom; set { _explicitNullValuePaddingBottom = value; AdditionalData?.Remove("paddingBottom"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paddingBottom"); else _explicitNullProperties?.Remove("paddingBottom"); } }
         private global::Soenneker.Figma.OpenApiClient.Models.VariableAlias _explicitNullValuePaddingBottom = default!;
 #endif
         /// <summary>Contains a variable alias</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? PaddingLeft { get => _explicitNullValuePaddingLeft; set { _explicitNullValuePaddingLeft = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paddingLeft"); else _explicitNullProperties?.Remove("paddingLeft"); } }
+        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? PaddingLeft { get => _explicitNullValuePaddingLeft; set { _explicitNullValuePaddingLeft = value; AdditionalData?.Remove("paddingLeft"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paddingLeft"); else _explicitNullProperties?.Remove("paddingLeft"); } }
         private global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? _explicitNullValuePaddingLeft = default!;
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias PaddingLeft { get => _explicitNullValuePaddingLeft; set { _explicitNullValuePaddingLeft = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paddingLeft"); else _explicitNullProperties?.Remove("paddingLeft"); } }
+        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias PaddingLeft { get => _explicitNullValuePaddingLeft; set { _explicitNullValuePaddingLeft = value; AdditionalData?.Remove("paddingLeft"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paddingLeft"); else _explicitNullProperties?.Remove("paddingLeft"); } }
         private global::Soenneker.Figma.OpenApiClient.Models.VariableAlias _explicitNullValuePaddingLeft = default!;
 #endif
         /// <summary>Contains a variable alias</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? PaddingRight { get => _explicitNullValuePaddingRight; set { _explicitNullValuePaddingRight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paddingRight"); else _explicitNullProperties?.Remove("paddingRight"); } }
+        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? PaddingRight { get => _explicitNullValuePaddingRight; set { _explicitNullValuePaddingRight = value; AdditionalData?.Remove("paddingRight"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paddingRight"); else _explicitNullProperties?.Remove("paddingRight"); } }
         private global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? _explicitNullValuePaddingRight = default!;
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias PaddingRight { get => _explicitNullValuePaddingRight; set { _explicitNullValuePaddingRight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paddingRight"); else _explicitNullProperties?.Remove("paddingRight"); } }
+        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias PaddingRight { get => _explicitNullValuePaddingRight; set { _explicitNullValuePaddingRight = value; AdditionalData?.Remove("paddingRight"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paddingRight"); else _explicitNullProperties?.Remove("paddingRight"); } }
         private global::Soenneker.Figma.OpenApiClient.Models.VariableAlias _explicitNullValuePaddingRight = default!;
 #endif
         /// <summary>Contains a variable alias</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? PaddingTop { get => _explicitNullValuePaddingTop; set { _explicitNullValuePaddingTop = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paddingTop"); else _explicitNullProperties?.Remove("paddingTop"); } }
+        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? PaddingTop { get => _explicitNullValuePaddingTop; set { _explicitNullValuePaddingTop = value; AdditionalData?.Remove("paddingTop"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paddingTop"); else _explicitNullProperties?.Remove("paddingTop"); } }
         private global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? _explicitNullValuePaddingTop = default!;
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias PaddingTop { get => _explicitNullValuePaddingTop; set { _explicitNullValuePaddingTop = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paddingTop"); else _explicitNullProperties?.Remove("paddingTop"); } }
+        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias PaddingTop { get => _explicitNullValuePaddingTop; set { _explicitNullValuePaddingTop = value; AdditionalData?.Remove("paddingTop"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paddingTop"); else _explicitNullProperties?.Remove("paddingTop"); } }
         private global::Soenneker.Figma.OpenApiClient.Models.VariableAlias _explicitNullValuePaddingTop = default!;
 #endif
         /// <summary>The paragraphIndent property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Figma.OpenApiClient.Models.VariableAlias>? ParagraphIndent { get => _explicitNullValueParagraphIndent; set { _explicitNullValueParagraphIndent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paragraphIndent"); else _explicitNullProperties?.Remove("paragraphIndent"); } }
+        public List<global::Soenneker.Figma.OpenApiClient.Models.VariableAlias>? ParagraphIndent { get => _explicitNullValueParagraphIndent; set { _explicitNullValueParagraphIndent = value; AdditionalData?.Remove("paragraphIndent"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paragraphIndent"); else _explicitNullProperties?.Remove("paragraphIndent"); } }
         private List<global::Soenneker.Figma.OpenApiClient.Models.VariableAlias>? _explicitNullValueParagraphIndent = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Figma.OpenApiClient.Models.VariableAlias> ParagraphIndent { get => _explicitNullValueParagraphIndent; set { _explicitNullValueParagraphIndent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paragraphIndent"); else _explicitNullProperties?.Remove("paragraphIndent"); } }
+        public List<global::Soenneker.Figma.OpenApiClient.Models.VariableAlias> ParagraphIndent { get => _explicitNullValueParagraphIndent; set { _explicitNullValueParagraphIndent = value; AdditionalData?.Remove("paragraphIndent"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paragraphIndent"); else _explicitNullProperties?.Remove("paragraphIndent"); } }
         private List<global::Soenneker.Figma.OpenApiClient.Models.VariableAlias> _explicitNullValueParagraphIndent = default!;
 #endif
         /// <summary>The paragraphSpacing property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Figma.OpenApiClient.Models.VariableAlias>? ParagraphSpacing { get => _explicitNullValueParagraphSpacing; set { _explicitNullValueParagraphSpacing = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paragraphSpacing"); else _explicitNullProperties?.Remove("paragraphSpacing"); } }
+        public List<global::Soenneker.Figma.OpenApiClient.Models.VariableAlias>? ParagraphSpacing { get => _explicitNullValueParagraphSpacing; set { _explicitNullValueParagraphSpacing = value; AdditionalData?.Remove("paragraphSpacing"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paragraphSpacing"); else _explicitNullProperties?.Remove("paragraphSpacing"); } }
         private List<global::Soenneker.Figma.OpenApiClient.Models.VariableAlias>? _explicitNullValueParagraphSpacing = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Figma.OpenApiClient.Models.VariableAlias> ParagraphSpacing { get => _explicitNullValueParagraphSpacing; set { _explicitNullValueParagraphSpacing = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paragraphSpacing"); else _explicitNullProperties?.Remove("paragraphSpacing"); } }
+        public List<global::Soenneker.Figma.OpenApiClient.Models.VariableAlias> ParagraphSpacing { get => _explicitNullValueParagraphSpacing; set { _explicitNullValueParagraphSpacing = value; AdditionalData?.Remove("paragraphSpacing"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paragraphSpacing"); else _explicitNullProperties?.Remove("paragraphSpacing"); } }
         private List<global::Soenneker.Figma.OpenApiClient.Models.VariableAlias> _explicitNullValueParagraphSpacing = default!;
 #endif
         /// <summary>The rectangleCornerRadii property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.IsLayerTraitBoundVariablesRectangleCornerRadii? RectangleCornerRadii { get => _explicitNullValueRectangleCornerRadii; set { _explicitNullValueRectangleCornerRadii = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rectangleCornerRadii"); else _explicitNullProperties?.Remove("rectangleCornerRadii"); } }
+        public global::Soenneker.Figma.OpenApiClient.Models.IsLayerTraitBoundVariablesRectangleCornerRadii? RectangleCornerRadii { get => _explicitNullValueRectangleCornerRadii; set { _explicitNullValueRectangleCornerRadii = value; AdditionalData?.Remove("rectangleCornerRadii"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rectangleCornerRadii"); else _explicitNullProperties?.Remove("rectangleCornerRadii"); } }
         private global::Soenneker.Figma.OpenApiClient.Models.IsLayerTraitBoundVariablesRectangleCornerRadii? _explicitNullValueRectangleCornerRadii = default!;
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.IsLayerTraitBoundVariablesRectangleCornerRadii RectangleCornerRadii { get => _explicitNullValueRectangleCornerRadii; set { _explicitNullValueRectangleCornerRadii = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rectangleCornerRadii"); else _explicitNullProperties?.Remove("rectangleCornerRadii"); } }
+        public global::Soenneker.Figma.OpenApiClient.Models.IsLayerTraitBoundVariablesRectangleCornerRadii RectangleCornerRadii { get => _explicitNullValueRectangleCornerRadii; set { _explicitNullValueRectangleCornerRadii = value; AdditionalData?.Remove("rectangleCornerRadii"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rectangleCornerRadii"); else _explicitNullProperties?.Remove("rectangleCornerRadii"); } }
         private global::Soenneker.Figma.OpenApiClient.Models.IsLayerTraitBoundVariablesRectangleCornerRadii _explicitNullValueRectangleCornerRadii = default!;
 #endif
         /// <summary>The size property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.IsLayerTraitBoundVariablesSize? Size { get => _explicitNullValueSize; set { _explicitNullValueSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("size"); else _explicitNullProperties?.Remove("size"); } }
+        public global::Soenneker.Figma.OpenApiClient.Models.IsLayerTraitBoundVariablesSize? Size { get => _explicitNullValueSize; set { _explicitNullValueSize = value; AdditionalData?.Remove("size"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("size"); else _explicitNullProperties?.Remove("size"); } }
         private global::Soenneker.Figma.OpenApiClient.Models.IsLayerTraitBoundVariablesSize? _explicitNullValueSize = default!;
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.IsLayerTraitBoundVariablesSize Size { get => _explicitNullValueSize; set { _explicitNullValueSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("size"); else _explicitNullProperties?.Remove("size"); } }
+        public global::Soenneker.Figma.OpenApiClient.Models.IsLayerTraitBoundVariablesSize Size { get => _explicitNullValueSize; set { _explicitNullValueSize = value; AdditionalData?.Remove("size"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("size"); else _explicitNullProperties?.Remove("size"); } }
         private global::Soenneker.Figma.OpenApiClient.Models.IsLayerTraitBoundVariablesSize _explicitNullValueSize = default!;
 #endif
         /// <summary>The strokes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Figma.OpenApiClient.Models.VariableAlias>? Strokes { get => _explicitNullValueStrokes; set { _explicitNullValueStrokes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("strokes"); else _explicitNullProperties?.Remove("strokes"); } }
+        public List<global::Soenneker.Figma.OpenApiClient.Models.VariableAlias>? Strokes { get => _explicitNullValueStrokes; set { _explicitNullValueStrokes = value; AdditionalData?.Remove("strokes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("strokes"); else _explicitNullProperties?.Remove("strokes"); } }
         private List<global::Soenneker.Figma.OpenApiClient.Models.VariableAlias>? _explicitNullValueStrokes = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Figma.OpenApiClient.Models.VariableAlias> Strokes { get => _explicitNullValueStrokes; set { _explicitNullValueStrokes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("strokes"); else _explicitNullProperties?.Remove("strokes"); } }
+        public List<global::Soenneker.Figma.OpenApiClient.Models.VariableAlias> Strokes { get => _explicitNullValueStrokes; set { _explicitNullValueStrokes = value; AdditionalData?.Remove("strokes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("strokes"); else _explicitNullProperties?.Remove("strokes"); } }
         private List<global::Soenneker.Figma.OpenApiClient.Models.VariableAlias> _explicitNullValueStrokes = default!;
 #endif
         /// <summary>The textRangeFills property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Figma.OpenApiClient.Models.VariableAlias>? TextRangeFills { get => _explicitNullValueTextRangeFills; set { _explicitNullValueTextRangeFills = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("textRangeFills"); else _explicitNullProperties?.Remove("textRangeFills"); } }
+        public List<global::Soenneker.Figma.OpenApiClient.Models.VariableAlias>? TextRangeFills { get => _explicitNullValueTextRangeFills; set { _explicitNullValueTextRangeFills = value; AdditionalData?.Remove("textRangeFills"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("textRangeFills"); else _explicitNullProperties?.Remove("textRangeFills"); } }
         private List<global::Soenneker.Figma.OpenApiClient.Models.VariableAlias>? _explicitNullValueTextRangeFills = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Figma.OpenApiClient.Models.VariableAlias> TextRangeFills { get => _explicitNullValueTextRangeFills; set { _explicitNullValueTextRangeFills = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("textRangeFills"); else _explicitNullProperties?.Remove("textRangeFills"); } }
+        public List<global::Soenneker.Figma.OpenApiClient.Models.VariableAlias> TextRangeFills { get => _explicitNullValueTextRangeFills; set { _explicitNullValueTextRangeFills = value; AdditionalData?.Remove("textRangeFills"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("textRangeFills"); else _explicitNullProperties?.Remove("textRangeFills"); } }
         private List<global::Soenneker.Figma.OpenApiClient.Models.VariableAlias> _explicitNullValueTextRangeFills = default!;
 #endif
         /// <summary>Contains a variable alias</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? TopLeftRadius { get => _explicitNullValueTopLeftRadius; set { _explicitNullValueTopLeftRadius = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("topLeftRadius"); else _explicitNullProperties?.Remove("topLeftRadius"); } }
+        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? TopLeftRadius { get => _explicitNullValueTopLeftRadius; set { _explicitNullValueTopLeftRadius = value; AdditionalData?.Remove("topLeftRadius"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("topLeftRadius"); else _explicitNullProperties?.Remove("topLeftRadius"); } }
         private global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? _explicitNullValueTopLeftRadius = default!;
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias TopLeftRadius { get => _explicitNullValueTopLeftRadius; set { _explicitNullValueTopLeftRadius = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("topLeftRadius"); else _explicitNullProperties?.Remove("topLeftRadius"); } }
+        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias TopLeftRadius { get => _explicitNullValueTopLeftRadius; set { _explicitNullValueTopLeftRadius = value; AdditionalData?.Remove("topLeftRadius"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("topLeftRadius"); else _explicitNullProperties?.Remove("topLeftRadius"); } }
         private global::Soenneker.Figma.OpenApiClient.Models.VariableAlias _explicitNullValueTopLeftRadius = default!;
 #endif
         /// <summary>Contains a variable alias</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? TopRightRadius { get => _explicitNullValueTopRightRadius; set { _explicitNullValueTopRightRadius = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("topRightRadius"); else _explicitNullProperties?.Remove("topRightRadius"); } }
+        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? TopRightRadius { get => _explicitNullValueTopRightRadius; set { _explicitNullValueTopRightRadius = value; AdditionalData?.Remove("topRightRadius"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("topRightRadius"); else _explicitNullProperties?.Remove("topRightRadius"); } }
         private global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? _explicitNullValueTopRightRadius = default!;
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias TopRightRadius { get => _explicitNullValueTopRightRadius; set { _explicitNullValueTopRightRadius = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("topRightRadius"); else _explicitNullProperties?.Remove("topRightRadius"); } }
+        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias TopRightRadius { get => _explicitNullValueTopRightRadius; set { _explicitNullValueTopRightRadius = value; AdditionalData?.Remove("topRightRadius"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("topRightRadius"); else _explicitNullProperties?.Remove("topRightRadius"); } }
         private global::Soenneker.Figma.OpenApiClient.Models.VariableAlias _explicitNullValueTopRightRadius = default!;
 #endif
         /// <summary>Contains a variable alias</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? Visible { get => _explicitNullValueVisible; set { _explicitNullValueVisible = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("visible"); else _explicitNullProperties?.Remove("visible"); } }
+        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? Visible { get => _explicitNullValueVisible; set { _explicitNullValueVisible = value; AdditionalData?.Remove("visible"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("visible"); else _explicitNullProperties?.Remove("visible"); } }
         private global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? _explicitNullValueVisible = default!;
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias Visible { get => _explicitNullValueVisible; set { _explicitNullValueVisible = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("visible"); else _explicitNullProperties?.Remove("visible"); } }
+        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias Visible { get => _explicitNullValueVisible; set { _explicitNullValueVisible = value; AdditionalData?.Remove("visible"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("visible"); else _explicitNullProperties?.Remove("visible"); } }
         private global::Soenneker.Figma.OpenApiClient.Models.VariableAlias _explicitNullValueVisible = default!;
 #endif
         /// <summary>

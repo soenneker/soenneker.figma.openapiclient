@@ -17,27 +17,48 @@ namespace Soenneker.Figma.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("backgroundColor") is { } nullNodeBackgroundColor && nullNodeBackgroundColor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BackgroundColor = null;
-            if (parseNode.GetChildNode("boundVariables") is { } nullNodeBoundVariables && nullNodeBoundVariables.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BoundVariables = null;
-            if (parseNode.GetChildNode("children") is { } nullNodeChildren && nullNodeChildren.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Children = null;
-            if (parseNode.GetChildNode("componentPropertyReferences") is { } nullNodeComponentPropertyReferences && nullNodeComponentPropertyReferences.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ComponentPropertyReferences = null;
-            if (parseNode.GetChildNode("explicitVariableModes") is { } nullNodeExplicitVariableModes && nullNodeExplicitVariableModes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExplicitVariableModes = null;
-            if (parseNode.GetChildNode("exportSettings") is { } nullNodeExportSettings && nullNodeExportSettings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExportSettings = null;
-            if (parseNode.GetChildNode("flowStartingPoints") is { } nullNodeFlowStartingPoints && nullNodeFlowStartingPoints.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FlowStartingPoints = null;
-            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
-            if (parseNode.GetChildNode("isFixed") is { } nullNodeIsFixed && nullNodeIsFixed.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsFixed = null;
-            if (parseNode.GetChildNode("locked") is { } nullNodeLocked && nullNodeLocked.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Locked = null;
-            if (parseNode.GetChildNode("measurements") is { } nullNodeMeasurements && nullNodeMeasurements.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Measurements = null;
-            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
-            if (parseNode.GetChildNode("pluginData") is { } nullNodePluginData && nullNodePluginData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PluginData = null;
-            if (parseNode.GetChildNode("prototypeBackgrounds") is { } nullNodePrototypeBackgrounds && nullNodePrototypeBackgrounds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrototypeBackgrounds = null;
-            if (parseNode.GetChildNode("prototypeDevice") is { } nullNodePrototypeDevice && nullNodePrototypeDevice.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrototypeDevice = null;
-            if (parseNode.GetChildNode("prototypeStartNodeID") is { } nullNodePrototypeStartNodeID && nullNodePrototypeStartNodeID.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrototypeStartNodeID = null;
-            if (parseNode.GetChildNode("rotation") is { } nullNodeRotation && nullNodeRotation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Rotation = null;
-            if (parseNode.GetChildNode("scrollBehavior") is { } nullNodeScrollBehavior && nullNodeScrollBehavior.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ScrollBehavior = null;
-            if (parseNode.GetChildNode("sharedPluginData") is { } nullNodeSharedPluginData && nullNodeSharedPluginData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SharedPluginData = null;
-            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
-            if (parseNode.GetChildNode("visible") is { } nullNodeVisible && nullNodeVisible.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Visible = null;
+            if (parseNode.GetChildNode("backgroundColor") is null) { _explicitNullValueBackgroundColor = default!; _explicitNullProperties?.Remove("backgroundColor"); }
+            else if (parseNode.GetChildNode("backgroundColor") is { } nullNodeBackgroundColor && nullNodeBackgroundColor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BackgroundColor = null;
+            if (parseNode.GetChildNode("boundVariables") is null) { _explicitNullValueBoundVariables = default!; _explicitNullProperties?.Remove("boundVariables"); }
+            else if (parseNode.GetChildNode("boundVariables") is { } nullNodeBoundVariables && nullNodeBoundVariables.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BoundVariables = null;
+            if (parseNode.GetChildNode("children") is null) { _explicitNullValueChildren = default!; _explicitNullProperties?.Remove("children"); }
+            else if (parseNode.GetChildNode("children") is { } nullNodeChildren && nullNodeChildren.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Children = null;
+            if (parseNode.GetChildNode("componentPropertyReferences") is null) { _explicitNullValueComponentPropertyReferences = default!; _explicitNullProperties?.Remove("componentPropertyReferences"); }
+            else if (parseNode.GetChildNode("componentPropertyReferences") is { } nullNodeComponentPropertyReferences && nullNodeComponentPropertyReferences.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ComponentPropertyReferences = null;
+            if (parseNode.GetChildNode("explicitVariableModes") is null) { _explicitNullValueExplicitVariableModes = default!; _explicitNullProperties?.Remove("explicitVariableModes"); }
+            else if (parseNode.GetChildNode("explicitVariableModes") is { } nullNodeExplicitVariableModes && nullNodeExplicitVariableModes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExplicitVariableModes = null;
+            if (parseNode.GetChildNode("exportSettings") is null) { _explicitNullValueExportSettings = default!; _explicitNullProperties?.Remove("exportSettings"); }
+            else if (parseNode.GetChildNode("exportSettings") is { } nullNodeExportSettings && nullNodeExportSettings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExportSettings = null;
+            if (parseNode.GetChildNode("flowStartingPoints") is null) { _explicitNullValueFlowStartingPoints = default!; _explicitNullProperties?.Remove("flowStartingPoints"); }
+            else if (parseNode.GetChildNode("flowStartingPoints") is { } nullNodeFlowStartingPoints && nullNodeFlowStartingPoints.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FlowStartingPoints = null;
+            if (parseNode.GetChildNode("id") is null) { _explicitNullValueId = default!; _explicitNullProperties?.Remove("id"); }
+            else if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("isFixed") is null) { _explicitNullValueIsFixed = default!; _explicitNullProperties?.Remove("isFixed"); }
+            else if (parseNode.GetChildNode("isFixed") is { } nullNodeIsFixed && nullNodeIsFixed.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsFixed = null;
+            if (parseNode.GetChildNode("locked") is null) { _explicitNullValueLocked = default!; _explicitNullProperties?.Remove("locked"); }
+            else if (parseNode.GetChildNode("locked") is { } nullNodeLocked && nullNodeLocked.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Locked = null;
+            if (parseNode.GetChildNode("measurements") is null) { _explicitNullValueMeasurements = default!; _explicitNullProperties?.Remove("measurements"); }
+            else if (parseNode.GetChildNode("measurements") is { } nullNodeMeasurements && nullNodeMeasurements.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Measurements = null;
+            if (parseNode.GetChildNode("name") is null) { _explicitNullValueName = default!; _explicitNullProperties?.Remove("name"); }
+            else if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("pluginData") is null) { _explicitNullValuePluginData = default!; _explicitNullProperties?.Remove("pluginData"); }
+            else if (parseNode.GetChildNode("pluginData") is { } nullNodePluginData && nullNodePluginData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PluginData = null;
+            if (parseNode.GetChildNode("prototypeBackgrounds") is null) { _explicitNullValuePrototypeBackgrounds = default!; _explicitNullProperties?.Remove("prototypeBackgrounds"); }
+            else if (parseNode.GetChildNode("prototypeBackgrounds") is { } nullNodePrototypeBackgrounds && nullNodePrototypeBackgrounds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrototypeBackgrounds = null;
+            if (parseNode.GetChildNode("prototypeDevice") is null) { _explicitNullValuePrototypeDevice = default!; _explicitNullProperties?.Remove("prototypeDevice"); }
+            else if (parseNode.GetChildNode("prototypeDevice") is { } nullNodePrototypeDevice && nullNodePrototypeDevice.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrototypeDevice = null;
+            if (parseNode.GetChildNode("prototypeStartNodeID") is null) { _explicitNullValuePrototypeStartNodeID = default!; _explicitNullProperties?.Remove("prototypeStartNodeID"); }
+            else if (parseNode.GetChildNode("prototypeStartNodeID") is { } nullNodePrototypeStartNodeID && nullNodePrototypeStartNodeID.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrototypeStartNodeID = null;
+            if (parseNode.GetChildNode("rotation") is null) { _explicitNullValueRotation = default!; _explicitNullProperties?.Remove("rotation"); }
+            else if (parseNode.GetChildNode("rotation") is { } nullNodeRotation && nullNodeRotation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Rotation = null;
+            if (parseNode.GetChildNode("scrollBehavior") is null) { _explicitNullValueScrollBehavior = default!; _explicitNullProperties?.Remove("scrollBehavior"); }
+            else if (parseNode.GetChildNode("scrollBehavior") is { } nullNodeScrollBehavior && nullNodeScrollBehavior.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ScrollBehavior = null;
+            if (parseNode.GetChildNode("sharedPluginData") is null) { _explicitNullValueSharedPluginData = default!; _explicitNullProperties?.Remove("sharedPluginData"); }
+            else if (parseNode.GetChildNode("sharedPluginData") is { } nullNodeSharedPluginData && nullNodeSharedPluginData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SharedPluginData = null;
+            if (parseNode.GetChildNode("type") is null) { _explicitNullValueType = default!; _explicitNullProperties?.Remove("type"); }
+            else if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("visible") is null) { _explicitNullValueVisible = default!; _explicitNullProperties?.Remove("visible"); }
+            else if (parseNode.GetChildNode("visible") is { } nullNodeVisible && nullNodeVisible.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Visible = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -45,172 +66,172 @@ namespace Soenneker.Figma.OpenApiClient.Models
         /// <summary>An RGBA color</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.Rgba? BackgroundColor { get => _explicitNullValueBackgroundColor; set { _explicitNullValueBackgroundColor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("backgroundColor"); else _explicitNullProperties?.Remove("backgroundColor"); } }
+        public global::Soenneker.Figma.OpenApiClient.Models.Rgba? BackgroundColor { get => _explicitNullValueBackgroundColor; set { _explicitNullValueBackgroundColor = value; AdditionalData?.Remove("backgroundColor"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("backgroundColor"); else _explicitNullProperties?.Remove("backgroundColor"); } }
         private global::Soenneker.Figma.OpenApiClient.Models.Rgba? _explicitNullValueBackgroundColor = default!;
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.Rgba BackgroundColor { get => _explicitNullValueBackgroundColor; set { _explicitNullValueBackgroundColor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("backgroundColor"); else _explicitNullProperties?.Remove("backgroundColor"); } }
+        public global::Soenneker.Figma.OpenApiClient.Models.Rgba BackgroundColor { get => _explicitNullValueBackgroundColor; set { _explicitNullValueBackgroundColor = value; AdditionalData?.Remove("backgroundColor"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("backgroundColor"); else _explicitNullProperties?.Remove("backgroundColor"); } }
         private global::Soenneker.Figma.OpenApiClient.Models.Rgba _explicitNullValueBackgroundColor = default!;
 #endif
         /// <summary>A mapping of field to the variables applied to this field. Most fields will only map to a single `VariableAlias`. However, for properties like `fills`, `strokes`, `size`, `componentProperties`, and `textRangeFills`, it is possible to have multiple variables bound to the field.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.IsLayerTraitBoundVariables? BoundVariables { get => _explicitNullValueBoundVariables; set { _explicitNullValueBoundVariables = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("boundVariables"); else _explicitNullProperties?.Remove("boundVariables"); } }
+        public global::Soenneker.Figma.OpenApiClient.Models.IsLayerTraitBoundVariables? BoundVariables { get => _explicitNullValueBoundVariables; set { _explicitNullValueBoundVariables = value; AdditionalData?.Remove("boundVariables"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("boundVariables"); else _explicitNullProperties?.Remove("boundVariables"); } }
         private global::Soenneker.Figma.OpenApiClient.Models.IsLayerTraitBoundVariables? _explicitNullValueBoundVariables = default!;
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.IsLayerTraitBoundVariables BoundVariables { get => _explicitNullValueBoundVariables; set { _explicitNullValueBoundVariables = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("boundVariables"); else _explicitNullProperties?.Remove("boundVariables"); } }
+        public global::Soenneker.Figma.OpenApiClient.Models.IsLayerTraitBoundVariables BoundVariables { get => _explicitNullValueBoundVariables; set { _explicitNullValueBoundVariables = value; AdditionalData?.Remove("boundVariables"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("boundVariables"); else _explicitNullProperties?.Remove("boundVariables"); } }
         private global::Soenneker.Figma.OpenApiClient.Models.IsLayerTraitBoundVariables _explicitNullValueBoundVariables = default!;
 #endif
         /// <summary>The children property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Figma.OpenApiClient.Models.SubcanvasNode>? Children { get => _explicitNullValueChildren; set { _explicitNullValueChildren = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("children"); else _explicitNullProperties?.Remove("children"); } }
+        public List<global::Soenneker.Figma.OpenApiClient.Models.SubcanvasNode>? Children { get => _explicitNullValueChildren; set { _explicitNullValueChildren = value; AdditionalData?.Remove("children"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("children"); else _explicitNullProperties?.Remove("children"); } }
         private List<global::Soenneker.Figma.OpenApiClient.Models.SubcanvasNode>? _explicitNullValueChildren = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Figma.OpenApiClient.Models.SubcanvasNode> Children { get => _explicitNullValueChildren; set { _explicitNullValueChildren = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("children"); else _explicitNullProperties?.Remove("children"); } }
+        public List<global::Soenneker.Figma.OpenApiClient.Models.SubcanvasNode> Children { get => _explicitNullValueChildren; set { _explicitNullValueChildren = value; AdditionalData?.Remove("children"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("children"); else _explicitNullProperties?.Remove("children"); } }
         private List<global::Soenneker.Figma.OpenApiClient.Models.SubcanvasNode> _explicitNullValueChildren = default!;
 #endif
         /// <summary>A mapping of a layer&apos;s property to component property name of component properties attached to this node. The component property name can be used to look up more information on the corresponding component&apos;s or component set&apos;s componentPropertyDefinitions.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.CanvasNodeComponentPropertyReferences? ComponentPropertyReferences { get => _explicitNullValueComponentPropertyReferences; set { _explicitNullValueComponentPropertyReferences = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("componentPropertyReferences"); else _explicitNullProperties?.Remove("componentPropertyReferences"); } }
+        public global::Soenneker.Figma.OpenApiClient.Models.CanvasNodeComponentPropertyReferences? ComponentPropertyReferences { get => _explicitNullValueComponentPropertyReferences; set { _explicitNullValueComponentPropertyReferences = value; AdditionalData?.Remove("componentPropertyReferences"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("componentPropertyReferences"); else _explicitNullProperties?.Remove("componentPropertyReferences"); } }
         private global::Soenneker.Figma.OpenApiClient.Models.CanvasNodeComponentPropertyReferences? _explicitNullValueComponentPropertyReferences = default!;
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.CanvasNodeComponentPropertyReferences ComponentPropertyReferences { get => _explicitNullValueComponentPropertyReferences; set { _explicitNullValueComponentPropertyReferences = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("componentPropertyReferences"); else _explicitNullProperties?.Remove("componentPropertyReferences"); } }
+        public global::Soenneker.Figma.OpenApiClient.Models.CanvasNodeComponentPropertyReferences ComponentPropertyReferences { get => _explicitNullValueComponentPropertyReferences; set { _explicitNullValueComponentPropertyReferences = value; AdditionalData?.Remove("componentPropertyReferences"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("componentPropertyReferences"); else _explicitNullProperties?.Remove("componentPropertyReferences"); } }
         private global::Soenneker.Figma.OpenApiClient.Models.CanvasNodeComponentPropertyReferences _explicitNullValueComponentPropertyReferences = default!;
 #endif
         /// <summary>A mapping of variable collection ID to mode ID representing the explicitly set modes for this node.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.CanvasNodeExplicitVariableModes? ExplicitVariableModes { get => _explicitNullValueExplicitVariableModes; set { _explicitNullValueExplicitVariableModes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("explicitVariableModes"); else _explicitNullProperties?.Remove("explicitVariableModes"); } }
+        public global::Soenneker.Figma.OpenApiClient.Models.CanvasNodeExplicitVariableModes? ExplicitVariableModes { get => _explicitNullValueExplicitVariableModes; set { _explicitNullValueExplicitVariableModes = value; AdditionalData?.Remove("explicitVariableModes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("explicitVariableModes"); else _explicitNullProperties?.Remove("explicitVariableModes"); } }
         private global::Soenneker.Figma.OpenApiClient.Models.CanvasNodeExplicitVariableModes? _explicitNullValueExplicitVariableModes = default!;
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.CanvasNodeExplicitVariableModes ExplicitVariableModes { get => _explicitNullValueExplicitVariableModes; set { _explicitNullValueExplicitVariableModes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("explicitVariableModes"); else _explicitNullProperties?.Remove("explicitVariableModes"); } }
+        public global::Soenneker.Figma.OpenApiClient.Models.CanvasNodeExplicitVariableModes ExplicitVariableModes { get => _explicitNullValueExplicitVariableModes; set { _explicitNullValueExplicitVariableModes = value; AdditionalData?.Remove("explicitVariableModes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("explicitVariableModes"); else _explicitNullProperties?.Remove("explicitVariableModes"); } }
         private global::Soenneker.Figma.OpenApiClient.Models.CanvasNodeExplicitVariableModes _explicitNullValueExplicitVariableModes = default!;
 #endif
         /// <summary>An array of export settings representing images to export from the node.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Figma.OpenApiClient.Models.ExportSetting>? ExportSettings { get => _explicitNullValueExportSettings; set { _explicitNullValueExportSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exportSettings"); else _explicitNullProperties?.Remove("exportSettings"); } }
+        public List<global::Soenneker.Figma.OpenApiClient.Models.ExportSetting>? ExportSettings { get => _explicitNullValueExportSettings; set { _explicitNullValueExportSettings = value; AdditionalData?.Remove("exportSettings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exportSettings"); else _explicitNullProperties?.Remove("exportSettings"); } }
         private List<global::Soenneker.Figma.OpenApiClient.Models.ExportSetting>? _explicitNullValueExportSettings = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Figma.OpenApiClient.Models.ExportSetting> ExportSettings { get => _explicitNullValueExportSettings; set { _explicitNullValueExportSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exportSettings"); else _explicitNullProperties?.Remove("exportSettings"); } }
+        public List<global::Soenneker.Figma.OpenApiClient.Models.ExportSetting> ExportSettings { get => _explicitNullValueExportSettings; set { _explicitNullValueExportSettings = value; AdditionalData?.Remove("exportSettings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exportSettings"); else _explicitNullProperties?.Remove("exportSettings"); } }
         private List<global::Soenneker.Figma.OpenApiClient.Models.ExportSetting> _explicitNullValueExportSettings = default!;
 #endif
         /// <summary>An array of flow starting points sorted by its position in the prototype settings panel.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Figma.OpenApiClient.Models.FlowStartingPoint>? FlowStartingPoints { get => _explicitNullValueFlowStartingPoints; set { _explicitNullValueFlowStartingPoints = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flowStartingPoints"); else _explicitNullProperties?.Remove("flowStartingPoints"); } }
+        public List<global::Soenneker.Figma.OpenApiClient.Models.FlowStartingPoint>? FlowStartingPoints { get => _explicitNullValueFlowStartingPoints; set { _explicitNullValueFlowStartingPoints = value; AdditionalData?.Remove("flowStartingPoints"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flowStartingPoints"); else _explicitNullProperties?.Remove("flowStartingPoints"); } }
         private List<global::Soenneker.Figma.OpenApiClient.Models.FlowStartingPoint>? _explicitNullValueFlowStartingPoints = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Figma.OpenApiClient.Models.FlowStartingPoint> FlowStartingPoints { get => _explicitNullValueFlowStartingPoints; set { _explicitNullValueFlowStartingPoints = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flowStartingPoints"); else _explicitNullProperties?.Remove("flowStartingPoints"); } }
+        public List<global::Soenneker.Figma.OpenApiClient.Models.FlowStartingPoint> FlowStartingPoints { get => _explicitNullValueFlowStartingPoints; set { _explicitNullValueFlowStartingPoints = value; AdditionalData?.Remove("flowStartingPoints"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flowStartingPoints"); else _explicitNullProperties?.Remove("flowStartingPoints"); } }
         private List<global::Soenneker.Figma.OpenApiClient.Models.FlowStartingPoint> _explicitNullValueFlowStartingPoints = default!;
 #endif
         /// <summary>A string uniquely identifying this node within the document.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string _explicitNullValueId = default!;
 #endif
         /// <summary>Whether the layer is fixed while the parent is scrolling</summary>
         [Obsolete("")]
-        public bool? IsFixed { get => _explicitNullValueIsFixed; set { _explicitNullValueIsFixed = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isFixed"); else _explicitNullProperties?.Remove("isFixed"); } }
+        public bool? IsFixed { get => _explicitNullValueIsFixed; set { _explicitNullValueIsFixed = value; AdditionalData?.Remove("isFixed"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isFixed"); else _explicitNullProperties?.Remove("isFixed"); } }
         private bool? _explicitNullValueIsFixed = default!;
         /// <summary>If true, layer is locked and cannot be edited</summary>
-        public bool? Locked { get => _explicitNullValueLocked; set { _explicitNullValueLocked = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locked"); else _explicitNullProperties?.Remove("locked"); } }
+        public bool? Locked { get => _explicitNullValueLocked; set { _explicitNullValueLocked = value; AdditionalData?.Remove("locked"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locked"); else _explicitNullProperties?.Remove("locked"); } }
         private bool? _explicitNullValueLocked = default!;
         /// <summary>The measurements property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Figma.OpenApiClient.Models.Measurement>? Measurements { get => _explicitNullValueMeasurements; set { _explicitNullValueMeasurements = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("measurements"); else _explicitNullProperties?.Remove("measurements"); } }
+        public List<global::Soenneker.Figma.OpenApiClient.Models.Measurement>? Measurements { get => _explicitNullValueMeasurements; set { _explicitNullValueMeasurements = value; AdditionalData?.Remove("measurements"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("measurements"); else _explicitNullProperties?.Remove("measurements"); } }
         private List<global::Soenneker.Figma.OpenApiClient.Models.Measurement>? _explicitNullValueMeasurements = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Figma.OpenApiClient.Models.Measurement> Measurements { get => _explicitNullValueMeasurements; set { _explicitNullValueMeasurements = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("measurements"); else _explicitNullProperties?.Remove("measurements"); } }
+        public List<global::Soenneker.Figma.OpenApiClient.Models.Measurement> Measurements { get => _explicitNullValueMeasurements; set { _explicitNullValueMeasurements = value; AdditionalData?.Remove("measurements"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("measurements"); else _explicitNullProperties?.Remove("measurements"); } }
         private List<global::Soenneker.Figma.OpenApiClient.Models.Measurement> _explicitNullValueMeasurements = default!;
 #endif
         /// <summary>The name given to the node by the user in the tool.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string _explicitNullValueName = default!;
 #endif
         /// <summary>Data written by plugins that is visible only to the plugin that wrote it. Requires the `pluginData` to include the ID of the plugin.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? PluginData { get => _explicitNullValuePluginData; set { _explicitNullValuePluginData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pluginData"); else _explicitNullProperties?.Remove("pluginData"); } }
+        public UntypedNode? PluginData { get => _explicitNullValuePluginData; set { _explicitNullValuePluginData = value; AdditionalData?.Remove("pluginData"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pluginData"); else _explicitNullProperties?.Remove("pluginData"); } }
         private UntypedNode? _explicitNullValuePluginData = default!;
 #nullable restore
 #else
-        public UntypedNode PluginData { get => _explicitNullValuePluginData; set { _explicitNullValuePluginData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pluginData"); else _explicitNullProperties?.Remove("pluginData"); } }
+        public UntypedNode PluginData { get => _explicitNullValuePluginData; set { _explicitNullValuePluginData = value; AdditionalData?.Remove("pluginData"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pluginData"); else _explicitNullProperties?.Remove("pluginData"); } }
         private UntypedNode _explicitNullValuePluginData = default!;
 #endif
         /// <summary>The background color of the prototype (currently only supports a single solid color paint).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Figma.OpenApiClient.Models.Rgba>? PrototypeBackgrounds { get => _explicitNullValuePrototypeBackgrounds; set { _explicitNullValuePrototypeBackgrounds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prototypeBackgrounds"); else _explicitNullProperties?.Remove("prototypeBackgrounds"); } }
+        public List<global::Soenneker.Figma.OpenApiClient.Models.Rgba>? PrototypeBackgrounds { get => _explicitNullValuePrototypeBackgrounds; set { _explicitNullValuePrototypeBackgrounds = value; AdditionalData?.Remove("prototypeBackgrounds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prototypeBackgrounds"); else _explicitNullProperties?.Remove("prototypeBackgrounds"); } }
         private List<global::Soenneker.Figma.OpenApiClient.Models.Rgba>? _explicitNullValuePrototypeBackgrounds = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Figma.OpenApiClient.Models.Rgba> PrototypeBackgrounds { get => _explicitNullValuePrototypeBackgrounds; set { _explicitNullValuePrototypeBackgrounds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prototypeBackgrounds"); else _explicitNullProperties?.Remove("prototypeBackgrounds"); } }
+        public List<global::Soenneker.Figma.OpenApiClient.Models.Rgba> PrototypeBackgrounds { get => _explicitNullValuePrototypeBackgrounds; set { _explicitNullValuePrototypeBackgrounds = value; AdditionalData?.Remove("prototypeBackgrounds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prototypeBackgrounds"); else _explicitNullProperties?.Remove("prototypeBackgrounds"); } }
         private List<global::Soenneker.Figma.OpenApiClient.Models.Rgba> _explicitNullValuePrototypeBackgrounds = default!;
 #endif
         /// <summary>The device used to view a prototype.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.PrototypeDevice? PrototypeDevice { get => _explicitNullValuePrototypeDevice; set { _explicitNullValuePrototypeDevice = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prototypeDevice"); else _explicitNullProperties?.Remove("prototypeDevice"); } }
+        public global::Soenneker.Figma.OpenApiClient.Models.PrototypeDevice? PrototypeDevice { get => _explicitNullValuePrototypeDevice; set { _explicitNullValuePrototypeDevice = value; AdditionalData?.Remove("prototypeDevice"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prototypeDevice"); else _explicitNullProperties?.Remove("prototypeDevice"); } }
         private global::Soenneker.Figma.OpenApiClient.Models.PrototypeDevice? _explicitNullValuePrototypeDevice = default!;
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.PrototypeDevice PrototypeDevice { get => _explicitNullValuePrototypeDevice; set { _explicitNullValuePrototypeDevice = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prototypeDevice"); else _explicitNullProperties?.Remove("prototypeDevice"); } }
+        public global::Soenneker.Figma.OpenApiClient.Models.PrototypeDevice PrototypeDevice { get => _explicitNullValuePrototypeDevice; set { _explicitNullValuePrototypeDevice = value; AdditionalData?.Remove("prototypeDevice"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prototypeDevice"); else _explicitNullProperties?.Remove("prototypeDevice"); } }
         private global::Soenneker.Figma.OpenApiClient.Models.PrototypeDevice _explicitNullValuePrototypeDevice = default!;
 #endif
         /// <summary>Node ID that corresponds to the start frame for prototypes. This is deprecated with the introduction of multiple flows. Please use the `flowStartingPoints` field.</summary>
         [Obsolete("")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PrototypeStartNodeID { get => _explicitNullValuePrototypeStartNodeID; set { _explicitNullValuePrototypeStartNodeID = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prototypeStartNodeID"); else _explicitNullProperties?.Remove("prototypeStartNodeID"); } }
+        public string? PrototypeStartNodeID { get => _explicitNullValuePrototypeStartNodeID; set { _explicitNullValuePrototypeStartNodeID = value; AdditionalData?.Remove("prototypeStartNodeID"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prototypeStartNodeID"); else _explicitNullProperties?.Remove("prototypeStartNodeID"); } }
         private string? _explicitNullValuePrototypeStartNodeID = default!;
 #nullable restore
 #else
-        public string PrototypeStartNodeID { get => _explicitNullValuePrototypeStartNodeID; set { _explicitNullValuePrototypeStartNodeID = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prototypeStartNodeID"); else _explicitNullProperties?.Remove("prototypeStartNodeID"); } }
+        public string PrototypeStartNodeID { get => _explicitNullValuePrototypeStartNodeID; set { _explicitNullValuePrototypeStartNodeID = value; AdditionalData?.Remove("prototypeStartNodeID"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prototypeStartNodeID"); else _explicitNullProperties?.Remove("prototypeStartNodeID"); } }
         private string _explicitNullValuePrototypeStartNodeID = default!;
 #endif
         /// <summary>The rotation of the node, if not 0.</summary>
-        public double? Rotation { get => _explicitNullValueRotation; set { _explicitNullValueRotation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rotation"); else _explicitNullProperties?.Remove("rotation"); } }
+        public double? Rotation { get => _explicitNullValueRotation; set { _explicitNullValueRotation = value; AdditionalData?.Remove("rotation"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rotation"); else _explicitNullProperties?.Remove("rotation"); } }
         private double? _explicitNullValueRotation = default!;
         /// <summary>How layer should be treated when the frame is resized</summary>
-        public global::Soenneker.Figma.OpenApiClient.Models.IsLayerTraitScrollBehavior? ScrollBehavior { get => _explicitNullValueScrollBehavior; set { _explicitNullValueScrollBehavior = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scrollBehavior"); else _explicitNullProperties?.Remove("scrollBehavior"); } }
+        public global::Soenneker.Figma.OpenApiClient.Models.IsLayerTraitScrollBehavior? ScrollBehavior { get => _explicitNullValueScrollBehavior; set { _explicitNullValueScrollBehavior = value; AdditionalData?.Remove("scrollBehavior"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scrollBehavior"); else _explicitNullProperties?.Remove("scrollBehavior"); } }
         private global::Soenneker.Figma.OpenApiClient.Models.IsLayerTraitScrollBehavior? _explicitNullValueScrollBehavior = default!;
         /// <summary>Data written by plugins that is visible to all plugins. Requires the `pluginData` parameter to include the string &quot;shared&quot;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? SharedPluginData { get => _explicitNullValueSharedPluginData; set { _explicitNullValueSharedPluginData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sharedPluginData"); else _explicitNullProperties?.Remove("sharedPluginData"); } }
+        public UntypedNode? SharedPluginData { get => _explicitNullValueSharedPluginData; set { _explicitNullValueSharedPluginData = value; AdditionalData?.Remove("sharedPluginData"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sharedPluginData"); else _explicitNullProperties?.Remove("sharedPluginData"); } }
         private UntypedNode? _explicitNullValueSharedPluginData = default!;
 #nullable restore
 #else
-        public UntypedNode SharedPluginData { get => _explicitNullValueSharedPluginData; set { _explicitNullValueSharedPluginData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sharedPluginData"); else _explicitNullProperties?.Remove("sharedPluginData"); } }
+        public UntypedNode SharedPluginData { get => _explicitNullValueSharedPluginData; set { _explicitNullValueSharedPluginData = value; AdditionalData?.Remove("sharedPluginData"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sharedPluginData"); else _explicitNullProperties?.Remove("sharedPluginData"); } }
         private UntypedNode _explicitNullValueSharedPluginData = default!;
 #endif
         /// <summary>The type of the node</summary>
-        public global::Soenneker.Figma.OpenApiClient.Models.CanvasType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        public global::Soenneker.Figma.OpenApiClient.Models.CanvasType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
         private global::Soenneker.Figma.OpenApiClient.Models.CanvasType? _explicitNullValueType = default!;
         /// <summary>Whether or not the node is visible on the canvas.</summary>
-        public bool? Visible { get => _explicitNullValueVisible; set { _explicitNullValueVisible = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("visible"); else _explicitNullProperties?.Remove("visible"); } }
+        public bool? Visible { get => _explicitNullValueVisible; set { _explicitNullValueVisible = value; AdditionalData?.Remove("visible"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("visible"); else _explicitNullProperties?.Remove("visible"); } }
         private bool? _explicitNullValueVisible = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Figma.OpenApiClient.Models.CanvasNode"/> and sets the default values.
@@ -258,9 +279,9 @@ namespace Soenneker.Figma.OpenApiClient.Models
                 { "prototypeDevice", n => { PrototypeDevice = n.GetObjectValue<global::Soenneker.Figma.OpenApiClient.Models.PrototypeDevice>(global::Soenneker.Figma.OpenApiClient.Models.PrototypeDevice.CreateFromDiscriminatorValue); } },
                 { "prototypeStartNodeID", n => { PrototypeStartNodeID = n.GetStringValue(); } },
                 { "rotation", n => { Rotation = n.GetDoubleValue(); } },
-                { "scrollBehavior", n => { ScrollBehavior = n.GetEnumValue<global::Soenneker.Figma.OpenApiClient.Models.IsLayerTraitScrollBehavior>(); } },
+                { "scrollBehavior", n => { var parsed = n.GetEnumValue<global::Soenneker.Figma.OpenApiClient.Models.IsLayerTraitScrollBehavior>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueScrollBehavior = default; _explicitNullProperties?.Remove("scrollBehavior"); AdditionalData["scrollBehavior"] = unknown; } else { ScrollBehavior = parsed; AdditionalData.Remove("scrollBehavior"); } } },
                 { "sharedPluginData", n => { SharedPluginData = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Figma.OpenApiClient.Models.CanvasType>(); } },
+                { "type", n => { var parsed = n.GetEnumValue<global::Soenneker.Figma.OpenApiClient.Models.CanvasType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueType = default; _explicitNullProperties?.Remove("type"); AdditionalData["type"] = unknown; } else { Type = parsed; AdditionalData.Remove("type"); } } },
                 { "visible", n => { Visible = n.GetBoolValue(); } },
             };
         }

@@ -18,21 +18,24 @@ namespace Soenneker.Figma.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("damping") is { } nullNodeDamping && nullNodeDamping.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Damping = null;
-            if (parseNode.GetChildNode("mass") is { } nullNodeMass && nullNodeMass.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Mass = null;
-            if (parseNode.GetChildNode("stiffness") is { } nullNodeStiffness && nullNodeStiffness.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Stiffness = null;
+            if (parseNode.GetChildNode("damping") is null) { _explicitNullValueDamping = default!; _explicitNullProperties?.Remove("damping"); }
+            else if (parseNode.GetChildNode("damping") is { } nullNodeDamping && nullNodeDamping.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Damping = null;
+            if (parseNode.GetChildNode("mass") is null) { _explicitNullValueMass = default!; _explicitNullProperties?.Remove("mass"); }
+            else if (parseNode.GetChildNode("mass") is { } nullNodeMass && nullNodeMass.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Mass = null;
+            if (parseNode.GetChildNode("stiffness") is null) { _explicitNullValueStiffness = default!; _explicitNullProperties?.Remove("stiffness"); }
+            else if (parseNode.GetChildNode("stiffness") is { } nullNodeStiffness && nullNodeStiffness.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Stiffness = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The damping property</summary>
-        public double? Damping { get => _explicitNullValueDamping; set { _explicitNullValueDamping = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("damping"); else _explicitNullProperties?.Remove("damping"); } }
+        public double? Damping { get => _explicitNullValueDamping; set { _explicitNullValueDamping = value; AdditionalData?.Remove("damping"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("damping"); else _explicitNullProperties?.Remove("damping"); } }
         private double? _explicitNullValueDamping = default!;
         /// <summary>The mass property</summary>
-        public double? Mass { get => _explicitNullValueMass; set { _explicitNullValueMass = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mass"); else _explicitNullProperties?.Remove("mass"); } }
+        public double? Mass { get => _explicitNullValueMass; set { _explicitNullValueMass = value; AdditionalData?.Remove("mass"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mass"); else _explicitNullProperties?.Remove("mass"); } }
         private double? _explicitNullValueMass = default!;
         /// <summary>The stiffness property</summary>
-        public double? Stiffness { get => _explicitNullValueStiffness; set { _explicitNullValueStiffness = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stiffness"); else _explicitNullProperties?.Remove("stiffness"); } }
+        public double? Stiffness { get => _explicitNullValueStiffness; set { _explicitNullValueStiffness = value; AdditionalData?.Remove("stiffness"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stiffness"); else _explicitNullProperties?.Remove("stiffness"); } }
         private double? _explicitNullValueStiffness = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Figma.OpenApiClient.Models.EasingEasingFunctionSpring"/> and sets the default values.

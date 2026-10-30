@@ -18,9 +18,12 @@ namespace Soenneker.Figma.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("easingFunctionCubicBezier") is { } nullNodeEasingFunctionCubicBezier && nullNodeEasingFunctionCubicBezier.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EasingFunctionCubicBezier = null;
-            if (parseNode.GetChildNode("easingFunctionSpring") is { } nullNodeEasingFunctionSpring && nullNodeEasingFunctionSpring.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EasingFunctionSpring = null;
-            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("easingFunctionCubicBezier") is null) { _explicitNullValueEasingFunctionCubicBezier = default!; _explicitNullProperties?.Remove("easingFunctionCubicBezier"); }
+            else if (parseNode.GetChildNode("easingFunctionCubicBezier") is { } nullNodeEasingFunctionCubicBezier && nullNodeEasingFunctionCubicBezier.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EasingFunctionCubicBezier = null;
+            if (parseNode.GetChildNode("easingFunctionSpring") is null) { _explicitNullValueEasingFunctionSpring = default!; _explicitNullProperties?.Remove("easingFunctionSpring"); }
+            else if (parseNode.GetChildNode("easingFunctionSpring") is { } nullNodeEasingFunctionSpring && nullNodeEasingFunctionSpring.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EasingFunctionSpring = null;
+            if (parseNode.GetChildNode("type") is null) { _explicitNullValueType = default!; _explicitNullProperties?.Remove("type"); }
+            else if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,25 +31,25 @@ namespace Soenneker.Figma.OpenApiClient.Models
         /// <summary>A cubic bezier curve that defines the easing.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.EasingEasingFunctionCubicBezier? EasingFunctionCubicBezier { get => _explicitNullValueEasingFunctionCubicBezier; set { _explicitNullValueEasingFunctionCubicBezier = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("easingFunctionCubicBezier"); else _explicitNullProperties?.Remove("easingFunctionCubicBezier"); } }
+        public global::Soenneker.Figma.OpenApiClient.Models.EasingEasingFunctionCubicBezier? EasingFunctionCubicBezier { get => _explicitNullValueEasingFunctionCubicBezier; set { _explicitNullValueEasingFunctionCubicBezier = value; AdditionalData?.Remove("easingFunctionCubicBezier"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("easingFunctionCubicBezier"); else _explicitNullProperties?.Remove("easingFunctionCubicBezier"); } }
         private global::Soenneker.Figma.OpenApiClient.Models.EasingEasingFunctionCubicBezier? _explicitNullValueEasingFunctionCubicBezier = default!;
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.EasingEasingFunctionCubicBezier EasingFunctionCubicBezier { get => _explicitNullValueEasingFunctionCubicBezier; set { _explicitNullValueEasingFunctionCubicBezier = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("easingFunctionCubicBezier"); else _explicitNullProperties?.Remove("easingFunctionCubicBezier"); } }
+        public global::Soenneker.Figma.OpenApiClient.Models.EasingEasingFunctionCubicBezier EasingFunctionCubicBezier { get => _explicitNullValueEasingFunctionCubicBezier; set { _explicitNullValueEasingFunctionCubicBezier = value; AdditionalData?.Remove("easingFunctionCubicBezier"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("easingFunctionCubicBezier"); else _explicitNullProperties?.Remove("easingFunctionCubicBezier"); } }
         private global::Soenneker.Figma.OpenApiClient.Models.EasingEasingFunctionCubicBezier _explicitNullValueEasingFunctionCubicBezier = default!;
 #endif
         /// <summary>A spring function that defines the easing.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.EasingEasingFunctionSpring? EasingFunctionSpring { get => _explicitNullValueEasingFunctionSpring; set { _explicitNullValueEasingFunctionSpring = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("easingFunctionSpring"); else _explicitNullProperties?.Remove("easingFunctionSpring"); } }
+        public global::Soenneker.Figma.OpenApiClient.Models.EasingEasingFunctionSpring? EasingFunctionSpring { get => _explicitNullValueEasingFunctionSpring; set { _explicitNullValueEasingFunctionSpring = value; AdditionalData?.Remove("easingFunctionSpring"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("easingFunctionSpring"); else _explicitNullProperties?.Remove("easingFunctionSpring"); } }
         private global::Soenneker.Figma.OpenApiClient.Models.EasingEasingFunctionSpring? _explicitNullValueEasingFunctionSpring = default!;
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.EasingEasingFunctionSpring EasingFunctionSpring { get => _explicitNullValueEasingFunctionSpring; set { _explicitNullValueEasingFunctionSpring = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("easingFunctionSpring"); else _explicitNullProperties?.Remove("easingFunctionSpring"); } }
+        public global::Soenneker.Figma.OpenApiClient.Models.EasingEasingFunctionSpring EasingFunctionSpring { get => _explicitNullValueEasingFunctionSpring; set { _explicitNullValueEasingFunctionSpring = value; AdditionalData?.Remove("easingFunctionSpring"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("easingFunctionSpring"); else _explicitNullProperties?.Remove("easingFunctionSpring"); } }
         private global::Soenneker.Figma.OpenApiClient.Models.EasingEasingFunctionSpring _explicitNullValueEasingFunctionSpring = default!;
 #endif
         /// <summary>The type of easing curve.</summary>
-        public global::Soenneker.Figma.OpenApiClient.Models.EasingType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        public global::Soenneker.Figma.OpenApiClient.Models.EasingType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
         private global::Soenneker.Figma.OpenApiClient.Models.EasingType? _explicitNullValueType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Figma.OpenApiClient.Models.Easing"/> and sets the default values.
@@ -75,7 +78,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
             {
                 { "easingFunctionCubicBezier", n => { EasingFunctionCubicBezier = n.GetObjectValue<global::Soenneker.Figma.OpenApiClient.Models.EasingEasingFunctionCubicBezier>(global::Soenneker.Figma.OpenApiClient.Models.EasingEasingFunctionCubicBezier.CreateFromDiscriminatorValue); } },
                 { "easingFunctionSpring", n => { EasingFunctionSpring = n.GetObjectValue<global::Soenneker.Figma.OpenApiClient.Models.EasingEasingFunctionSpring>(global::Soenneker.Figma.OpenApiClient.Models.EasingEasingFunctionSpring.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Figma.OpenApiClient.Models.EasingType>(); } },
+                { "type", n => { var parsed = n.GetEnumValue<global::Soenneker.Figma.OpenApiClient.Models.EasingType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueType = default; _explicitNullProperties?.Remove("type"); AdditionalData["type"] = unknown; } else { Type = parsed; AdditionalData.Remove("type"); } } },
             };
         }
         /// <summary>

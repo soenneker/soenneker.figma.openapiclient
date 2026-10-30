@@ -17,7 +17,35 @@ namespace Soenneker.Figma.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
+            if (parseNode.GetChildNode("style_key") is null) { _explicitNullValueStyleKey = default!; _explicitNullProperties?.Remove("style_key"); }
+            else if (parseNode.GetChildNode("style_key") is { } nullNodeStyleKey && nullNodeStyleKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StyleKey = null;
+            if (parseNode.GetChildNode("style_name") is null) { _explicitNullValueStyleName = default!; _explicitNullProperties?.Remove("style_name"); }
+            else if (parseNode.GetChildNode("style_name") is { } nullNodeStyleName && nullNodeStyleName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StyleName = null;
+            if (parseNode.GetChildNode("style_type") is null) { _explicitNullValueStyleType = default!; _explicitNullProperties?.Remove("style_type"); }
+            else if (parseNode.GetChildNode("style_type") is { } nullNodeStyleType && nullNodeStyleType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StyleType = null;
+            if (parseNode.GetChildNode("usages") is null) { _explicitNullValueUsages = default!; _explicitNullProperties?.Remove("usages"); }
+            else if (parseNode.GetChildNode("usages") is { } nullNodeUsages && nullNodeUsages.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Usages = null;
+            if (parseNode.GetChildNode("teams_using") is null) { _explicitNullValueTeamsUsing = default!; _explicitNullProperties?.Remove("teams_using"); }
+            else if (parseNode.GetChildNode("teams_using") is { } nullNodeTeamsUsing && nullNodeTeamsUsing.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TeamsUsing = null;
+            if (parseNode.GetChildNode("files_using") is null) { _explicitNullValueFilesUsing = default!; _explicitNullProperties?.Remove("files_using"); }
+            else if (parseNode.GetChildNode("files_using") is { } nullNodeFilesUsing && nullNodeFilesUsing.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FilesUsing = null;
         }
+
+        // Restore fields omitted by the generator's model-depth limit.
+#nullable enable
+        public string? StyleKey { get => _explicitNullValueStyleKey; set { _explicitNullValueStyleKey = value; AdditionalData?.Remove("style_key"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("style_key"); else _explicitNullProperties?.Remove("style_key"); } }
+        private string? _explicitNullValueStyleKey = default!;
+        public string? StyleName { get => _explicitNullValueStyleName; set { _explicitNullValueStyleName = value; AdditionalData?.Remove("style_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("style_name"); else _explicitNullProperties?.Remove("style_name"); } }
+        private string? _explicitNullValueStyleName = default!;
+        public string? StyleType { get => _explicitNullValueStyleType; set { _explicitNullValueStyleType = value; AdditionalData?.Remove("style_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("style_type"); else _explicitNullProperties?.Remove("style_type"); } }
+        private string? _explicitNullValueStyleType = default!;
+        public double? Usages { get => _explicitNullValueUsages; set { _explicitNullValueUsages = value; AdditionalData?.Remove("usages"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("usages"); else _explicitNullProperties?.Remove("usages"); } }
+        private double? _explicitNullValueUsages = default!;
+        public double? TeamsUsing { get => _explicitNullValueTeamsUsing; set { _explicitNullValueTeamsUsing = value; AdditionalData?.Remove("teams_using"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("teams_using"); else _explicitNullProperties?.Remove("teams_using"); } }
+        private double? _explicitNullValueTeamsUsing = default!;
+        public double? FilesUsing { get => _explicitNullValueFilesUsing; set { _explicitNullValueFilesUsing = value; AdditionalData?.Remove("files_using"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("files_using"); else _explicitNullProperties?.Remove("files_using"); } }
+        private double? _explicitNullValueFilesUsing = default!;
+#nullable restore
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
@@ -46,6 +74,12 @@ namespace Soenneker.Figma.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "style_key", n => { StyleKey = n.GetStringValue(); } },
+                { "style_name", n => { StyleName = n.GetStringValue(); } },
+                { "style_type", n => { StyleType = n.GetStringValue(); } },
+                { "usages", n => { Usages = n.GetDoubleValue(); } },
+                { "teams_using", n => { TeamsUsing = n.GetDoubleValue(); } },
+                { "files_using", n => { FilesUsing = n.GetDoubleValue(); } },
             };
         }
         /// <summary>
@@ -55,6 +89,12 @@ namespace Soenneker.Figma.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteStringValue("style_key", StyleKey);
+            writer.WriteStringValue("style_name", StyleName);
+            writer.WriteStringValue("style_type", StyleType);
+            writer.WriteDoubleValue("usages", Usages);
+            writer.WriteDoubleValue("teams_using", TeamsUsing);
+            writer.WriteDoubleValue("files_using", FilesUsing);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

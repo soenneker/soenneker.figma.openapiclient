@@ -18,8 +18,10 @@ namespace Soenneker.Figma.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("expressionArguments") is { } nullNodeExpressionArguments && nullNodeExpressionArguments.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExpressionArguments = null;
-            if (parseNode.GetChildNode("expressionFunction") is { } nullNodeExpressionFunction && nullNodeExpressionFunction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExpressionFunction = null;
+            if (parseNode.GetChildNode("expressionArguments") is null) { _explicitNullValueExpressionArguments = default!; _explicitNullProperties?.Remove("expressionArguments"); }
+            else if (parseNode.GetChildNode("expressionArguments") is { } nullNodeExpressionArguments && nullNodeExpressionArguments.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExpressionArguments = null;
+            if (parseNode.GetChildNode("expressionFunction") is null) { _explicitNullValueExpressionFunction = default!; _explicitNullProperties?.Remove("expressionFunction"); }
+            else if (parseNode.GetChildNode("expressionFunction") is { } nullNodeExpressionFunction && nullNodeExpressionFunction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExpressionFunction = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,15 +29,15 @@ namespace Soenneker.Figma.OpenApiClient.Models
         /// <summary>The expressionArguments property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Figma.OpenApiClient.Models.VariableData>? ExpressionArguments { get => _explicitNullValueExpressionArguments; set { _explicitNullValueExpressionArguments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expressionArguments"); else _explicitNullProperties?.Remove("expressionArguments"); } }
+        public List<global::Soenneker.Figma.OpenApiClient.Models.VariableData>? ExpressionArguments { get => _explicitNullValueExpressionArguments; set { _explicitNullValueExpressionArguments = value; AdditionalData?.Remove("expressionArguments"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expressionArguments"); else _explicitNullProperties?.Remove("expressionArguments"); } }
         private List<global::Soenneker.Figma.OpenApiClient.Models.VariableData>? _explicitNullValueExpressionArguments = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Figma.OpenApiClient.Models.VariableData> ExpressionArguments { get => _explicitNullValueExpressionArguments; set { _explicitNullValueExpressionArguments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expressionArguments"); else _explicitNullProperties?.Remove("expressionArguments"); } }
+        public List<global::Soenneker.Figma.OpenApiClient.Models.VariableData> ExpressionArguments { get => _explicitNullValueExpressionArguments; set { _explicitNullValueExpressionArguments = value; AdditionalData?.Remove("expressionArguments"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expressionArguments"); else _explicitNullProperties?.Remove("expressionArguments"); } }
         private List<global::Soenneker.Figma.OpenApiClient.Models.VariableData> _explicitNullValueExpressionArguments = default!;
 #endif
         /// <summary>Defines the list of operators available to use in an Expression.</summary>
-        public global::Soenneker.Figma.OpenApiClient.Models.ExpressionFunction? ExpressionFunction { get => _explicitNullValueExpressionFunction; set { _explicitNullValueExpressionFunction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expressionFunction"); else _explicitNullProperties?.Remove("expressionFunction"); } }
+        public global::Soenneker.Figma.OpenApiClient.Models.ExpressionFunction? ExpressionFunction { get => _explicitNullValueExpressionFunction; set { _explicitNullValueExpressionFunction = value; AdditionalData?.Remove("expressionFunction"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expressionFunction"); else _explicitNullProperties?.Remove("expressionFunction"); } }
         private global::Soenneker.Figma.OpenApiClient.Models.ExpressionFunction? _explicitNullValueExpressionFunction = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Figma.OpenApiClient.Models.Expression"/> and sets the default values.
@@ -63,7 +65,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "expressionArguments", n => { ExpressionArguments = n.GetCollectionOfObjectValues<global::Soenneker.Figma.OpenApiClient.Models.VariableData>(global::Soenneker.Figma.OpenApiClient.Models.VariableData.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "expressionFunction", n => { ExpressionFunction = n.GetEnumValue<global::Soenneker.Figma.OpenApiClient.Models.ExpressionFunction>(); } },
+                { "expressionFunction", n => { var parsed = n.GetEnumValue<global::Soenneker.Figma.OpenApiClient.Models.ExpressionFunction>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueExpressionFunction = default; _explicitNullProperties?.Remove("expressionFunction"); AdditionalData["expressionFunction"] = unknown; } else { ExpressionFunction = parsed; AdditionalData.Remove("expressionFunction"); } } },
             };
         }
         /// <summary>

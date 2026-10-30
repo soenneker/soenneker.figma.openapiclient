@@ -18,14 +18,22 @@ namespace Soenneker.Figma.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("fontFamily") is { } nullNodeFontFamily && nullNodeFontFamily.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FontFamily = null;
-            if (parseNode.GetChildNode("fontSize") is { } nullNodeFontSize && nullNodeFontSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FontSize = null;
-            if (parseNode.GetChildNode("fontStyle") is { } nullNodeFontStyle && nullNodeFontStyle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FontStyle = null;
-            if (parseNode.GetChildNode("fontWeight") is { } nullNodeFontWeight && nullNodeFontWeight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FontWeight = null;
-            if (parseNode.GetChildNode("letterSpacing") is { } nullNodeLetterSpacing && nullNodeLetterSpacing.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LetterSpacing = null;
-            if (parseNode.GetChildNode("lineHeight") is { } nullNodeLineHeight && nullNodeLineHeight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LineHeight = null;
-            if (parseNode.GetChildNode("paragraphIndent") is { } nullNodeParagraphIndent && nullNodeParagraphIndent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ParagraphIndent = null;
-            if (parseNode.GetChildNode("paragraphSpacing") is { } nullNodeParagraphSpacing && nullNodeParagraphSpacing.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ParagraphSpacing = null;
+            if (parseNode.GetChildNode("fontFamily") is null) { _explicitNullValueFontFamily = default!; _explicitNullProperties?.Remove("fontFamily"); }
+            else if (parseNode.GetChildNode("fontFamily") is { } nullNodeFontFamily && nullNodeFontFamily.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FontFamily = null;
+            if (parseNode.GetChildNode("fontSize") is null) { _explicitNullValueFontSize = default!; _explicitNullProperties?.Remove("fontSize"); }
+            else if (parseNode.GetChildNode("fontSize") is { } nullNodeFontSize && nullNodeFontSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FontSize = null;
+            if (parseNode.GetChildNode("fontStyle") is null) { _explicitNullValueFontStyle = default!; _explicitNullProperties?.Remove("fontStyle"); }
+            else if (parseNode.GetChildNode("fontStyle") is { } nullNodeFontStyle && nullNodeFontStyle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FontStyle = null;
+            if (parseNode.GetChildNode("fontWeight") is null) { _explicitNullValueFontWeight = default!; _explicitNullProperties?.Remove("fontWeight"); }
+            else if (parseNode.GetChildNode("fontWeight") is { } nullNodeFontWeight && nullNodeFontWeight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FontWeight = null;
+            if (parseNode.GetChildNode("letterSpacing") is null) { _explicitNullValueLetterSpacing = default!; _explicitNullProperties?.Remove("letterSpacing"); }
+            else if (parseNode.GetChildNode("letterSpacing") is { } nullNodeLetterSpacing && nullNodeLetterSpacing.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LetterSpacing = null;
+            if (parseNode.GetChildNode("lineHeight") is null) { _explicitNullValueLineHeight = default!; _explicitNullProperties?.Remove("lineHeight"); }
+            else if (parseNode.GetChildNode("lineHeight") is { } nullNodeLineHeight && nullNodeLineHeight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LineHeight = null;
+            if (parseNode.GetChildNode("paragraphIndent") is null) { _explicitNullValueParagraphIndent = default!; _explicitNullProperties?.Remove("paragraphIndent"); }
+            else if (parseNode.GetChildNode("paragraphIndent") is { } nullNodeParagraphIndent && nullNodeParagraphIndent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ParagraphIndent = null;
+            if (parseNode.GetChildNode("paragraphSpacing") is null) { _explicitNullValueParagraphSpacing = default!; _explicitNullProperties?.Remove("paragraphSpacing"); }
+            else if (parseNode.GetChildNode("paragraphSpacing") is { } nullNodeParagraphSpacing && nullNodeParagraphSpacing.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ParagraphSpacing = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -33,81 +41,81 @@ namespace Soenneker.Figma.OpenApiClient.Models
         /// <summary>Contains a variable alias</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? FontFamily { get => _explicitNullValueFontFamily; set { _explicitNullValueFontFamily = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fontFamily"); else _explicitNullProperties?.Remove("fontFamily"); } }
+        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? FontFamily { get => _explicitNullValueFontFamily; set { _explicitNullValueFontFamily = value; AdditionalData?.Remove("fontFamily"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fontFamily"); else _explicitNullProperties?.Remove("fontFamily"); } }
         private global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? _explicitNullValueFontFamily = default!;
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias FontFamily { get => _explicitNullValueFontFamily; set { _explicitNullValueFontFamily = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fontFamily"); else _explicitNullProperties?.Remove("fontFamily"); } }
+        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias FontFamily { get => _explicitNullValueFontFamily; set { _explicitNullValueFontFamily = value; AdditionalData?.Remove("fontFamily"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fontFamily"); else _explicitNullProperties?.Remove("fontFamily"); } }
         private global::Soenneker.Figma.OpenApiClient.Models.VariableAlias _explicitNullValueFontFamily = default!;
 #endif
         /// <summary>Contains a variable alias</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? FontSize { get => _explicitNullValueFontSize; set { _explicitNullValueFontSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fontSize"); else _explicitNullProperties?.Remove("fontSize"); } }
+        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? FontSize { get => _explicitNullValueFontSize; set { _explicitNullValueFontSize = value; AdditionalData?.Remove("fontSize"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fontSize"); else _explicitNullProperties?.Remove("fontSize"); } }
         private global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? _explicitNullValueFontSize = default!;
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias FontSize { get => _explicitNullValueFontSize; set { _explicitNullValueFontSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fontSize"); else _explicitNullProperties?.Remove("fontSize"); } }
+        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias FontSize { get => _explicitNullValueFontSize; set { _explicitNullValueFontSize = value; AdditionalData?.Remove("fontSize"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fontSize"); else _explicitNullProperties?.Remove("fontSize"); } }
         private global::Soenneker.Figma.OpenApiClient.Models.VariableAlias _explicitNullValueFontSize = default!;
 #endif
         /// <summary>Contains a variable alias</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? FontStyle { get => _explicitNullValueFontStyle; set { _explicitNullValueFontStyle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fontStyle"); else _explicitNullProperties?.Remove("fontStyle"); } }
+        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? FontStyle { get => _explicitNullValueFontStyle; set { _explicitNullValueFontStyle = value; AdditionalData?.Remove("fontStyle"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fontStyle"); else _explicitNullProperties?.Remove("fontStyle"); } }
         private global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? _explicitNullValueFontStyle = default!;
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias FontStyle { get => _explicitNullValueFontStyle; set { _explicitNullValueFontStyle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fontStyle"); else _explicitNullProperties?.Remove("fontStyle"); } }
+        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias FontStyle { get => _explicitNullValueFontStyle; set { _explicitNullValueFontStyle = value; AdditionalData?.Remove("fontStyle"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fontStyle"); else _explicitNullProperties?.Remove("fontStyle"); } }
         private global::Soenneker.Figma.OpenApiClient.Models.VariableAlias _explicitNullValueFontStyle = default!;
 #endif
         /// <summary>Contains a variable alias</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? FontWeight { get => _explicitNullValueFontWeight; set { _explicitNullValueFontWeight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fontWeight"); else _explicitNullProperties?.Remove("fontWeight"); } }
+        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? FontWeight { get => _explicitNullValueFontWeight; set { _explicitNullValueFontWeight = value; AdditionalData?.Remove("fontWeight"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fontWeight"); else _explicitNullProperties?.Remove("fontWeight"); } }
         private global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? _explicitNullValueFontWeight = default!;
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias FontWeight { get => _explicitNullValueFontWeight; set { _explicitNullValueFontWeight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fontWeight"); else _explicitNullProperties?.Remove("fontWeight"); } }
+        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias FontWeight { get => _explicitNullValueFontWeight; set { _explicitNullValueFontWeight = value; AdditionalData?.Remove("fontWeight"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fontWeight"); else _explicitNullProperties?.Remove("fontWeight"); } }
         private global::Soenneker.Figma.OpenApiClient.Models.VariableAlias _explicitNullValueFontWeight = default!;
 #endif
         /// <summary>Contains a variable alias</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? LetterSpacing { get => _explicitNullValueLetterSpacing; set { _explicitNullValueLetterSpacing = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("letterSpacing"); else _explicitNullProperties?.Remove("letterSpacing"); } }
+        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? LetterSpacing { get => _explicitNullValueLetterSpacing; set { _explicitNullValueLetterSpacing = value; AdditionalData?.Remove("letterSpacing"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("letterSpacing"); else _explicitNullProperties?.Remove("letterSpacing"); } }
         private global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? _explicitNullValueLetterSpacing = default!;
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias LetterSpacing { get => _explicitNullValueLetterSpacing; set { _explicitNullValueLetterSpacing = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("letterSpacing"); else _explicitNullProperties?.Remove("letterSpacing"); } }
+        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias LetterSpacing { get => _explicitNullValueLetterSpacing; set { _explicitNullValueLetterSpacing = value; AdditionalData?.Remove("letterSpacing"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("letterSpacing"); else _explicitNullProperties?.Remove("letterSpacing"); } }
         private global::Soenneker.Figma.OpenApiClient.Models.VariableAlias _explicitNullValueLetterSpacing = default!;
 #endif
         /// <summary>Contains a variable alias</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? LineHeight { get => _explicitNullValueLineHeight; set { _explicitNullValueLineHeight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lineHeight"); else _explicitNullProperties?.Remove("lineHeight"); } }
+        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? LineHeight { get => _explicitNullValueLineHeight; set { _explicitNullValueLineHeight = value; AdditionalData?.Remove("lineHeight"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lineHeight"); else _explicitNullProperties?.Remove("lineHeight"); } }
         private global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? _explicitNullValueLineHeight = default!;
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias LineHeight { get => _explicitNullValueLineHeight; set { _explicitNullValueLineHeight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lineHeight"); else _explicitNullProperties?.Remove("lineHeight"); } }
+        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias LineHeight { get => _explicitNullValueLineHeight; set { _explicitNullValueLineHeight = value; AdditionalData?.Remove("lineHeight"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lineHeight"); else _explicitNullProperties?.Remove("lineHeight"); } }
         private global::Soenneker.Figma.OpenApiClient.Models.VariableAlias _explicitNullValueLineHeight = default!;
 #endif
         /// <summary>Contains a variable alias</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? ParagraphIndent { get => _explicitNullValueParagraphIndent; set { _explicitNullValueParagraphIndent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paragraphIndent"); else _explicitNullProperties?.Remove("paragraphIndent"); } }
+        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? ParagraphIndent { get => _explicitNullValueParagraphIndent; set { _explicitNullValueParagraphIndent = value; AdditionalData?.Remove("paragraphIndent"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paragraphIndent"); else _explicitNullProperties?.Remove("paragraphIndent"); } }
         private global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? _explicitNullValueParagraphIndent = default!;
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias ParagraphIndent { get => _explicitNullValueParagraphIndent; set { _explicitNullValueParagraphIndent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paragraphIndent"); else _explicitNullProperties?.Remove("paragraphIndent"); } }
+        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias ParagraphIndent { get => _explicitNullValueParagraphIndent; set { _explicitNullValueParagraphIndent = value; AdditionalData?.Remove("paragraphIndent"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paragraphIndent"); else _explicitNullProperties?.Remove("paragraphIndent"); } }
         private global::Soenneker.Figma.OpenApiClient.Models.VariableAlias _explicitNullValueParagraphIndent = default!;
 #endif
         /// <summary>Contains a variable alias</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? ParagraphSpacing { get => _explicitNullValueParagraphSpacing; set { _explicitNullValueParagraphSpacing = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paragraphSpacing"); else _explicitNullProperties?.Remove("paragraphSpacing"); } }
+        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? ParagraphSpacing { get => _explicitNullValueParagraphSpacing; set { _explicitNullValueParagraphSpacing = value; AdditionalData?.Remove("paragraphSpacing"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paragraphSpacing"); else _explicitNullProperties?.Remove("paragraphSpacing"); } }
         private global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? _explicitNullValueParagraphSpacing = default!;
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias ParagraphSpacing { get => _explicitNullValueParagraphSpacing; set { _explicitNullValueParagraphSpacing = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paragraphSpacing"); else _explicitNullProperties?.Remove("paragraphSpacing"); } }
+        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias ParagraphSpacing { get => _explicitNullValueParagraphSpacing; set { _explicitNullValueParagraphSpacing = value; AdditionalData?.Remove("paragraphSpacing"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paragraphSpacing"); else _explicitNullProperties?.Remove("paragraphSpacing"); } }
         private global::Soenneker.Figma.OpenApiClient.Models.VariableAlias _explicitNullValueParagraphSpacing = default!;
 #endif
         /// <summary>

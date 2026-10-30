@@ -18,17 +18,19 @@ namespace Soenneker.Figma.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("horizontal") is { } nullNodeHorizontal && nullNodeHorizontal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Horizontal = null;
-            if (parseNode.GetChildNode("vertical") is { } nullNodeVertical && nullNodeVertical.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Vertical = null;
+            if (parseNode.GetChildNode("horizontal") is null) { _explicitNullValueHorizontal = default!; _explicitNullProperties?.Remove("horizontal"); }
+            else if (parseNode.GetChildNode("horizontal") is { } nullNodeHorizontal && nullNodeHorizontal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Horizontal = null;
+            if (parseNode.GetChildNode("vertical") is null) { _explicitNullValueVertical = default!; _explicitNullProperties?.Remove("vertical"); }
+            else if (parseNode.GetChildNode("vertical") is { } nullNodeVertical && nullNodeVertical.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Vertical = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Horizontal constraint (relative to containing frame) as an enum:- `LEFT`: Node is laid out relative to left of the containing frame- `RIGHT`: Node is laid out relative to right of the containing frame- `CENTER`: Node is horizontally centered relative to containing frame- `LEFT_RIGHT`: Both left and right of node are constrained relative to containing frame (node stretches with frame)- `SCALE`: Node scales horizontally with containing frame</summary>
-        public global::Soenneker.Figma.OpenApiClient.Models.LayoutConstraintHorizontal? Horizontal { get => _explicitNullValueHorizontal; set { _explicitNullValueHorizontal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("horizontal"); else _explicitNullProperties?.Remove("horizontal"); } }
+        public global::Soenneker.Figma.OpenApiClient.Models.LayoutConstraintHorizontal? Horizontal { get => _explicitNullValueHorizontal; set { _explicitNullValueHorizontal = value; AdditionalData?.Remove("horizontal"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("horizontal"); else _explicitNullProperties?.Remove("horizontal"); } }
         private global::Soenneker.Figma.OpenApiClient.Models.LayoutConstraintHorizontal? _explicitNullValueHorizontal = default!;
         /// <summary>Vertical constraint (relative to containing frame) as an enum:- `TOP`: Node is laid out relative to top of the containing frame- `BOTTOM`: Node is laid out relative to bottom of the containing frame- `CENTER`: Node is vertically centered relative to containing frame- `TOP_BOTTOM`: Both top and bottom of node are constrained relative to containing frame (node stretches with frame)- `SCALE`: Node scales vertically with containing frame</summary>
-        public global::Soenneker.Figma.OpenApiClient.Models.LayoutConstraintVertical? Vertical { get => _explicitNullValueVertical; set { _explicitNullValueVertical = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("vertical"); else _explicitNullProperties?.Remove("vertical"); } }
+        public global::Soenneker.Figma.OpenApiClient.Models.LayoutConstraintVertical? Vertical { get => _explicitNullValueVertical; set { _explicitNullValueVertical = value; AdditionalData?.Remove("vertical"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("vertical"); else _explicitNullProperties?.Remove("vertical"); } }
         private global::Soenneker.Figma.OpenApiClient.Models.LayoutConstraintVertical? _explicitNullValueVertical = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Figma.OpenApiClient.Models.LayoutConstraint"/> and sets the default values.
@@ -55,8 +57,8 @@ namespace Soenneker.Figma.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "horizontal", n => { Horizontal = n.GetEnumValue<global::Soenneker.Figma.OpenApiClient.Models.LayoutConstraintHorizontal>(); } },
-                { "vertical", n => { Vertical = n.GetEnumValue<global::Soenneker.Figma.OpenApiClient.Models.LayoutConstraintVertical>(); } },
+                { "horizontal", n => { var parsed = n.GetEnumValue<global::Soenneker.Figma.OpenApiClient.Models.LayoutConstraintHorizontal>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueHorizontal = default; _explicitNullProperties?.Remove("horizontal"); AdditionalData["horizontal"] = unknown; } else { Horizontal = parsed; AdditionalData.Remove("horizontal"); } } },
+                { "vertical", n => { var parsed = n.GetEnumValue<global::Soenneker.Figma.OpenApiClient.Models.LayoutConstraintVertical>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueVertical = default; _explicitNullProperties?.Remove("vertical"); AdditionalData["vertical"] = unknown; } else { Vertical = parsed; AdditionalData.Remove("vertical"); } } },
             };
         }
         /// <summary>

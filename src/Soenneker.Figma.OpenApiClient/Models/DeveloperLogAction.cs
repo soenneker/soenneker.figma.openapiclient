@@ -18,8 +18,10 @@ namespace Soenneker.Figma.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("event_name") is { } nullNodeEventName && nullNodeEventName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EventName = null;
-            if (parseNode.GetChildNode("event_source") is { } nullNodeEventSource && nullNodeEventSource.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EventSource = null;
+            if (parseNode.GetChildNode("event_name") is null) { _explicitNullValueEventName = default!; _explicitNullProperties?.Remove("event_name"); }
+            else if (parseNode.GetChildNode("event_name") is { } nullNodeEventName && nullNodeEventName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EventName = null;
+            if (parseNode.GetChildNode("event_source") is null) { _explicitNullValueEventSource = default!; _explicitNullProperties?.Remove("event_source"); }
+            else if (parseNode.GetChildNode("event_source") is { } nullNodeEventSource && nullNodeEventSource.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EventSource = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,15 +29,15 @@ namespace Soenneker.Figma.OpenApiClient.Models
         /// <summary>The route path (for REST API requests) or tool name (for MCP server calls).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EventName { get => _explicitNullValueEventName; set { _explicitNullValueEventName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("event_name"); else _explicitNullProperties?.Remove("event_name"); } }
+        public string? EventName { get => _explicitNullValueEventName; set { _explicitNullValueEventName = value; AdditionalData?.Remove("event_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("event_name"); else _explicitNullProperties?.Remove("event_name"); } }
         private string? _explicitNullValueEventName = default!;
 #nullable restore
 #else
-        public string EventName { get => _explicitNullValueEventName; set { _explicitNullValueEventName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("event_name"); else _explicitNullProperties?.Remove("event_name"); } }
+        public string EventName { get => _explicitNullValueEventName; set { _explicitNullValueEventName = value; AdditionalData?.Remove("event_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("event_name"); else _explicitNullProperties?.Remove("event_name"); } }
         private string _explicitNullValueEventName = default!;
 #endif
         /// <summary>The source of the event.</summary>
-        public global::Soenneker.Figma.OpenApiClient.Models.DeveloperLogActionEventSource? EventSource { get => _explicitNullValueEventSource; set { _explicitNullValueEventSource = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("event_source"); else _explicitNullProperties?.Remove("event_source"); } }
+        public global::Soenneker.Figma.OpenApiClient.Models.DeveloperLogActionEventSource? EventSource { get => _explicitNullValueEventSource; set { _explicitNullValueEventSource = value; AdditionalData?.Remove("event_source"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("event_source"); else _explicitNullProperties?.Remove("event_source"); } }
         private global::Soenneker.Figma.OpenApiClient.Models.DeveloperLogActionEventSource? _explicitNullValueEventSource = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Figma.OpenApiClient.Models.DeveloperLogAction"/> and sets the default values.
@@ -63,7 +65,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "event_name", n => { EventName = n.GetStringValue(); } },
-                { "event_source", n => { EventSource = n.GetEnumValue<global::Soenneker.Figma.OpenApiClient.Models.DeveloperLogActionEventSource>(); } },
+                { "event_source", n => { var parsed = n.GetEnumValue<global::Soenneker.Figma.OpenApiClient.Models.DeveloperLogActionEventSource>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueEventSource = default; _explicitNullProperties?.Remove("event_source"); AdditionalData["event_source"] = unknown; } else { EventSource = parsed; AdditionalData.Remove("event_source"); } } },
             };
         }
         /// <summary>

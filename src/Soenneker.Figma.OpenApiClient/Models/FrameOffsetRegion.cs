@@ -18,43 +18,48 @@ namespace Soenneker.Figma.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("comment_pin_corner") is { } nullNodeCommentPinCorner && nullNodeCommentPinCorner.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CommentPinCorner = null;
-            if (parseNode.GetChildNode("node_id") is { } nullNodeNodeId && nullNodeNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NodeId = null;
-            if (parseNode.GetChildNode("node_offset") is { } nullNodeNodeOffset && nullNodeNodeOffset.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NodeOffset = null;
-            if (parseNode.GetChildNode("region_height") is { } nullNodeRegionHeight && nullNodeRegionHeight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RegionHeight = null;
-            if (parseNode.GetChildNode("region_width") is { } nullNodeRegionWidth && nullNodeRegionWidth.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RegionWidth = null;
+            if (parseNode.GetChildNode("comment_pin_corner") is null) { _explicitNullValueCommentPinCorner = default!; _explicitNullProperties?.Remove("comment_pin_corner"); }
+            else if (parseNode.GetChildNode("comment_pin_corner") is { } nullNodeCommentPinCorner && nullNodeCommentPinCorner.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CommentPinCorner = null;
+            if (parseNode.GetChildNode("node_id") is null) { _explicitNullValueNodeId = default!; _explicitNullProperties?.Remove("node_id"); }
+            else if (parseNode.GetChildNode("node_id") is { } nullNodeNodeId && nullNodeNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NodeId = null;
+            if (parseNode.GetChildNode("node_offset") is null) { _explicitNullValueNodeOffset = default!; _explicitNullProperties?.Remove("node_offset"); }
+            else if (parseNode.GetChildNode("node_offset") is { } nullNodeNodeOffset && nullNodeNodeOffset.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NodeOffset = null;
+            if (parseNode.GetChildNode("region_height") is null) { _explicitNullValueRegionHeight = default!; _explicitNullProperties?.Remove("region_height"); }
+            else if (parseNode.GetChildNode("region_height") is { } nullNodeRegionHeight && nullNodeRegionHeight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RegionHeight = null;
+            if (parseNode.GetChildNode("region_width") is null) { _explicitNullValueRegionWidth = default!; _explicitNullProperties?.Remove("region_width"); }
+            else if (parseNode.GetChildNode("region_width") is { } nullNodeRegionWidth && nullNodeRegionWidth.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RegionWidth = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The corner of the comment region to pin to the node&apos;s corner as a string enum.</summary>
-        public global::Soenneker.Figma.OpenApiClient.Models.FrameOffsetRegionCommentPinCorner? CommentPinCorner { get => _explicitNullValueCommentPinCorner; set { _explicitNullValueCommentPinCorner = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("comment_pin_corner"); else _explicitNullProperties?.Remove("comment_pin_corner"); } }
+        public global::Soenneker.Figma.OpenApiClient.Models.FrameOffsetRegionCommentPinCorner? CommentPinCorner { get => _explicitNullValueCommentPinCorner; set { _explicitNullValueCommentPinCorner = value; AdditionalData?.Remove("comment_pin_corner"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("comment_pin_corner"); else _explicitNullProperties?.Remove("comment_pin_corner"); } }
         private global::Soenneker.Figma.OpenApiClient.Models.FrameOffsetRegionCommentPinCorner? _explicitNullValueCommentPinCorner = default!;
         /// <summary>Unique id specifying the frame.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NodeId { get => _explicitNullValueNodeId; set { _explicitNullValueNodeId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("node_id"); else _explicitNullProperties?.Remove("node_id"); } }
+        public string? NodeId { get => _explicitNullValueNodeId; set { _explicitNullValueNodeId = value; AdditionalData?.Remove("node_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("node_id"); else _explicitNullProperties?.Remove("node_id"); } }
         private string? _explicitNullValueNodeId = default!;
 #nullable restore
 #else
-        public string NodeId { get => _explicitNullValueNodeId; set { _explicitNullValueNodeId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("node_id"); else _explicitNullProperties?.Remove("node_id"); } }
+        public string NodeId { get => _explicitNullValueNodeId; set { _explicitNullValueNodeId = value; AdditionalData?.Remove("node_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("node_id"); else _explicitNullProperties?.Remove("node_id"); } }
         private string _explicitNullValueNodeId = default!;
 #endif
         /// <summary>2D vector offset within the frame from the top-left corner.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.Vector? NodeOffset { get => _explicitNullValueNodeOffset; set { _explicitNullValueNodeOffset = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("node_offset"); else _explicitNullProperties?.Remove("node_offset"); } }
+        public global::Soenneker.Figma.OpenApiClient.Models.Vector? NodeOffset { get => _explicitNullValueNodeOffset; set { _explicitNullValueNodeOffset = value; AdditionalData?.Remove("node_offset"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("node_offset"); else _explicitNullProperties?.Remove("node_offset"); } }
         private global::Soenneker.Figma.OpenApiClient.Models.Vector? _explicitNullValueNodeOffset = default!;
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.Vector NodeOffset { get => _explicitNullValueNodeOffset; set { _explicitNullValueNodeOffset = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("node_offset"); else _explicitNullProperties?.Remove("node_offset"); } }
+        public global::Soenneker.Figma.OpenApiClient.Models.Vector NodeOffset { get => _explicitNullValueNodeOffset; set { _explicitNullValueNodeOffset = value; AdditionalData?.Remove("node_offset"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("node_offset"); else _explicitNullProperties?.Remove("node_offset"); } }
         private global::Soenneker.Figma.OpenApiClient.Models.Vector _explicitNullValueNodeOffset = default!;
 #endif
         /// <summary>The height of the comment region. Must be greater than 0.</summary>
-        public double? RegionHeight { get => _explicitNullValueRegionHeight; set { _explicitNullValueRegionHeight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("region_height"); else _explicitNullProperties?.Remove("region_height"); } }
+        public double? RegionHeight { get => _explicitNullValueRegionHeight; set { _explicitNullValueRegionHeight = value; AdditionalData?.Remove("region_height"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("region_height"); else _explicitNullProperties?.Remove("region_height"); } }
         private double? _explicitNullValueRegionHeight = default!;
         /// <summary>The width of the comment region. Must be greater than 0.</summary>
-        public double? RegionWidth { get => _explicitNullValueRegionWidth; set { _explicitNullValueRegionWidth = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("region_width"); else _explicitNullProperties?.Remove("region_width"); } }
+        public double? RegionWidth { get => _explicitNullValueRegionWidth; set { _explicitNullValueRegionWidth = value; AdditionalData?.Remove("region_width"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("region_width"); else _explicitNullProperties?.Remove("region_width"); } }
         private double? _explicitNullValueRegionWidth = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Figma.OpenApiClient.Models.FrameOffsetRegion"/> and sets the default values.
@@ -81,7 +86,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "comment_pin_corner", n => { CommentPinCorner = n.GetEnumValue<global::Soenneker.Figma.OpenApiClient.Models.FrameOffsetRegionCommentPinCorner>(); } },
+                { "comment_pin_corner", n => { var parsed = n.GetEnumValue<global::Soenneker.Figma.OpenApiClient.Models.FrameOffsetRegionCommentPinCorner>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueCommentPinCorner = default; _explicitNullProperties?.Remove("comment_pin_corner"); AdditionalData["comment_pin_corner"] = unknown; } else { CommentPinCorner = parsed; AdditionalData.Remove("comment_pin_corner"); } } },
                 { "node_id", n => { NodeId = n.GetStringValue(); } },
                 { "node_offset", n => { NodeOffset = n.GetObjectValue<global::Soenneker.Figma.OpenApiClient.Models.Vector>(global::Soenneker.Figma.OpenApiClient.Models.Vector.CreateFromDiscriminatorValue); } },
                 { "region_height", n => { RegionHeight = n.GetDoubleValue(); } },

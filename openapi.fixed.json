@@ -31504,7 +31504,7 @@
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/PostTeamInvitesErrorResponseResponse"
+              "$ref": "#/components/schemas/PostFileDuplicateErrorResponseResponse"
             }
           }
         }

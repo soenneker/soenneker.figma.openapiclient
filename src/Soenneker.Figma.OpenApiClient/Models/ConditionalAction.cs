@@ -18,8 +18,10 @@ namespace Soenneker.Figma.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("conditionalBlocks") is { } nullNodeConditionalBlocks && nullNodeConditionalBlocks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConditionalBlocks = null;
-            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("conditionalBlocks") is null) { _explicitNullValueConditionalBlocks = default!; _explicitNullProperties?.Remove("conditionalBlocks"); }
+            else if (parseNode.GetChildNode("conditionalBlocks") is { } nullNodeConditionalBlocks && nullNodeConditionalBlocks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConditionalBlocks = null;
+            if (parseNode.GetChildNode("type") is null) { _explicitNullValueType = default!; _explicitNullProperties?.Remove("type"); }
+            else if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,15 +29,15 @@ namespace Soenneker.Figma.OpenApiClient.Models
         /// <summary>The conditionalBlocks property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Figma.OpenApiClient.Models.ConditionalBlock>? ConditionalBlocks { get => _explicitNullValueConditionalBlocks; set { _explicitNullValueConditionalBlocks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conditionalBlocks"); else _explicitNullProperties?.Remove("conditionalBlocks"); } }
+        public List<global::Soenneker.Figma.OpenApiClient.Models.ConditionalBlock>? ConditionalBlocks { get => _explicitNullValueConditionalBlocks; set { _explicitNullValueConditionalBlocks = value; AdditionalData?.Remove("conditionalBlocks"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conditionalBlocks"); else _explicitNullProperties?.Remove("conditionalBlocks"); } }
         private List<global::Soenneker.Figma.OpenApiClient.Models.ConditionalBlock>? _explicitNullValueConditionalBlocks = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Figma.OpenApiClient.Models.ConditionalBlock> ConditionalBlocks { get => _explicitNullValueConditionalBlocks; set { _explicitNullValueConditionalBlocks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conditionalBlocks"); else _explicitNullProperties?.Remove("conditionalBlocks"); } }
+        public List<global::Soenneker.Figma.OpenApiClient.Models.ConditionalBlock> ConditionalBlocks { get => _explicitNullValueConditionalBlocks; set { _explicitNullValueConditionalBlocks = value; AdditionalData?.Remove("conditionalBlocks"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conditionalBlocks"); else _explicitNullProperties?.Remove("conditionalBlocks"); } }
         private List<global::Soenneker.Figma.OpenApiClient.Models.ConditionalBlock> _explicitNullValueConditionalBlocks = default!;
 #endif
         /// <summary>The type property</summary>
-        public global::Soenneker.Figma.OpenApiClient.Models.ConditionalType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        public global::Soenneker.Figma.OpenApiClient.Models.ConditionalType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
         private global::Soenneker.Figma.OpenApiClient.Models.ConditionalType? _explicitNullValueType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Figma.OpenApiClient.Models.ConditionalAction"/> and sets the default values.
@@ -63,7 +65,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "conditionalBlocks", n => { ConditionalBlocks = n.GetCollectionOfObjectValues<global::Soenneker.Figma.OpenApiClient.Models.ConditionalBlock>(global::Soenneker.Figma.OpenApiClient.Models.ConditionalBlock.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Figma.OpenApiClient.Models.ConditionalType>(); } },
+                { "type", n => { var parsed = n.GetEnumValue<global::Soenneker.Figma.OpenApiClient.Models.ConditionalType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueType = default; _explicitNullProperties?.Remove("type"); AdditionalData["type"] = unknown; } else { Type = parsed; AdditionalData.Remove("type"); } } },
             };
         }
         /// <summary>

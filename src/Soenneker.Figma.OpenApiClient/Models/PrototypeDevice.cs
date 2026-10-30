@@ -18,10 +18,14 @@ namespace Soenneker.Figma.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("presetIdentifier") is { } nullNodePresetIdentifier && nullNodePresetIdentifier.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PresetIdentifier = null;
-            if (parseNode.GetChildNode("rotation") is { } nullNodeRotation && nullNodeRotation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Rotation = null;
-            if (parseNode.GetChildNode("size") is { } nullNodeSize && nullNodeSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Size = null;
-            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("presetIdentifier") is null) { _explicitNullValuePresetIdentifier = default!; _explicitNullProperties?.Remove("presetIdentifier"); }
+            else if (parseNode.GetChildNode("presetIdentifier") is { } nullNodePresetIdentifier && nullNodePresetIdentifier.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PresetIdentifier = null;
+            if (parseNode.GetChildNode("rotation") is null) { _explicitNullValueRotation = default!; _explicitNullProperties?.Remove("rotation"); }
+            else if (parseNode.GetChildNode("rotation") is { } nullNodeRotation && nullNodeRotation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Rotation = null;
+            if (parseNode.GetChildNode("size") is null) { _explicitNullValueSize = default!; _explicitNullProperties?.Remove("size"); }
+            else if (parseNode.GetChildNode("size") is { } nullNodeSize && nullNodeSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Size = null;
+            if (parseNode.GetChildNode("type") is null) { _explicitNullValueType = default!; _explicitNullProperties?.Remove("type"); }
+            else if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -29,28 +33,28 @@ namespace Soenneker.Figma.OpenApiClient.Models
         /// <summary>The presetIdentifier property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PresetIdentifier { get => _explicitNullValuePresetIdentifier; set { _explicitNullValuePresetIdentifier = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("presetIdentifier"); else _explicitNullProperties?.Remove("presetIdentifier"); } }
+        public string? PresetIdentifier { get => _explicitNullValuePresetIdentifier; set { _explicitNullValuePresetIdentifier = value; AdditionalData?.Remove("presetIdentifier"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("presetIdentifier"); else _explicitNullProperties?.Remove("presetIdentifier"); } }
         private string? _explicitNullValuePresetIdentifier = default!;
 #nullable restore
 #else
-        public string PresetIdentifier { get => _explicitNullValuePresetIdentifier; set { _explicitNullValuePresetIdentifier = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("presetIdentifier"); else _explicitNullProperties?.Remove("presetIdentifier"); } }
+        public string PresetIdentifier { get => _explicitNullValuePresetIdentifier; set { _explicitNullValuePresetIdentifier = value; AdditionalData?.Remove("presetIdentifier"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("presetIdentifier"); else _explicitNullProperties?.Remove("presetIdentifier"); } }
         private string _explicitNullValuePresetIdentifier = default!;
 #endif
         /// <summary>The rotation property</summary>
-        public global::Soenneker.Figma.OpenApiClient.Models.PrototypeDeviceRotation? Rotation { get => _explicitNullValueRotation; set { _explicitNullValueRotation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rotation"); else _explicitNullProperties?.Remove("rotation"); } }
+        public global::Soenneker.Figma.OpenApiClient.Models.PrototypeDeviceRotation? Rotation { get => _explicitNullValueRotation; set { _explicitNullValueRotation = value; AdditionalData?.Remove("rotation"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rotation"); else _explicitNullProperties?.Remove("rotation"); } }
         private global::Soenneker.Figma.OpenApiClient.Models.PrototypeDeviceRotation? _explicitNullValueRotation = default!;
         /// <summary>A width and a height.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.Size? Size { get => _explicitNullValueSize; set { _explicitNullValueSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("size"); else _explicitNullProperties?.Remove("size"); } }
+        public global::Soenneker.Figma.OpenApiClient.Models.Size? Size { get => _explicitNullValueSize; set { _explicitNullValueSize = value; AdditionalData?.Remove("size"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("size"); else _explicitNullProperties?.Remove("size"); } }
         private global::Soenneker.Figma.OpenApiClient.Models.Size? _explicitNullValueSize = default!;
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.Size Size { get => _explicitNullValueSize; set { _explicitNullValueSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("size"); else _explicitNullProperties?.Remove("size"); } }
+        public global::Soenneker.Figma.OpenApiClient.Models.Size Size { get => _explicitNullValueSize; set { _explicitNullValueSize = value; AdditionalData?.Remove("size"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("size"); else _explicitNullProperties?.Remove("size"); } }
         private global::Soenneker.Figma.OpenApiClient.Models.Size _explicitNullValueSize = default!;
 #endif
         /// <summary>The type property</summary>
-        public global::Soenneker.Figma.OpenApiClient.Models.PrototypeDeviceType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        public global::Soenneker.Figma.OpenApiClient.Models.PrototypeDeviceType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
         private global::Soenneker.Figma.OpenApiClient.Models.PrototypeDeviceType? _explicitNullValueType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Figma.OpenApiClient.Models.PrototypeDevice"/> and sets the default values.
@@ -78,9 +82,9 @@ namespace Soenneker.Figma.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "presetIdentifier", n => { PresetIdentifier = n.GetStringValue(); } },
-                { "rotation", n => { Rotation = n.GetEnumValue<global::Soenneker.Figma.OpenApiClient.Models.PrototypeDeviceRotation>(); } },
+                { "rotation", n => { var parsed = n.GetEnumValue<global::Soenneker.Figma.OpenApiClient.Models.PrototypeDeviceRotation>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueRotation = default; _explicitNullProperties?.Remove("rotation"); AdditionalData["rotation"] = unknown; } else { Rotation = parsed; AdditionalData.Remove("rotation"); } } },
                 { "size", n => { Size = n.GetObjectValue<global::Soenneker.Figma.OpenApiClient.Models.Size>(global::Soenneker.Figma.OpenApiClient.Models.Size.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Figma.OpenApiClient.Models.PrototypeDeviceType>(); } },
+                { "type", n => { var parsed = n.GetEnumValue<global::Soenneker.Figma.OpenApiClient.Models.PrototypeDeviceType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueType = default; _explicitNullProperties?.Remove("type"); AdditionalData["type"] = unknown; } else { Type = parsed; AdditionalData.Remove("type"); } } },
             };
         }
         /// <summary>

@@ -18,34 +18,37 @@ namespace Soenneker.Figma.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
-            if (parseNode.GetChildNode("variableCollectionId") is { } nullNodeVariableCollectionId && nullNodeVariableCollectionId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VariableCollectionId = null;
-            if (parseNode.GetChildNode("variableModeId") is { } nullNodeVariableModeId && nullNodeVariableModeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VariableModeId = null;
+            if (parseNode.GetChildNode("type") is null) { _explicitNullValueType = default!; _explicitNullProperties?.Remove("type"); }
+            else if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("variableCollectionId") is null) { _explicitNullValueVariableCollectionId = default!; _explicitNullProperties?.Remove("variableCollectionId"); }
+            else if (parseNode.GetChildNode("variableCollectionId") is { } nullNodeVariableCollectionId && nullNodeVariableCollectionId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VariableCollectionId = null;
+            if (parseNode.GetChildNode("variableModeId") is null) { _explicitNullValueVariableModeId = default!; _explicitNullProperties?.Remove("variableModeId"); }
+            else if (parseNode.GetChildNode("variableModeId") is { } nullNodeVariableModeId && nullNodeVariableModeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VariableModeId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The type property</summary>
-        public global::Soenneker.Figma.OpenApiClient.Models.SetVariableModeType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        public global::Soenneker.Figma.OpenApiClient.Models.SetVariableModeType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
         private global::Soenneker.Figma.OpenApiClient.Models.SetVariableModeType? _explicitNullValueType = default!;
         /// <summary>The variableCollectionId property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? VariableCollectionId { get => _explicitNullValueVariableCollectionId; set { _explicitNullValueVariableCollectionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("variableCollectionId"); else _explicitNullProperties?.Remove("variableCollectionId"); } }
+        public string? VariableCollectionId { get => _explicitNullValueVariableCollectionId; set { _explicitNullValueVariableCollectionId = value; AdditionalData?.Remove("variableCollectionId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("variableCollectionId"); else _explicitNullProperties?.Remove("variableCollectionId"); } }
         private string? _explicitNullValueVariableCollectionId = default!;
 #nullable restore
 #else
-        public string VariableCollectionId { get => _explicitNullValueVariableCollectionId; set { _explicitNullValueVariableCollectionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("variableCollectionId"); else _explicitNullProperties?.Remove("variableCollectionId"); } }
+        public string VariableCollectionId { get => _explicitNullValueVariableCollectionId; set { _explicitNullValueVariableCollectionId = value; AdditionalData?.Remove("variableCollectionId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("variableCollectionId"); else _explicitNullProperties?.Remove("variableCollectionId"); } }
         private string _explicitNullValueVariableCollectionId = default!;
 #endif
         /// <summary>The variableModeId property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? VariableModeId { get => _explicitNullValueVariableModeId; set { _explicitNullValueVariableModeId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("variableModeId"); else _explicitNullProperties?.Remove("variableModeId"); } }
+        public string? VariableModeId { get => _explicitNullValueVariableModeId; set { _explicitNullValueVariableModeId = value; AdditionalData?.Remove("variableModeId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("variableModeId"); else _explicitNullProperties?.Remove("variableModeId"); } }
         private string? _explicitNullValueVariableModeId = default!;
 #nullable restore
 #else
-        public string VariableModeId { get => _explicitNullValueVariableModeId; set { _explicitNullValueVariableModeId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("variableModeId"); else _explicitNullProperties?.Remove("variableModeId"); } }
+        public string VariableModeId { get => _explicitNullValueVariableModeId; set { _explicitNullValueVariableModeId = value; AdditionalData?.Remove("variableModeId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("variableModeId"); else _explicitNullProperties?.Remove("variableModeId"); } }
         private string _explicitNullValueVariableModeId = default!;
 #endif
         /// <summary>
@@ -73,7 +76,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Figma.OpenApiClient.Models.SetVariableModeType>(); } },
+                { "type", n => { var parsed = n.GetEnumValue<global::Soenneker.Figma.OpenApiClient.Models.SetVariableModeType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueType = default; _explicitNullProperties?.Remove("type"); AdditionalData["type"] = unknown; } else { Type = parsed; AdditionalData.Remove("type"); } } },
                 { "variableCollectionId", n => { VariableCollectionId = n.GetStringValue(); } },
                 { "variableModeId", n => { VariableModeId = n.GetStringValue(); } },
             };

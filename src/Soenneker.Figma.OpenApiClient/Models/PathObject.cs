@@ -18,28 +18,31 @@ namespace Soenneker.Figma.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("overrideID") is { } nullNodeOverrideID && nullNodeOverrideID.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OverrideID = null;
-            if (parseNode.GetChildNode("path") is { } nullNodePath && nullNodePath.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Path = null;
-            if (parseNode.GetChildNode("windingRule") is { } nullNodeWindingRule && nullNodeWindingRule.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WindingRule = null;
+            if (parseNode.GetChildNode("overrideID") is null) { _explicitNullValueOverrideID = default!; _explicitNullProperties?.Remove("overrideID"); }
+            else if (parseNode.GetChildNode("overrideID") is { } nullNodeOverrideID && nullNodeOverrideID.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OverrideID = null;
+            if (parseNode.GetChildNode("path") is null) { _explicitNullValuePath = default!; _explicitNullProperties?.Remove("path"); }
+            else if (parseNode.GetChildNode("path") is { } nullNodePath && nullNodePath.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Path = null;
+            if (parseNode.GetChildNode("windingRule") is null) { _explicitNullValueWindingRule = default!; _explicitNullProperties?.Remove("windingRule"); }
+            else if (parseNode.GetChildNode("windingRule") is { } nullNodeWindingRule && nullNodeWindingRule.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WindingRule = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>If there is a per-region fill, this refers to an ID in the `fillOverrideTable`.</summary>
-        public double? OverrideID { get => _explicitNullValueOverrideID; set { _explicitNullValueOverrideID = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("overrideID"); else _explicitNullProperties?.Remove("overrideID"); } }
+        public double? OverrideID { get => _explicitNullValueOverrideID; set { _explicitNullValueOverrideID = value; AdditionalData?.Remove("overrideID"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("overrideID"); else _explicitNullProperties?.Remove("overrideID"); } }
         private double? _explicitNullValueOverrideID = default!;
         /// <summary>A series of path commands that encodes how to draw the path.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Path { get => _explicitNullValuePath; set { _explicitNullValuePath = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("path"); else _explicitNullProperties?.Remove("path"); } }
+        public string? Path { get => _explicitNullValuePath; set { _explicitNullValuePath = value; AdditionalData?.Remove("path"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("path"); else _explicitNullProperties?.Remove("path"); } }
         private string? _explicitNullValuePath = default!;
 #nullable restore
 #else
-        public string Path { get => _explicitNullValuePath; set { _explicitNullValuePath = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("path"); else _explicitNullProperties?.Remove("path"); } }
+        public string Path { get => _explicitNullValuePath; set { _explicitNullValuePath = value; AdditionalData?.Remove("path"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("path"); else _explicitNullProperties?.Remove("path"); } }
         private string _explicitNullValuePath = default!;
 #endif
         /// <summary>The winding rule for the path (same as in SVGs). This determines whether a given point in space is inside or outside the path.</summary>
-        public global::Soenneker.Figma.OpenApiClient.Models.PathWindingRule? WindingRule { get => _explicitNullValueWindingRule; set { _explicitNullValueWindingRule = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("windingRule"); else _explicitNullProperties?.Remove("windingRule"); } }
+        public global::Soenneker.Figma.OpenApiClient.Models.PathWindingRule? WindingRule { get => _explicitNullValueWindingRule; set { _explicitNullValueWindingRule = value; AdditionalData?.Remove("windingRule"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("windingRule"); else _explicitNullProperties?.Remove("windingRule"); } }
         private global::Soenneker.Figma.OpenApiClient.Models.PathWindingRule? _explicitNullValueWindingRule = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Figma.OpenApiClient.Models.PathObject"/> and sets the default values.
@@ -68,7 +71,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
             {
                 { "overrideID", n => { OverrideID = n.GetDoubleValue(); } },
                 { "path", n => { Path = n.GetStringValue(); } },
-                { "windingRule", n => { WindingRule = n.GetEnumValue<global::Soenneker.Figma.OpenApiClient.Models.PathWindingRule>(); } },
+                { "windingRule", n => { var parsed = n.GetEnumValue<global::Soenneker.Figma.OpenApiClient.Models.PathWindingRule>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueWindingRule = default; _explicitNullProperties?.Remove("windingRule"); AdditionalData["windingRule"] = unknown; } else { WindingRule = parsed; AdditionalData.Remove("windingRule"); } } },
             };
         }
         /// <summary>
