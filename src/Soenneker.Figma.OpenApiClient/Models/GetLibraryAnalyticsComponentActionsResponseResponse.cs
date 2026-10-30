@@ -11,26 +11,41 @@ namespace Soenneker.Figma.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class GetLibraryAnalyticsComponentActionsResponseResponse : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("cursor") is { } nullNodeCursor && nullNodeCursor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Cursor = null;
+            if (parseNode.GetChildNode("next_page") is { } nullNodeNextPage && nullNodeNextPage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NextPage = null;
+            if (parseNode.GetChildNode("rows") is { } nullNodeRows && nullNodeRows.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Rows = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The cursor to use to fetch the next page of data. Not present if next_page is false.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Cursor { get; set; }
+        public string? Cursor { get => _explicitNullValueCursor; set { _explicitNullValueCursor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cursor"); else _explicitNullProperties?.Remove("cursor"); } }
+        private string? _explicitNullValueCursor = default!;
 #nullable restore
 #else
-        public string Cursor { get; set; }
+        public string Cursor { get => _explicitNullValueCursor; set { _explicitNullValueCursor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cursor"); else _explicitNullProperties?.Remove("cursor"); } }
+        private string _explicitNullValueCursor = default!;
 #endif
         /// <summary>Whether there is a next page of data that can be fetched.</summary>
-        public bool? NextPage { get; set; }
+        public bool? NextPage { get => _explicitNullValueNextPage; set { _explicitNullValueNextPage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("next_page"); else _explicitNullProperties?.Remove("next_page"); } }
+        private bool? _explicitNullValueNextPage = default!;
         /// <summary>An array of analytics data.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.GetLibraryAnalyticsComponentActionsResponseResponseRows? Rows { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.GetLibraryAnalyticsComponentActionsResponseResponseRows? Rows { get => _explicitNullValueRows; set { _explicitNullValueRows = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rows"); else _explicitNullProperties?.Remove("rows"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.GetLibraryAnalyticsComponentActionsResponseResponseRows? _explicitNullValueRows = default!;
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.GetLibraryAnalyticsComponentActionsResponseResponseRows Rows { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.GetLibraryAnalyticsComponentActionsResponseResponseRows Rows { get => _explicitNullValueRows; set { _explicitNullValueRows = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rows"); else _explicitNullProperties?.Remove("rows"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.GetLibraryAnalyticsComponentActionsResponseResponseRows _explicitNullValueRows = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Figma.OpenApiClient.Models.GetLibraryAnalyticsComponentActionsResponseResponse"/> and sets the default values.
@@ -47,7 +62,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
         public static global::Soenneker.Figma.OpenApiClient.Models.GetLibraryAnalyticsComponentActionsResponseResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Figma.OpenApiClient.Models.GetLibraryAnalyticsComponentActionsResponseResponse();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Figma.OpenApiClient.Models.GetLibraryAnalyticsComponentActionsResponseResponse(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -72,6 +87,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
             writer.WriteStringValue("cursor", Cursor);
             writer.WriteBoolValue("next_page", NextPage);
             writer.WriteObjectValue<global::Soenneker.Figma.OpenApiClient.Models.GetLibraryAnalyticsComponentActionsResponseResponseRows>("rows", Rows);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

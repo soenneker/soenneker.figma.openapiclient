@@ -12,13 +12,24 @@ namespace Soenneker.Figma.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class LayoutConstraint : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("horizontal") is { } nullNodeHorizontal && nullNodeHorizontal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Horizontal = null;
+            if (parseNode.GetChildNode("vertical") is { } nullNodeVertical && nullNodeVertical.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Vertical = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Horizontal constraint (relative to containing frame) as an enum:- `LEFT`: Node is laid out relative to left of the containing frame- `RIGHT`: Node is laid out relative to right of the containing frame- `CENTER`: Node is horizontally centered relative to containing frame- `LEFT_RIGHT`: Both left and right of node are constrained relative to containing frame (node stretches with frame)- `SCALE`: Node scales horizontally with containing frame</summary>
-        public global::Soenneker.Figma.OpenApiClient.Models.LayoutConstraintHorizontal? Horizontal { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.LayoutConstraintHorizontal? Horizontal { get => _explicitNullValueHorizontal; set { _explicitNullValueHorizontal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("horizontal"); else _explicitNullProperties?.Remove("horizontal"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.LayoutConstraintHorizontal? _explicitNullValueHorizontal = default!;
         /// <summary>Vertical constraint (relative to containing frame) as an enum:- `TOP`: Node is laid out relative to top of the containing frame- `BOTTOM`: Node is laid out relative to bottom of the containing frame- `CENTER`: Node is vertically centered relative to containing frame- `TOP_BOTTOM`: Both top and bottom of node are constrained relative to containing frame (node stretches with frame)- `SCALE`: Node scales vertically with containing frame</summary>
-        public global::Soenneker.Figma.OpenApiClient.Models.LayoutConstraintVertical? Vertical { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.LayoutConstraintVertical? Vertical { get => _explicitNullValueVertical; set { _explicitNullValueVertical = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("vertical"); else _explicitNullProperties?.Remove("vertical"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.LayoutConstraintVertical? _explicitNullValueVertical = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Figma.OpenApiClient.Models.LayoutConstraint"/> and sets the default values.
         /// </summary>
@@ -34,7 +45,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
         public static global::Soenneker.Figma.OpenApiClient.Models.LayoutConstraint CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Figma.OpenApiClient.Models.LayoutConstraint();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Figma.OpenApiClient.Models.LayoutConstraint(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -57,6 +68,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteEnumValue<global::Soenneker.Figma.OpenApiClient.Models.LayoutConstraintHorizontal>("horizontal", Horizontal);
             writer.WriteEnumValue<global::Soenneker.Figma.OpenApiClient.Models.LayoutConstraintVertical>("vertical", Vertical);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

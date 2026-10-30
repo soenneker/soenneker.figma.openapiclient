@@ -12,24 +12,37 @@ namespace Soenneker.Figma.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class VariableComposedColor : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("color") is { } nullNodeColor && nullNodeColor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Color = null;
+            if (parseNode.GetChildNode("opacity") is { } nullNodeOpacity && nullNodeOpacity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Opacity = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The color property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableComposedColorOneOf1Color? Color { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.VariableComposedColorOneOf1Color? Color { get => _explicitNullValueColor; set { _explicitNullValueColor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("color"); else _explicitNullProperties?.Remove("color"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.VariableComposedColorOneOf1Color? _explicitNullValueColor = default!;
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableComposedColorOneOf1Color Color { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.VariableComposedColorOneOf1Color Color { get => _explicitNullValueColor; set { _explicitNullValueColor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("color"); else _explicitNullProperties?.Remove("color"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.VariableComposedColorOneOf1Color _explicitNullValueColor = default!;
 #endif
         /// <summary>Contains a variable alias</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? Opacity { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? Opacity { get => _explicitNullValueOpacity; set { _explicitNullValueOpacity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("opacity"); else _explicitNullProperties?.Remove("opacity"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? _explicitNullValueOpacity = default!;
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias Opacity { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias Opacity { get => _explicitNullValueOpacity; set { _explicitNullValueOpacity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("opacity"); else _explicitNullProperties?.Remove("opacity"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.VariableAlias _explicitNullValueOpacity = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Figma.OpenApiClient.Models.VariableComposedColor"/> and sets the default values.
@@ -46,7 +59,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
         public static global::Soenneker.Figma.OpenApiClient.Models.VariableComposedColor CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Figma.OpenApiClient.Models.VariableComposedColor();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Figma.OpenApiClient.Models.VariableComposedColor(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -69,6 +82,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Figma.OpenApiClient.Models.VariableComposedColorOneOf1Color>("color", Color);
             writer.WriteObjectValue<global::Soenneker.Figma.OpenApiClient.Models.VariableAlias>("opacity", Opacity);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

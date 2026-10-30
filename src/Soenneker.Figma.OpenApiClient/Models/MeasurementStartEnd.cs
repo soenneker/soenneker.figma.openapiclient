@@ -12,19 +12,31 @@ namespace Soenneker.Figma.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class MeasurementStartEnd : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("nodeId") is { } nullNodeNodeId && nullNodeNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NodeId = null;
+            if (parseNode.GetChildNode("side") is { } nullNodeSide && nullNodeSide.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Side = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The nodeId property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NodeId { get; set; }
+        public string? NodeId { get => _explicitNullValueNodeId; set { _explicitNullValueNodeId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nodeId"); else _explicitNullProperties?.Remove("nodeId"); } }
+        private string? _explicitNullValueNodeId = default!;
 #nullable restore
 #else
-        public string NodeId { get; set; }
+        public string NodeId { get => _explicitNullValueNodeId; set { _explicitNullValueNodeId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nodeId"); else _explicitNullProperties?.Remove("nodeId"); } }
+        private string _explicitNullValueNodeId = default!;
 #endif
         /// <summary>The side property</summary>
-        public global::Soenneker.Figma.OpenApiClient.Models.MeasurementStartEndSide? Side { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.MeasurementStartEndSide? Side { get => _explicitNullValueSide; set { _explicitNullValueSide = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("side"); else _explicitNullProperties?.Remove("side"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.MeasurementStartEndSide? _explicitNullValueSide = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Figma.OpenApiClient.Models.MeasurementStartEnd"/> and sets the default values.
         /// </summary>
@@ -40,7 +52,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
         public static global::Soenneker.Figma.OpenApiClient.Models.MeasurementStartEnd CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Figma.OpenApiClient.Models.MeasurementStartEnd();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Figma.OpenApiClient.Models.MeasurementStartEnd(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -63,6 +75,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("nodeId", NodeId);
             writer.WriteEnumValue<global::Soenneker.Figma.OpenApiClient.Models.MeasurementStartEndSide>("side", Side);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

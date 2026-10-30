@@ -11,45 +11,73 @@ namespace Soenneker.Figma.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class DropShadowEffect : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("blendMode") is { } nullNodeBlendMode && nullNodeBlendMode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BlendMode = null;
+            if (parseNode.GetChildNode("boundVariables") is { } nullNodeBoundVariables && nullNodeBoundVariables.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BoundVariables = null;
+            if (parseNode.GetChildNode("color") is { } nullNodeColor && nullNodeColor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Color = null;
+            if (parseNode.GetChildNode("offset") is { } nullNodeOffset && nullNodeOffset.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Offset = null;
+            if (parseNode.GetChildNode("radius") is { } nullNodeRadius && nullNodeRadius.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Radius = null;
+            if (parseNode.GetChildNode("showShadowBehindNode") is { } nullNodeShowShadowBehindNode && nullNodeShowShadowBehindNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShowShadowBehindNode = null;
+            if (parseNode.GetChildNode("spread") is { } nullNodeSpread && nullNodeSpread.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Spread = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("visible") is { } nullNodeVisible && nullNodeVisible.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Visible = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Blend mode of the shadow</summary>
-        public global::Soenneker.Figma.OpenApiClient.Models.BlendMode? BlendMode { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.BlendMode? BlendMode { get => _explicitNullValueBlendMode; set { _explicitNullValueBlendMode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("blendMode"); else _explicitNullProperties?.Remove("blendMode"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.BlendMode? _explicitNullValueBlendMode = default!;
         /// <summary>The variables bound to a particular field on this shadow effect</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.BaseShadowEffectBoundVariables? BoundVariables { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.BaseShadowEffectBoundVariables? BoundVariables { get => _explicitNullValueBoundVariables; set { _explicitNullValueBoundVariables = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("boundVariables"); else _explicitNullProperties?.Remove("boundVariables"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.BaseShadowEffectBoundVariables? _explicitNullValueBoundVariables = default!;
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.BaseShadowEffectBoundVariables BoundVariables { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.BaseShadowEffectBoundVariables BoundVariables { get => _explicitNullValueBoundVariables; set { _explicitNullValueBoundVariables = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("boundVariables"); else _explicitNullProperties?.Remove("boundVariables"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.BaseShadowEffectBoundVariables _explicitNullValueBoundVariables = default!;
 #endif
         /// <summary>An RGBA color</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.Rgba? Color { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.Rgba? Color { get => _explicitNullValueColor; set { _explicitNullValueColor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("color"); else _explicitNullProperties?.Remove("color"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.Rgba? _explicitNullValueColor = default!;
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.Rgba Color { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.Rgba Color { get => _explicitNullValueColor; set { _explicitNullValueColor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("color"); else _explicitNullProperties?.Remove("color"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.Rgba _explicitNullValueColor = default!;
 #endif
         /// <summary>How far the shadow is projected in the x and y directions</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.Vector? Offset { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.Vector? Offset { get => _explicitNullValueOffset; set { _explicitNullValueOffset = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("offset"); else _explicitNullProperties?.Remove("offset"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.Vector? _explicitNullValueOffset = default!;
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.Vector Offset { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.Vector Offset { get => _explicitNullValueOffset; set { _explicitNullValueOffset = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("offset"); else _explicitNullProperties?.Remove("offset"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.Vector _explicitNullValueOffset = default!;
 #endif
         /// <summary>Radius of the blur effect (applies to shadows as well)</summary>
-        public double? Radius { get; set; }
+        public double? Radius { get => _explicitNullValueRadius; set { _explicitNullValueRadius = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("radius"); else _explicitNullProperties?.Remove("radius"); } }
+        private double? _explicitNullValueRadius = default!;
         /// <summary>Whether to show the shadow behind translucent or transparent pixels</summary>
-        public bool? ShowShadowBehindNode { get; set; }
+        public bool? ShowShadowBehindNode { get => _explicitNullValueShowShadowBehindNode; set { _explicitNullValueShowShadowBehindNode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("showShadowBehindNode"); else _explicitNullProperties?.Remove("showShadowBehindNode"); } }
+        private bool? _explicitNullValueShowShadowBehindNode = default!;
         /// <summary>The distance by which to expand (or contract) the shadow.For drop shadows, a positive `spread` value creates a shadow larger than the node, whereas a negative value creates a shadow smaller than the node.For inner shadows, a positive `spread` value contracts the shadow. Spread values are only accepted on rectangles and ellipses, or on frames, components, and instances with visible fill paints and `clipsContent` enabled. When left unspecified, the default value is 0.</summary>
-        public double? Spread { get; set; }
+        public double? Spread { get => _explicitNullValueSpread; set { _explicitNullValueSpread = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("spread"); else _explicitNullProperties?.Remove("spread"); } }
+        private double? _explicitNullValueSpread = default!;
         /// <summary>A string literal representing the effect&apos;s type. Always check the type before reading other properties.</summary>
-        public global::Soenneker.Figma.OpenApiClient.Models.DropShadowType? Type { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.DropShadowType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.DropShadowType? _explicitNullValueType = default!;
         /// <summary>Whether this shadow is visible.</summary>
-        public bool? Visible { get; set; }
+        public bool? Visible { get => _explicitNullValueVisible; set { _explicitNullValueVisible = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("visible"); else _explicitNullProperties?.Remove("visible"); } }
+        private bool? _explicitNullValueVisible = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Figma.OpenApiClient.Models.DropShadowEffect"/> and sets the default values.
         /// </summary>
@@ -67,7 +95,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
         public static global::Soenneker.Figma.OpenApiClient.Models.DropShadowEffect CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Figma.OpenApiClient.Models.DropShadowEffect();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Figma.OpenApiClient.Models.DropShadowEffect(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -104,6 +132,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
             writer.WriteDoubleValue("spread", Spread);
             writer.WriteEnumValue<global::Soenneker.Figma.OpenApiClient.Models.DropShadowType>("type", Type);
             writer.WriteBoolValue("visible", Visible);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

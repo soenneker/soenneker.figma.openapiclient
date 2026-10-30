@@ -11,43 +11,71 @@ namespace Soenneker.Figma.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class BlurEffect : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("blurType") is { } nullNodeBlurType && nullNodeBlurType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BlurType = null;
+            if (parseNode.GetChildNode("boundVariables") is { } nullNodeBoundVariables && nullNodeBoundVariables.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BoundVariables = null;
+            if (parseNode.GetChildNode("endOffset") is { } nullNodeEndOffset && nullNodeEndOffset.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EndOffset = null;
+            if (parseNode.GetChildNode("radius") is { } nullNodeRadius && nullNodeRadius.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Radius = null;
+            if (parseNode.GetChildNode("startOffset") is { } nullNodeStartOffset && nullNodeStartOffset.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartOffset = null;
+            if (parseNode.GetChildNode("startRadius") is { } nullNodeStartRadius && nullNodeStartRadius.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartRadius = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("visible") is { } nullNodeVisible && nullNodeVisible.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Visible = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The string literal &apos;NORMAL&apos; representing the blur type. Always check the blurType before reading other properties.</summary>
-        public global::Soenneker.Figma.OpenApiClient.Models.NormalBlurType? BlurType { get; set; }
+#nullable enable
+        public string? BlurType { get => _explicitNullValueBlurType; set { _explicitNullValueBlurType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("blurType"); else _explicitNullProperties?.Remove("blurType"); } }
+        private string? _explicitNullValueBlurType = default!;
+#nullable restore
         /// <summary>The variables bound to a particular field on this blur effect</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.BaseBlurEffectBoundVariables? BoundVariables { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.BaseBlurEffectBoundVariables? BoundVariables { get => _explicitNullValueBoundVariables; set { _explicitNullValueBoundVariables = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("boundVariables"); else _explicitNullProperties?.Remove("boundVariables"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.BaseBlurEffectBoundVariables? _explicitNullValueBoundVariables = default!;
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.BaseBlurEffectBoundVariables BoundVariables { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.BaseBlurEffectBoundVariables BoundVariables { get => _explicitNullValueBoundVariables; set { _explicitNullValueBoundVariables = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("boundVariables"); else _explicitNullProperties?.Remove("boundVariables"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.BaseBlurEffectBoundVariables _explicitNullValueBoundVariables = default!;
 #endif
         /// <summary>The ending offset of the progressive blur</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.Vector? EndOffset { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.Vector? EndOffset { get => _explicitNullValueEndOffset; set { _explicitNullValueEndOffset = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("endOffset"); else _explicitNullProperties?.Remove("endOffset"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.Vector? _explicitNullValueEndOffset = default!;
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.Vector EndOffset { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.Vector EndOffset { get => _explicitNullValueEndOffset; set { _explicitNullValueEndOffset = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("endOffset"); else _explicitNullProperties?.Remove("endOffset"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.Vector _explicitNullValueEndOffset = default!;
 #endif
         /// <summary>Radius of the blur effect</summary>
-        public double? Radius { get; set; }
+        public double? Radius { get => _explicitNullValueRadius; set { _explicitNullValueRadius = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("radius"); else _explicitNullProperties?.Remove("radius"); } }
+        private double? _explicitNullValueRadius = default!;
         /// <summary>The starting offset of the progressive blur</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.Vector? StartOffset { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.Vector? StartOffset { get => _explicitNullValueStartOffset; set { _explicitNullValueStartOffset = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startOffset"); else _explicitNullProperties?.Remove("startOffset"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.Vector? _explicitNullValueStartOffset = default!;
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.Vector StartOffset { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.Vector StartOffset { get => _explicitNullValueStartOffset; set { _explicitNullValueStartOffset = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startOffset"); else _explicitNullProperties?.Remove("startOffset"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.Vector _explicitNullValueStartOffset = default!;
 #endif
         /// <summary>The starting radius of the progressive blur</summary>
-        public double? StartRadius { get; set; }
+        public double? StartRadius { get => _explicitNullValueStartRadius; set { _explicitNullValueStartRadius = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startRadius"); else _explicitNullProperties?.Remove("startRadius"); } }
+        private double? _explicitNullValueStartRadius = default!;
         /// <summary>A string literal representing the effect&apos;s type. Always check the type before reading other properties.</summary>
-        public global::Soenneker.Figma.OpenApiClient.Models.BaseBlurEffectType? Type { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.BaseBlurEffectType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.BaseBlurEffectType? _explicitNullValueType = default!;
         /// <summary>Whether this blur is active.</summary>
-        public bool? Visible { get; set; }
+        public bool? Visible { get => _explicitNullValueVisible; set { _explicitNullValueVisible = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("visible"); else _explicitNullProperties?.Remove("visible"); } }
+        private bool? _explicitNullValueVisible = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Figma.OpenApiClient.Models.BlurEffect"/> and sets the default values.
         /// </summary>
@@ -63,7 +91,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
         public static global::Soenneker.Figma.OpenApiClient.Models.BlurEffect CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Figma.OpenApiClient.Models.BlurEffect();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Figma.OpenApiClient.Models.BlurEffect(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -73,7 +101,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "blurType", n => { BlurType = n.GetEnumValue<global::Soenneker.Figma.OpenApiClient.Models.NormalBlurType>(); } },
+                { "blurType", n => { BlurType = n.GetStringValue(); } },
                 { "boundVariables", n => { BoundVariables = n.GetObjectValue<global::Soenneker.Figma.OpenApiClient.Models.BaseBlurEffectBoundVariables>(global::Soenneker.Figma.OpenApiClient.Models.BaseBlurEffectBoundVariables.CreateFromDiscriminatorValue); } },
                 { "endOffset", n => { EndOffset = n.GetObjectValue<global::Soenneker.Figma.OpenApiClient.Models.Vector>(global::Soenneker.Figma.OpenApiClient.Models.Vector.CreateFromDiscriminatorValue); } },
                 { "radius", n => { Radius = n.GetDoubleValue(); } },
@@ -90,7 +118,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.Figma.OpenApiClient.Models.NormalBlurType>("blurType", BlurType);
+            writer.WriteStringValue("blurType", BlurType);
             writer.WriteObjectValue<global::Soenneker.Figma.OpenApiClient.Models.BaseBlurEffectBoundVariables>("boundVariables", BoundVariables);
             writer.WriteObjectValue<global::Soenneker.Figma.OpenApiClient.Models.Vector>("endOffset", EndOffset);
             writer.WriteDoubleValue("radius", Radius);
@@ -98,6 +126,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
             writer.WriteDoubleValue("startRadius", StartRadius);
             writer.WriteEnumValue<global::Soenneker.Figma.OpenApiClient.Models.BaseBlurEffectType>("type", Type);
             writer.WriteBoolValue("visible", Visible);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

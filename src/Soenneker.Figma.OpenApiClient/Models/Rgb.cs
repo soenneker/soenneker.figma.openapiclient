@@ -12,15 +12,28 @@ namespace Soenneker.Figma.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Rgb : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("b") is { } nullNodeB && nullNodeB.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) B = null;
+            if (parseNode.GetChildNode("g") is { } nullNodeG && nullNodeG.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) G = null;
+            if (parseNode.GetChildNode("r") is { } nullNodeR && nullNodeR.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) R = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Blue channel value, between 0 and 1.</summary>
-        public double? B { get; set; }
+        public double? B { get => _explicitNullValueB; set { _explicitNullValueB = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("b"); else _explicitNullProperties?.Remove("b"); } }
+        private double? _explicitNullValueB = default!;
         /// <summary>Green channel value, between 0 and 1.</summary>
-        public double? G { get; set; }
+        public double? G { get => _explicitNullValueG; set { _explicitNullValueG = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("g"); else _explicitNullProperties?.Remove("g"); } }
+        private double? _explicitNullValueG = default!;
         /// <summary>Red channel value, between 0 and 1.</summary>
-        public double? R { get; set; }
+        public double? R { get => _explicitNullValueR; set { _explicitNullValueR = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("r"); else _explicitNullProperties?.Remove("r"); } }
+        private double? _explicitNullValueR = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Figma.OpenApiClient.Models.Rgb"/> and sets the default values.
         /// </summary>
@@ -36,7 +49,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
         public static global::Soenneker.Figma.OpenApiClient.Models.Rgb CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Figma.OpenApiClient.Models.Rgb();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Figma.OpenApiClient.Models.Rgb(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -61,6 +74,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
             writer.WriteDoubleValue("b", B);
             writer.WriteDoubleValue("g", G);
             writer.WriteDoubleValue("r", R);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

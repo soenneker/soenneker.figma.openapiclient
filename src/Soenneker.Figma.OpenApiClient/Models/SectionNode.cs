@@ -11,258 +11,398 @@ namespace Soenneker.Figma.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class SectionNode : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("absoluteBoundingBox") is { } nullNodeAbsoluteBoundingBox && nullNodeAbsoluteBoundingBox.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AbsoluteBoundingBox = null;
+            if (parseNode.GetChildNode("absoluteRenderBounds") is { } nullNodeAbsoluteRenderBounds && nullNodeAbsoluteRenderBounds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AbsoluteRenderBounds = null;
+            if (parseNode.GetChildNode("boundVariables") is { } nullNodeBoundVariables && nullNodeBoundVariables.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BoundVariables = null;
+            if (parseNode.GetChildNode("children") is { } nullNodeChildren && nullNodeChildren.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Children = null;
+            if (parseNode.GetChildNode("componentPropertyReferences") is { } nullNodeComponentPropertyReferences && nullNodeComponentPropertyReferences.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ComponentPropertyReferences = null;
+            if (parseNode.GetChildNode("constraints") is { } nullNodeConstraints && nullNodeConstraints.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Constraints = null;
+            if (parseNode.GetChildNode("devStatus") is { } nullNodeDevStatus && nullNodeDevStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DevStatus = null;
+            if (parseNode.GetChildNode("explicitVariableModes") is { } nullNodeExplicitVariableModes && nullNodeExplicitVariableModes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExplicitVariableModes = null;
+            if (parseNode.GetChildNode("fillGeometry") is { } nullNodeFillGeometry && nullNodeFillGeometry.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FillGeometry = null;
+            if (parseNode.GetChildNode("fillOverrideTable") is { } nullNodeFillOverrideTable && nullNodeFillOverrideTable.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FillOverrideTable = null;
+            if (parseNode.GetChildNode("fills") is { } nullNodeFills && nullNodeFills.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Fills = null;
+            if (parseNode.GetChildNode("gridChildHorizontalAlign") is { } nullNodeGridChildHorizontalAlign && nullNodeGridChildHorizontalAlign.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GridChildHorizontalAlign = null;
+            if (parseNode.GetChildNode("gridChildVerticalAlign") is { } nullNodeGridChildVerticalAlign && nullNodeGridChildVerticalAlign.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GridChildVerticalAlign = null;
+            if (parseNode.GetChildNode("gridColumnAnchorIndex") is { } nullNodeGridColumnAnchorIndex && nullNodeGridColumnAnchorIndex.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GridColumnAnchorIndex = null;
+            if (parseNode.GetChildNode("gridColumnCount") is { } nullNodeGridColumnCount && nullNodeGridColumnCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GridColumnCount = null;
+            if (parseNode.GetChildNode("gridColumnGap") is { } nullNodeGridColumnGap && nullNodeGridColumnGap.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GridColumnGap = null;
+            if (parseNode.GetChildNode("gridColumnSpan") is { } nullNodeGridColumnSpan && nullNodeGridColumnSpan.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GridColumnSpan = null;
+            if (parseNode.GetChildNode("gridColumnsSizing") is { } nullNodeGridColumnsSizing && nullNodeGridColumnsSizing.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GridColumnsSizing = null;
+            if (parseNode.GetChildNode("gridRowAnchorIndex") is { } nullNodeGridRowAnchorIndex && nullNodeGridRowAnchorIndex.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GridRowAnchorIndex = null;
+            if (parseNode.GetChildNode("gridRowCount") is { } nullNodeGridRowCount && nullNodeGridRowCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GridRowCount = null;
+            if (parseNode.GetChildNode("gridRowGap") is { } nullNodeGridRowGap && nullNodeGridRowGap.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GridRowGap = null;
+            if (parseNode.GetChildNode("gridRowSpan") is { } nullNodeGridRowSpan && nullNodeGridRowSpan.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GridRowSpan = null;
+            if (parseNode.GetChildNode("gridRowsSizing") is { } nullNodeGridRowsSizing && nullNodeGridRowsSizing.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GridRowsSizing = null;
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("isFixed") is { } nullNodeIsFixed && nullNodeIsFixed.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsFixed = null;
+            if (parseNode.GetChildNode("layoutAlign") is { } nullNodeLayoutAlign && nullNodeLayoutAlign.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LayoutAlign = null;
+            if (parseNode.GetChildNode("layoutGrow") is { } nullNodeLayoutGrow && nullNodeLayoutGrow.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LayoutGrow = null;
+            if (parseNode.GetChildNode("layoutPositioning") is { } nullNodeLayoutPositioning && nullNodeLayoutPositioning.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LayoutPositioning = null;
+            if (parseNode.GetChildNode("layoutSizingHorizontal") is { } nullNodeLayoutSizingHorizontal && nullNodeLayoutSizingHorizontal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LayoutSizingHorizontal = null;
+            if (parseNode.GetChildNode("layoutSizingVertical") is { } nullNodeLayoutSizingVertical && nullNodeLayoutSizingVertical.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LayoutSizingVertical = null;
+            if (parseNode.GetChildNode("locked") is { } nullNodeLocked && nullNodeLocked.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Locked = null;
+            if (parseNode.GetChildNode("maxHeight") is { } nullNodeMaxHeight && nullNodeMaxHeight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxHeight = null;
+            if (parseNode.GetChildNode("maxWidth") is { } nullNodeMaxWidth && nullNodeMaxWidth.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxWidth = null;
+            if (parseNode.GetChildNode("minHeight") is { } nullNodeMinHeight && nullNodeMinHeight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MinHeight = null;
+            if (parseNode.GetChildNode("minWidth") is { } nullNodeMinWidth && nullNodeMinWidth.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MinWidth = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("pluginData") is { } nullNodePluginData && nullNodePluginData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PluginData = null;
+            if (parseNode.GetChildNode("preserveRatio") is { } nullNodePreserveRatio && nullNodePreserveRatio.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PreserveRatio = null;
+            if (parseNode.GetChildNode("relativeTransform") is { } nullNodeRelativeTransform && nullNodeRelativeTransform.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RelativeTransform = null;
+            if (parseNode.GetChildNode("rotation") is { } nullNodeRotation && nullNodeRotation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Rotation = null;
+            if (parseNode.GetChildNode("scrollBehavior") is { } nullNodeScrollBehavior && nullNodeScrollBehavior.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ScrollBehavior = null;
+            if (parseNode.GetChildNode("sectionContentsHidden") is { } nullNodeSectionContentsHidden && nullNodeSectionContentsHidden.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SectionContentsHidden = null;
+            if (parseNode.GetChildNode("sharedPluginData") is { } nullNodeSharedPluginData && nullNodeSharedPluginData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SharedPluginData = null;
+            if (parseNode.GetChildNode("size") is { } nullNodeSize && nullNodeSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Size = null;
+            if (parseNode.GetChildNode("strokeAlign") is { } nullNodeStrokeAlign && nullNodeStrokeAlign.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StrokeAlign = null;
+            if (parseNode.GetChildNode("strokeCap") is { } nullNodeStrokeCap && nullNodeStrokeCap.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StrokeCap = null;
+            if (parseNode.GetChildNode("strokeDashes") is { } nullNodeStrokeDashes && nullNodeStrokeDashes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StrokeDashes = null;
+            if (parseNode.GetChildNode("strokeGeometry") is { } nullNodeStrokeGeometry && nullNodeStrokeGeometry.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StrokeGeometry = null;
+            if (parseNode.GetChildNode("strokeJoin") is { } nullNodeStrokeJoin && nullNodeStrokeJoin.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StrokeJoin = null;
+            if (parseNode.GetChildNode("strokeMiterAngle") is { } nullNodeStrokeMiterAngle && nullNodeStrokeMiterAngle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StrokeMiterAngle = null;
+            if (parseNode.GetChildNode("strokes") is { } nullNodeStrokes && nullNodeStrokes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Strokes = null;
+            if (parseNode.GetChildNode("strokeWeight") is { } nullNodeStrokeWeight && nullNodeStrokeWeight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StrokeWeight = null;
+            if (parseNode.GetChildNode("styles") is { } nullNodeStyles && nullNodeStyles.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Styles = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("visible") is { } nullNodeVisible && nullNodeVisible.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Visible = null;
+        }
+
         /// <summary>Bounding box of the node in absolute space coordinates.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.Rectangle? AbsoluteBoundingBox { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.Rectangle? AbsoluteBoundingBox { get => _explicitNullValueAbsoluteBoundingBox; set { _explicitNullValueAbsoluteBoundingBox = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("absoluteBoundingBox"); else _explicitNullProperties?.Remove("absoluteBoundingBox"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.Rectangle? _explicitNullValueAbsoluteBoundingBox = default!;
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.Rectangle AbsoluteBoundingBox { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.Rectangle AbsoluteBoundingBox { get => _explicitNullValueAbsoluteBoundingBox; set { _explicitNullValueAbsoluteBoundingBox = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("absoluteBoundingBox"); else _explicitNullProperties?.Remove("absoluteBoundingBox"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.Rectangle _explicitNullValueAbsoluteBoundingBox = default!;
 #endif
         /// <summary>The actual bounds of a node accounting for drop shadows, thick strokes, and anything else that may fall outside the node&apos;s regular bounding box defined in `x`, `y`, `width`, and `height`. The `x` and `y` inside this property represent the absolute position of the node on the page. This value will be `null` if the node is invisible.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.Rectangle? AbsoluteRenderBounds { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.Rectangle? AbsoluteRenderBounds { get => _explicitNullValueAbsoluteRenderBounds; set { _explicitNullValueAbsoluteRenderBounds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("absoluteRenderBounds"); else _explicitNullProperties?.Remove("absoluteRenderBounds"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.Rectangle? _explicitNullValueAbsoluteRenderBounds = default!;
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.Rectangle AbsoluteRenderBounds { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.Rectangle AbsoluteRenderBounds { get => _explicitNullValueAbsoluteRenderBounds; set { _explicitNullValueAbsoluteRenderBounds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("absoluteRenderBounds"); else _explicitNullProperties?.Remove("absoluteRenderBounds"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.Rectangle _explicitNullValueAbsoluteRenderBounds = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A mapping of field to the variables applied to this field. Most fields will only map to a single `VariableAlias`. However, for properties like `fills`, `strokes`, `size`, `componentProperties`, and `textRangeFills`, it is possible to have multiple variables bound to the field.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.IsLayerTraitBoundVariables? BoundVariables { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.IsLayerTraitBoundVariables? BoundVariables { get => _explicitNullValueBoundVariables; set { _explicitNullValueBoundVariables = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("boundVariables"); else _explicitNullProperties?.Remove("boundVariables"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.IsLayerTraitBoundVariables? _explicitNullValueBoundVariables = default!;
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.IsLayerTraitBoundVariables BoundVariables { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.IsLayerTraitBoundVariables BoundVariables { get => _explicitNullValueBoundVariables; set { _explicitNullValueBoundVariables = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("boundVariables"); else _explicitNullProperties?.Remove("boundVariables"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.IsLayerTraitBoundVariables _explicitNullValueBoundVariables = default!;
 #endif
         /// <summary>An array of nodes that are direct children of this node</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Figma.OpenApiClient.Models.SubcanvasNode>? Children { get; set; }
+        public List<global::Soenneker.Figma.OpenApiClient.Models.SubcanvasNode>? Children { get => _explicitNullValueChildren; set { _explicitNullValueChildren = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("children"); else _explicitNullProperties?.Remove("children"); } }
+        private List<global::Soenneker.Figma.OpenApiClient.Models.SubcanvasNode>? _explicitNullValueChildren = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Figma.OpenApiClient.Models.SubcanvasNode> Children { get; set; }
+        public List<global::Soenneker.Figma.OpenApiClient.Models.SubcanvasNode> Children { get => _explicitNullValueChildren; set { _explicitNullValueChildren = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("children"); else _explicitNullProperties?.Remove("children"); } }
+        private List<global::Soenneker.Figma.OpenApiClient.Models.SubcanvasNode> _explicitNullValueChildren = default!;
 #endif
         /// <summary>A mapping of a layer&apos;s property to component property name of component properties attached to this node. The component property name can be used to look up more information on the corresponding component&apos;s or component set&apos;s componentPropertyDefinitions.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.SectionNodeComponentPropertyReferences? ComponentPropertyReferences { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.SectionNodeComponentPropertyReferences? ComponentPropertyReferences { get => _explicitNullValueComponentPropertyReferences; set { _explicitNullValueComponentPropertyReferences = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("componentPropertyReferences"); else _explicitNullProperties?.Remove("componentPropertyReferences"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.SectionNodeComponentPropertyReferences? _explicitNullValueComponentPropertyReferences = default!;
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.SectionNodeComponentPropertyReferences ComponentPropertyReferences { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.SectionNodeComponentPropertyReferences ComponentPropertyReferences { get => _explicitNullValueComponentPropertyReferences; set { _explicitNullValueComponentPropertyReferences = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("componentPropertyReferences"); else _explicitNullProperties?.Remove("componentPropertyReferences"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.SectionNodeComponentPropertyReferences _explicitNullValueComponentPropertyReferences = default!;
 #endif
         /// <summary>Horizontal and vertical layout constraints for node.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.LayoutConstraint? Constraints { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.LayoutConstraint? Constraints { get => _explicitNullValueConstraints; set { _explicitNullValueConstraints = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("constraints"); else _explicitNullProperties?.Remove("constraints"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.LayoutConstraint? _explicitNullValueConstraints = default!;
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.LayoutConstraint Constraints { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.LayoutConstraint Constraints { get => _explicitNullValueConstraints; set { _explicitNullValueConstraints = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("constraints"); else _explicitNullProperties?.Remove("constraints"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.LayoutConstraint _explicitNullValueConstraints = default!;
 #endif
         /// <summary>Represents whether or not a node has a particular handoff (or dev) status applied to it.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.DevStatusTraitDevStatus? DevStatus { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.DevStatusTraitDevStatus? DevStatus { get => _explicitNullValueDevStatus; set { _explicitNullValueDevStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("devStatus"); else _explicitNullProperties?.Remove("devStatus"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.DevStatusTraitDevStatus? _explicitNullValueDevStatus = default!;
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.DevStatusTraitDevStatus DevStatus { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.DevStatusTraitDevStatus DevStatus { get => _explicitNullValueDevStatus; set { _explicitNullValueDevStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("devStatus"); else _explicitNullProperties?.Remove("devStatus"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.DevStatusTraitDevStatus _explicitNullValueDevStatus = default!;
 #endif
         /// <summary>A mapping of variable collection ID to mode ID representing the explicitly set modes for this node.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.SectionNodeExplicitVariableModes? ExplicitVariableModes { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.SectionNodeExplicitVariableModes? ExplicitVariableModes { get => _explicitNullValueExplicitVariableModes; set { _explicitNullValueExplicitVariableModes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("explicitVariableModes"); else _explicitNullProperties?.Remove("explicitVariableModes"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.SectionNodeExplicitVariableModes? _explicitNullValueExplicitVariableModes = default!;
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.SectionNodeExplicitVariableModes ExplicitVariableModes { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.SectionNodeExplicitVariableModes ExplicitVariableModes { get => _explicitNullValueExplicitVariableModes; set { _explicitNullValueExplicitVariableModes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("explicitVariableModes"); else _explicitNullProperties?.Remove("explicitVariableModes"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.SectionNodeExplicitVariableModes _explicitNullValueExplicitVariableModes = default!;
 #endif
         /// <summary>Only specified if parameter `geometry=paths` is used. An array of paths representing the object fill.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Figma.OpenApiClient.Models.PathObject>? FillGeometry { get; set; }
+        public List<global::Soenneker.Figma.OpenApiClient.Models.PathObject>? FillGeometry { get => _explicitNullValueFillGeometry; set { _explicitNullValueFillGeometry = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fillGeometry"); else _explicitNullProperties?.Remove("fillGeometry"); } }
+        private List<global::Soenneker.Figma.OpenApiClient.Models.PathObject>? _explicitNullValueFillGeometry = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Figma.OpenApiClient.Models.PathObject> FillGeometry { get; set; }
+        public List<global::Soenneker.Figma.OpenApiClient.Models.PathObject> FillGeometry { get => _explicitNullValueFillGeometry; set { _explicitNullValueFillGeometry = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fillGeometry"); else _explicitNullProperties?.Remove("fillGeometry"); } }
+        private List<global::Soenneker.Figma.OpenApiClient.Models.PathObject> _explicitNullValueFillGeometry = default!;
 #endif
         /// <summary>Map from ID to PaintOverride for looking up fill overrides. To see which regions are overridden, you must use the `geometry=paths` option. Each path returned may have an `overrideID` which maps to this table.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.SectionNodeFillOverrideTable? FillOverrideTable { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.SectionNodeFillOverrideTable? FillOverrideTable { get => _explicitNullValueFillOverrideTable; set { _explicitNullValueFillOverrideTable = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fillOverrideTable"); else _explicitNullProperties?.Remove("fillOverrideTable"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.SectionNodeFillOverrideTable? _explicitNullValueFillOverrideTable = default!;
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.SectionNodeFillOverrideTable FillOverrideTable { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.SectionNodeFillOverrideTable FillOverrideTable { get => _explicitNullValueFillOverrideTable; set { _explicitNullValueFillOverrideTable = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fillOverrideTable"); else _explicitNullProperties?.Remove("fillOverrideTable"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.SectionNodeFillOverrideTable _explicitNullValueFillOverrideTable = default!;
 #endif
         /// <summary>An array of fill paints applied to the node.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Figma.OpenApiClient.Models.Paint>? Fills { get; set; }
+        public List<global::Soenneker.Figma.OpenApiClient.Models.Paint>? Fills { get => _explicitNullValueFills; set { _explicitNullValueFills = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fills"); else _explicitNullProperties?.Remove("fills"); } }
+        private List<global::Soenneker.Figma.OpenApiClient.Models.Paint>? _explicitNullValueFills = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Figma.OpenApiClient.Models.Paint> Fills { get; set; }
+        public List<global::Soenneker.Figma.OpenApiClient.Models.Paint> Fills { get => _explicitNullValueFills; set { _explicitNullValueFills = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fills"); else _explicitNullProperties?.Remove("fills"); } }
+        private List<global::Soenneker.Figma.OpenApiClient.Models.Paint> _explicitNullValueFills = default!;
 #endif
         /// <summary>Determines how a GRID frame&apos;s child should be aligned in the horizontal direction within its grid area. This property is only applicable for direct children of frames with `layoutMode: &quot;GRID&quot;`.</summary>
-        public global::Soenneker.Figma.OpenApiClient.Models.HasLayoutTraitGridChildHorizontalAlign? GridChildHorizontalAlign { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.HasLayoutTraitGridChildHorizontalAlign? GridChildHorizontalAlign { get => _explicitNullValueGridChildHorizontalAlign; set { _explicitNullValueGridChildHorizontalAlign = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gridChildHorizontalAlign"); else _explicitNullProperties?.Remove("gridChildHorizontalAlign"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.HasLayoutTraitGridChildHorizontalAlign? _explicitNullValueGridChildHorizontalAlign = default!;
         /// <summary>Determines how a GRID frame&apos;s child should be aligned in the vertical direction within its grid area. This property is only applicable for direct children of frames with `layoutMode: &quot;GRID&quot;`.</summary>
-        public global::Soenneker.Figma.OpenApiClient.Models.HasLayoutTraitGridChildVerticalAlign? GridChildVerticalAlign { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.HasLayoutTraitGridChildVerticalAlign? GridChildVerticalAlign { get => _explicitNullValueGridChildVerticalAlign; set { _explicitNullValueGridChildVerticalAlign = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gridChildVerticalAlign"); else _explicitNullProperties?.Remove("gridChildVerticalAlign"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.HasLayoutTraitGridChildVerticalAlign? _explicitNullValueGridChildVerticalAlign = default!;
         /// <summary>The index of the column that a GRID frame&apos;s child should be anchored to. This property is only applicable for direct children of frames with `layoutMode: &quot;GRID&quot;`.</summary>
-        public double? GridColumnAnchorIndex { get; set; }
+        public double? GridColumnAnchorIndex { get => _explicitNullValueGridColumnAnchorIndex; set { _explicitNullValueGridColumnAnchorIndex = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gridColumnAnchorIndex"); else _explicitNullProperties?.Remove("gridColumnAnchorIndex"); } }
+        private double? _explicitNullValueGridColumnAnchorIndex = default!;
         /// <summary>The number of columns in the grid layout. This property is only applicable for auto-layout frames with `layoutMode: &quot;GRID&quot;`.</summary>
-        public double? GridColumnCount { get; set; }
+        public double? GridColumnCount { get => _explicitNullValueGridColumnCount; set { _explicitNullValueGridColumnCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gridColumnCount"); else _explicitNullProperties?.Remove("gridColumnCount"); } }
+        private double? _explicitNullValueGridColumnCount = default!;
         /// <summary>The distance between columns in the grid layout. This property is only applicable for auto-layout frames with `layoutMode: &quot;GRID&quot;`.</summary>
-        public double? GridColumnGap { get; set; }
+        public double? GridColumnGap { get => _explicitNullValueGridColumnGap; set { _explicitNullValueGridColumnGap = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gridColumnGap"); else _explicitNullProperties?.Remove("gridColumnGap"); } }
+        private double? _explicitNullValueGridColumnGap = default!;
         /// <summary>The number of columns that a GRID frame&apos;s child should span. This property is only applicable for direct children of frames with `layoutMode: &quot;GRID&quot;`.</summary>
-        public double? GridColumnSpan { get; set; }
+        public double? GridColumnSpan { get => _explicitNullValueGridColumnSpan; set { _explicitNullValueGridColumnSpan = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gridColumnSpan"); else _explicitNullProperties?.Remove("gridColumnSpan"); } }
+        private double? _explicitNullValueGridColumnSpan = default!;
         /// <summary>The string for the CSS grid-template-columns property. This property is only applicable for auto-layout frames with `layoutMode: &quot;GRID&quot;`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? GridColumnsSizing { get; set; }
+        public string? GridColumnsSizing { get => _explicitNullValueGridColumnsSizing; set { _explicitNullValueGridColumnsSizing = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gridColumnsSizing"); else _explicitNullProperties?.Remove("gridColumnsSizing"); } }
+        private string? _explicitNullValueGridColumnsSizing = default!;
 #nullable restore
 #else
-        public string GridColumnsSizing { get; set; }
+        public string GridColumnsSizing { get => _explicitNullValueGridColumnsSizing; set { _explicitNullValueGridColumnsSizing = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gridColumnsSizing"); else _explicitNullProperties?.Remove("gridColumnsSizing"); } }
+        private string _explicitNullValueGridColumnsSizing = default!;
 #endif
         /// <summary>The index of the row that a GRID frame&apos;s child should be anchored to. This property is only applicable for direct children of frames with `layoutMode: &quot;GRID&quot;`.</summary>
-        public double? GridRowAnchorIndex { get; set; }
+        public double? GridRowAnchorIndex { get => _explicitNullValueGridRowAnchorIndex; set { _explicitNullValueGridRowAnchorIndex = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gridRowAnchorIndex"); else _explicitNullProperties?.Remove("gridRowAnchorIndex"); } }
+        private double? _explicitNullValueGridRowAnchorIndex = default!;
         /// <summary>The number of rows in the grid layout. This property is only applicable for auto-layout frames with `layoutMode: &quot;GRID&quot;`.</summary>
-        public double? GridRowCount { get; set; }
+        public double? GridRowCount { get => _explicitNullValueGridRowCount; set { _explicitNullValueGridRowCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gridRowCount"); else _explicitNullProperties?.Remove("gridRowCount"); } }
+        private double? _explicitNullValueGridRowCount = default!;
         /// <summary>The distance between rows in the grid layout. This property is only applicable for auto-layout frames with `layoutMode: &quot;GRID&quot;`.</summary>
-        public double? GridRowGap { get; set; }
+        public double? GridRowGap { get => _explicitNullValueGridRowGap; set { _explicitNullValueGridRowGap = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gridRowGap"); else _explicitNullProperties?.Remove("gridRowGap"); } }
+        private double? _explicitNullValueGridRowGap = default!;
         /// <summary>The number of rows that a GRID frame&apos;s child should span. This property is only applicable for direct children of frames with `layoutMode: &quot;GRID&quot;`.</summary>
-        public double? GridRowSpan { get; set; }
+        public double? GridRowSpan { get => _explicitNullValueGridRowSpan; set { _explicitNullValueGridRowSpan = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gridRowSpan"); else _explicitNullProperties?.Remove("gridRowSpan"); } }
+        private double? _explicitNullValueGridRowSpan = default!;
         /// <summary>The string for the CSS grid-template-rows property. This property is only applicable for auto-layout frames with `layoutMode: &quot;GRID&quot;`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? GridRowsSizing { get; set; }
+        public string? GridRowsSizing { get => _explicitNullValueGridRowsSizing; set { _explicitNullValueGridRowsSizing = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gridRowsSizing"); else _explicitNullProperties?.Remove("gridRowsSizing"); } }
+        private string? _explicitNullValueGridRowsSizing = default!;
 #nullable restore
 #else
-        public string GridRowsSizing { get; set; }
+        public string GridRowsSizing { get => _explicitNullValueGridRowsSizing; set { _explicitNullValueGridRowsSizing = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gridRowsSizing"); else _explicitNullProperties?.Remove("gridRowsSizing"); } }
+        private string _explicitNullValueGridRowsSizing = default!;
 #endif
         /// <summary>A string uniquely identifying this node within the document.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get; set; }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string _explicitNullValueId = default!;
 #endif
         /// <summary>Whether the layer is fixed while the parent is scrolling</summary>
         [Obsolete("")]
-        public bool? IsFixed { get; set; }
+        public bool? IsFixed { get => _explicitNullValueIsFixed; set { _explicitNullValueIsFixed = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isFixed"); else _explicitNullProperties?.Remove("isFixed"); } }
+        private bool? _explicitNullValueIsFixed = default!;
         /// <summary>Determines if the layer should stretch along the parent&apos;s counter axis. This property is only provided for direct children of auto-layout frames.- `INHERIT`- `STRETCH`In previous versions of auto layout, determined how the layer is aligned inside an auto-layout frame. This property is only provided for direct children of auto-layout frames.- `MIN`- `CENTER`- `MAX`- `STRETCH`In horizontal auto-layout frames, &quot;MIN&quot; and &quot;MAX&quot; correspond to &quot;TOP&quot; and &quot;BOTTOM&quot;. In vertical auto-layout frames, &quot;MIN&quot; and &quot;MAX&quot; correspond to &quot;LEFT&quot; and &quot;RIGHT&quot;.</summary>
-        public global::Soenneker.Figma.OpenApiClient.Models.HasLayoutTraitLayoutAlign? LayoutAlign { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.HasLayoutTraitLayoutAlign? LayoutAlign { get => _explicitNullValueLayoutAlign; set { _explicitNullValueLayoutAlign = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("layoutAlign"); else _explicitNullProperties?.Remove("layoutAlign"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.HasLayoutTraitLayoutAlign? _explicitNullValueLayoutAlign = default!;
         /// <summary>This property is applicable only for direct children of auto-layout frames, ignored otherwise. Determines whether a layer should stretch along the parent&apos;s primary axis. A `0` corresponds to a fixed size and `1` corresponds to stretch.</summary>
-        public double? LayoutGrow { get; set; }
+        public double? LayoutGrow { get => _explicitNullValueLayoutGrow; set { _explicitNullValueLayoutGrow = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("layoutGrow"); else _explicitNullProperties?.Remove("layoutGrow"); } }
+        private double? _explicitNullValueLayoutGrow = default!;
         /// <summary>Determines whether a layer&apos;s size and position should be determined by auto-layout settings or manually adjustable.</summary>
-        public global::Soenneker.Figma.OpenApiClient.Models.HasLayoutTraitLayoutPositioning? LayoutPositioning { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.HasLayoutTraitLayoutPositioning? LayoutPositioning { get => _explicitNullValueLayoutPositioning; set { _explicitNullValueLayoutPositioning = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("layoutPositioning"); else _explicitNullProperties?.Remove("layoutPositioning"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.HasLayoutTraitLayoutPositioning? _explicitNullValueLayoutPositioning = default!;
         /// <summary>The horizontal sizing setting on this auto-layout frame or frame child.- `FIXED`- `HUG`: only valid on auto-layout frames and text nodes- `FILL`: only valid on auto-layout frame children</summary>
-        public global::Soenneker.Figma.OpenApiClient.Models.HasLayoutTraitLayoutSizingHorizontal? LayoutSizingHorizontal { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.HasLayoutTraitLayoutSizingHorizontal? LayoutSizingHorizontal { get => _explicitNullValueLayoutSizingHorizontal; set { _explicitNullValueLayoutSizingHorizontal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("layoutSizingHorizontal"); else _explicitNullProperties?.Remove("layoutSizingHorizontal"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.HasLayoutTraitLayoutSizingHorizontal? _explicitNullValueLayoutSizingHorizontal = default!;
         /// <summary>The vertical sizing setting on this auto-layout frame or frame child.- `FIXED`- `HUG`: only valid on auto-layout frames and text nodes- `FILL`: only valid on auto-layout frame children</summary>
-        public global::Soenneker.Figma.OpenApiClient.Models.HasLayoutTraitLayoutSizingVertical? LayoutSizingVertical { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.HasLayoutTraitLayoutSizingVertical? LayoutSizingVertical { get => _explicitNullValueLayoutSizingVertical; set { _explicitNullValueLayoutSizingVertical = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("layoutSizingVertical"); else _explicitNullProperties?.Remove("layoutSizingVertical"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.HasLayoutTraitLayoutSizingVertical? _explicitNullValueLayoutSizingVertical = default!;
         /// <summary>If true, layer is locked and cannot be edited</summary>
-        public bool? Locked { get; set; }
+        public bool? Locked { get => _explicitNullValueLocked; set { _explicitNullValueLocked = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locked"); else _explicitNullProperties?.Remove("locked"); } }
+        private bool? _explicitNullValueLocked = default!;
         /// <summary>The maximum height of the frame. This property is only applicable for auto-layout frames or direct children of auto-layout frames.</summary>
-        public double? MaxHeight { get; set; }
+        public double? MaxHeight { get => _explicitNullValueMaxHeight; set { _explicitNullValueMaxHeight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("maxHeight"); else _explicitNullProperties?.Remove("maxHeight"); } }
+        private double? _explicitNullValueMaxHeight = default!;
         /// <summary>The maximum width of the frame. This property is only applicable for auto-layout frames or direct children of auto-layout frames.</summary>
-        public double? MaxWidth { get; set; }
+        public double? MaxWidth { get => _explicitNullValueMaxWidth; set { _explicitNullValueMaxWidth = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("maxWidth"); else _explicitNullProperties?.Remove("maxWidth"); } }
+        private double? _explicitNullValueMaxWidth = default!;
         /// <summary>The minimum height of the frame. This property is only applicable for auto-layout frames or direct children of auto-layout frames.</summary>
-        public double? MinHeight { get; set; }
+        public double? MinHeight { get => _explicitNullValueMinHeight; set { _explicitNullValueMinHeight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minHeight"); else _explicitNullProperties?.Remove("minHeight"); } }
+        private double? _explicitNullValueMinHeight = default!;
         /// <summary>The minimum width of the frame. This property is only applicable for auto-layout frames or direct children of auto-layout frames.</summary>
-        public double? MinWidth { get; set; }
+        public double? MinWidth { get => _explicitNullValueMinWidth; set { _explicitNullValueMinWidth = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minWidth"); else _explicitNullProperties?.Remove("minWidth"); } }
+        private double? _explicitNullValueMinWidth = default!;
         /// <summary>The name given to the node by the user in the tool.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>Data written by plugins that is visible only to the plugin that wrote it. Requires the `pluginData` to include the ID of the plugin.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? PluginData { get; set; }
+        public UntypedNode? PluginData { get => _explicitNullValuePluginData; set { _explicitNullValuePluginData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pluginData"); else _explicitNullProperties?.Remove("pluginData"); } }
+        private UntypedNode? _explicitNullValuePluginData = default!;
 #nullable restore
 #else
-        public UntypedNode PluginData { get; set; }
+        public UntypedNode PluginData { get => _explicitNullValuePluginData; set { _explicitNullValuePluginData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pluginData"); else _explicitNullProperties?.Remove("pluginData"); } }
+        private UntypedNode _explicitNullValuePluginData = default!;
 #endif
         /// <summary>Keep height and width constrained to same ratio.</summary>
-        public bool? PreserveRatio { get; set; }
+        public bool? PreserveRatio { get => _explicitNullValuePreserveRatio; set { _explicitNullValuePreserveRatio = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("preserveRatio"); else _explicitNullProperties?.Remove("preserveRatio"); } }
+        private bool? _explicitNullValuePreserveRatio = default!;
         /// <summary>A transformation matrix is standard way in computer graphics to represent translation and rotation. These are the top two rows of a 3x3 matrix. The bottom row of the matrix is assumed to be [0, 0, 1]. This is known as an affine transform and is enough to represent translation, rotation, and skew.The identity transform is [[1, 0, 0], [0, 1, 0]].A translation matrix will typically look like:```[[1, 0, tx],  [0, 1, ty]]```and a rotation matrix will typically look like:```[[cos(angle), sin(angle), 0],  [-sin(angle), cos(angle), 0]]```Another way to think about this transform is as three vectors:- The x axis (t[0][0], t[1][0])- The y axis (t[0][1], t[1][1])- The translation offset (t[0][2], t[1][2])The most common usage of the Transform matrix is the `relativeTransform property`. This particular usage of the matrix has a few additional restrictions. The translation offset can take on any value but we do enforce that the axis vectors are unit vectors (i.e. have length 1). The axes are not required to be at 90° angles to each other.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? RelativeTransform { get; set; }
+        public UntypedNode? RelativeTransform { get => _explicitNullValueRelativeTransform; set { _explicitNullValueRelativeTransform = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("relativeTransform"); else _explicitNullProperties?.Remove("relativeTransform"); } }
+        private UntypedNode? _explicitNullValueRelativeTransform = default!;
 #nullable restore
 #else
-        public UntypedNode RelativeTransform { get; set; }
+        public UntypedNode RelativeTransform { get => _explicitNullValueRelativeTransform; set { _explicitNullValueRelativeTransform = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("relativeTransform"); else _explicitNullProperties?.Remove("relativeTransform"); } }
+        private UntypedNode _explicitNullValueRelativeTransform = default!;
 #endif
         /// <summary>The rotation of the node, if not 0.</summary>
-        public double? Rotation { get; set; }
+        public double? Rotation { get => _explicitNullValueRotation; set { _explicitNullValueRotation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rotation"); else _explicitNullProperties?.Remove("rotation"); } }
+        private double? _explicitNullValueRotation = default!;
         /// <summary>How layer should be treated when the frame is resized</summary>
-        public global::Soenneker.Figma.OpenApiClient.Models.IsLayerTraitScrollBehavior? ScrollBehavior { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.IsLayerTraitScrollBehavior? ScrollBehavior { get => _explicitNullValueScrollBehavior; set { _explicitNullValueScrollBehavior = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scrollBehavior"); else _explicitNullProperties?.Remove("scrollBehavior"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.IsLayerTraitScrollBehavior? _explicitNullValueScrollBehavior = default!;
         /// <summary>Whether the contents of the section are visible</summary>
-        public bool? SectionContentsHidden { get; set; }
+        public bool? SectionContentsHidden { get => _explicitNullValueSectionContentsHidden; set { _explicitNullValueSectionContentsHidden = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sectionContentsHidden"); else _explicitNullProperties?.Remove("sectionContentsHidden"); } }
+        private bool? _explicitNullValueSectionContentsHidden = default!;
         /// <summary>Data written by plugins that is visible to all plugins. Requires the `pluginData` parameter to include the string &quot;shared&quot;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? SharedPluginData { get; set; }
+        public UntypedNode? SharedPluginData { get => _explicitNullValueSharedPluginData; set { _explicitNullValueSharedPluginData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sharedPluginData"); else _explicitNullProperties?.Remove("sharedPluginData"); } }
+        private UntypedNode? _explicitNullValueSharedPluginData = default!;
 #nullable restore
 #else
-        public UntypedNode SharedPluginData { get; set; }
+        public UntypedNode SharedPluginData { get => _explicitNullValueSharedPluginData; set { _explicitNullValueSharedPluginData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sharedPluginData"); else _explicitNullProperties?.Remove("sharedPluginData"); } }
+        private UntypedNode _explicitNullValueSharedPluginData = default!;
 #endif
         /// <summary>Width and height of element. This is different from the width and height of the bounding box in that the absolute bounding box represents the element after scaling and rotation. Only present if `geometry=paths` is passed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.Vector? Size { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.Vector? Size { get => _explicitNullValueSize; set { _explicitNullValueSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("size"); else _explicitNullProperties?.Remove("size"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.Vector? _explicitNullValueSize = default!;
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.Vector Size { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.Vector Size { get => _explicitNullValueSize; set { _explicitNullValueSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("size"); else _explicitNullProperties?.Remove("size"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.Vector _explicitNullValueSize = default!;
 #endif
         /// <summary>Position of stroke relative to vector outline, as a string enum- `INSIDE`: stroke drawn inside the shape boundary- `OUTSIDE`: stroke drawn outside the shape boundary- `CENTER`: stroke drawn centered along the shape boundary</summary>
-        public global::Soenneker.Figma.OpenApiClient.Models.HasGeometryTraitStrokeAlign? StrokeAlign { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.HasGeometryTraitStrokeAlign? StrokeAlign { get => _explicitNullValueStrokeAlign; set { _explicitNullValueStrokeAlign = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("strokeAlign"); else _explicitNullProperties?.Remove("strokeAlign"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.HasGeometryTraitStrokeAlign? _explicitNullValueStrokeAlign = default!;
         /// <summary>A string enum describing the end caps of vector paths.</summary>
-        public global::Soenneker.Figma.OpenApiClient.Models.HasGeometryTraitStrokeCap? StrokeCap { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.HasGeometryTraitStrokeCap? StrokeCap { get => _explicitNullValueStrokeCap; set { _explicitNullValueStrokeCap = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("strokeCap"); else _explicitNullProperties?.Remove("strokeCap"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.HasGeometryTraitStrokeCap? _explicitNullValueStrokeCap = default!;
         /// <summary>An array of floating point numbers describing the pattern of dash length and gap lengths that the vector stroke will use when drawn.For example a value of [1, 2] indicates that the stroke will be drawn with a dash of length 1 followed by a gap of length 2, repeated.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<double?>? StrokeDashes { get; set; }
+        public List<double?>? StrokeDashes { get => _explicitNullValueStrokeDashes; set { _explicitNullValueStrokeDashes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("strokeDashes"); else _explicitNullProperties?.Remove("strokeDashes"); } }
+        private List<double?>? _explicitNullValueStrokeDashes = default!;
 #nullable restore
 #else
-        public List<double?> StrokeDashes { get; set; }
+        public List<double?> StrokeDashes { get => _explicitNullValueStrokeDashes; set { _explicitNullValueStrokeDashes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("strokeDashes"); else _explicitNullProperties?.Remove("strokeDashes"); } }
+        private List<double?> _explicitNullValueStrokeDashes = default!;
 #endif
         /// <summary>Only specified if parameter `geometry=paths` is used. An array of paths representing the object stroke.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Figma.OpenApiClient.Models.PathObject>? StrokeGeometry { get; set; }
+        public List<global::Soenneker.Figma.OpenApiClient.Models.PathObject>? StrokeGeometry { get => _explicitNullValueStrokeGeometry; set { _explicitNullValueStrokeGeometry = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("strokeGeometry"); else _explicitNullProperties?.Remove("strokeGeometry"); } }
+        private List<global::Soenneker.Figma.OpenApiClient.Models.PathObject>? _explicitNullValueStrokeGeometry = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Figma.OpenApiClient.Models.PathObject> StrokeGeometry { get; set; }
+        public List<global::Soenneker.Figma.OpenApiClient.Models.PathObject> StrokeGeometry { get => _explicitNullValueStrokeGeometry; set { _explicitNullValueStrokeGeometry = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("strokeGeometry"); else _explicitNullProperties?.Remove("strokeGeometry"); } }
+        private List<global::Soenneker.Figma.OpenApiClient.Models.PathObject> _explicitNullValueStrokeGeometry = default!;
 #endif
         /// <summary>A string enum with value of &quot;MITER&quot;, &quot;BEVEL&quot;, or &quot;ROUND&quot;, describing how corners in vector paths are rendered.</summary>
-        public global::Soenneker.Figma.OpenApiClient.Models.HasGeometryTraitStrokeJoin? StrokeJoin { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.HasGeometryTraitStrokeJoin? StrokeJoin { get => _explicitNullValueStrokeJoin; set { _explicitNullValueStrokeJoin = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("strokeJoin"); else _explicitNullProperties?.Remove("strokeJoin"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.HasGeometryTraitStrokeJoin? _explicitNullValueStrokeJoin = default!;
         /// <summary>Only valid if `strokeJoin` is &quot;MITER&quot;. The corner angle, in degrees, below which `strokeJoin` will be set to &quot;BEVEL&quot; to avoid super sharp corners. By default this is 28.96 degrees.</summary>
-        public double? StrokeMiterAngle { get; set; }
+        public double? StrokeMiterAngle { get => _explicitNullValueStrokeMiterAngle; set { _explicitNullValueStrokeMiterAngle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("strokeMiterAngle"); else _explicitNullProperties?.Remove("strokeMiterAngle"); } }
+        private double? _explicitNullValueStrokeMiterAngle = default!;
         /// <summary>An array of stroke paints applied to the node.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Figma.OpenApiClient.Models.Paint>? Strokes { get; set; }
+        public List<global::Soenneker.Figma.OpenApiClient.Models.Paint>? Strokes { get => _explicitNullValueStrokes; set { _explicitNullValueStrokes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("strokes"); else _explicitNullProperties?.Remove("strokes"); } }
+        private List<global::Soenneker.Figma.OpenApiClient.Models.Paint>? _explicitNullValueStrokes = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Figma.OpenApiClient.Models.Paint> Strokes { get; set; }
+        public List<global::Soenneker.Figma.OpenApiClient.Models.Paint> Strokes { get => _explicitNullValueStrokes; set { _explicitNullValueStrokes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("strokes"); else _explicitNullProperties?.Remove("strokes"); } }
+        private List<global::Soenneker.Figma.OpenApiClient.Models.Paint> _explicitNullValueStrokes = default!;
 #endif
         /// <summary>The weight of strokes on the node.</summary>
-        public double? StrokeWeight { get; set; }
+        public double? StrokeWeight { get => _explicitNullValueStrokeWeight; set { _explicitNullValueStrokeWeight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("strokeWeight"); else _explicitNullProperties?.Remove("strokeWeight"); } }
+        private double? _explicitNullValueStrokeWeight = default!;
         /// <summary>A mapping of a StyleType to style ID (see Style) of styles present on this node. The style ID can be used to look up more information about the style in the top-level styles field.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.SectionNodeStyles? Styles { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.SectionNodeStyles? Styles { get => _explicitNullValueStyles; set { _explicitNullValueStyles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("styles"); else _explicitNullProperties?.Remove("styles"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.SectionNodeStyles? _explicitNullValueStyles = default!;
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.SectionNodeStyles Styles { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.SectionNodeStyles Styles { get => _explicitNullValueStyles; set { _explicitNullValueStyles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("styles"); else _explicitNullProperties?.Remove("styles"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.SectionNodeStyles _explicitNullValueStyles = default!;
 #endif
         /// <summary>The type of this node, represented by the string literal &quot;SECTION&quot;</summary>
-        public global::Soenneker.Figma.OpenApiClient.Models.SectionType? Type { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.SectionType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.SectionType? _explicitNullValueType = default!;
         /// <summary>Whether or not the node is visible on the canvas.</summary>
-        public bool? Visible { get; set; }
+        public bool? Visible { get => _explicitNullValueVisible; set { _explicitNullValueVisible = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("visible"); else _explicitNullProperties?.Remove("visible"); } }
+        private bool? _explicitNullValueVisible = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Figma.OpenApiClient.Models.SectionNode"/> and sets the default values.
         /// </summary>
@@ -297,7 +437,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
         public static global::Soenneker.Figma.OpenApiClient.Models.SectionNode CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Figma.OpenApiClient.Models.SectionNode();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Figma.OpenApiClient.Models.SectionNode(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -426,6 +566,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Figma.OpenApiClient.Models.SectionNodeStyles>("styles", Styles);
             writer.WriteEnumValue<global::Soenneker.Figma.OpenApiClient.Models.SectionType>("type", Type);
             writer.WriteBoolValue("visible", Visible);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

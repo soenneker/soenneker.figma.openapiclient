@@ -12,19 +12,31 @@ namespace Soenneker.Figma.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ConditionalAction : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("conditionalBlocks") is { } nullNodeConditionalBlocks && nullNodeConditionalBlocks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConditionalBlocks = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The conditionalBlocks property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Figma.OpenApiClient.Models.ConditionalBlock>? ConditionalBlocks { get; set; }
+        public List<global::Soenneker.Figma.OpenApiClient.Models.ConditionalBlock>? ConditionalBlocks { get => _explicitNullValueConditionalBlocks; set { _explicitNullValueConditionalBlocks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conditionalBlocks"); else _explicitNullProperties?.Remove("conditionalBlocks"); } }
+        private List<global::Soenneker.Figma.OpenApiClient.Models.ConditionalBlock>? _explicitNullValueConditionalBlocks = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Figma.OpenApiClient.Models.ConditionalBlock> ConditionalBlocks { get; set; }
+        public List<global::Soenneker.Figma.OpenApiClient.Models.ConditionalBlock> ConditionalBlocks { get => _explicitNullValueConditionalBlocks; set { _explicitNullValueConditionalBlocks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conditionalBlocks"); else _explicitNullProperties?.Remove("conditionalBlocks"); } }
+        private List<global::Soenneker.Figma.OpenApiClient.Models.ConditionalBlock> _explicitNullValueConditionalBlocks = default!;
 #endif
         /// <summary>The type property</summary>
-        public global::Soenneker.Figma.OpenApiClient.Models.ConditionalType? Type { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.ConditionalType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.ConditionalType? _explicitNullValueType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Figma.OpenApiClient.Models.ConditionalAction"/> and sets the default values.
         /// </summary>
@@ -40,7 +52,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
         public static global::Soenneker.Figma.OpenApiClient.Models.ConditionalAction CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Figma.OpenApiClient.Models.ConditionalAction();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Figma.OpenApiClient.Models.ConditionalAction(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -63,6 +75,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.Figma.OpenApiClient.Models.ConditionalBlock>("conditionalBlocks", ConditionalBlocks);
             writer.WriteEnumValue<global::Soenneker.Figma.OpenApiClient.Models.ConditionalType>("type", Type);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -11,25 +11,45 @@ namespace Soenneker.Figma.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class Transition : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("direction") is { } nullNodeDirection && nullNodeDirection.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Direction = null;
+            if (parseNode.GetChildNode("duration") is { } nullNodeDuration && nullNodeDuration.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Duration = null;
+            if (parseNode.GetChildNode("easing") is { } nullNodeEasing && nullNodeEasing.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Easing = null;
+            if (parseNode.GetChildNode("matchLayers") is { } nullNodeMatchLayers && nullNodeMatchLayers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MatchLayers = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The direction property</summary>
-        public global::Soenneker.Figma.OpenApiClient.Models.DirectionalTransitionDirection? Direction { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.DirectionalTransitionDirection? Direction { get => _explicitNullValueDirection; set { _explicitNullValueDirection = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("direction"); else _explicitNullProperties?.Remove("direction"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.DirectionalTransitionDirection? _explicitNullValueDirection = default!;
         /// <summary>The duration of the transition in milliseconds.</summary>
-        public double? Duration { get; set; }
+        public double? Duration { get => _explicitNullValueDuration; set { _explicitNullValueDuration = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duration"); else _explicitNullProperties?.Remove("duration"); } }
+        private double? _explicitNullValueDuration = default!;
         /// <summary>The easing curve of the transition.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.Easing? Easing { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.Easing? Easing { get => _explicitNullValueEasing; set { _explicitNullValueEasing = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("easing"); else _explicitNullProperties?.Remove("easing"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.Easing? _explicitNullValueEasing = default!;
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.Easing Easing { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.Easing Easing { get => _explicitNullValueEasing; set { _explicitNullValueEasing = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("easing"); else _explicitNullProperties?.Remove("easing"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.Easing _explicitNullValueEasing = default!;
 #endif
         /// <summary>When the transition `type` is `&quot;SMART_ANIMATE&quot;` or when `matchLayers` is `true`, then the transition will be performed using smart animate, which attempts to match corresponding layers an interpolate other properties during the animation.</summary>
-        public bool? MatchLayers { get; set; }
+        public bool? MatchLayers { get => _explicitNullValueMatchLayers; set { _explicitNullValueMatchLayers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("matchLayers"); else _explicitNullProperties?.Remove("matchLayers"); } }
+        private bool? _explicitNullValueMatchLayers = default!;
         /// <summary>The type property</summary>
-        public global::Soenneker.Figma.OpenApiClient.Models.SimpleTransitionType? Type { get; set; }
+#nullable enable
+        public string? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private string? _explicitNullValueType = default!;
+#nullable restore
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Figma.OpenApiClient.Models.Transition"/> and sets the default values.
         /// </summary>
@@ -45,7 +65,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
         public static global::Soenneker.Figma.OpenApiClient.Models.Transition CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Figma.OpenApiClient.Models.Transition();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Figma.OpenApiClient.Models.Transition(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -59,7 +79,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
                 { "duration", n => { Duration = n.GetDoubleValue(); } },
                 { "easing", n => { Easing = n.GetObjectValue<global::Soenneker.Figma.OpenApiClient.Models.Easing>(global::Soenneker.Figma.OpenApiClient.Models.Easing.CreateFromDiscriminatorValue); } },
                 { "matchLayers", n => { MatchLayers = n.GetBoolValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Figma.OpenApiClient.Models.SimpleTransitionType>(); } },
+                { "type", n => { Type = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -73,7 +93,8 @@ namespace Soenneker.Figma.OpenApiClient.Models
             writer.WriteDoubleValue("duration", Duration);
             writer.WriteObjectValue<global::Soenneker.Figma.OpenApiClient.Models.Easing>("easing", Easing);
             writer.WriteBoolValue("matchLayers", MatchLayers);
-            writer.WriteEnumValue<global::Soenneker.Figma.OpenApiClient.Models.SimpleTransitionType>("type", Type);
+            writer.WriteStringValue("type", Type);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

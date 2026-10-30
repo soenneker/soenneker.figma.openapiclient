@@ -12,15 +12,28 @@ namespace Soenneker.Figma.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ArcData : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("endingAngle") is { } nullNodeEndingAngle && nullNodeEndingAngle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EndingAngle = null;
+            if (parseNode.GetChildNode("innerRadius") is { } nullNodeInnerRadius && nullNodeInnerRadius.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InnerRadius = null;
+            if (parseNode.GetChildNode("startingAngle") is { } nullNodeStartingAngle && nullNodeStartingAngle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartingAngle = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>End of the sweep in radians.</summary>
-        public double? EndingAngle { get; set; }
+        public double? EndingAngle { get => _explicitNullValueEndingAngle; set { _explicitNullValueEndingAngle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("endingAngle"); else _explicitNullProperties?.Remove("endingAngle"); } }
+        private double? _explicitNullValueEndingAngle = default!;
         /// <summary>Inner radius value between 0 and 1</summary>
-        public double? InnerRadius { get; set; }
+        public double? InnerRadius { get => _explicitNullValueInnerRadius; set { _explicitNullValueInnerRadius = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("innerRadius"); else _explicitNullProperties?.Remove("innerRadius"); } }
+        private double? _explicitNullValueInnerRadius = default!;
         /// <summary>Start of the sweep in radians.</summary>
-        public double? StartingAngle { get; set; }
+        public double? StartingAngle { get => _explicitNullValueStartingAngle; set { _explicitNullValueStartingAngle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startingAngle"); else _explicitNullProperties?.Remove("startingAngle"); } }
+        private double? _explicitNullValueStartingAngle = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Figma.OpenApiClient.Models.ArcData"/> and sets the default values.
         /// </summary>
@@ -39,7 +52,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
         public static global::Soenneker.Figma.OpenApiClient.Models.ArcData CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Figma.OpenApiClient.Models.ArcData();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Figma.OpenApiClient.Models.ArcData(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -64,6 +77,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
             writer.WriteDoubleValue("endingAngle", EndingAngle);
             writer.WriteDoubleValue("innerRadius", InnerRadius);
             writer.WriteDoubleValue("startingAngle", StartingAngle);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

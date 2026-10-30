@@ -12,32 +12,48 @@ namespace Soenneker.Figma.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class VariableModeValue : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("modeId") is { } nullNodeModeId && nullNodeModeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ModeId = null;
+            if (parseNode.GetChildNode("value") is { } nullNodeValue && nullNodeValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Value = null;
+            if (parseNode.GetChildNode("variableId") is { } nullNodeVariableId && nullNodeVariableId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VariableId = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Must correspond to a mode in the variable collection that contains the target variable.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ModeId { get; set; }
+        public string? ModeId { get => _explicitNullValueModeId; set { _explicitNullValueModeId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("modeId"); else _explicitNullProperties?.Remove("modeId"); } }
+        private string? _explicitNullValueModeId = default!;
 #nullable restore
 #else
-        public string ModeId { get; set; }
+        public string ModeId { get => _explicitNullValueModeId; set { _explicitNullValueModeId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("modeId"); else _explicitNullProperties?.Remove("modeId"); } }
+        private string _explicitNullValueModeId = default!;
 #endif
         /// <summary>The value for the variable. The value must match the variable&apos;s type. If setting to a variable alias, the alias must resolve to this type. If overriding a value, the value type must match the variable&apos;s type. If removing an overridden value, the value must be `null`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableValue? Value { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.VariableValue? Value { get => _explicitNullValueValue; set { _explicitNullValueValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("value"); else _explicitNullProperties?.Remove("value"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.VariableValue? _explicitNullValueValue = default!;
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableValue Value { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.VariableValue Value { get => _explicitNullValueValue; set { _explicitNullValueValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("value"); else _explicitNullProperties?.Remove("value"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.VariableValue _explicitNullValueValue = default!;
 #endif
         /// <summary>The target variable. You can use the temporary id of a variable.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? VariableId { get; set; }
+        public string? VariableId { get => _explicitNullValueVariableId; set { _explicitNullValueVariableId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("variableId"); else _explicitNullProperties?.Remove("variableId"); } }
+        private string? _explicitNullValueVariableId = default!;
 #nullable restore
 #else
-        public string VariableId { get; set; }
+        public string VariableId { get => _explicitNullValueVariableId; set { _explicitNullValueVariableId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("variableId"); else _explicitNullProperties?.Remove("variableId"); } }
+        private string _explicitNullValueVariableId = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Figma.OpenApiClient.Models.VariableModeValue"/> and sets the default values.
@@ -54,7 +70,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
         public static global::Soenneker.Figma.OpenApiClient.Models.VariableModeValue CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Figma.OpenApiClient.Models.VariableModeValue();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Figma.OpenApiClient.Models.VariableModeValue(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -79,6 +95,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
             writer.WriteStringValue("modeId", ModeId);
             writer.WriteObjectValue<global::Soenneker.Figma.OpenApiClient.Models.VariableValue>("value", Value);
             writer.WriteStringValue("variableId", VariableId);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

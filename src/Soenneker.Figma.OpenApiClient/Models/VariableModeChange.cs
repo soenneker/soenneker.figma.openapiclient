@@ -12,7 +12,12 @@ namespace Soenneker.Figma.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class VariableModeChange : IComposedTypeWrapper, IParsable
-    {
+    , global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder {
+        // Preserve ambiguous union payloads without inventing a discriminator.
+        /// <summary>The complete payload when no unique typed union branch can be selected.</summary>
+        public global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode UnrecognizedValue { get; set; } = null!;
+        public global::System.Collections.Generic.IDictionary<string, object> AdditionalData { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
+
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Figma.OpenApiClient.Models.VariableModeCreate"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -45,21 +50,30 @@ namespace Soenneker.Figma.OpenApiClient.Models
         public static global::Soenneker.Figma.OpenApiClient.Models.VariableModeChange CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            var mappingValue = parseNode.GetChildNode("action")?.GetStringValue();
+            var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
             var result = new global::Soenneker.Figma.OpenApiClient.Models.VariableModeChange();
-            if("CREATE".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            if("VariableModeCreate".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.VariableModeCreate = new global::Soenneker.Figma.OpenApiClient.Models.VariableModeCreate();
+                
             }
-            else if("DELETE".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            else if("VariableModeDelete".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.VariableModeDelete = new global::Soenneker.Figma.OpenApiClient.Models.VariableModeDelete();
+                
             }
-            else if("UPDATE".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            else if("VariableModeUpdate".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.VariableModeUpdate = new global::Soenneker.Figma.OpenApiClient.Models.VariableModeUpdate();
+                
             }
-            return result;
+            
+            var unionPayload = parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue);
+            bool matchesUnionBranch0 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("action") != null && (parseNode.GetChildNode("action")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag1 && ("CREATE".Equals(tag1.GetValue(), global::System.StringComparison.Ordinal))) && parseNode.GetChildNode("name") != null && parseNode.GetChildNode("variableCollectionId") != null))();
+            bool matchesUnionBranch1 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("action") != null && (parseNode.GetChildNode("action")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag1 && ("UPDATE".Equals(tag1.GetValue(), global::System.StringComparison.Ordinal))) && parseNode.GetChildNode("id") != null && parseNode.GetChildNode("variableCollectionId") != null))();
+            bool matchesUnionBranch2 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("action") != null && (parseNode.GetChildNode("action")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag1 && ("DELETE".Equals(tag1.GetValue(), global::System.StringComparison.Ordinal))) && parseNode.GetChildNode("id") != null))();
+            if (result.VariableModeCreate == null && result.VariableModeDelete == null && result.VariableModeUpdate == null && matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch2) result.VariableModeCreate = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Figma.OpenApiClient.Models.VariableModeCreate(), parseNode);
+            if (result.VariableModeCreate == null && result.VariableModeDelete == null && result.VariableModeUpdate == null && matchesUnionBranch1 && !matchesUnionBranch0 && !matchesUnionBranch2) result.VariableModeUpdate = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Figma.OpenApiClient.Models.VariableModeUpdate(), parseNode);
+            if (result.VariableModeCreate == null && result.VariableModeDelete == null && result.VariableModeUpdate == null && matchesUnionBranch2 && !matchesUnionBranch0 && !matchesUnionBranch1) result.VariableModeDelete = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Figma.OpenApiClient.Models.VariableModeDelete(), parseNode);
+            if (result.VariableModeCreate == null && result.VariableModeDelete == null && result.VariableModeUpdate == null) result.UnrecognizedValue = unionPayload;
+return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -87,17 +101,26 @@ namespace Soenneker.Figma.OpenApiClient.Models
         /// <param name="writer">Serialization writer to use to serialize this model</param>
         public virtual void Serialize(ISerializationWriter writer)
         {
+            if (global::System.Object.ReferenceEquals(writer, null)) throw new global::System.ArgumentNullException(nameof(writer));
+            if (VariableModeCreate == null && VariableModeDelete == null && VariableModeUpdate == null) { if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawObject) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData, rawObject)); else if (UnrecognizedValue != null) writer.WriteObjectValue(null, UnrecognizedValue); else if (AdditionalData.Count > 0) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData)); else writer.WriteNullValue(null); return; }
+            if (VariableModeCreate != null && VariableModeDelete == null && VariableModeUpdate == null) { if (VariableModeCreate is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, VariableModeCreate); return; }
+            if (VariableModeDelete != null && VariableModeCreate == null && VariableModeUpdate == null) { if (VariableModeDelete is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, VariableModeDelete); return; }
+            if (VariableModeUpdate != null && VariableModeCreate == null && VariableModeDelete == null) { if (VariableModeUpdate is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, VariableModeUpdate); return; }
+
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             if(VariableModeCreate != null)
             {
+                if (VariableModeCreate is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Figma.OpenApiClient.Models.VariableModeCreate>(null, VariableModeCreate);
             }
             else if(VariableModeDelete != null)
             {
+                if (VariableModeDelete is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Figma.OpenApiClient.Models.VariableModeDelete>(null, VariableModeDelete);
             }
             else if(VariableModeUpdate != null)
             {
+                if (VariableModeUpdate is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Figma.OpenApiClient.Models.VariableModeUpdate>(null, VariableModeUpdate);
             }
         }

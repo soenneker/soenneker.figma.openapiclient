@@ -12,42 +12,63 @@ namespace Soenneker.Figma.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ActivityLogContext : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("client_name") is { } nullNodeClientName && nullNodeClientName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ClientName = null;
+            if (parseNode.GetChildNode("ip_address") is { } nullNodeIpAddress && nullNodeIpAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IpAddress = null;
+            if (parseNode.GetChildNode("is_figma_support_team_action") is { } nullNodeIsFigmaSupportTeamAction && nullNodeIsFigmaSupportTeamAction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsFigmaSupportTeamAction = null;
+            if (parseNode.GetChildNode("org_id") is { } nullNodeOrgId && nullNodeOrgId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OrgId = null;
+            if (parseNode.GetChildNode("team_id") is { } nullNodeTeamId && nullNodeTeamId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TeamId = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The third-party application that triggered the event, if applicable.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ClientName { get; set; }
+        public string? ClientName { get => _explicitNullValueClientName; set { _explicitNullValueClientName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("client_name"); else _explicitNullProperties?.Remove("client_name"); } }
+        private string? _explicitNullValueClientName = default!;
 #nullable restore
 #else
-        public string ClientName { get; set; }
+        public string ClientName { get => _explicitNullValueClientName; set { _explicitNullValueClientName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("client_name"); else _explicitNullProperties?.Remove("client_name"); } }
+        private string _explicitNullValueClientName = default!;
 #endif
         /// <summary>The IP address from of the client that sent the event request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IpAddress { get; set; }
+        public string? IpAddress { get => _explicitNullValueIpAddress; set { _explicitNullValueIpAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ip_address"); else _explicitNullProperties?.Remove("ip_address"); } }
+        private string? _explicitNullValueIpAddress = default!;
 #nullable restore
 #else
-        public string IpAddress { get; set; }
+        public string IpAddress { get => _explicitNullValueIpAddress; set { _explicitNullValueIpAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ip_address"); else _explicitNullProperties?.Remove("ip_address"); } }
+        private string _explicitNullValueIpAddress = default!;
 #endif
         /// <summary>If Figma&apos;s Support team triggered the event. This is either true or false.</summary>
-        public bool? IsFigmaSupportTeamAction { get; set; }
+        public bool? IsFigmaSupportTeamAction { get => _explicitNullValueIsFigmaSupportTeamAction; set { _explicitNullValueIsFigmaSupportTeamAction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_figma_support_team_action"); else _explicitNullProperties?.Remove("is_figma_support_team_action"); } }
+        private bool? _explicitNullValueIsFigmaSupportTeamAction = default!;
         /// <summary>The id of the organization where the event took place.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OrgId { get; set; }
+        public string? OrgId { get => _explicitNullValueOrgId; set { _explicitNullValueOrgId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("org_id"); else _explicitNullProperties?.Remove("org_id"); } }
+        private string? _explicitNullValueOrgId = default!;
 #nullable restore
 #else
-        public string OrgId { get; set; }
+        public string OrgId { get => _explicitNullValueOrgId; set { _explicitNullValueOrgId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("org_id"); else _explicitNullProperties?.Remove("org_id"); } }
+        private string _explicitNullValueOrgId = default!;
 #endif
         /// <summary>The id of the team where the event took place -- if this took place in a specific team.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TeamId { get; set; }
+        public string? TeamId { get => _explicitNullValueTeamId; set { _explicitNullValueTeamId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("team_id"); else _explicitNullProperties?.Remove("team_id"); } }
+        private string? _explicitNullValueTeamId = default!;
 #nullable restore
 #else
-        public string TeamId { get; set; }
+        public string TeamId { get => _explicitNullValueTeamId; set { _explicitNullValueTeamId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("team_id"); else _explicitNullProperties?.Remove("team_id"); } }
+        private string _explicitNullValueTeamId = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Figma.OpenApiClient.Models.ActivityLogContext"/> and sets the default values.
@@ -64,7 +85,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
         public static global::Soenneker.Figma.OpenApiClient.Models.ActivityLogContext CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Figma.OpenApiClient.Models.ActivityLogContext();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Figma.OpenApiClient.Models.ActivityLogContext(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -93,6 +114,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
             writer.WriteBoolValue("is_figma_support_team_action", IsFigmaSupportTeamAction);
             writer.WriteStringValue("org_id", OrgId);
             writer.WriteStringValue("team_id", TeamId);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -12,34 +12,54 @@ namespace Soenneker.Figma.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CreateTeamRequest : IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("org_discoverability") is { } nullNodeOrgDiscoverability && nullNodeOrgDiscoverability.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OrgDiscoverability = null;
+            if (parseNode.GetChildNode("sharing_audience_control") is { } nullNodeSharingAudienceControl && nullNodeSharingAudienceControl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SharingAudienceControl = null;
+            if (parseNode.GetChildNode("workspace_id") is { } nullNodeWorkspaceId && nullNodeWorkspaceId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkspaceId = null;
+        }
+
         /// <summary>A description of the team.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get; set; }
+        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public string Description { get; set; }
+        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string _explicitNullValueDescription = default!;
 #endif
         /// <summary>The name of the team.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>Whether organization members can discover an invite-only team. Required for invite_only and not accepted for other audiences.</summary>
-        public global::Soenneker.Figma.OpenApiClient.Models.CreateTeamRequestOrgDiscoverability? OrgDiscoverability { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.CreateTeamRequestOrgDiscoverability? OrgDiscoverability { get => _explicitNullValueOrgDiscoverability; set { _explicitNullValueOrgDiscoverability = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("org_discoverability"); else _explicitNullProperties?.Remove("org_discoverability"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.CreateTeamRequestOrgDiscoverability? _explicitNullValueOrgDiscoverability = default!;
         /// <summary>The audience that can discover and join the team. Workspace audiences require a workspace_id.</summary>
-        public global::Soenneker.Figma.OpenApiClient.Models.CreateTeamRequestSharingAudienceControl? SharingAudienceControl { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.CreateTeamRequestSharingAudienceControl? SharingAudienceControl { get => _explicitNullValueSharingAudienceControl; set { _explicitNullValueSharingAudienceControl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sharing_audience_control"); else _explicitNullProperties?.Remove("sharing_audience_control"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.CreateTeamRequestSharingAudienceControl? _explicitNullValueSharingAudienceControl = default!;
         /// <summary>The workspace in which to create the team. Required for workspace audiences.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WorkspaceId { get; set; }
+        public string? WorkspaceId { get => _explicitNullValueWorkspaceId; set { _explicitNullValueWorkspaceId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workspace_id"); else _explicitNullProperties?.Remove("workspace_id"); } }
+        private string? _explicitNullValueWorkspaceId = default!;
 #nullable restore
 #else
-        public string WorkspaceId { get; set; }
+        public string WorkspaceId { get => _explicitNullValueWorkspaceId; set { _explicitNullValueWorkspaceId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workspace_id"); else _explicitNullProperties?.Remove("workspace_id"); } }
+        private string _explicitNullValueWorkspaceId = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -49,7 +69,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
         public static global::Soenneker.Figma.OpenApiClient.Models.CreateTeamRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Figma.OpenApiClient.Models.CreateTeamRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Figma.OpenApiClient.Models.CreateTeamRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -77,7 +97,8 @@ namespace Soenneker.Figma.OpenApiClient.Models
             writer.WriteStringValue("name", Name);
             writer.WriteEnumValue<global::Soenneker.Figma.OpenApiClient.Models.CreateTeamRequestOrgDiscoverability>("org_discoverability", OrgDiscoverability);
             writer.WriteEnumValue<global::Soenneker.Figma.OpenApiClient.Models.CreateTeamRequestSharingAudienceControl>("sharing_audience_control", SharingAudienceControl);
-            writer.WriteStringValue("workspace_id", WorkspaceId);
+            writer.WriteStringValue("workspace_id", WorkspaceId);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

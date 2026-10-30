@@ -12,48 +12,70 @@ namespace Soenneker.Figma.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class BaseShadowEffectBoundVariables : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("color") is { } nullNodeColor && nullNodeColor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Color = null;
+            if (parseNode.GetChildNode("offsetX") is { } nullNodeOffsetX && nullNodeOffsetX.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OffsetX = null;
+            if (parseNode.GetChildNode("offsetY") is { } nullNodeOffsetY && nullNodeOffsetY.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OffsetY = null;
+            if (parseNode.GetChildNode("radius") is { } nullNodeRadius && nullNodeRadius.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Radius = null;
+            if (parseNode.GetChildNode("spread") is { } nullNodeSpread && nullNodeSpread.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Spread = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Contains a variable alias</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? Color { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? Color { get => _explicitNullValueColor; set { _explicitNullValueColor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("color"); else _explicitNullProperties?.Remove("color"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? _explicitNullValueColor = default!;
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias Color { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias Color { get => _explicitNullValueColor; set { _explicitNullValueColor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("color"); else _explicitNullProperties?.Remove("color"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.VariableAlias _explicitNullValueColor = default!;
 #endif
         /// <summary>Contains a variable alias</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? OffsetX { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? OffsetX { get => _explicitNullValueOffsetX; set { _explicitNullValueOffsetX = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("offsetX"); else _explicitNullProperties?.Remove("offsetX"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? _explicitNullValueOffsetX = default!;
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias OffsetX { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias OffsetX { get => _explicitNullValueOffsetX; set { _explicitNullValueOffsetX = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("offsetX"); else _explicitNullProperties?.Remove("offsetX"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.VariableAlias _explicitNullValueOffsetX = default!;
 #endif
         /// <summary>Contains a variable alias</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? OffsetY { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? OffsetY { get => _explicitNullValueOffsetY; set { _explicitNullValueOffsetY = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("offsetY"); else _explicitNullProperties?.Remove("offsetY"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? _explicitNullValueOffsetY = default!;
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias OffsetY { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias OffsetY { get => _explicitNullValueOffsetY; set { _explicitNullValueOffsetY = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("offsetY"); else _explicitNullProperties?.Remove("offsetY"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.VariableAlias _explicitNullValueOffsetY = default!;
 #endif
         /// <summary>Contains a variable alias</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? Radius { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? Radius { get => _explicitNullValueRadius; set { _explicitNullValueRadius = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("radius"); else _explicitNullProperties?.Remove("radius"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? _explicitNullValueRadius = default!;
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias Radius { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias Radius { get => _explicitNullValueRadius; set { _explicitNullValueRadius = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("radius"); else _explicitNullProperties?.Remove("radius"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.VariableAlias _explicitNullValueRadius = default!;
 #endif
         /// <summary>Contains a variable alias</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? Spread { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? Spread { get => _explicitNullValueSpread; set { _explicitNullValueSpread = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("spread"); else _explicitNullProperties?.Remove("spread"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? _explicitNullValueSpread = default!;
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias Spread { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias Spread { get => _explicitNullValueSpread; set { _explicitNullValueSpread = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("spread"); else _explicitNullProperties?.Remove("spread"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.VariableAlias _explicitNullValueSpread = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Figma.OpenApiClient.Models.BaseShadowEffectBoundVariables"/> and sets the default values.
@@ -70,7 +92,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
         public static global::Soenneker.Figma.OpenApiClient.Models.BaseShadowEffectBoundVariables CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Figma.OpenApiClient.Models.BaseShadowEffectBoundVariables();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Figma.OpenApiClient.Models.BaseShadowEffectBoundVariables(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -99,6 +121,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Figma.OpenApiClient.Models.VariableAlias>("offsetY", OffsetY);
             writer.WriteObjectValue<global::Soenneker.Figma.OpenApiClient.Models.VariableAlias>("radius", Radius);
             writer.WriteObjectValue<global::Soenneker.Figma.OpenApiClient.Models.VariableAlias>("spread", Spread);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

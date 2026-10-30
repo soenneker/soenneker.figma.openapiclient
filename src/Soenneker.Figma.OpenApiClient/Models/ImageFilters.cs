@@ -12,23 +12,44 @@ namespace Soenneker.Figma.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ImageFilters : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("contrast") is { } nullNodeContrast && nullNodeContrast.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Contrast = null;
+            if (parseNode.GetChildNode("exposure") is { } nullNodeExposure && nullNodeExposure.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Exposure = null;
+            if (parseNode.GetChildNode("highlights") is { } nullNodeHighlights && nullNodeHighlights.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Highlights = null;
+            if (parseNode.GetChildNode("saturation") is { } nullNodeSaturation && nullNodeSaturation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Saturation = null;
+            if (parseNode.GetChildNode("shadows") is { } nullNodeShadows && nullNodeShadows.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Shadows = null;
+            if (parseNode.GetChildNode("temperature") is { } nullNodeTemperature && nullNodeTemperature.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Temperature = null;
+            if (parseNode.GetChildNode("tint") is { } nullNodeTint && nullNodeTint.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Tint = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The contrast property</summary>
-        public double? Contrast { get; set; }
+        public double? Contrast { get => _explicitNullValueContrast; set { _explicitNullValueContrast = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contrast"); else _explicitNullProperties?.Remove("contrast"); } }
+        private double? _explicitNullValueContrast = default!;
         /// <summary>The exposure property</summary>
-        public double? Exposure { get; set; }
+        public double? Exposure { get => _explicitNullValueExposure; set { _explicitNullValueExposure = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exposure"); else _explicitNullProperties?.Remove("exposure"); } }
+        private double? _explicitNullValueExposure = default!;
         /// <summary>The highlights property</summary>
-        public double? Highlights { get; set; }
+        public double? Highlights { get => _explicitNullValueHighlights; set { _explicitNullValueHighlights = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("highlights"); else _explicitNullProperties?.Remove("highlights"); } }
+        private double? _explicitNullValueHighlights = default!;
         /// <summary>The saturation property</summary>
-        public double? Saturation { get; set; }
+        public double? Saturation { get => _explicitNullValueSaturation; set { _explicitNullValueSaturation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("saturation"); else _explicitNullProperties?.Remove("saturation"); } }
+        private double? _explicitNullValueSaturation = default!;
         /// <summary>The shadows property</summary>
-        public double? Shadows { get; set; }
+        public double? Shadows { get => _explicitNullValueShadows; set { _explicitNullValueShadows = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shadows"); else _explicitNullProperties?.Remove("shadows"); } }
+        private double? _explicitNullValueShadows = default!;
         /// <summary>The temperature property</summary>
-        public double? Temperature { get; set; }
+        public double? Temperature { get => _explicitNullValueTemperature; set { _explicitNullValueTemperature = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("temperature"); else _explicitNullProperties?.Remove("temperature"); } }
+        private double? _explicitNullValueTemperature = default!;
         /// <summary>The tint property</summary>
-        public double? Tint { get; set; }
+        public double? Tint { get => _explicitNullValueTint; set { _explicitNullValueTint = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tint"); else _explicitNullProperties?.Remove("tint"); } }
+        private double? _explicitNullValueTint = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Figma.OpenApiClient.Models.ImageFilters"/> and sets the default values.
         /// </summary>
@@ -51,7 +72,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
         public static global::Soenneker.Figma.OpenApiClient.Models.ImageFilters CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Figma.OpenApiClient.Models.ImageFilters();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Figma.OpenApiClient.Models.ImageFilters(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -84,6 +105,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
             writer.WriteDoubleValue("shadows", Shadows);
             writer.WriteDoubleValue("temperature", Temperature);
             writer.WriteDoubleValue("tint", Tint);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

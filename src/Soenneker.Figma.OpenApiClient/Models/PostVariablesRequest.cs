@@ -11,40 +11,59 @@ namespace Soenneker.Figma.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostVariablesRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("variableCollections") is { } nullNodeVariableCollections && nullNodeVariableCollections.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VariableCollections = null;
+            if (parseNode.GetChildNode("variableModes") is { } nullNodeVariableModes && nullNodeVariableModes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VariableModes = null;
+            if (parseNode.GetChildNode("variableModeValues") is { } nullNodeVariableModeValues && nullNodeVariableModeValues.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VariableModeValues = null;
+            if (parseNode.GetChildNode("variables") is { } nullNodeVariables && nullNodeVariables.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Variables = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>For creating, updating, and deleting variable collections.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Figma.OpenApiClient.Models.VariableCollectionChange>? VariableCollections { get; set; }
+        public List<global::Soenneker.Figma.OpenApiClient.Models.VariableCollectionChange>? VariableCollections { get => _explicitNullValueVariableCollections; set { _explicitNullValueVariableCollections = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("variableCollections"); else _explicitNullProperties?.Remove("variableCollections"); } }
+        private List<global::Soenneker.Figma.OpenApiClient.Models.VariableCollectionChange>? _explicitNullValueVariableCollections = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Figma.OpenApiClient.Models.VariableCollectionChange> VariableCollections { get; set; }
+        public List<global::Soenneker.Figma.OpenApiClient.Models.VariableCollectionChange> VariableCollections { get => _explicitNullValueVariableCollections; set { _explicitNullValueVariableCollections = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("variableCollections"); else _explicitNullProperties?.Remove("variableCollections"); } }
+        private List<global::Soenneker.Figma.OpenApiClient.Models.VariableCollectionChange> _explicitNullValueVariableCollections = default!;
 #endif
         /// <summary>For creating, updating, and deleting modes within variable collections.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Figma.OpenApiClient.Models.VariableModeChange>? VariableModes { get; set; }
+        public List<global::Soenneker.Figma.OpenApiClient.Models.VariableModeChange>? VariableModes { get => _explicitNullValueVariableModes; set { _explicitNullValueVariableModes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("variableModes"); else _explicitNullProperties?.Remove("variableModes"); } }
+        private List<global::Soenneker.Figma.OpenApiClient.Models.VariableModeChange>? _explicitNullValueVariableModes = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Figma.OpenApiClient.Models.VariableModeChange> VariableModes { get; set; }
+        public List<global::Soenneker.Figma.OpenApiClient.Models.VariableModeChange> VariableModes { get => _explicitNullValueVariableModes; set { _explicitNullValueVariableModes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("variableModes"); else _explicitNullProperties?.Remove("variableModes"); } }
+        private List<global::Soenneker.Figma.OpenApiClient.Models.VariableModeChange> _explicitNullValueVariableModes = default!;
 #endif
         /// <summary>For setting a specific value, given a variable and a mode.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Figma.OpenApiClient.Models.VariableModeValue>? VariableModeValues { get; set; }
+        public List<global::Soenneker.Figma.OpenApiClient.Models.VariableModeValue>? VariableModeValues { get => _explicitNullValueVariableModeValues; set { _explicitNullValueVariableModeValues = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("variableModeValues"); else _explicitNullProperties?.Remove("variableModeValues"); } }
+        private List<global::Soenneker.Figma.OpenApiClient.Models.VariableModeValue>? _explicitNullValueVariableModeValues = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Figma.OpenApiClient.Models.VariableModeValue> VariableModeValues { get; set; }
+        public List<global::Soenneker.Figma.OpenApiClient.Models.VariableModeValue> VariableModeValues { get => _explicitNullValueVariableModeValues; set { _explicitNullValueVariableModeValues = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("variableModeValues"); else _explicitNullProperties?.Remove("variableModeValues"); } }
+        private List<global::Soenneker.Figma.OpenApiClient.Models.VariableModeValue> _explicitNullValueVariableModeValues = default!;
 #endif
         /// <summary>For creating, updating, and deleting variables.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Figma.OpenApiClient.Models.VariableChange>? Variables { get; set; }
+        public List<global::Soenneker.Figma.OpenApiClient.Models.VariableChange>? Variables { get => _explicitNullValueVariables; set { _explicitNullValueVariables = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("variables"); else _explicitNullProperties?.Remove("variables"); } }
+        private List<global::Soenneker.Figma.OpenApiClient.Models.VariableChange>? _explicitNullValueVariables = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Figma.OpenApiClient.Models.VariableChange> Variables { get; set; }
+        public List<global::Soenneker.Figma.OpenApiClient.Models.VariableChange> Variables { get => _explicitNullValueVariables; set { _explicitNullValueVariables = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("variables"); else _explicitNullProperties?.Remove("variables"); } }
+        private List<global::Soenneker.Figma.OpenApiClient.Models.VariableChange> _explicitNullValueVariables = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Figma.OpenApiClient.Models.PostVariablesRequest"/> and sets the default values.
@@ -61,7 +80,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
         public static global::Soenneker.Figma.OpenApiClient.Models.PostVariablesRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Figma.OpenApiClient.Models.PostVariablesRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Figma.OpenApiClient.Models.PostVariablesRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -88,6 +107,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Figma.OpenApiClient.Models.VariableModeChange>("variableModes", VariableModes);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Figma.OpenApiClient.Models.VariableModeValue>("variableModeValues", VariableModeValues);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Figma.OpenApiClient.Models.VariableChange>("variables", Variables);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

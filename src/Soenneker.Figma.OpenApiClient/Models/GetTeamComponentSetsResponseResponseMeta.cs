@@ -11,24 +11,37 @@ namespace Soenneker.Figma.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class GetTeamComponentSetsResponseResponseMeta : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("component_sets") is { } nullNodeComponentSets && nullNodeComponentSets.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ComponentSets = null;
+            if (parseNode.GetChildNode("cursor") is { } nullNodeCursor && nullNodeCursor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Cursor = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The component_sets property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Figma.OpenApiClient.Models.PublishedComponentSet>? ComponentSets { get; set; }
+        public List<global::Soenneker.Figma.OpenApiClient.Models.PublishedComponentSet>? ComponentSets { get => _explicitNullValueComponentSets; set { _explicitNullValueComponentSets = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("component_sets"); else _explicitNullProperties?.Remove("component_sets"); } }
+        private List<global::Soenneker.Figma.OpenApiClient.Models.PublishedComponentSet>? _explicitNullValueComponentSets = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Figma.OpenApiClient.Models.PublishedComponentSet> ComponentSets { get; set; }
+        public List<global::Soenneker.Figma.OpenApiClient.Models.PublishedComponentSet> ComponentSets { get => _explicitNullValueComponentSets; set { _explicitNullValueComponentSets = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("component_sets"); else _explicitNullProperties?.Remove("component_sets"); } }
+        private List<global::Soenneker.Figma.OpenApiClient.Models.PublishedComponentSet> _explicitNullValueComponentSets = default!;
 #endif
         /// <summary>Pagination cursor</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.ResponseCursor? Cursor { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.ResponseCursor? Cursor { get => _explicitNullValueCursor; set { _explicitNullValueCursor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cursor"); else _explicitNullProperties?.Remove("cursor"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.ResponseCursor? _explicitNullValueCursor = default!;
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.ResponseCursor Cursor { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.ResponseCursor Cursor { get => _explicitNullValueCursor; set { _explicitNullValueCursor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cursor"); else _explicitNullProperties?.Remove("cursor"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.ResponseCursor _explicitNullValueCursor = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Figma.OpenApiClient.Models.GetTeamComponentSetsResponseResponseMeta"/> and sets the default values.
@@ -45,7 +58,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
         public static global::Soenneker.Figma.OpenApiClient.Models.GetTeamComponentSetsResponseResponseMeta CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Figma.OpenApiClient.Models.GetTeamComponentSetsResponseResponseMeta();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Figma.OpenApiClient.Models.GetTeamComponentSetsResponseResponseMeta(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -68,6 +81,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.Figma.OpenApiClient.Models.PublishedComponentSet>("component_sets", ComponentSets);
             writer.WriteObjectValue<global::Soenneker.Figma.OpenApiClient.Models.ResponseCursor>("cursor", Cursor);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

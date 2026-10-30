@@ -22,6 +22,7 @@ namespace Soenneker.Figma.OpenApiClient.V2.Teams.Item
             get => new global::Soenneker.Figma.OpenApiClient.V2.Teams.Item.Folders.FoldersRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The webhooks property</summary>
+        [Obsolete("")]
         public global::Soenneker.Figma.OpenApiClient.V2.Teams.Item.Webhooks.WebhooksRequestBuilder Webhooks
         {
             get => new global::Soenneker.Figma.OpenApiClient.V2.Teams.Item.Webhooks.WebhooksRequestBuilder(PathParameters, RequestAdapter);

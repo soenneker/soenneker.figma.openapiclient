@@ -12,17 +12,29 @@ namespace Soenneker.Figma.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CreateFolderRequest : IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("sharing_audience_control") is { } nullNodeSharingAudienceControl && nullNodeSharingAudienceControl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SharingAudienceControl = null;
+        }
+
         /// <summary>The name of the folder.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>The audience that can access the folder. Workspace audiences require the specified team to belong to a workspace.</summary>
-        public global::Soenneker.Figma.OpenApiClient.Models.CreateFolderRequestSharingAudienceControl? SharingAudienceControl { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.CreateFolderRequestSharingAudienceControl? SharingAudienceControl { get => _explicitNullValueSharingAudienceControl; set { _explicitNullValueSharingAudienceControl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sharing_audience_control"); else _explicitNullProperties?.Remove("sharing_audience_control"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.CreateFolderRequestSharingAudienceControl? _explicitNullValueSharingAudienceControl = default!;
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -31,7 +43,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
         public static global::Soenneker.Figma.OpenApiClient.Models.CreateFolderRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Figma.OpenApiClient.Models.CreateFolderRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Figma.OpenApiClient.Models.CreateFolderRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -53,7 +65,8 @@ namespace Soenneker.Figma.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("name", Name);
-            writer.WriteEnumValue<global::Soenneker.Figma.OpenApiClient.Models.CreateFolderRequestSharingAudienceControl>("sharing_audience_control", SharingAudienceControl);
+            writer.WriteEnumValue<global::Soenneker.Figma.OpenApiClient.Models.CreateFolderRequestSharingAudienceControl>("sharing_audience_control", SharingAudienceControl);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

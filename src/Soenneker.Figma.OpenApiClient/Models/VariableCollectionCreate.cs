@@ -12,52 +12,78 @@ namespace Soenneker.Figma.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class VariableCollectionCreate : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("action") is { } nullNodeAction && nullNodeAction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Action = null;
+            if (parseNode.GetChildNode("hiddenFromPublishing") is { } nullNodeHiddenFromPublishing && nullNodeHiddenFromPublishing.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HiddenFromPublishing = null;
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("initialModeId") is { } nullNodeInitialModeId && nullNodeInitialModeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InitialModeId = null;
+            if (parseNode.GetChildNode("initialModeIdToParentModeIdMapping") is { } nullNodeInitialModeIdToParentModeIdMapping && nullNodeInitialModeIdToParentModeIdMapping.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InitialModeIdToParentModeIdMapping = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("parentVariableCollectionId") is { } nullNodeParentVariableCollectionId && nullNodeParentVariableCollectionId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ParentVariableCollectionId = null;
+        }
+
         /// <summary>The action to perform for the variable collection.</summary>
-        public global::Soenneker.Figma.OpenApiClient.Models.CreateAction? Action { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.CreateAction? Action { get => _explicitNullValueAction; set { _explicitNullValueAction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("action"); else _explicitNullProperties?.Remove("action"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.CreateAction? _explicitNullValueAction = default!;
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Whether this variable collection is hidden when publishing the current file as a library.</summary>
-        public bool? HiddenFromPublishing { get; set; }
+        public bool? HiddenFromPublishing { get => _explicitNullValueHiddenFromPublishing; set { _explicitNullValueHiddenFromPublishing = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hiddenFromPublishing"); else _explicitNullProperties?.Remove("hiddenFromPublishing"); } }
+        private bool? _explicitNullValueHiddenFromPublishing = default!;
         /// <summary>A temporary id for this variable collection.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get; set; }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string _explicitNullValueId = default!;
 #endif
         /// <summary>The initial mode refers to the mode that is created by default. You can set a temporary id here, in order to reference this mode later in this request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? InitialModeId { get; set; }
+        public string? InitialModeId { get => _explicitNullValueInitialModeId; set { _explicitNullValueInitialModeId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("initialModeId"); else _explicitNullProperties?.Remove("initialModeId"); } }
+        private string? _explicitNullValueInitialModeId = default!;
 #nullable restore
 #else
-        public string InitialModeId { get; set; }
+        public string InitialModeId { get => _explicitNullValueInitialModeId; set { _explicitNullValueInitialModeId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("initialModeId"); else _explicitNullProperties?.Remove("initialModeId"); } }
+        private string _explicitNullValueInitialModeId = default!;
 #endif
         /// <summary>Maps inherited modes from the parent variable collection to the initial mode ids on the extended variable collection.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableCollectionCreateInitialModeIdToParentModeIdMappingProperty? InitialModeIdToParentModeIdMapping { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.VariableCollectionCreateInitialModeIdToParentModeIdMappingProperty? InitialModeIdToParentModeIdMapping { get => _explicitNullValueInitialModeIdToParentModeIdMapping; set { _explicitNullValueInitialModeIdToParentModeIdMapping = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("initialModeIdToParentModeIdMapping"); else _explicitNullProperties?.Remove("initialModeIdToParentModeIdMapping"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.VariableCollectionCreateInitialModeIdToParentModeIdMappingProperty? _explicitNullValueInitialModeIdToParentModeIdMapping = default!;
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableCollectionCreateInitialModeIdToParentModeIdMappingProperty InitialModeIdToParentModeIdMapping { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.VariableCollectionCreateInitialModeIdToParentModeIdMappingProperty InitialModeIdToParentModeIdMapping { get => _explicitNullValueInitialModeIdToParentModeIdMapping; set { _explicitNullValueInitialModeIdToParentModeIdMapping = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("initialModeIdToParentModeIdMapping"); else _explicitNullProperties?.Remove("initialModeIdToParentModeIdMapping"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.VariableCollectionCreateInitialModeIdToParentModeIdMappingProperty _explicitNullValueInitialModeIdToParentModeIdMapping = default!;
 #endif
         /// <summary>The name of this variable collection.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>The id of the parent variable collection that this variable collection is extending from.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ParentVariableCollectionId { get; set; }
+        public string? ParentVariableCollectionId { get => _explicitNullValueParentVariableCollectionId; set { _explicitNullValueParentVariableCollectionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parentVariableCollectionId"); else _explicitNullProperties?.Remove("parentVariableCollectionId"); } }
+        private string? _explicitNullValueParentVariableCollectionId = default!;
 #nullable restore
 #else
-        public string ParentVariableCollectionId { get; set; }
+        public string ParentVariableCollectionId { get => _explicitNullValueParentVariableCollectionId; set { _explicitNullValueParentVariableCollectionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parentVariableCollectionId"); else _explicitNullProperties?.Remove("parentVariableCollectionId"); } }
+        private string _explicitNullValueParentVariableCollectionId = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Figma.OpenApiClient.Models.VariableCollectionCreate"/> and sets the default values.
@@ -75,7 +101,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
         public static global::Soenneker.Figma.OpenApiClient.Models.VariableCollectionCreate CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Figma.OpenApiClient.Models.VariableCollectionCreate();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Figma.OpenApiClient.Models.VariableCollectionCreate(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -108,6 +134,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Figma.OpenApiClient.Models.VariableCollectionCreateInitialModeIdToParentModeIdMappingProperty>("initialModeIdToParentModeIdMapping", InitialModeIdToParentModeIdMapping);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("parentVariableCollectionId", ParentVariableCollectionId);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

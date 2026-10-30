@@ -12,32 +12,48 @@ namespace Soenneker.Figma.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class VariableCodeSyntax : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("ANDROID") is { } nullNodeANDROID && nullNodeANDROID.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ANDROID = null;
+            if (parseNode.GetChildNode("iOS") is { } nullNodeIOS && nullNodeIOS.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IOS = null;
+            if (parseNode.GetChildNode("WEB") is { } nullNodeWEB && nullNodeWEB.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WEB = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The ANDROID property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ANDROID { get; set; }
+        public string? ANDROID { get => _explicitNullValueANDROID; set { _explicitNullValueANDROID = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ANDROID"); else _explicitNullProperties?.Remove("ANDROID"); } }
+        private string? _explicitNullValueANDROID = default!;
 #nullable restore
 #else
-        public string ANDROID { get; set; }
+        public string ANDROID { get => _explicitNullValueANDROID; set { _explicitNullValueANDROID = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ANDROID"); else _explicitNullProperties?.Remove("ANDROID"); } }
+        private string _explicitNullValueANDROID = default!;
 #endif
         /// <summary>The iOS property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IOS { get; set; }
+        public string? IOS { get => _explicitNullValueIOS; set { _explicitNullValueIOS = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("iOS"); else _explicitNullProperties?.Remove("iOS"); } }
+        private string? _explicitNullValueIOS = default!;
 #nullable restore
 #else
-        public string IOS { get; set; }
+        public string IOS { get => _explicitNullValueIOS; set { _explicitNullValueIOS = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("iOS"); else _explicitNullProperties?.Remove("iOS"); } }
+        private string _explicitNullValueIOS = default!;
 #endif
         /// <summary>The WEB property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WEB { get; set; }
+        public string? WEB { get => _explicitNullValueWEB; set { _explicitNullValueWEB = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("WEB"); else _explicitNullProperties?.Remove("WEB"); } }
+        private string? _explicitNullValueWEB = default!;
 #nullable restore
 #else
-        public string WEB { get; set; }
+        public string WEB { get => _explicitNullValueWEB; set { _explicitNullValueWEB = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("WEB"); else _explicitNullProperties?.Remove("WEB"); } }
+        private string _explicitNullValueWEB = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Figma.OpenApiClient.Models.VariableCodeSyntax"/> and sets the default values.
@@ -54,7 +70,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
         public static global::Soenneker.Figma.OpenApiClient.Models.VariableCodeSyntax CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Figma.OpenApiClient.Models.VariableCodeSyntax();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Figma.OpenApiClient.Models.VariableCodeSyntax(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -79,6 +95,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
             writer.WriteStringValue("ANDROID", ANDROID);
             writer.WriteStringValue("iOS", IOS);
             writer.WriteStringValue("WEB", WEB);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

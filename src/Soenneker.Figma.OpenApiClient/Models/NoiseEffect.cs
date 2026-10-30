@@ -11,39 +11,68 @@ namespace Soenneker.Figma.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class NoiseEffect : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("blendMode") is { } nullNodeBlendMode && nullNodeBlendMode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BlendMode = null;
+            if (parseNode.GetChildNode("color") is { } nullNodeColor && nullNodeColor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Color = null;
+            if (parseNode.GetChildNode("density") is { } nullNodeDensity && nullNodeDensity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Density = null;
+            if (parseNode.GetChildNode("noiseSize") is { } nullNodeNoiseSize && nullNodeNoiseSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NoiseSize = null;
+            if (parseNode.GetChildNode("noiseType") is { } nullNodeNoiseType && nullNodeNoiseType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NoiseType = null;
+            if (parseNode.GetChildNode("opacity") is { } nullNodeOpacity && nullNodeOpacity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Opacity = null;
+            if (parseNode.GetChildNode("secondaryColor") is { } nullNodeSecondaryColor && nullNodeSecondaryColor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SecondaryColor = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("visible") is { } nullNodeVisible && nullNodeVisible.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Visible = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Blend mode of the noise effect</summary>
-        public global::Soenneker.Figma.OpenApiClient.Models.BlendMode? BlendMode { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.BlendMode? BlendMode { get => _explicitNullValueBlendMode; set { _explicitNullValueBlendMode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("blendMode"); else _explicitNullProperties?.Remove("blendMode"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.BlendMode? _explicitNullValueBlendMode = default!;
         /// <summary>An RGBA color</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.Rgba? Color { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.Rgba? Color { get => _explicitNullValueColor; set { _explicitNullValueColor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("color"); else _explicitNullProperties?.Remove("color"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.Rgba? _explicitNullValueColor = default!;
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.Rgba Color { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.Rgba Color { get => _explicitNullValueColor; set { _explicitNullValueColor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("color"); else _explicitNullProperties?.Remove("color"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.Rgba _explicitNullValueColor = default!;
 #endif
         /// <summary>The density of the noise effect</summary>
-        public double? Density { get; set; }
+        public double? Density { get => _explicitNullValueDensity; set { _explicitNullValueDensity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("density"); else _explicitNullProperties?.Remove("density"); } }
+        private double? _explicitNullValueDensity = default!;
         /// <summary>The size of the noise effect</summary>
-        public double? NoiseSize { get; set; }
+        public double? NoiseSize { get => _explicitNullValueNoiseSize; set { _explicitNullValueNoiseSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("noiseSize"); else _explicitNullProperties?.Remove("noiseSize"); } }
+        private double? _explicitNullValueNoiseSize = default!;
         /// <summary>The string literal &apos;MONOTONE&apos; representing the noise type.</summary>
-        public global::Soenneker.Figma.OpenApiClient.Models.MonotoneNoiseType? NoiseType { get; set; }
+#nullable enable
+        public string? NoiseType { get => _explicitNullValueNoiseType; set { _explicitNullValueNoiseType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("noiseType"); else _explicitNullProperties?.Remove("noiseType"); } }
+        private string? _explicitNullValueNoiseType = default!;
+#nullable restore
         /// <summary>The opacity of the noise effect</summary>
-        public double? Opacity { get; set; }
+        public double? Opacity { get => _explicitNullValueOpacity; set { _explicitNullValueOpacity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("opacity"); else _explicitNullProperties?.Remove("opacity"); } }
+        private double? _explicitNullValueOpacity = default!;
         /// <summary>An RGBA color</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.Rgba? SecondaryColor { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.Rgba? SecondaryColor { get => _explicitNullValueSecondaryColor; set { _explicitNullValueSecondaryColor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("secondaryColor"); else _explicitNullProperties?.Remove("secondaryColor"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.Rgba? _explicitNullValueSecondaryColor = default!;
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.Rgba SecondaryColor { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.Rgba SecondaryColor { get => _explicitNullValueSecondaryColor; set { _explicitNullValueSecondaryColor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("secondaryColor"); else _explicitNullProperties?.Remove("secondaryColor"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.Rgba _explicitNullValueSecondaryColor = default!;
 #endif
         /// <summary>The string literal &apos;NOISE&apos; representing the effect&apos;s type. Always check the type before reading other properties.</summary>
-        public global::Soenneker.Figma.OpenApiClient.Models.NoiseType? Type { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.NoiseType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.NoiseType? _explicitNullValueType = default!;
         /// <summary>Whether the noise effect is visible.</summary>
-        public bool? Visible { get; set; }
+        public bool? Visible { get => _explicitNullValueVisible; set { _explicitNullValueVisible = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("visible"); else _explicitNullProperties?.Remove("visible"); } }
+        private bool? _explicitNullValueVisible = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Figma.OpenApiClient.Models.NoiseEffect"/> and sets the default values.
         /// </summary>
@@ -59,7 +88,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
         public static global::Soenneker.Figma.OpenApiClient.Models.NoiseEffect CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Figma.OpenApiClient.Models.NoiseEffect();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Figma.OpenApiClient.Models.NoiseEffect(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -73,7 +102,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
                 { "color", n => { Color = n.GetObjectValue<global::Soenneker.Figma.OpenApiClient.Models.Rgba>(global::Soenneker.Figma.OpenApiClient.Models.Rgba.CreateFromDiscriminatorValue); } },
                 { "density", n => { Density = n.GetDoubleValue(); } },
                 { "noiseSize", n => { NoiseSize = n.GetDoubleValue(); } },
-                { "noiseType", n => { NoiseType = n.GetEnumValue<global::Soenneker.Figma.OpenApiClient.Models.MonotoneNoiseType>(); } },
+                { "noiseType", n => { NoiseType = n.GetStringValue(); } },
                 { "opacity", n => { Opacity = n.GetDoubleValue(); } },
                 { "secondaryColor", n => { SecondaryColor = n.GetObjectValue<global::Soenneker.Figma.OpenApiClient.Models.Rgba>(global::Soenneker.Figma.OpenApiClient.Models.Rgba.CreateFromDiscriminatorValue); } },
                 { "type", n => { Type = n.GetEnumValue<global::Soenneker.Figma.OpenApiClient.Models.NoiseType>(); } },
@@ -91,11 +120,12 @@ namespace Soenneker.Figma.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Figma.OpenApiClient.Models.Rgba>("color", Color);
             writer.WriteDoubleValue("density", Density);
             writer.WriteDoubleValue("noiseSize", NoiseSize);
-            writer.WriteEnumValue<global::Soenneker.Figma.OpenApiClient.Models.MonotoneNoiseType>("noiseType", NoiseType);
+            writer.WriteStringValue("noiseType", NoiseType);
             writer.WriteDoubleValue("opacity", Opacity);
             writer.WriteObjectValue<global::Soenneker.Figma.OpenApiClient.Models.Rgba>("secondaryColor", SecondaryColor);
             writer.WriteEnumValue<global::Soenneker.Figma.OpenApiClient.Models.NoiseType>("type", Type);
             writer.WriteBoolValue("visible", Visible);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

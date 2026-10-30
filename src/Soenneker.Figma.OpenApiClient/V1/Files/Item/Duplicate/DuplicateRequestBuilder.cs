@@ -55,6 +55,8 @@ namespace Soenneker.Figma.OpenApiClient.V1.Files.Item.Duplicate
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
                 { "400", global::Soenneker.Figma.OpenApiClient.Models.BadRequestErrorResponseWithErrorBooleanResponse.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Figma.OpenApiClient.Models.PostFileDuplicateResponseResponse>(requestInfo, global::Soenneker.Figma.OpenApiClient.Models.PostFileDuplicateResponseResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

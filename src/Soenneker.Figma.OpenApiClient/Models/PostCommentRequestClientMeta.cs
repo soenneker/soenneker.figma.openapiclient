@@ -12,7 +12,12 @@ namespace Soenneker.Figma.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PostCommentRequestClientMeta : IComposedTypeWrapper, IParsable
-    {
+    , global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder {
+        // Preserve ambiguous union payloads without inventing a discriminator.
+        /// <summary>The complete payload when no unique typed union branch can be selected.</summary>
+        public global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode UnrecognizedValue { get; set; } = null!;
+        public global::System.Collections.Generic.IDictionary<string, object> AdditionalData { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
+
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Figma.OpenApiClient.Models.FrameOffset"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -57,21 +62,32 @@ namespace Soenneker.Figma.OpenApiClient.Models
             var result = new global::Soenneker.Figma.OpenApiClient.Models.PostCommentRequestClientMeta();
             if("FrameOffset".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.FrameOffset = new global::Soenneker.Figma.OpenApiClient.Models.FrameOffset();
+                
             }
             else if("FrameOffsetRegion".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.FrameOffsetRegion = new global::Soenneker.Figma.OpenApiClient.Models.FrameOffsetRegion();
+                
             }
             else if("Region".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.Region = new global::Soenneker.Figma.OpenApiClient.Models.Region();
+                
             }
             else if("Vector".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.Vector = new global::Soenneker.Figma.OpenApiClient.Models.Vector();
+                
             }
-            return result;
+            
+            var unionPayload = parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue);
+            bool matchesUnionBranch0 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("x") != null && parseNode.GetChildNode("y") != null))();
+            bool matchesUnionBranch1 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("node_id") != null && parseNode.GetChildNode("node_offset") != null))();
+            bool matchesUnionBranch2 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("x") != null && parseNode.GetChildNode("y") != null && parseNode.GetChildNode("region_height") != null && parseNode.GetChildNode("region_width") != null && (parseNode.GetChildNode("comment_pin_corner") == null || (parseNode.GetChildNode("comment_pin_corner")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString optionalTag4 && ("top-left".Equals(optionalTag4.GetValue(), global::System.StringComparison.Ordinal) || "top-right".Equals(optionalTag4.GetValue(), global::System.StringComparison.Ordinal) || "bottom-left".Equals(optionalTag4.GetValue(), global::System.StringComparison.Ordinal) || "bottom-right".Equals(optionalTag4.GetValue(), global::System.StringComparison.Ordinal))))))();
+            bool matchesUnionBranch3 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("node_id") != null && parseNode.GetChildNode("node_offset") != null && parseNode.GetChildNode("region_height") != null && parseNode.GetChildNode("region_width") != null && (parseNode.GetChildNode("comment_pin_corner") == null || (parseNode.GetChildNode("comment_pin_corner")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString optionalTag4 && ("top-left".Equals(optionalTag4.GetValue(), global::System.StringComparison.Ordinal) || "top-right".Equals(optionalTag4.GetValue(), global::System.StringComparison.Ordinal) || "bottom-left".Equals(optionalTag4.GetValue(), global::System.StringComparison.Ordinal) || "bottom-right".Equals(optionalTag4.GetValue(), global::System.StringComparison.Ordinal))))))();
+            if (result.FrameOffset == null && result.FrameOffsetRegion == null && result.Region == null && result.Vector == null && matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch2 && !matchesUnionBranch3) result.Vector = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Figma.OpenApiClient.Models.Vector(), parseNode);
+            if (result.FrameOffset == null && result.FrameOffsetRegion == null && result.Region == null && result.Vector == null && matchesUnionBranch1 && !matchesUnionBranch0 && !matchesUnionBranch2 && !matchesUnionBranch3) result.FrameOffset = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Figma.OpenApiClient.Models.FrameOffset(), parseNode);
+            if (result.FrameOffset == null && result.FrameOffsetRegion == null && result.Region == null && result.Vector == null && matchesUnionBranch2 && !matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch3) result.Region = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Figma.OpenApiClient.Models.Region(), parseNode);
+            if (result.FrameOffset == null && result.FrameOffsetRegion == null && result.Region == null && result.Vector == null && matchesUnionBranch3 && !matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch2) result.FrameOffsetRegion = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Figma.OpenApiClient.Models.FrameOffsetRegion(), parseNode);
+            if (result.FrameOffset == null && result.FrameOffsetRegion == null && result.Region == null && result.Vector == null) result.UnrecognizedValue = unionPayload;
+return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -103,21 +119,32 @@ namespace Soenneker.Figma.OpenApiClient.Models
         /// <param name="writer">Serialization writer to use to serialize this model</param>
         public virtual void Serialize(ISerializationWriter writer)
         {
+            if (global::System.Object.ReferenceEquals(writer, null)) throw new global::System.ArgumentNullException(nameof(writer));
+            if (FrameOffset == null && FrameOffsetRegion == null && Region == null && Vector == null) { if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawObject) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData, rawObject)); else if (UnrecognizedValue != null) writer.WriteObjectValue(null, UnrecognizedValue); else if (AdditionalData.Count > 0) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData)); else writer.WriteNullValue(null); return; }
+            if (FrameOffset != null && FrameOffsetRegion == null && Region == null && Vector == null) { if (FrameOffset is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, FrameOffset); return; }
+            if (FrameOffsetRegion != null && FrameOffset == null && Region == null && Vector == null) { if (FrameOffsetRegion is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, FrameOffsetRegion); return; }
+            if (Region != null && FrameOffset == null && FrameOffsetRegion == null && Vector == null) { if (Region is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, Region); return; }
+            if (Vector != null && FrameOffset == null && FrameOffsetRegion == null && Region == null) { if (Vector is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, Vector); return; }
+
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             if(FrameOffset != null)
             {
+                if (FrameOffset is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Figma.OpenApiClient.Models.FrameOffset>(null, FrameOffset);
             }
             else if(FrameOffsetRegion != null)
             {
+                if (FrameOffsetRegion is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Figma.OpenApiClient.Models.FrameOffsetRegion>(null, FrameOffsetRegion);
             }
             else if(Region != null)
             {
+                if (Region is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Figma.OpenApiClient.Models.Region>(null, Region);
             }
             else if(Vector != null)
             {
+                if (Vector is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Figma.OpenApiClient.Models.Vector>(null, Vector);
             }
         }

@@ -11,41 +11,70 @@ namespace Soenneker.Figma.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PatternPaint : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("blendMode") is { } nullNodeBlendMode && nullNodeBlendMode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BlendMode = null;
+            if (parseNode.GetChildNode("horizontalAlignment") is { } nullNodeHorizontalAlignment && nullNodeHorizontalAlignment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HorizontalAlignment = null;
+            if (parseNode.GetChildNode("opacity") is { } nullNodeOpacity && nullNodeOpacity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Opacity = null;
+            if (parseNode.GetChildNode("scalingFactor") is { } nullNodeScalingFactor && nullNodeScalingFactor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ScalingFactor = null;
+            if (parseNode.GetChildNode("sourceNodeId") is { } nullNodeSourceNodeId && nullNodeSourceNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SourceNodeId = null;
+            if (parseNode.GetChildNode("spacing") is { } nullNodeSpacing && nullNodeSpacing.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Spacing = null;
+            if (parseNode.GetChildNode("tileType") is { } nullNodeTileType && nullNodeTileType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TileType = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("verticalAlignment") is { } nullNodeVerticalAlignment && nullNodeVerticalAlignment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VerticalAlignment = null;
+            if (parseNode.GetChildNode("visible") is { } nullNodeVisible && nullNodeVisible.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Visible = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>How this node blends with nodes behind it in the scene</summary>
-        public global::Soenneker.Figma.OpenApiClient.Models.BlendMode? BlendMode { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.BlendMode? BlendMode { get => _explicitNullValueBlendMode; set { _explicitNullValueBlendMode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("blendMode"); else _explicitNullProperties?.Remove("blendMode"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.BlendMode? _explicitNullValueBlendMode = default!;
         /// <summary>The horizontal alignment for the pattern</summary>
-        public global::Soenneker.Figma.OpenApiClient.Models.PatternPaintHorizontalAlignment? HorizontalAlignment { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.PatternPaintHorizontalAlignment? HorizontalAlignment { get => _explicitNullValueHorizontalAlignment; set { _explicitNullValueHorizontalAlignment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("horizontalAlignment"); else _explicitNullProperties?.Remove("horizontalAlignment"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.PatternPaintHorizontalAlignment? _explicitNullValueHorizontalAlignment = default!;
         /// <summary>Overall opacity of paint (colors within the paint can also have opacity values which would blend with this)</summary>
-        public double? Opacity { get; set; }
+        public double? Opacity { get => _explicitNullValueOpacity; set { _explicitNullValueOpacity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("opacity"); else _explicitNullProperties?.Remove("opacity"); } }
+        private double? _explicitNullValueOpacity = default!;
         /// <summary>The scaling factor for the pattern</summary>
-        public double? ScalingFactor { get; set; }
+        public double? ScalingFactor { get => _explicitNullValueScalingFactor; set { _explicitNullValueScalingFactor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scalingFactor"); else _explicitNullProperties?.Remove("scalingFactor"); } }
+        private double? _explicitNullValueScalingFactor = default!;
         /// <summary>The node id of the source node for the pattern</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SourceNodeId { get; set; }
+        public string? SourceNodeId { get => _explicitNullValueSourceNodeId; set { _explicitNullValueSourceNodeId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sourceNodeId"); else _explicitNullProperties?.Remove("sourceNodeId"); } }
+        private string? _explicitNullValueSourceNodeId = default!;
 #nullable restore
 #else
-        public string SourceNodeId { get; set; }
+        public string SourceNodeId { get => _explicitNullValueSourceNodeId; set { _explicitNullValueSourceNodeId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sourceNodeId"); else _explicitNullProperties?.Remove("sourceNodeId"); } }
+        private string _explicitNullValueSourceNodeId = default!;
 #endif
         /// <summary>The spacing for the pattern</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.Vector? Spacing { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.Vector? Spacing { get => _explicitNullValueSpacing; set { _explicitNullValueSpacing = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("spacing"); else _explicitNullProperties?.Remove("spacing"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.Vector? _explicitNullValueSpacing = default!;
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.Vector Spacing { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.Vector Spacing { get => _explicitNullValueSpacing; set { _explicitNullValueSpacing = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("spacing"); else _explicitNullProperties?.Remove("spacing"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.Vector _explicitNullValueSpacing = default!;
 #endif
         /// <summary>The tile type for the pattern</summary>
-        public global::Soenneker.Figma.OpenApiClient.Models.PatternPaintTileType? TileType { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.PatternPaintTileType? TileType { get => _explicitNullValueTileType; set { _explicitNullValueTileType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tileType"); else _explicitNullProperties?.Remove("tileType"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.PatternPaintTileType? _explicitNullValueTileType = default!;
         /// <summary>The string literal &quot;PATTERN&quot; representing the paint&apos;s type. Always check the `type` before reading other properties.</summary>
-        public global::Soenneker.Figma.OpenApiClient.Models.PatternType? Type { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.PatternType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.PatternType? _explicitNullValueType = default!;
         /// <summary>The vertical alignment for the pattern</summary>
-        public global::Soenneker.Figma.OpenApiClient.Models.PatternPaintVerticalAlignment? VerticalAlignment { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.PatternPaintVerticalAlignment? VerticalAlignment { get => _explicitNullValueVerticalAlignment; set { _explicitNullValueVerticalAlignment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verticalAlignment"); else _explicitNullProperties?.Remove("verticalAlignment"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.PatternPaintVerticalAlignment? _explicitNullValueVerticalAlignment = default!;
         /// <summary>Is the paint enabled?</summary>
-        public bool? Visible { get; set; }
+        public bool? Visible { get => _explicitNullValueVisible; set { _explicitNullValueVisible = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("visible"); else _explicitNullProperties?.Remove("visible"); } }
+        private bool? _explicitNullValueVisible = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Figma.OpenApiClient.Models.PatternPaint"/> and sets the default values.
         /// </summary>
@@ -63,7 +92,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
         public static global::Soenneker.Figma.OpenApiClient.Models.PatternPaint CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Figma.OpenApiClient.Models.PatternPaint();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Figma.OpenApiClient.Models.PatternPaint(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -102,6 +131,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Figma.OpenApiClient.Models.PatternType>("type", Type);
             writer.WriteEnumValue<global::Soenneker.Figma.OpenApiClient.Models.PatternPaintVerticalAlignment>("verticalAlignment", VerticalAlignment);
             writer.WriteBoolValue("visible", Visible);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

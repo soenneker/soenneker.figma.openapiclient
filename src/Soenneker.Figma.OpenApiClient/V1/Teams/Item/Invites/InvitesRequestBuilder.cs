@@ -55,6 +55,8 @@ namespace Soenneker.Figma.OpenApiClient.V1.Teams.Item.Invites
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
                 { "400", global::Soenneker.Figma.OpenApiClient.Models.PostTeamInvites400Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Figma.OpenApiClient.Models.InviteTeamMembersResponseResponse>(requestInfo, global::Soenneker.Figma.OpenApiClient.Models.InviteTeamMembersResponseResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

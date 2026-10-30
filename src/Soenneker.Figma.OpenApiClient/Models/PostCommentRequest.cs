@@ -11,32 +11,48 @@ namespace Soenneker.Figma.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostCommentRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("client_meta") is { } nullNodeClientMeta && nullNodeClientMeta.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ClientMeta = null;
+            if (parseNode.GetChildNode("comment_id") is { } nullNodeCommentId && nullNodeCommentId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CommentId = null;
+            if (parseNode.GetChildNode("message") is { } nullNodeMessage && nullNodeMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Message = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The position where to place the comment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.PostCommentRequestClientMeta? ClientMeta { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.PostCommentRequestClientMeta? ClientMeta { get => _explicitNullValueClientMeta; set { _explicitNullValueClientMeta = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("client_meta"); else _explicitNullProperties?.Remove("client_meta"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.PostCommentRequestClientMeta? _explicitNullValueClientMeta = default!;
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.PostCommentRequestClientMeta ClientMeta { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.PostCommentRequestClientMeta ClientMeta { get => _explicitNullValueClientMeta; set { _explicitNullValueClientMeta = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("client_meta"); else _explicitNullProperties?.Remove("client_meta"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.PostCommentRequestClientMeta _explicitNullValueClientMeta = default!;
 #endif
         /// <summary>The ID of the comment to reply to, if any. This must be a root comment. You cannot reply to other replies (a comment that has a parent_id).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CommentId { get; set; }
+        public string? CommentId { get => _explicitNullValueCommentId; set { _explicitNullValueCommentId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("comment_id"); else _explicitNullProperties?.Remove("comment_id"); } }
+        private string? _explicitNullValueCommentId = default!;
 #nullable restore
 #else
-        public string CommentId { get; set; }
+        public string CommentId { get => _explicitNullValueCommentId; set { _explicitNullValueCommentId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("comment_id"); else _explicitNullProperties?.Remove("comment_id"); } }
+        private string _explicitNullValueCommentId = default!;
 #endif
         /// <summary>The text contents of the comment to post.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Message { get; set; }
+        public string? Message { get => _explicitNullValueMessage; set { _explicitNullValueMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message"); else _explicitNullProperties?.Remove("message"); } }
+        private string? _explicitNullValueMessage = default!;
 #nullable restore
 #else
-        public string Message { get; set; }
+        public string Message { get => _explicitNullValueMessage; set { _explicitNullValueMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message"); else _explicitNullProperties?.Remove("message"); } }
+        private string _explicitNullValueMessage = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Figma.OpenApiClient.Models.PostCommentRequest"/> and sets the default values.
@@ -53,7 +69,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
         public static global::Soenneker.Figma.OpenApiClient.Models.PostCommentRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Figma.OpenApiClient.Models.PostCommentRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Figma.OpenApiClient.Models.PostCommentRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -78,6 +94,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Figma.OpenApiClient.Models.PostCommentRequestClientMeta>("client_meta", ClientMeta);
             writer.WriteStringValue("comment_id", CommentId);
             writer.WriteStringValue("message", Message);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

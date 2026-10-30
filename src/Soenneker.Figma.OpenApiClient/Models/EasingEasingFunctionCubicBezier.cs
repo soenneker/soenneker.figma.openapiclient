@@ -12,17 +12,32 @@ namespace Soenneker.Figma.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class EasingEasingFunctionCubicBezier : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("x1") is { } nullNodeX1 && nullNodeX1.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) X1 = null;
+            if (parseNode.GetChildNode("x2") is { } nullNodeX2 && nullNodeX2.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) X2 = null;
+            if (parseNode.GetChildNode("y1") is { } nullNodeY1 && nullNodeY1.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Y1 = null;
+            if (parseNode.GetChildNode("y2") is { } nullNodeY2 && nullNodeY2.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Y2 = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The x component of the first control point.</summary>
-        public double? X1 { get; set; }
+        public double? X1 { get => _explicitNullValueX1; set { _explicitNullValueX1 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("x1"); else _explicitNullProperties?.Remove("x1"); } }
+        private double? _explicitNullValueX1 = default!;
         /// <summary>The x component of the second control point.</summary>
-        public double? X2 { get; set; }
+        public double? X2 { get => _explicitNullValueX2; set { _explicitNullValueX2 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("x2"); else _explicitNullProperties?.Remove("x2"); } }
+        private double? _explicitNullValueX2 = default!;
         /// <summary>The y component of the first control point.</summary>
-        public double? Y1 { get; set; }
+        public double? Y1 { get => _explicitNullValueY1; set { _explicitNullValueY1 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("y1"); else _explicitNullProperties?.Remove("y1"); } }
+        private double? _explicitNullValueY1 = default!;
         /// <summary>The y component of the second control point.</summary>
-        public double? Y2 { get; set; }
+        public double? Y2 { get => _explicitNullValueY2; set { _explicitNullValueY2 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("y2"); else _explicitNullProperties?.Remove("y2"); } }
+        private double? _explicitNullValueY2 = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Figma.OpenApiClient.Models.EasingEasingFunctionCubicBezier"/> and sets the default values.
         /// </summary>
@@ -38,7 +53,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
         public static global::Soenneker.Figma.OpenApiClient.Models.EasingEasingFunctionCubicBezier CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Figma.OpenApiClient.Models.EasingEasingFunctionCubicBezier();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Figma.OpenApiClient.Models.EasingEasingFunctionCubicBezier(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -65,6 +80,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
             writer.WriteDoubleValue("x2", X2);
             writer.WriteDoubleValue("y1", Y1);
             writer.WriteDoubleValue("y2", Y2);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

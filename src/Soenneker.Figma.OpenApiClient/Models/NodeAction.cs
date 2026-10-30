@@ -12,45 +12,73 @@ namespace Soenneker.Figma.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class NodeAction : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("destinationId") is { } nullNodeDestinationId && nullNodeDestinationId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DestinationId = null;
+            if (parseNode.GetChildNode("navigation") is { } nullNodeNavigation && nullNodeNavigation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Navigation = null;
+            if (parseNode.GetChildNode("overlayRelativePosition") is { } nullNodeOverlayRelativePosition && nullNodeOverlayRelativePosition.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OverlayRelativePosition = null;
+            if (parseNode.GetChildNode("preserveScrollPosition") is { } nullNodePreserveScrollPosition && nullNodePreserveScrollPosition.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PreserveScrollPosition = null;
+            if (parseNode.GetChildNode("resetInteractiveComponents") is { } nullNodeResetInteractiveComponents && nullNodeResetInteractiveComponents.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResetInteractiveComponents = null;
+            if (parseNode.GetChildNode("resetScrollPosition") is { } nullNodeResetScrollPosition && nullNodeResetScrollPosition.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResetScrollPosition = null;
+            if (parseNode.GetChildNode("resetVideoPosition") is { } nullNodeResetVideoPosition && nullNodeResetVideoPosition.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResetVideoPosition = null;
+            if (parseNode.GetChildNode("transition") is { } nullNodeTransition && nullNodeTransition.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Transition = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The destinationId property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DestinationId { get; set; }
+        public string? DestinationId { get => _explicitNullValueDestinationId; set { _explicitNullValueDestinationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("destinationId"); else _explicitNullProperties?.Remove("destinationId"); } }
+        private string? _explicitNullValueDestinationId = default!;
 #nullable restore
 #else
-        public string DestinationId { get; set; }
+        public string DestinationId { get => _explicitNullValueDestinationId; set { _explicitNullValueDestinationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("destinationId"); else _explicitNullProperties?.Remove("destinationId"); } }
+        private string _explicitNullValueDestinationId = default!;
 #endif
         /// <summary>The method of navigation. The possible values are:- `&quot;NAVIGATE&quot;`: Replaces the current screen with the destination, also closing all overlays.- `&quot;OVERLAY&quot;`: Opens the destination as an overlay on the current screen.- `&quot;SWAP&quot;`: On an overlay, replaces the current (topmost) overlay with the destination. On a top-level frame,   behaves the same as `&quot;NAVIGATE&quot;` except that no entry is added to the navigation history.- `&quot;SCROLL_TO&quot;`: Scrolls to the destination on the current screen.- `&quot;CHANGE_TO&quot;`: Changes the closest ancestor instance of source node to the specified variant.</summary>
-        public global::Soenneker.Figma.OpenApiClient.Models.Navigation? Navigation { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.Navigation? Navigation { get => _explicitNullValueNavigation; set { _explicitNullValueNavigation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("navigation"); else _explicitNullProperties?.Remove("navigation"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.Navigation? _explicitNullValueNavigation = default!;
         /// <summary>Applicable only when `navigation` is `&quot;OVERLAY&quot;` and the destination is a frame with `overlayPosition` equal to `&quot;MANUAL&quot;`. This value represents the offset by which the overlay is opened relative to this node.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.Vector? OverlayRelativePosition { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.Vector? OverlayRelativePosition { get => _explicitNullValueOverlayRelativePosition; set { _explicitNullValueOverlayRelativePosition = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("overlayRelativePosition"); else _explicitNullProperties?.Remove("overlayRelativePosition"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.Vector? _explicitNullValueOverlayRelativePosition = default!;
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.Vector OverlayRelativePosition { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.Vector OverlayRelativePosition { get => _explicitNullValueOverlayRelativePosition; set { _explicitNullValueOverlayRelativePosition = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("overlayRelativePosition"); else _explicitNullProperties?.Remove("overlayRelativePosition"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.Vector _explicitNullValueOverlayRelativePosition = default!;
 #endif
         /// <summary>Whether the scroll offsets of any scrollable elements in the current screen or overlay are preserved when navigating to the destination. This is applicable only if the layout of both the current frame and its destination are the same.</summary>
-        public bool? PreserveScrollPosition { get; set; }
+        public bool? PreserveScrollPosition { get => _explicitNullValuePreserveScrollPosition; set { _explicitNullValuePreserveScrollPosition = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("preserveScrollPosition"); else _explicitNullProperties?.Remove("preserveScrollPosition"); } }
+        private bool? _explicitNullValuePreserveScrollPosition = default!;
         /// <summary>Whether the state of any interactive components in the current screen or overlay reset when navigating to the destination. This is applicable if there are interactive components in the destination frame.</summary>
-        public bool? ResetInteractiveComponents { get; set; }
+        public bool? ResetInteractiveComponents { get => _explicitNullValueResetInteractiveComponents; set { _explicitNullValueResetInteractiveComponents = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resetInteractiveComponents"); else _explicitNullProperties?.Remove("resetInteractiveComponents"); } }
+        private bool? _explicitNullValueResetInteractiveComponents = default!;
         /// <summary>Whether the scroll offsets of any scrollable elements in the current screen or overlay reset when navigating to the destination. This is applicable only if the layout of both the current frame and its destination are the same.</summary>
-        public bool? ResetScrollPosition { get; set; }
+        public bool? ResetScrollPosition { get => _explicitNullValueResetScrollPosition; set { _explicitNullValueResetScrollPosition = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resetScrollPosition"); else _explicitNullProperties?.Remove("resetScrollPosition"); } }
+        private bool? _explicitNullValueResetScrollPosition = default!;
         /// <summary>When true, all videos within the destination frame will reset their memorized playback position to 00:00 before starting to play.</summary>
-        public bool? ResetVideoPosition { get; set; }
+        public bool? ResetVideoPosition { get => _explicitNullValueResetVideoPosition; set { _explicitNullValueResetVideoPosition = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resetVideoPosition"); else _explicitNullProperties?.Remove("resetVideoPosition"); } }
+        private bool? _explicitNullValueResetVideoPosition = default!;
         /// <summary>The transition property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.Transition? Transition { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.Transition? Transition { get => _explicitNullValueTransition; set { _explicitNullValueTransition = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transition"); else _explicitNullProperties?.Remove("transition"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.Transition? _explicitNullValueTransition = default!;
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.Transition Transition { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.Transition Transition { get => _explicitNullValueTransition; set { _explicitNullValueTransition = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transition"); else _explicitNullProperties?.Remove("transition"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.Transition _explicitNullValueTransition = default!;
 #endif
         /// <summary>The type property</summary>
-        public global::Soenneker.Figma.OpenApiClient.Models.NodeType? Type { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.NodeType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.NodeType? _explicitNullValueType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Figma.OpenApiClient.Models.NodeAction"/> and sets the default values.
         /// </summary>
@@ -66,7 +94,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
         public static global::Soenneker.Figma.OpenApiClient.Models.NodeAction CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Figma.OpenApiClient.Models.NodeAction();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Figma.OpenApiClient.Models.NodeAction(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -103,6 +131,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
             writer.WriteBoolValue("resetVideoPosition", ResetVideoPosition);
             writer.WriteObjectValue<global::Soenneker.Figma.OpenApiClient.Models.Transition>("transition", Transition);
             writer.WriteEnumValue<global::Soenneker.Figma.OpenApiClient.Models.NodeType>("type", Type);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

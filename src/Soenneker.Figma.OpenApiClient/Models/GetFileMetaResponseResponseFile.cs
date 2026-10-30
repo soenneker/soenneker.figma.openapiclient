@@ -12,72 +12,108 @@ namespace Soenneker.Figma.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class GetFileMetaResponseResponseFile : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("creator") is { } nullNodeCreator && nullNodeCreator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Creator = null;
+            if (parseNode.GetChildNode("editorType") is { } nullNodeEditorType && nullNodeEditorType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EditorType = null;
+            if (parseNode.GetChildNode("folder_name") is { } nullNodeFolderName && nullNodeFolderName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FolderName = null;
+            if (parseNode.GetChildNode("last_touched_at") is { } nullNodeLastTouchedAt && nullNodeLastTouchedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastTouchedAt = null;
+            if (parseNode.GetChildNode("last_touched_by") is { } nullNodeLastTouchedBy && nullNodeLastTouchedBy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastTouchedBy = null;
+            if (parseNode.GetChildNode("link_access") is { } nullNodeLinkAccess && nullNodeLinkAccess.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LinkAccess = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("role") is { } nullNodeRole && nullNodeRole.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Role = null;
+            if (parseNode.GetChildNode("thumbnail_url") is { } nullNodeThumbnailUrl && nullNodeThumbnailUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ThumbnailUrl = null;
+            if (parseNode.GetChildNode("url") is { } nullNodeUrl && nullNodeUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Url = null;
+            if (parseNode.GetChildNode("version") is { } nullNodeVersion && nullNodeVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Version = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The user who created the file.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.User? Creator { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.User? Creator { get => _explicitNullValueCreator; set { _explicitNullValueCreator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("creator"); else _explicitNullProperties?.Remove("creator"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.User? _explicitNullValueCreator = default!;
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.User Creator { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.User Creator { get => _explicitNullValueCreator; set { _explicitNullValueCreator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("creator"); else _explicitNullProperties?.Remove("creator"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.User _explicitNullValueCreator = default!;
 #endif
         /// <summary>The type of editor associated with this file.</summary>
-        public global::Soenneker.Figma.OpenApiClient.Models.GetFileMetaResponseResponseFileEditorType? EditorType { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.GetFileMetaResponseResponseFileEditorType? EditorType { get => _explicitNullValueEditorType; set { _explicitNullValueEditorType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("editorType"); else _explicitNullProperties?.Remove("editorType"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.GetFileMetaResponseResponseFileEditorType? _explicitNullValueEditorType = default!;
         /// <summary>The name of the project containing the file.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FolderName { get; set; }
+        public string? FolderName { get => _explicitNullValueFolderName; set { _explicitNullValueFolderName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("folder_name"); else _explicitNullProperties?.Remove("folder_name"); } }
+        private string? _explicitNullValueFolderName = default!;
 #nullable restore
 #else
-        public string FolderName { get; set; }
+        public string FolderName { get => _explicitNullValueFolderName; set { _explicitNullValueFolderName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("folder_name"); else _explicitNullProperties?.Remove("folder_name"); } }
+        private string _explicitNullValueFolderName = default!;
 #endif
         /// <summary>The UTC ISO 8601 time at which the file content was last modified.</summary>
-        public DateTimeOffset? LastTouchedAt { get; set; }
+        public DateTimeOffset? LastTouchedAt { get => _explicitNullValueLastTouchedAt; set { _explicitNullValueLastTouchedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_touched_at"); else _explicitNullProperties?.Remove("last_touched_at"); } }
+        private DateTimeOffset? _explicitNullValueLastTouchedAt = default!;
         /// <summary>The user who last modified the file contents.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.User? LastTouchedBy { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.User? LastTouchedBy { get => _explicitNullValueLastTouchedBy; set { _explicitNullValueLastTouchedBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_touched_by"); else _explicitNullProperties?.Remove("last_touched_by"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.User? _explicitNullValueLastTouchedBy = default!;
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.User LastTouchedBy { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.User LastTouchedBy { get => _explicitNullValueLastTouchedBy; set { _explicitNullValueLastTouchedBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_touched_by"); else _explicitNullProperties?.Remove("last_touched_by"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.User _explicitNullValueLastTouchedBy = default!;
 #endif
         /// <summary>Access policy for users who have the link to the file.</summary>
-        public global::Soenneker.Figma.OpenApiClient.Models.LinkAccess? LinkAccess { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.LinkAccess? LinkAccess { get => _explicitNullValueLinkAccess; set { _explicitNullValueLinkAccess = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("link_access"); else _explicitNullProperties?.Remove("link_access"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.LinkAccess? _explicitNullValueLinkAccess = default!;
         /// <summary>The name of the file.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>The role of the user making the API request in relation to the file.</summary>
-        public global::Soenneker.Figma.OpenApiClient.Models.Role? Role { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.Role? Role { get => _explicitNullValueRole; set { _explicitNullValueRole = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("role"); else _explicitNullProperties?.Remove("role"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.Role? _explicitNullValueRole = default!;
         /// <summary>A URL to a thumbnail image of the file.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ThumbnailUrl { get; set; }
+        public string? ThumbnailUrl { get => _explicitNullValueThumbnailUrl; set { _explicitNullValueThumbnailUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("thumbnail_url"); else _explicitNullProperties?.Remove("thumbnail_url"); } }
+        private string? _explicitNullValueThumbnailUrl = default!;
 #nullable restore
 #else
-        public string ThumbnailUrl { get; set; }
+        public string ThumbnailUrl { get => _explicitNullValueThumbnailUrl; set { _explicitNullValueThumbnailUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("thumbnail_url"); else _explicitNullProperties?.Remove("thumbnail_url"); } }
+        private string _explicitNullValueThumbnailUrl = default!;
 #endif
         /// <summary>The URL of the file.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Url { get; set; }
+        public string? Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        private string? _explicitNullValueUrl = default!;
 #nullable restore
 #else
-        public string Url { get; set; }
+        public string Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        private string _explicitNullValueUrl = default!;
 #endif
         /// <summary>The version number of the file. This number is incremented when a file is modified and can be used to check if the file has changed between requests.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Version { get; set; }
+        public string? Version { get => _explicitNullValueVersion; set { _explicitNullValueVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("version"); else _explicitNullProperties?.Remove("version"); } }
+        private string? _explicitNullValueVersion = default!;
 #nullable restore
 #else
-        public string Version { get; set; }
+        public string Version { get => _explicitNullValueVersion; set { _explicitNullValueVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("version"); else _explicitNullProperties?.Remove("version"); } }
+        private string _explicitNullValueVersion = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Figma.OpenApiClient.Models.GetFileMetaResponseResponseFile"/> and sets the default values.
@@ -94,7 +130,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
         public static global::Soenneker.Figma.OpenApiClient.Models.GetFileMetaResponseResponseFile CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Figma.OpenApiClient.Models.GetFileMetaResponseResponseFile();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Figma.OpenApiClient.Models.GetFileMetaResponseResponseFile(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -135,6 +171,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
             writer.WriteStringValue("thumbnail_url", ThumbnailUrl);
             writer.WriteStringValue("url", Url);
             writer.WriteStringValue("version", Version);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

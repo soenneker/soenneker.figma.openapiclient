@@ -12,40 +12,59 @@ namespace Soenneker.Figma.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class LayoutGridBoundVariables : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("gutterSize") is { } nullNodeGutterSize && nullNodeGutterSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GutterSize = null;
+            if (parseNode.GetChildNode("numSections") is { } nullNodeNumSections && nullNodeNumSections.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NumSections = null;
+            if (parseNode.GetChildNode("offset") is { } nullNodeOffset && nullNodeOffset.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Offset = null;
+            if (parseNode.GetChildNode("sectionSize") is { } nullNodeSectionSize && nullNodeSectionSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SectionSize = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Contains a variable alias</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? GutterSize { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? GutterSize { get => _explicitNullValueGutterSize; set { _explicitNullValueGutterSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gutterSize"); else _explicitNullProperties?.Remove("gutterSize"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? _explicitNullValueGutterSize = default!;
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias GutterSize { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias GutterSize { get => _explicitNullValueGutterSize; set { _explicitNullValueGutterSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gutterSize"); else _explicitNullProperties?.Remove("gutterSize"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.VariableAlias _explicitNullValueGutterSize = default!;
 #endif
         /// <summary>Contains a variable alias</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? NumSections { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? NumSections { get => _explicitNullValueNumSections; set { _explicitNullValueNumSections = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("numSections"); else _explicitNullProperties?.Remove("numSections"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? _explicitNullValueNumSections = default!;
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias NumSections { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias NumSections { get => _explicitNullValueNumSections; set { _explicitNullValueNumSections = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("numSections"); else _explicitNullProperties?.Remove("numSections"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.VariableAlias _explicitNullValueNumSections = default!;
 #endif
         /// <summary>Contains a variable alias</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? Offset { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? Offset { get => _explicitNullValueOffset; set { _explicitNullValueOffset = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("offset"); else _explicitNullProperties?.Remove("offset"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? _explicitNullValueOffset = default!;
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias Offset { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias Offset { get => _explicitNullValueOffset; set { _explicitNullValueOffset = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("offset"); else _explicitNullProperties?.Remove("offset"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.VariableAlias _explicitNullValueOffset = default!;
 #endif
         /// <summary>Contains a variable alias</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? SectionSize { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? SectionSize { get => _explicitNullValueSectionSize; set { _explicitNullValueSectionSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sectionSize"); else _explicitNullProperties?.Remove("sectionSize"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? _explicitNullValueSectionSize = default!;
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias SectionSize { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias SectionSize { get => _explicitNullValueSectionSize; set { _explicitNullValueSectionSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sectionSize"); else _explicitNullProperties?.Remove("sectionSize"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.VariableAlias _explicitNullValueSectionSize = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Figma.OpenApiClient.Models.LayoutGridBoundVariables"/> and sets the default values.
@@ -62,7 +81,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
         public static global::Soenneker.Figma.OpenApiClient.Models.LayoutGridBoundVariables CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Figma.OpenApiClient.Models.LayoutGridBoundVariables();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Figma.OpenApiClient.Models.LayoutGridBoundVariables(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -89,6 +108,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Figma.OpenApiClient.Models.VariableAlias>("numSections", NumSections);
             writer.WriteObjectValue<global::Soenneker.Figma.OpenApiClient.Models.VariableAlias>("offset", Offset);
             writer.WriteObjectValue<global::Soenneker.Figma.OpenApiClient.Models.VariableAlias>("sectionSize", SectionSize);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

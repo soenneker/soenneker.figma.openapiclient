@@ -12,39 +12,66 @@ namespace Soenneker.Figma.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class LayoutGrid : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("alignment") is { } nullNodeAlignment && nullNodeAlignment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Alignment = null;
+            if (parseNode.GetChildNode("boundVariables") is { } nullNodeBoundVariables && nullNodeBoundVariables.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BoundVariables = null;
+            if (parseNode.GetChildNode("color") is { } nullNodeColor && nullNodeColor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Color = null;
+            if (parseNode.GetChildNode("count") is { } nullNodeCount && nullNodeCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Count = null;
+            if (parseNode.GetChildNode("gutterSize") is { } nullNodeGutterSize && nullNodeGutterSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GutterSize = null;
+            if (parseNode.GetChildNode("offset") is { } nullNodeOffset && nullNodeOffset.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Offset = null;
+            if (parseNode.GetChildNode("pattern") is { } nullNodePattern && nullNodePattern.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Pattern = null;
+            if (parseNode.GetChildNode("sectionSize") is { } nullNodeSectionSize && nullNodeSectionSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SectionSize = null;
+            if (parseNode.GetChildNode("visible") is { } nullNodeVisible && nullNodeVisible.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Visible = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Positioning of grid as a string enum- `MIN`: Grid starts at the left or top of the frame- `MAX`: Grid starts at the right or bottom of the frame- `STRETCH`: Grid is stretched to fit the frame- `CENTER`: Grid is center aligned</summary>
-        public global::Soenneker.Figma.OpenApiClient.Models.LayoutGridAlignment? Alignment { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.LayoutGridAlignment? Alignment { get => _explicitNullValueAlignment; set { _explicitNullValueAlignment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("alignment"); else _explicitNullProperties?.Remove("alignment"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.LayoutGridAlignment? _explicitNullValueAlignment = default!;
         /// <summary>The variables bound to a particular field on this layout grid</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.LayoutGridBoundVariables? BoundVariables { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.LayoutGridBoundVariables? BoundVariables { get => _explicitNullValueBoundVariables; set { _explicitNullValueBoundVariables = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("boundVariables"); else _explicitNullProperties?.Remove("boundVariables"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.LayoutGridBoundVariables? _explicitNullValueBoundVariables = default!;
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.LayoutGridBoundVariables BoundVariables { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.LayoutGridBoundVariables BoundVariables { get => _explicitNullValueBoundVariables; set { _explicitNullValueBoundVariables = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("boundVariables"); else _explicitNullProperties?.Remove("boundVariables"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.LayoutGridBoundVariables _explicitNullValueBoundVariables = default!;
 #endif
         /// <summary>An RGBA color</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.Rgba? Color { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.Rgba? Color { get => _explicitNullValueColor; set { _explicitNullValueColor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("color"); else _explicitNullProperties?.Remove("color"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.Rgba? _explicitNullValueColor = default!;
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.Rgba Color { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.Rgba Color { get => _explicitNullValueColor; set { _explicitNullValueColor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("color"); else _explicitNullProperties?.Remove("color"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.Rgba _explicitNullValueColor = default!;
 #endif
         /// <summary>Number of columns or rows</summary>
-        public double? Count { get; set; }
+        public double? Count { get => _explicitNullValueCount; set { _explicitNullValueCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("count"); else _explicitNullProperties?.Remove("count"); } }
+        private double? _explicitNullValueCount = default!;
         /// <summary>Spacing in between columns and rows</summary>
-        public double? GutterSize { get; set; }
+        public double? GutterSize { get => _explicitNullValueGutterSize; set { _explicitNullValueGutterSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gutterSize"); else _explicitNullProperties?.Remove("gutterSize"); } }
+        private double? _explicitNullValueGutterSize = default!;
         /// <summary>Spacing before the first column or row</summary>
-        public double? Offset { get; set; }
+        public double? Offset { get => _explicitNullValueOffset; set { _explicitNullValueOffset = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("offset"); else _explicitNullProperties?.Remove("offset"); } }
+        private double? _explicitNullValueOffset = default!;
         /// <summary>Orientation of the grid as a string enum- `COLUMNS`: Vertical grid- `ROWS`: Horizontal grid- `GRID`: Square grid</summary>
-        public global::Soenneker.Figma.OpenApiClient.Models.LayoutGridPattern? Pattern { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.LayoutGridPattern? Pattern { get => _explicitNullValuePattern; set { _explicitNullValuePattern = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pattern"); else _explicitNullProperties?.Remove("pattern"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.LayoutGridPattern? _explicitNullValuePattern = default!;
         /// <summary>Width of column grid or height of row grid or square grid spacing.</summary>
-        public double? SectionSize { get; set; }
+        public double? SectionSize { get => _explicitNullValueSectionSize; set { _explicitNullValueSectionSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sectionSize"); else _explicitNullProperties?.Remove("sectionSize"); } }
+        private double? _explicitNullValueSectionSize = default!;
         /// <summary>Is the grid currently visible?</summary>
-        public bool? Visible { get; set; }
+        public bool? Visible { get => _explicitNullValueVisible; set { _explicitNullValueVisible = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("visible"); else _explicitNullProperties?.Remove("visible"); } }
+        private bool? _explicitNullValueVisible = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Figma.OpenApiClient.Models.LayoutGrid"/> and sets the default values.
         /// </summary>
@@ -60,7 +87,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
         public static global::Soenneker.Figma.OpenApiClient.Models.LayoutGrid CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Figma.OpenApiClient.Models.LayoutGrid();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Figma.OpenApiClient.Models.LayoutGrid(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -97,6 +124,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Figma.OpenApiClient.Models.LayoutGridPattern>("pattern", Pattern);
             writer.WriteDoubleValue("sectionSize", SectionSize);
             writer.WriteBoolValue("visible", Visible);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

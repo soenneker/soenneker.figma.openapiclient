@@ -11,40 +11,59 @@ namespace Soenneker.Figma.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class IsLayerTraitBoundVariablesRectangleCornerRadii : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("RECTANGLE_BOTTOM_LEFT_CORNER_RADIUS") is { } nullNodeRECTANGLEBOTTOMLEFTCORNERRADIUS && nullNodeRECTANGLEBOTTOMLEFTCORNERRADIUS.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RECTANGLEBOTTOMLEFTCORNERRADIUS = null;
+            if (parseNode.GetChildNode("RECTANGLE_BOTTOM_RIGHT_CORNER_RADIUS") is { } nullNodeRECTANGLEBOTTOMRIGHTCORNERRADIUS && nullNodeRECTANGLEBOTTOMRIGHTCORNERRADIUS.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RECTANGLEBOTTOMRIGHTCORNERRADIUS = null;
+            if (parseNode.GetChildNode("RECTANGLE_TOP_LEFT_CORNER_RADIUS") is { } nullNodeRECTANGLETOPLEFTCORNERRADIUS && nullNodeRECTANGLETOPLEFTCORNERRADIUS.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RECTANGLETOPLEFTCORNERRADIUS = null;
+            if (parseNode.GetChildNode("RECTANGLE_TOP_RIGHT_CORNER_RADIUS") is { } nullNodeRECTANGLETOPRIGHTCORNERRADIUS && nullNodeRECTANGLETOPRIGHTCORNERRADIUS.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RECTANGLETOPRIGHTCORNERRADIUS = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Contains a variable alias</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? RECTANGLEBOTTOMLEFTCORNERRADIUS { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? RECTANGLEBOTTOMLEFTCORNERRADIUS { get => _explicitNullValueRECTANGLEBOTTOMLEFTCORNERRADIUS; set { _explicitNullValueRECTANGLEBOTTOMLEFTCORNERRADIUS = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RECTANGLE_BOTTOM_LEFT_CORNER_RADIUS"); else _explicitNullProperties?.Remove("RECTANGLE_BOTTOM_LEFT_CORNER_RADIUS"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? _explicitNullValueRECTANGLEBOTTOMLEFTCORNERRADIUS = default!;
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias RECTANGLEBOTTOMLEFTCORNERRADIUS { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias RECTANGLEBOTTOMLEFTCORNERRADIUS { get => _explicitNullValueRECTANGLEBOTTOMLEFTCORNERRADIUS; set { _explicitNullValueRECTANGLEBOTTOMLEFTCORNERRADIUS = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RECTANGLE_BOTTOM_LEFT_CORNER_RADIUS"); else _explicitNullProperties?.Remove("RECTANGLE_BOTTOM_LEFT_CORNER_RADIUS"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.VariableAlias _explicitNullValueRECTANGLEBOTTOMLEFTCORNERRADIUS = default!;
 #endif
         /// <summary>Contains a variable alias</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? RECTANGLEBOTTOMRIGHTCORNERRADIUS { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? RECTANGLEBOTTOMRIGHTCORNERRADIUS { get => _explicitNullValueRECTANGLEBOTTOMRIGHTCORNERRADIUS; set { _explicitNullValueRECTANGLEBOTTOMRIGHTCORNERRADIUS = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RECTANGLE_BOTTOM_RIGHT_CORNER_RADIUS"); else _explicitNullProperties?.Remove("RECTANGLE_BOTTOM_RIGHT_CORNER_RADIUS"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? _explicitNullValueRECTANGLEBOTTOMRIGHTCORNERRADIUS = default!;
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias RECTANGLEBOTTOMRIGHTCORNERRADIUS { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias RECTANGLEBOTTOMRIGHTCORNERRADIUS { get => _explicitNullValueRECTANGLEBOTTOMRIGHTCORNERRADIUS; set { _explicitNullValueRECTANGLEBOTTOMRIGHTCORNERRADIUS = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RECTANGLE_BOTTOM_RIGHT_CORNER_RADIUS"); else _explicitNullProperties?.Remove("RECTANGLE_BOTTOM_RIGHT_CORNER_RADIUS"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.VariableAlias _explicitNullValueRECTANGLEBOTTOMRIGHTCORNERRADIUS = default!;
 #endif
         /// <summary>Contains a variable alias</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? RECTANGLETOPLEFTCORNERRADIUS { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? RECTANGLETOPLEFTCORNERRADIUS { get => _explicitNullValueRECTANGLETOPLEFTCORNERRADIUS; set { _explicitNullValueRECTANGLETOPLEFTCORNERRADIUS = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RECTANGLE_TOP_LEFT_CORNER_RADIUS"); else _explicitNullProperties?.Remove("RECTANGLE_TOP_LEFT_CORNER_RADIUS"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? _explicitNullValueRECTANGLETOPLEFTCORNERRADIUS = default!;
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias RECTANGLETOPLEFTCORNERRADIUS { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias RECTANGLETOPLEFTCORNERRADIUS { get => _explicitNullValueRECTANGLETOPLEFTCORNERRADIUS; set { _explicitNullValueRECTANGLETOPLEFTCORNERRADIUS = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RECTANGLE_TOP_LEFT_CORNER_RADIUS"); else _explicitNullProperties?.Remove("RECTANGLE_TOP_LEFT_CORNER_RADIUS"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.VariableAlias _explicitNullValueRECTANGLETOPLEFTCORNERRADIUS = default!;
 #endif
         /// <summary>Contains a variable alias</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? RECTANGLETOPRIGHTCORNERRADIUS { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? RECTANGLETOPRIGHTCORNERRADIUS { get => _explicitNullValueRECTANGLETOPRIGHTCORNERRADIUS; set { _explicitNullValueRECTANGLETOPRIGHTCORNERRADIUS = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RECTANGLE_TOP_RIGHT_CORNER_RADIUS"); else _explicitNullProperties?.Remove("RECTANGLE_TOP_RIGHT_CORNER_RADIUS"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? _explicitNullValueRECTANGLETOPRIGHTCORNERRADIUS = default!;
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias RECTANGLETOPRIGHTCORNERRADIUS { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias RECTANGLETOPRIGHTCORNERRADIUS { get => _explicitNullValueRECTANGLETOPRIGHTCORNERRADIUS; set { _explicitNullValueRECTANGLETOPRIGHTCORNERRADIUS = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("RECTANGLE_TOP_RIGHT_CORNER_RADIUS"); else _explicitNullProperties?.Remove("RECTANGLE_TOP_RIGHT_CORNER_RADIUS"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.VariableAlias _explicitNullValueRECTANGLETOPRIGHTCORNERRADIUS = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Figma.OpenApiClient.Models.IsLayerTraitBoundVariablesRectangleCornerRadii"/> and sets the default values.
@@ -61,7 +80,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
         public static global::Soenneker.Figma.OpenApiClient.Models.IsLayerTraitBoundVariablesRectangleCornerRadii CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Figma.OpenApiClient.Models.IsLayerTraitBoundVariablesRectangleCornerRadii();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Figma.OpenApiClient.Models.IsLayerTraitBoundVariablesRectangleCornerRadii(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -88,6 +107,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Figma.OpenApiClient.Models.VariableAlias>("RECTANGLE_BOTTOM_RIGHT_CORNER_RADIUS", RECTANGLEBOTTOMRIGHTCORNERRADIUS);
             writer.WriteObjectValue<global::Soenneker.Figma.OpenApiClient.Models.VariableAlias>("RECTANGLE_TOP_LEFT_CORNER_RADIUS", RECTANGLETOPLEFTCORNERRADIUS);
             writer.WriteObjectValue<global::Soenneker.Figma.OpenApiClient.Models.VariableAlias>("RECTANGLE_TOP_RIGHT_CORNER_RADIUS", RECTANGLETOPRIGHTCORNERRADIUS);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

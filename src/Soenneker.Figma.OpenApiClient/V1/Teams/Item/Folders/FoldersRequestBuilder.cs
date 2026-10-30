@@ -65,6 +65,8 @@ namespace Soenneker.Figma.OpenApiClient.V1.Teams.Item.Folders
                 { "404", global::Soenneker.Figma.OpenApiClient.Models.NotFoundErrorResponseWithErrMessageResponse.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Figma.OpenApiClient.Models.TooManyRequestsErrorResponseWithErrMessageResponse.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Figma.OpenApiClient.Models.InternalServerErrorResponseWithErrMessageResponse.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Figma.OpenApiClient.Models.CreateFolderResponseResponse>(requestInfo, global::Soenneker.Figma.OpenApiClient.Models.CreateFolderResponseResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

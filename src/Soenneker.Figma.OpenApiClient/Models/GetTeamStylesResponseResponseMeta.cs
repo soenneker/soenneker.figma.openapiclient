@@ -11,24 +11,37 @@ namespace Soenneker.Figma.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class GetTeamStylesResponseResponseMeta : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("cursor") is { } nullNodeCursor && nullNodeCursor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Cursor = null;
+            if (parseNode.GetChildNode("styles") is { } nullNodeStyles && nullNodeStyles.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Styles = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Pagination cursor</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.ResponseCursor? Cursor { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.ResponseCursor? Cursor { get => _explicitNullValueCursor; set { _explicitNullValueCursor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cursor"); else _explicitNullProperties?.Remove("cursor"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.ResponseCursor? _explicitNullValueCursor = default!;
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.ResponseCursor Cursor { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.ResponseCursor Cursor { get => _explicitNullValueCursor; set { _explicitNullValueCursor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cursor"); else _explicitNullProperties?.Remove("cursor"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.ResponseCursor _explicitNullValueCursor = default!;
 #endif
         /// <summary>The styles property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Figma.OpenApiClient.Models.PublishedStyle>? Styles { get; set; }
+        public List<global::Soenneker.Figma.OpenApiClient.Models.PublishedStyle>? Styles { get => _explicitNullValueStyles; set { _explicitNullValueStyles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("styles"); else _explicitNullProperties?.Remove("styles"); } }
+        private List<global::Soenneker.Figma.OpenApiClient.Models.PublishedStyle>? _explicitNullValueStyles = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Figma.OpenApiClient.Models.PublishedStyle> Styles { get; set; }
+        public List<global::Soenneker.Figma.OpenApiClient.Models.PublishedStyle> Styles { get => _explicitNullValueStyles; set { _explicitNullValueStyles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("styles"); else _explicitNullProperties?.Remove("styles"); } }
+        private List<global::Soenneker.Figma.OpenApiClient.Models.PublishedStyle> _explicitNullValueStyles = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Figma.OpenApiClient.Models.GetTeamStylesResponseResponseMeta"/> and sets the default values.
@@ -45,7 +58,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
         public static global::Soenneker.Figma.OpenApiClient.Models.GetTeamStylesResponseResponseMeta CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Figma.OpenApiClient.Models.GetTeamStylesResponseResponseMeta();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Figma.OpenApiClient.Models.GetTeamStylesResponseResponseMeta(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -68,6 +81,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Figma.OpenApiClient.Models.ResponseCursor>("cursor", Cursor);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Figma.OpenApiClient.Models.PublishedStyle>("styles", Styles);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

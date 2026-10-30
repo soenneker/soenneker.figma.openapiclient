@@ -12,36 +12,56 @@ namespace Soenneker.Figma.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PaymentInformation : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("date_of_purchase") is { } nullNodeDateOfPurchase && nullNodeDateOfPurchase.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DateOfPurchase = null;
+            if (parseNode.GetChildNode("payment_status") is { } nullNodePaymentStatus && nullNodePaymentStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaymentStatus = null;
+            if (parseNode.GetChildNode("resource_id") is { } nullNodeResourceId && nullNodeResourceId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResourceId = null;
+            if (parseNode.GetChildNode("resource_type") is { } nullNodeResourceType && nullNodeResourceType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResourceType = null;
+            if (parseNode.GetChildNode("user_id") is { } nullNodeUserId && nullNodeUserId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserId = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The UTC ISO 8601 timestamp indicating when the user purchased the resource. No value is given if the user has never purchased the resource.Note that a value will still be returned if the user had purchased the resource, but no longer has active access to it (e.g. purchase refunded, subscription ended).</summary>
-        public DateTimeOffset? DateOfPurchase { get; set; }
+        public DateTimeOffset? DateOfPurchase { get => _explicitNullValueDateOfPurchase; set { _explicitNullValueDateOfPurchase = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("date_of_purchase"); else _explicitNullProperties?.Remove("date_of_purchase"); } }
+        private DateTimeOffset? _explicitNullValueDateOfPurchase = default!;
         /// <summary>An object describing the user&apos;s payment status.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.PaymentStatus? PaymentStatus { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.PaymentStatus? PaymentStatus { get => _explicitNullValuePaymentStatus; set { _explicitNullValuePaymentStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_status"); else _explicitNullProperties?.Remove("payment_status"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.PaymentStatus? _explicitNullValuePaymentStatus = default!;
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.PaymentStatus PaymentStatus { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.PaymentStatus PaymentStatus { get => _explicitNullValuePaymentStatus; set { _explicitNullValuePaymentStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payment_status"); else _explicitNullProperties?.Remove("payment_status"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.PaymentStatus _explicitNullValuePaymentStatus = default!;
 #endif
         /// <summary>The ID of the plugin, widget, or Community file that was queried. Can be used to verify the validity of a response.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ResourceId { get; set; }
+        public string? ResourceId { get => _explicitNullValueResourceId; set { _explicitNullValueResourceId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resource_id"); else _explicitNullProperties?.Remove("resource_id"); } }
+        private string? _explicitNullValueResourceId = default!;
 #nullable restore
 #else
-        public string ResourceId { get; set; }
+        public string ResourceId { get => _explicitNullValueResourceId; set { _explicitNullValueResourceId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resource_id"); else _explicitNullProperties?.Remove("resource_id"); } }
+        private string _explicitNullValueResourceId = default!;
 #endif
         /// <summary>The type of the resource.</summary>
-        public global::Soenneker.Figma.OpenApiClient.Models.PaymentInformationResourceType? ResourceType { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.PaymentInformationResourceType? ResourceType { get => _explicitNullValueResourceType; set { _explicitNullValueResourceType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resource_type"); else _explicitNullProperties?.Remove("resource_type"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.PaymentInformationResourceType? _explicitNullValueResourceType = default!;
         /// <summary>The ID of the user whose payment information was queried. Can be used to verify the validity of a response.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UserId { get; set; }
+        public string? UserId { get => _explicitNullValueUserId; set { _explicitNullValueUserId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_id"); else _explicitNullProperties?.Remove("user_id"); } }
+        private string? _explicitNullValueUserId = default!;
 #nullable restore
 #else
-        public string UserId { get; set; }
+        public string UserId { get => _explicitNullValueUserId; set { _explicitNullValueUserId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_id"); else _explicitNullProperties?.Remove("user_id"); } }
+        private string _explicitNullValueUserId = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Figma.OpenApiClient.Models.PaymentInformation"/> and sets the default values.
@@ -58,7 +78,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
         public static global::Soenneker.Figma.OpenApiClient.Models.PaymentInformation CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Figma.OpenApiClient.Models.PaymentInformation();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Figma.OpenApiClient.Models.PaymentInformation(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -87,6 +107,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
             writer.WriteStringValue("resource_id", ResourceId);
             writer.WriteEnumValue<global::Soenneker.Figma.OpenApiClient.Models.PaymentInformationResourceType>("resource_type", ResourceType);
             writer.WriteStringValue("user_id", UserId);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

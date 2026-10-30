@@ -12,29 +12,53 @@ namespace Soenneker.Figma.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Trigger : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("delay") is { } nullNodeDelay && nullNodeDelay.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Delay = null;
+            if (parseNode.GetChildNode("deprecatedVersion") is { } nullNodeDeprecatedVersion && nullNodeDeprecatedVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeprecatedVersion = null;
+            if (parseNode.GetChildNode("device") is { } nullNodeDevice && nullNodeDevice.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Device = null;
+            if (parseNode.GetChildNode("keyCodes") is { } nullNodeKeyCodes && nullNodeKeyCodes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) KeyCodes = null;
+            if (parseNode.GetChildNode("mediaHitTime") is { } nullNodeMediaHitTime && nullNodeMediaHitTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MediaHitTime = null;
+            if (parseNode.GetChildNode("timeout") is { } nullNodeTimeout && nullNodeTimeout.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Timeout = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The delay property</summary>
-        public double? Delay { get; set; }
+        public double? Delay { get => _explicitNullValueDelay; set { _explicitNullValueDelay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("delay"); else _explicitNullProperties?.Remove("delay"); } }
+        private double? _explicitNullValueDelay = default!;
         /// <summary>Whether this is a [deprecated version](https://help.figma.com/hc/en-us/articles/360040035834-Prototype-triggers#h_01HHN04REHJNP168R26P1CMP0A) of the trigger that was left unchanged for backwards compatibility.If not present, the trigger is the latest version.</summary>
-        public bool? DeprecatedVersion { get; set; }
+        public bool? DeprecatedVersion { get => _explicitNullValueDeprecatedVersion; set { _explicitNullValueDeprecatedVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deprecatedVersion"); else _explicitNullProperties?.Remove("deprecatedVersion"); } }
+        private bool? _explicitNullValueDeprecatedVersion = default!;
         /// <summary>The device property</summary>
-        public global::Soenneker.Figma.OpenApiClient.Models.OnKeyDownTriggerDevice? Device { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.OnKeyDownTriggerDevice? Device { get => _explicitNullValueDevice; set { _explicitNullValueDevice = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("device"); else _explicitNullProperties?.Remove("device"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.OnKeyDownTriggerDevice? _explicitNullValueDevice = default!;
         /// <summary>The keyCodes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<double?>? KeyCodes { get; set; }
+        public List<double?>? KeyCodes { get => _explicitNullValueKeyCodes; set { _explicitNullValueKeyCodes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("keyCodes"); else _explicitNullProperties?.Remove("keyCodes"); } }
+        private List<double?>? _explicitNullValueKeyCodes = default!;
 #nullable restore
 #else
-        public List<double?> KeyCodes { get; set; }
+        public List<double?> KeyCodes { get => _explicitNullValueKeyCodes; set { _explicitNullValueKeyCodes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("keyCodes"); else _explicitNullProperties?.Remove("keyCodes"); } }
+        private List<double?> _explicitNullValueKeyCodes = default!;
 #endif
         /// <summary>The mediaHitTime property</summary>
-        public double? MediaHitTime { get; set; }
+        public double? MediaHitTime { get => _explicitNullValueMediaHitTime; set { _explicitNullValueMediaHitTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mediaHitTime"); else _explicitNullProperties?.Remove("mediaHitTime"); } }
+        private double? _explicitNullValueMediaHitTime = default!;
         /// <summary>The timeout property</summary>
-        public double? Timeout { get; set; }
+        public double? Timeout { get => _explicitNullValueTimeout; set { _explicitNullValueTimeout = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timeout"); else _explicitNullProperties?.Remove("timeout"); } }
+        private double? _explicitNullValueTimeout = default!;
         /// <summary>The type property</summary>
-        public global::Soenneker.Figma.OpenApiClient.Models.TriggerOneOf1Type? Type { get; set; }
+#nullable enable
+        public string? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private string? _explicitNullValueType = default!;
+#nullable restore
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Figma.OpenApiClient.Models.Trigger"/> and sets the default values.
         /// </summary>
@@ -50,7 +74,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
         public static global::Soenneker.Figma.OpenApiClient.Models.Trigger CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Figma.OpenApiClient.Models.Trigger();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Figma.OpenApiClient.Models.Trigger(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -66,7 +90,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
                 { "keyCodes", n => { KeyCodes = n.GetCollectionOfPrimitiveValues<double?>()?.AsList(); } },
                 { "mediaHitTime", n => { MediaHitTime = n.GetDoubleValue(); } },
                 { "timeout", n => { Timeout = n.GetDoubleValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Figma.OpenApiClient.Models.TriggerOneOf1Type>(); } },
+                { "type", n => { Type = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -82,7 +106,8 @@ namespace Soenneker.Figma.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<double?>("keyCodes", KeyCodes);
             writer.WriteDoubleValue("mediaHitTime", MediaHitTime);
             writer.WriteDoubleValue("timeout", Timeout);
-            writer.WriteEnumValue<global::Soenneker.Figma.OpenApiClient.Models.TriggerOneOf1Type>("type", Type);
+            writer.WriteStringValue("type", Type);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

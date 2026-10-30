@@ -11,107 +11,181 @@ namespace Soenneker.Figma.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class TypeStyle : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("boundVariables") is { } nullNodeBoundVariables && nullNodeBoundVariables.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BoundVariables = null;
+            if (parseNode.GetChildNode("fills") is { } nullNodeFills && nullNodeFills.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Fills = null;
+            if (parseNode.GetChildNode("fontFamily") is { } nullNodeFontFamily && nullNodeFontFamily.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FontFamily = null;
+            if (parseNode.GetChildNode("fontPostScriptName") is { } nullNodeFontPostScriptName && nullNodeFontPostScriptName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FontPostScriptName = null;
+            if (parseNode.GetChildNode("fontSize") is { } nullNodeFontSize && nullNodeFontSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FontSize = null;
+            if (parseNode.GetChildNode("fontStyle") is { } nullNodeFontStyle && nullNodeFontStyle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FontStyle = null;
+            if (parseNode.GetChildNode("fontVariantPosition") is { } nullNodeFontVariantPosition && nullNodeFontVariantPosition.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FontVariantPosition = null;
+            if (parseNode.GetChildNode("fontWeight") is { } nullNodeFontWeight && nullNodeFontWeight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FontWeight = null;
+            if (parseNode.GetChildNode("hyperlink") is { } nullNodeHyperlink && nullNodeHyperlink.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Hyperlink = null;
+            if (parseNode.GetChildNode("isOverrideOverTextStyle") is { } nullNodeIsOverrideOverTextStyle && nullNodeIsOverrideOverTextStyle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsOverrideOverTextStyle = null;
+            if (parseNode.GetChildNode("italic") is { } nullNodeItalic && nullNodeItalic.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Italic = null;
+            if (parseNode.GetChildNode("letterSpacing") is { } nullNodeLetterSpacing && nullNodeLetterSpacing.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LetterSpacing = null;
+            if (parseNode.GetChildNode("lineHeightPercent") is { } nullNodeLineHeightPercent && nullNodeLineHeightPercent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LineHeightPercent = null;
+            if (parseNode.GetChildNode("lineHeightPercentFontSize") is { } nullNodeLineHeightPercentFontSize && nullNodeLineHeightPercentFontSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LineHeightPercentFontSize = null;
+            if (parseNode.GetChildNode("lineHeightPx") is { } nullNodeLineHeightPx && nullNodeLineHeightPx.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LineHeightPx = null;
+            if (parseNode.GetChildNode("lineHeightUnit") is { } nullNodeLineHeightUnit && nullNodeLineHeightUnit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LineHeightUnit = null;
+            if (parseNode.GetChildNode("listSpacing") is { } nullNodeListSpacing && nullNodeListSpacing.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ListSpacing = null;
+            if (parseNode.GetChildNode("maxLines") is { } nullNodeMaxLines && nullNodeMaxLines.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxLines = null;
+            if (parseNode.GetChildNode("opentypeFlags") is { } nullNodeOpentypeFlags && nullNodeOpentypeFlags.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OpentypeFlags = null;
+            if (parseNode.GetChildNode("paragraphIndent") is { } nullNodeParagraphIndent && nullNodeParagraphIndent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ParagraphIndent = null;
+            if (parseNode.GetChildNode("paragraphSpacing") is { } nullNodeParagraphSpacing && nullNodeParagraphSpacing.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ParagraphSpacing = null;
+            if (parseNode.GetChildNode("semanticItalic") is { } nullNodeSemanticItalic && nullNodeSemanticItalic.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SemanticItalic = null;
+            if (parseNode.GetChildNode("semanticWeight") is { } nullNodeSemanticWeight && nullNodeSemanticWeight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SemanticWeight = null;
+            if (parseNode.GetChildNode("textAlignHorizontal") is { } nullNodeTextAlignHorizontal && nullNodeTextAlignHorizontal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TextAlignHorizontal = null;
+            if (parseNode.GetChildNode("textAlignVertical") is { } nullNodeTextAlignVertical && nullNodeTextAlignVertical.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TextAlignVertical = null;
+            if (parseNode.GetChildNode("textAutoResize") is { } nullNodeTextAutoResize && nullNodeTextAutoResize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TextAutoResize = null;
+            if (parseNode.GetChildNode("textCase") is { } nullNodeTextCase && nullNodeTextCase.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TextCase = null;
+            if (parseNode.GetChildNode("textDecoration") is { } nullNodeTextDecoration && nullNodeTextDecoration.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TextDecoration = null;
+            if (parseNode.GetChildNode("textTruncation") is { } nullNodeTextTruncation && nullNodeTextTruncation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TextTruncation = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The variables bound to a particular field on this style</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.TypeStyleAllOf1BoundVariables? BoundVariables { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.TypeStyleAllOf1BoundVariables? BoundVariables { get => _explicitNullValueBoundVariables; set { _explicitNullValueBoundVariables = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("boundVariables"); else _explicitNullProperties?.Remove("boundVariables"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.TypeStyleAllOf1BoundVariables? _explicitNullValueBoundVariables = default!;
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.TypeStyleAllOf1BoundVariables BoundVariables { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.TypeStyleAllOf1BoundVariables BoundVariables { get => _explicitNullValueBoundVariables; set { _explicitNullValueBoundVariables = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("boundVariables"); else _explicitNullProperties?.Remove("boundVariables"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.TypeStyleAllOf1BoundVariables _explicitNullValueBoundVariables = default!;
 #endif
         /// <summary>An array of fill paints applied to the characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Figma.OpenApiClient.Models.Paint>? Fills { get; set; }
+        public List<global::Soenneker.Figma.OpenApiClient.Models.Paint>? Fills { get => _explicitNullValueFills; set { _explicitNullValueFills = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fills"); else _explicitNullProperties?.Remove("fills"); } }
+        private List<global::Soenneker.Figma.OpenApiClient.Models.Paint>? _explicitNullValueFills = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Figma.OpenApiClient.Models.Paint> Fills { get; set; }
+        public List<global::Soenneker.Figma.OpenApiClient.Models.Paint> Fills { get => _explicitNullValueFills; set { _explicitNullValueFills = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fills"); else _explicitNullProperties?.Remove("fills"); } }
+        private List<global::Soenneker.Figma.OpenApiClient.Models.Paint> _explicitNullValueFills = default!;
 #endif
         /// <summary>Font family of text (standard name).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FontFamily { get; set; }
+        public string? FontFamily { get => _explicitNullValueFontFamily; set { _explicitNullValueFontFamily = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fontFamily"); else _explicitNullProperties?.Remove("fontFamily"); } }
+        private string? _explicitNullValueFontFamily = default!;
 #nullable restore
 #else
-        public string FontFamily { get; set; }
+        public string FontFamily { get => _explicitNullValueFontFamily; set { _explicitNullValueFontFamily = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fontFamily"); else _explicitNullProperties?.Remove("fontFamily"); } }
+        private string _explicitNullValueFontFamily = default!;
 #endif
         /// <summary>PostScript font name.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FontPostScriptName { get; set; }
+        public string? FontPostScriptName { get => _explicitNullValueFontPostScriptName; set { _explicitNullValueFontPostScriptName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fontPostScriptName"); else _explicitNullProperties?.Remove("fontPostScriptName"); } }
+        private string? _explicitNullValueFontPostScriptName = default!;
 #nullable restore
 #else
-        public string FontPostScriptName { get; set; }
+        public string FontPostScriptName { get => _explicitNullValueFontPostScriptName; set { _explicitNullValueFontPostScriptName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fontPostScriptName"); else _explicitNullProperties?.Remove("fontPostScriptName"); } }
+        private string _explicitNullValueFontPostScriptName = default!;
 #endif
         /// <summary>Font size in px.</summary>
-        public double? FontSize { get; set; }
+        public double? FontSize { get => _explicitNullValueFontSize; set { _explicitNullValueFontSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fontSize"); else _explicitNullProperties?.Remove("fontSize"); } }
+        private double? _explicitNullValueFontSize = default!;
         /// <summary>Describes visual weight or emphasis, such as Bold or Italic.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FontStyle { get; set; }
+        public string? FontStyle { get => _explicitNullValueFontStyle; set { _explicitNullValueFontStyle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fontStyle"); else _explicitNullProperties?.Remove("fontStyle"); } }
+        private string? _explicitNullValueFontStyle = default!;
 #nullable restore
 #else
-        public string FontStyle { get; set; }
+        public string FontStyle { get => _explicitNullValueFontStyle; set { _explicitNullValueFontStyle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fontStyle"); else _explicitNullProperties?.Remove("fontStyle"); } }
+        private string _explicitNullValueFontStyle = default!;
 #endif
+        /// <summary>Whether the text is formatted as superscript or subscript.</summary>
+        public global::Soenneker.Figma.OpenApiClient.Models.TypeStyleFontVariantPosition? FontVariantPosition { get => _explicitNullValueFontVariantPosition; set { _explicitNullValueFontVariantPosition = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fontVariantPosition"); else _explicitNullProperties?.Remove("fontVariantPosition"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.TypeStyleFontVariantPosition? _explicitNullValueFontVariantPosition = default!;
         /// <summary>Numeric font weight.</summary>
-        public double? FontWeight { get; set; }
+        public double? FontWeight { get => _explicitNullValueFontWeight; set { _explicitNullValueFontWeight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fontWeight"); else _explicitNullProperties?.Remove("fontWeight"); } }
+        private double? _explicitNullValueFontWeight = default!;
         /// <summary>Link to a URL or frame.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.Hyperlink? Hyperlink { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.Hyperlink? Hyperlink { get => _explicitNullValueHyperlink; set { _explicitNullValueHyperlink = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hyperlink"); else _explicitNullProperties?.Remove("hyperlink"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.Hyperlink? _explicitNullValueHyperlink = default!;
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.Hyperlink Hyperlink { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.Hyperlink Hyperlink { get => _explicitNullValueHyperlink; set { _explicitNullValueHyperlink = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hyperlink"); else _explicitNullProperties?.Remove("hyperlink"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.Hyperlink _explicitNullValueHyperlink = default!;
 #endif
         /// <summary>Whether or not this style has overrides over a text style. The possible fields to override are semanticWeight, semanticItalic, hyperlink, and textDecoration. If this is true, then those fields are overrides if present.</summary>
-        public bool? IsOverrideOverTextStyle { get; set; }
+        public bool? IsOverrideOverTextStyle { get => _explicitNullValueIsOverrideOverTextStyle; set { _explicitNullValueIsOverrideOverTextStyle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isOverrideOverTextStyle"); else _explicitNullProperties?.Remove("isOverrideOverTextStyle"); } }
+        private bool? _explicitNullValueIsOverrideOverTextStyle = default!;
         /// <summary>Whether or not text is italicized.</summary>
-        public bool? Italic { get; set; }
+        public bool? Italic { get => _explicitNullValueItalic; set { _explicitNullValueItalic = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("italic"); else _explicitNullProperties?.Remove("italic"); } }
+        private bool? _explicitNullValueItalic = default!;
         /// <summary>Space between characters in px.</summary>
-        public double? LetterSpacing { get; set; }
+        public double? LetterSpacing { get => _explicitNullValueLetterSpacing; set { _explicitNullValueLetterSpacing = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("letterSpacing"); else _explicitNullProperties?.Remove("letterSpacing"); } }
+        private double? _explicitNullValueLetterSpacing = default!;
         /// <summary>Line height as a percentage of normal line height. This is deprecated; in a future version of the API only lineHeightPx and lineHeightPercentFontSize will be returned.</summary>
-        public double? LineHeightPercent { get; set; }
+        public double? LineHeightPercent { get => _explicitNullValueLineHeightPercent; set { _explicitNullValueLineHeightPercent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lineHeightPercent"); else _explicitNullProperties?.Remove("lineHeightPercent"); } }
+        private double? _explicitNullValueLineHeightPercent = default!;
         /// <summary>Line height as a percentage of the font size. Only returned when `lineHeightPercent` (deprecated) is not 100.</summary>
-        public double? LineHeightPercentFontSize { get; set; }
+        public double? LineHeightPercentFontSize { get => _explicitNullValueLineHeightPercentFontSize; set { _explicitNullValueLineHeightPercentFontSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lineHeightPercentFontSize"); else _explicitNullProperties?.Remove("lineHeightPercentFontSize"); } }
+        private double? _explicitNullValueLineHeightPercentFontSize = default!;
         /// <summary>Line height in px.</summary>
-        public double? LineHeightPx { get; set; }
+        public double? LineHeightPx { get => _explicitNullValueLineHeightPx; set { _explicitNullValueLineHeightPx = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lineHeightPx"); else _explicitNullProperties?.Remove("lineHeightPx"); } }
+        private double? _explicitNullValueLineHeightPx = default!;
         /// <summary>The unit of the line height value specified by the user.</summary>
-        public global::Soenneker.Figma.OpenApiClient.Models.TypeStyleLineHeightUnit? LineHeightUnit { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.TypeStyleLineHeightUnit? LineHeightUnit { get => _explicitNullValueLineHeightUnit; set { _explicitNullValueLineHeightUnit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lineHeightUnit"); else _explicitNullProperties?.Remove("lineHeightUnit"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.TypeStyleLineHeightUnit? _explicitNullValueLineHeightUnit = default!;
         /// <summary>Space between list items in px, 0 if not present.</summary>
-        public double? ListSpacing { get; set; }
+        public double? ListSpacing { get => _explicitNullValueListSpacing; set { _explicitNullValueListSpacing = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("listSpacing"); else _explicitNullProperties?.Remove("listSpacing"); } }
+        private double? _explicitNullValueListSpacing = default!;
         /// <summary>When `textTruncation: &quot;ENDING&quot;` is set, `maxLines` determines how many lines a text node can grow to before it truncates.</summary>
-        public double? MaxLines { get; set; }
+        public double? MaxLines { get => _explicitNullValueMaxLines; set { _explicitNullValueMaxLines = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("maxLines"); else _explicitNullProperties?.Remove("maxLines"); } }
+        private double? _explicitNullValueMaxLines = default!;
         /// <summary>A map of OpenType feature flags to 1 or 0, 1 if it is enabled and 0 if it is disabled. Note that some flags aren&apos;t reflected here. For example, SMCP (small caps) is still represented by the `textCase` field.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.TypeStyleOpentypeFlags? OpentypeFlags { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.TypeStyleOpentypeFlags? OpentypeFlags { get => _explicitNullValueOpentypeFlags; set { _explicitNullValueOpentypeFlags = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("opentypeFlags"); else _explicitNullProperties?.Remove("opentypeFlags"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.TypeStyleOpentypeFlags? _explicitNullValueOpentypeFlags = default!;
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.TypeStyleOpentypeFlags OpentypeFlags { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.TypeStyleOpentypeFlags OpentypeFlags { get => _explicitNullValueOpentypeFlags; set { _explicitNullValueOpentypeFlags = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("opentypeFlags"); else _explicitNullProperties?.Remove("opentypeFlags"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.TypeStyleOpentypeFlags _explicitNullValueOpentypeFlags = default!;
 #endif
         /// <summary>Paragraph indentation in px, 0 if not present.</summary>
-        public double? ParagraphIndent { get; set; }
+        public double? ParagraphIndent { get => _explicitNullValueParagraphIndent; set { _explicitNullValueParagraphIndent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paragraphIndent"); else _explicitNullProperties?.Remove("paragraphIndent"); } }
+        private double? _explicitNullValueParagraphIndent = default!;
         /// <summary>Space between paragraphs in px, 0 if not present.</summary>
-        public double? ParagraphSpacing { get; set; }
+        public double? ParagraphSpacing { get => _explicitNullValueParagraphSpacing; set { _explicitNullValueParagraphSpacing = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paragraphSpacing"); else _explicitNullProperties?.Remove("paragraphSpacing"); } }
+        private double? _explicitNullValueParagraphSpacing = default!;
         /// <summary>Indicates how the font style was overridden when there is a text style override.</summary>
-        public global::Soenneker.Figma.OpenApiClient.Models.BaseTypeStyleSemanticItalic? SemanticItalic { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.BaseTypeStyleSemanticItalic? SemanticItalic { get => _explicitNullValueSemanticItalic; set { _explicitNullValueSemanticItalic = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("semanticItalic"); else _explicitNullProperties?.Remove("semanticItalic"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.BaseTypeStyleSemanticItalic? _explicitNullValueSemanticItalic = default!;
         /// <summary>Indicates how the font weight was overridden when there is a text style override.</summary>
-        public global::Soenneker.Figma.OpenApiClient.Models.BaseTypeStyleSemanticWeight? SemanticWeight { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.BaseTypeStyleSemanticWeight? SemanticWeight { get => _explicitNullValueSemanticWeight; set { _explicitNullValueSemanticWeight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("semanticWeight"); else _explicitNullProperties?.Remove("semanticWeight"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.BaseTypeStyleSemanticWeight? _explicitNullValueSemanticWeight = default!;
         /// <summary>Horizontal text alignment as string enum.</summary>
-        public global::Soenneker.Figma.OpenApiClient.Models.BaseTypeStyleTextAlignHorizontal? TextAlignHorizontal { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.BaseTypeStyleTextAlignHorizontal? TextAlignHorizontal { get => _explicitNullValueTextAlignHorizontal; set { _explicitNullValueTextAlignHorizontal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("textAlignHorizontal"); else _explicitNullProperties?.Remove("textAlignHorizontal"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.BaseTypeStyleTextAlignHorizontal? _explicitNullValueTextAlignHorizontal = default!;
         /// <summary>Vertical text alignment as string enum.</summary>
-        public global::Soenneker.Figma.OpenApiClient.Models.BaseTypeStyleTextAlignVertical? TextAlignVertical { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.BaseTypeStyleTextAlignVertical? TextAlignVertical { get => _explicitNullValueTextAlignVertical; set { _explicitNullValueTextAlignVertical = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("textAlignVertical"); else _explicitNullProperties?.Remove("textAlignVertical"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.BaseTypeStyleTextAlignVertical? _explicitNullValueTextAlignVertical = default!;
         /// <summary>Dimensions along which text will auto resize, default is that the text does not auto-resize. TRUNCATE means that the text will be shortened and trailing text will be replaced with &quot;…&quot; if the text contents is larger than the bounds. `TRUNCATE` as a return value is deprecated and will be removed in a future version. Read from `textTruncation` instead.</summary>
-        public global::Soenneker.Figma.OpenApiClient.Models.TypeStyleTextAutoResize? TextAutoResize { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.TypeStyleTextAutoResize? TextAutoResize { get => _explicitNullValueTextAutoResize; set { _explicitNullValueTextAutoResize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("textAutoResize"); else _explicitNullProperties?.Remove("textAutoResize"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.TypeStyleTextAutoResize? _explicitNullValueTextAutoResize = default!;
         /// <summary>Text casing applied to the node, default is the original casing.</summary>
-        public global::Soenneker.Figma.OpenApiClient.Models.BaseTypeStyleTextCase? TextCase { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.BaseTypeStyleTextCase? TextCase { get => _explicitNullValueTextCase; set { _explicitNullValueTextCase = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("textCase"); else _explicitNullProperties?.Remove("textCase"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.BaseTypeStyleTextCase? _explicitNullValueTextCase = default!;
         /// <summary>Text decoration applied to the node, default is none.</summary>
-        public global::Soenneker.Figma.OpenApiClient.Models.TypeStyleTextDecoration? TextDecoration { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.TypeStyleTextDecoration? TextDecoration { get => _explicitNullValueTextDecoration; set { _explicitNullValueTextDecoration = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("textDecoration"); else _explicitNullProperties?.Remove("textDecoration"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.TypeStyleTextDecoration? _explicitNullValueTextDecoration = default!;
         /// <summary>Whether this text node will truncate with an ellipsis when the text contents is larger than the text node.</summary>
-        public global::Soenneker.Figma.OpenApiClient.Models.TypeStyleTextTruncation? TextTruncation { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.TypeStyleTextTruncation? TextTruncation { get => _explicitNullValueTextTruncation; set { _explicitNullValueTextTruncation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("textTruncation"); else _explicitNullProperties?.Remove("textTruncation"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.TypeStyleTextTruncation? _explicitNullValueTextTruncation = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Figma.OpenApiClient.Models.TypeStyle"/> and sets the default values.
         /// </summary>
@@ -132,7 +206,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
         public static global::Soenneker.Figma.OpenApiClient.Models.TypeStyle CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Figma.OpenApiClient.Models.TypeStyle();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Figma.OpenApiClient.Models.TypeStyle(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -148,6 +222,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
                 { "fontPostScriptName", n => { FontPostScriptName = n.GetStringValue(); } },
                 { "fontSize", n => { FontSize = n.GetDoubleValue(); } },
                 { "fontStyle", n => { FontStyle = n.GetStringValue(); } },
+                { "fontVariantPosition", n => { FontVariantPosition = n.GetEnumValue<global::Soenneker.Figma.OpenApiClient.Models.TypeStyleFontVariantPosition>(); } },
                 { "fontWeight", n => { FontWeight = n.GetDoubleValue(); } },
                 { "hyperlink", n => { Hyperlink = n.GetObjectValue<global::Soenneker.Figma.OpenApiClient.Models.Hyperlink>(global::Soenneker.Figma.OpenApiClient.Models.Hyperlink.CreateFromDiscriminatorValue); } },
                 { "isOverrideOverTextStyle", n => { IsOverrideOverTextStyle = n.GetBoolValue(); } },
@@ -185,6 +260,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
             writer.WriteStringValue("fontPostScriptName", FontPostScriptName);
             writer.WriteDoubleValue("fontSize", FontSize);
             writer.WriteStringValue("fontStyle", FontStyle);
+            writer.WriteEnumValue<global::Soenneker.Figma.OpenApiClient.Models.TypeStyleFontVariantPosition>("fontVariantPosition", FontVariantPosition);
             writer.WriteDoubleValue("fontWeight", FontWeight);
             writer.WriteObjectValue<global::Soenneker.Figma.OpenApiClient.Models.Hyperlink>("hyperlink", Hyperlink);
             writer.WriteBoolValue("isOverrideOverTextStyle", IsOverrideOverTextStyle);
@@ -207,6 +283,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Figma.OpenApiClient.Models.BaseTypeStyleTextCase>("textCase", TextCase);
             writer.WriteEnumValue<global::Soenneker.Figma.OpenApiClient.Models.TypeStyleTextDecoration>("textDecoration", TextDecoration);
             writer.WriteEnumValue<global::Soenneker.Figma.OpenApiClient.Models.TypeStyleTextTruncation>("textTruncation", TextTruncation);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

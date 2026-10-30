@@ -12,7 +12,12 @@ namespace Soenneker.Figma.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Effect : IComposedTypeWrapper, IParsable
-    {
+    , global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder {
+        // Preserve ambiguous union payloads without inventing a discriminator.
+        /// <summary>The complete payload when no unique typed union branch can be selected.</summary>
+        public global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode UnrecognizedValue { get; set; } = null!;
+        public global::System.Collections.Generic.IDictionary<string, object> AdditionalData { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
+
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Figma.OpenApiClient.Models.BlurEffect"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -65,17 +70,26 @@ namespace Soenneker.Figma.OpenApiClient.Models
             var result = new global::Soenneker.Figma.OpenApiClient.Models.Effect();
             if("DROP_SHADOW".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.DropShadowEffect = new global::Soenneker.Figma.OpenApiClient.Models.DropShadowEffect();
+                
             }
             else if("INNER_SHADOW".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.InnerShadowEffect = new global::Soenneker.Figma.OpenApiClient.Models.InnerShadowEffect();
+                
             }
             else if("TEXTURE".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.TextureEffect = new global::Soenneker.Figma.OpenApiClient.Models.TextureEffect();
+                
             }
-            return result;
+            
+            var unionPayload = parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue);
+            bool matchesUnionBranch0 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("type") != null && (parseNode.GetChildNode("type")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag1 && ("DROP_SHADOW".Equals(tag1.GetValue(), global::System.StringComparison.Ordinal))) && parseNode.GetChildNode("showShadowBehindNode") != null && parseNode.GetChildNode("color") != null && parseNode.GetChildNode("blendMode") != null && (parseNode.GetChildNode("blendMode")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag5 && ("PASS_THROUGH".Equals(tag5.GetValue(), global::System.StringComparison.Ordinal) || "NORMAL".Equals(tag5.GetValue(), global::System.StringComparison.Ordinal) || "DARKEN".Equals(tag5.GetValue(), global::System.StringComparison.Ordinal) || "MULTIPLY".Equals(tag5.GetValue(), global::System.StringComparison.Ordinal) || "LINEAR_BURN".Equals(tag5.GetValue(), global::System.StringComparison.Ordinal) || "COLOR_BURN".Equals(tag5.GetValue(), global::System.StringComparison.Ordinal) || "LIGHTEN".Equals(tag5.GetValue(), global::System.StringComparison.Ordinal) || "SCREEN".Equals(tag5.GetValue(), global::System.StringComparison.Ordinal) || "LINEAR_DODGE".Equals(tag5.GetValue(), global::System.StringComparison.Ordinal) || "COLOR_DODGE".Equals(tag5.GetValue(), global::System.StringComparison.Ordinal) || "OVERLAY".Equals(tag5.GetValue(), global::System.StringComparison.Ordinal) || "SOFT_LIGHT".Equals(tag5.GetValue(), global::System.StringComparison.Ordinal) || "HARD_LIGHT".Equals(tag5.GetValue(), global::System.StringComparison.Ordinal) || "DIFFERENCE".Equals(tag5.GetValue(), global::System.StringComparison.Ordinal) || "EXCLUSION".Equals(tag5.GetValue(), global::System.StringComparison.Ordinal) || "HUE".Equals(tag5.GetValue(), global::System.StringComparison.Ordinal) || "SATURATION".Equals(tag5.GetValue(), global::System.StringComparison.Ordinal) || "COLOR".Equals(tag5.GetValue(), global::System.StringComparison.Ordinal) || "LUMINOSITY".Equals(tag5.GetValue(), global::System.StringComparison.Ordinal))) && parseNode.GetChildNode("offset") != null && parseNode.GetChildNode("radius") != null && parseNode.GetChildNode("visible") != null))();
+            bool matchesUnionBranch1 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("color") != null && parseNode.GetChildNode("blendMode") != null && (parseNode.GetChildNode("blendMode")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag2 && ("PASS_THROUGH".Equals(tag2.GetValue(), global::System.StringComparison.Ordinal) || "NORMAL".Equals(tag2.GetValue(), global::System.StringComparison.Ordinal) || "DARKEN".Equals(tag2.GetValue(), global::System.StringComparison.Ordinal) || "MULTIPLY".Equals(tag2.GetValue(), global::System.StringComparison.Ordinal) || "LINEAR_BURN".Equals(tag2.GetValue(), global::System.StringComparison.Ordinal) || "COLOR_BURN".Equals(tag2.GetValue(), global::System.StringComparison.Ordinal) || "LIGHTEN".Equals(tag2.GetValue(), global::System.StringComparison.Ordinal) || "SCREEN".Equals(tag2.GetValue(), global::System.StringComparison.Ordinal) || "LINEAR_DODGE".Equals(tag2.GetValue(), global::System.StringComparison.Ordinal) || "COLOR_DODGE".Equals(tag2.GetValue(), global::System.StringComparison.Ordinal) || "OVERLAY".Equals(tag2.GetValue(), global::System.StringComparison.Ordinal) || "SOFT_LIGHT".Equals(tag2.GetValue(), global::System.StringComparison.Ordinal) || "HARD_LIGHT".Equals(tag2.GetValue(), global::System.StringComparison.Ordinal) || "DIFFERENCE".Equals(tag2.GetValue(), global::System.StringComparison.Ordinal) || "EXCLUSION".Equals(tag2.GetValue(), global::System.StringComparison.Ordinal) || "HUE".Equals(tag2.GetValue(), global::System.StringComparison.Ordinal) || "SATURATION".Equals(tag2.GetValue(), global::System.StringComparison.Ordinal) || "COLOR".Equals(tag2.GetValue(), global::System.StringComparison.Ordinal) || "LUMINOSITY".Equals(tag2.GetValue(), global::System.StringComparison.Ordinal))) && parseNode.GetChildNode("offset") != null && parseNode.GetChildNode("radius") != null && parseNode.GetChildNode("visible") != null && (parseNode.GetChildNode("type") == null || (parseNode.GetChildNode("type")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString optionalTag6 && ("INNER_SHADOW".Equals(optionalTag6.GetValue(), global::System.StringComparison.Ordinal))))))();
+            bool matchesUnionBranch2 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("type") != null && (parseNode.GetChildNode("type")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag1 && ("TEXTURE".Equals(tag1.GetValue(), global::System.StringComparison.Ordinal))) && parseNode.GetChildNode("visible") != null && parseNode.GetChildNode("noiseSize") != null && parseNode.GetChildNode("radius") != null && parseNode.GetChildNode("clipToShape") != null))();
+            if (result.BlurEffect == null && result.DropShadowEffect == null && result.InnerShadowEffect == null && result.NoiseEffect == null && result.TextureEffect == null && matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch2) result.DropShadowEffect = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Figma.OpenApiClient.Models.DropShadowEffect(), parseNode);
+            if (result.BlurEffect == null && result.DropShadowEffect == null && result.InnerShadowEffect == null && result.NoiseEffect == null && result.TextureEffect == null && matchesUnionBranch1 && !matchesUnionBranch0 && !matchesUnionBranch2) result.InnerShadowEffect = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Figma.OpenApiClient.Models.InnerShadowEffect(), parseNode);
+            if (result.BlurEffect == null && result.DropShadowEffect == null && result.InnerShadowEffect == null && result.NoiseEffect == null && result.TextureEffect == null && matchesUnionBranch2 && !matchesUnionBranch0 && !matchesUnionBranch1) result.TextureEffect = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Figma.OpenApiClient.Models.TextureEffect(), parseNode);
+            if (result.BlurEffect == null && result.DropShadowEffect == null && result.InnerShadowEffect == null && result.NoiseEffect == null && result.TextureEffect == null) result.UnrecognizedValue = unionPayload;
+return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -111,25 +125,36 @@ namespace Soenneker.Figma.OpenApiClient.Models
         /// <param name="writer">Serialization writer to use to serialize this model</param>
         public virtual void Serialize(ISerializationWriter writer)
         {
+            if (global::System.Object.ReferenceEquals(writer, null)) throw new global::System.ArgumentNullException(nameof(writer));
+            if (BlurEffect == null && DropShadowEffect == null && InnerShadowEffect == null && NoiseEffect == null && TextureEffect == null) { if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawObject) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData, rawObject)); else if (UnrecognizedValue != null) writer.WriteObjectValue(null, UnrecognizedValue); else if (AdditionalData.Count > 0) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData)); else writer.WriteNullValue(null); return; }
+            if (DropShadowEffect != null && BlurEffect == null && InnerShadowEffect == null && NoiseEffect == null && TextureEffect == null) { if (DropShadowEffect is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, DropShadowEffect); return; }
+            if (InnerShadowEffect != null && BlurEffect == null && DropShadowEffect == null && NoiseEffect == null && TextureEffect == null) { if (InnerShadowEffect is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, InnerShadowEffect); return; }
+            if (TextureEffect != null && BlurEffect == null && DropShadowEffect == null && InnerShadowEffect == null && NoiseEffect == null) { if (TextureEffect is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, TextureEffect); return; }
+
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             if(BlurEffect != null)
             {
+                if (BlurEffect is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Figma.OpenApiClient.Models.BlurEffect>(null, BlurEffect);
             }
             else if(DropShadowEffect != null)
             {
+                if (DropShadowEffect is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Figma.OpenApiClient.Models.DropShadowEffect>(null, DropShadowEffect);
             }
             else if(InnerShadowEffect != null)
             {
+                if (InnerShadowEffect is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Figma.OpenApiClient.Models.InnerShadowEffect>(null, InnerShadowEffect);
             }
             else if(NoiseEffect != null)
             {
+                if (NoiseEffect is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Figma.OpenApiClient.Models.NoiseEffect>(null, NoiseEffect);
             }
             else if(TextureEffect != null)
             {
+                if (TextureEffect is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Figma.OpenApiClient.Models.TextureEffect>(null, TextureEffect);
             }
         }

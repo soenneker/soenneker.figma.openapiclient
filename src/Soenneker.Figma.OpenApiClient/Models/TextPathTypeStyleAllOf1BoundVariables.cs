@@ -12,48 +12,70 @@ namespace Soenneker.Figma.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class TextPathTypeStyleAllOf1BoundVariables : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("fontFamily") is { } nullNodeFontFamily && nullNodeFontFamily.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FontFamily = null;
+            if (parseNode.GetChildNode("fontSize") is { } nullNodeFontSize && nullNodeFontSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FontSize = null;
+            if (parseNode.GetChildNode("fontStyle") is { } nullNodeFontStyle && nullNodeFontStyle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FontStyle = null;
+            if (parseNode.GetChildNode("fontWeight") is { } nullNodeFontWeight && nullNodeFontWeight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FontWeight = null;
+            if (parseNode.GetChildNode("letterSpacing") is { } nullNodeLetterSpacing && nullNodeLetterSpacing.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LetterSpacing = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Contains a variable alias</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? FontFamily { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? FontFamily { get => _explicitNullValueFontFamily; set { _explicitNullValueFontFamily = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fontFamily"); else _explicitNullProperties?.Remove("fontFamily"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? _explicitNullValueFontFamily = default!;
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias FontFamily { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias FontFamily { get => _explicitNullValueFontFamily; set { _explicitNullValueFontFamily = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fontFamily"); else _explicitNullProperties?.Remove("fontFamily"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.VariableAlias _explicitNullValueFontFamily = default!;
 #endif
         /// <summary>Contains a variable alias</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? FontSize { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? FontSize { get => _explicitNullValueFontSize; set { _explicitNullValueFontSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fontSize"); else _explicitNullProperties?.Remove("fontSize"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? _explicitNullValueFontSize = default!;
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias FontSize { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias FontSize { get => _explicitNullValueFontSize; set { _explicitNullValueFontSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fontSize"); else _explicitNullProperties?.Remove("fontSize"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.VariableAlias _explicitNullValueFontSize = default!;
 #endif
         /// <summary>Contains a variable alias</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? FontStyle { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? FontStyle { get => _explicitNullValueFontStyle; set { _explicitNullValueFontStyle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fontStyle"); else _explicitNullProperties?.Remove("fontStyle"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? _explicitNullValueFontStyle = default!;
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias FontStyle { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias FontStyle { get => _explicitNullValueFontStyle; set { _explicitNullValueFontStyle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fontStyle"); else _explicitNullProperties?.Remove("fontStyle"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.VariableAlias _explicitNullValueFontStyle = default!;
 #endif
         /// <summary>Contains a variable alias</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? FontWeight { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? FontWeight { get => _explicitNullValueFontWeight; set { _explicitNullValueFontWeight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fontWeight"); else _explicitNullProperties?.Remove("fontWeight"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? _explicitNullValueFontWeight = default!;
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias FontWeight { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias FontWeight { get => _explicitNullValueFontWeight; set { _explicitNullValueFontWeight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fontWeight"); else _explicitNullProperties?.Remove("fontWeight"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.VariableAlias _explicitNullValueFontWeight = default!;
 #endif
         /// <summary>Contains a variable alias</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? LetterSpacing { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? LetterSpacing { get => _explicitNullValueLetterSpacing; set { _explicitNullValueLetterSpacing = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("letterSpacing"); else _explicitNullProperties?.Remove("letterSpacing"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.VariableAlias? _explicitNullValueLetterSpacing = default!;
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias LetterSpacing { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.VariableAlias LetterSpacing { get => _explicitNullValueLetterSpacing; set { _explicitNullValueLetterSpacing = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("letterSpacing"); else _explicitNullProperties?.Remove("letterSpacing"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.VariableAlias _explicitNullValueLetterSpacing = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Figma.OpenApiClient.Models.TextPathTypeStyleAllOf1BoundVariables"/> and sets the default values.
@@ -70,7 +92,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
         public static global::Soenneker.Figma.OpenApiClient.Models.TextPathTypeStyleAllOf1BoundVariables CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Figma.OpenApiClient.Models.TextPathTypeStyleAllOf1BoundVariables();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Figma.OpenApiClient.Models.TextPathTypeStyleAllOf1BoundVariables(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -99,6 +121,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Figma.OpenApiClient.Models.VariableAlias>("fontStyle", FontStyle);
             writer.WriteObjectValue<global::Soenneker.Figma.OpenApiClient.Models.VariableAlias>("fontWeight", FontWeight);
             writer.WriteObjectValue<global::Soenneker.Figma.OpenApiClient.Models.VariableAlias>("letterSpacing", LetterSpacing);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

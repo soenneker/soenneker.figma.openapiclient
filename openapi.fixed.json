@@ -7,7 +7,7 @@
     "contact": {
       "email": "support@figma.com"
     },
-    "version": "0.46.0"
+    "version": "0.47.0"
   },
   "servers": [
     {
@@ -6473,9 +6473,6 @@
         ]
       },
       "Node": {
-        "required": [
-          "type"
-        ],
         "oneOf": [
           {
             "$ref": "#/components/schemas/BooleanOperationNode"
@@ -6562,12 +6559,7 @@
             "$ref": "#/components/schemas/CanvasNode"
           }
         ],
-        "properties": {
-          "type": {
-            "type": "string"
-          }
-        },
-        "discriminator": {
+        "x-client-original-discriminator": {
           "propertyName": "type",
           "mapping": {
             "BOOLEAN_OPERATION": "#/components/schemas/BooleanOperationNode",
@@ -6784,9 +6776,6 @@
         }
       },
       "SubcanvasNode": {
-        "required": [
-          "type"
-        ],
         "oneOf": [
           {
             "$ref": "#/components/schemas/BooleanOperationNode"
@@ -6867,12 +6856,7 @@
             "$ref": "#/components/schemas/WidgetNode"
           }
         ],
-        "properties": {
-          "type": {
-            "type": "string"
-          }
-        },
-        "discriminator": {
+        "x-client-original-discriminator": {
           "propertyName": "type",
           "mapping": {
             "BOOLEAN_OPERATION": "#/components/schemas/BooleanOperationNode",
@@ -16166,6 +16150,9 @@
           "textDecoration": {
             "$ref": "#/components/schemas/TypeStyleTextDecoration"
           },
+          "fontVariantPosition": {
+            "$ref": "#/components/schemas/TypeStyleFontVariantPosition"
+          },
           "textAutoResize": {
             "$ref": "#/components/schemas/TypeStyleTextAutoResize"
           },
@@ -19788,9 +19775,6 @@
         "description": "An object that contains details about deleting a \u0060VariableCollection\u0060."
       },
       "VariableCollectionChange": {
-        "required": [
-          "action"
-        ],
         "oneOf": [
           {
             "$ref": "#/components/schemas/VariableCollectionCreate"
@@ -19802,12 +19786,7 @@
             "$ref": "#/components/schemas/VariableCollectionDelete"
           }
         ],
-        "properties": {
-          "action": {
-            "type": "string"
-          }
-        },
-        "discriminator": {
+        "x-client-original-discriminator": {
           "propertyName": "action",
           "mapping": {
             "CREATE": "#/components/schemas/VariableCollectionCreate",
@@ -19886,9 +19865,6 @@
         "description": "An object that contains details about deleting a \u0060VariableMode\u0060."
       },
       "VariableModeChange": {
-        "required": [
-          "action"
-        ],
         "oneOf": [
           {
             "$ref": "#/components/schemas/VariableModeCreate"
@@ -19900,12 +19876,7 @@
             "$ref": "#/components/schemas/VariableModeDelete"
           }
         ],
-        "properties": {
-          "action": {
-            "type": "string"
-          }
-        },
-        "discriminator": {
+        "x-client-original-discriminator": {
           "propertyName": "action",
           "mapping": {
             "CREATE": "#/components/schemas/VariableModeCreate",
@@ -20024,9 +19995,6 @@
         "description": "An object that contains details about deleting a \u0060Variable\u0060."
       },
       "VariableChange": {
-        "required": [
-          "action"
-        ],
         "oneOf": [
           {
             "$ref": "#/components/schemas/VariableCreate"
@@ -20038,12 +20006,7 @@
             "$ref": "#/components/schemas/VariableDelete"
           }
         ],
-        "properties": {
-          "action": {
-            "type": "string"
-          }
-        },
-        "discriminator": {
+        "x-client-original-discriminator": {
           "propertyName": "action",
           "mapping": {
             "CREATE": "#/components/schemas/VariableCreate",
@@ -23013,6 +22976,9 @@
           "textDecoration": {
             "$ref": "#/components/schemas/TypeStyleTextDecoration"
           },
+          "fontVariantPosition": {
+            "$ref": "#/components/schemas/TypeStyleFontVariantPosition"
+          },
           "textAutoResize": {
             "$ref": "#/components/schemas/TypeStyleTextAutoResize"
           },
@@ -23625,9 +23591,6 @@
         }
       },
       "ActivityLogEntity": {
-        "required": [
-          "type"
-        ],
         "oneOf": [
           {
             "$ref": "#/components/schemas/ActivityLogUserEntity"
@@ -23657,13 +23620,8 @@
             "$ref": "#/components/schemas/ActivityLogWidgetEntity"
           }
         ],
-        "properties": {
-          "type": {
-            "type": "string"
-          }
-        },
         "description": "The resource the actor took the action on. It can be a user, file, project or other resource types.",
-        "discriminator": {
+        "x-client-original-discriminator": {
           "propertyName": "type",
           "mapping": {
             "user": "#/components/schemas/ActivityLogUserEntity",
@@ -28297,6 +28255,33 @@
             {
               "value": "UNDERLINE",
               "name": "Underline"
+            }
+          ]
+        }
+      },
+      "TypeStyleFontVariantPosition": {
+        "enum": [
+          "NORMAL",
+          "SUPER",
+          "SUB"
+        ],
+        "type": "string",
+        "description": "Whether the text is formatted as superscript or subscript.",
+        "x-ms-enum": {
+          "name": "TypeStyleFontVariantPosition",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "NORMAL",
+              "name": "Normal"
+            },
+            {
+              "value": "SUPER",
+              "name": "Super"
+            },
+            {
+              "value": "SUB",
+              "name": "Sub"
             }
           ]
         }

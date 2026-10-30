@@ -11,36 +11,56 @@ namespace Soenneker.Figma.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ConnectorTextBackground : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("cornerRadius") is { } nullNodeCornerRadius && nullNodeCornerRadius.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CornerRadius = null;
+            if (parseNode.GetChildNode("cornerSmoothing") is { } nullNodeCornerSmoothing && nullNodeCornerSmoothing.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CornerSmoothing = null;
+            if (parseNode.GetChildNode("fills") is { } nullNodeFills && nullNodeFills.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Fills = null;
+            if (parseNode.GetChildNode("rectangleCornerRadii") is { } nullNodeRectangleCornerRadii && nullNodeRectangleCornerRadii.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RectangleCornerRadii = null;
+            if (parseNode.GetChildNode("styles") is { } nullNodeStyles && nullNodeStyles.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Styles = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Radius of each corner if a single radius is set for all corners</summary>
-        public double? CornerRadius { get; set; }
+        public double? CornerRadius { get => _explicitNullValueCornerRadius; set { _explicitNullValueCornerRadius = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cornerRadius"); else _explicitNullProperties?.Remove("cornerRadius"); } }
+        private double? _explicitNullValueCornerRadius = default!;
         /// <summary>A value that lets you control how &quot;smooth&quot; the corners are. Ranges from 0 to 1. 0 is the default and means that the corner is perfectly circular. A value of 0.6 means the corner matches the iOS 7 &quot;squircle&quot; icon shape. Other values produce various other curves.</summary>
-        public double? CornerSmoothing { get; set; }
+        public double? CornerSmoothing { get => _explicitNullValueCornerSmoothing; set { _explicitNullValueCornerSmoothing = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cornerSmoothing"); else _explicitNullProperties?.Remove("cornerSmoothing"); } }
+        private double? _explicitNullValueCornerSmoothing = default!;
         /// <summary>An array of fill paints applied to the node.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Figma.OpenApiClient.Models.Paint>? Fills { get; set; }
+        public List<global::Soenneker.Figma.OpenApiClient.Models.Paint>? Fills { get => _explicitNullValueFills; set { _explicitNullValueFills = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fills"); else _explicitNullProperties?.Remove("fills"); } }
+        private List<global::Soenneker.Figma.OpenApiClient.Models.Paint>? _explicitNullValueFills = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Figma.OpenApiClient.Models.Paint> Fills { get; set; }
+        public List<global::Soenneker.Figma.OpenApiClient.Models.Paint> Fills { get => _explicitNullValueFills; set { _explicitNullValueFills = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fills"); else _explicitNullProperties?.Remove("fills"); } }
+        private List<global::Soenneker.Figma.OpenApiClient.Models.Paint> _explicitNullValueFills = default!;
 #endif
         /// <summary>Array of length 4 of the radius of each corner of the frame, starting in the top left and proceeding clockwise.Values are given in the order top-left, top-right, bottom-right, bottom-left.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<double?>? RectangleCornerRadii { get; set; }
+        public List<double?>? RectangleCornerRadii { get => _explicitNullValueRectangleCornerRadii; set { _explicitNullValueRectangleCornerRadii = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rectangleCornerRadii"); else _explicitNullProperties?.Remove("rectangleCornerRadii"); } }
+        private List<double?>? _explicitNullValueRectangleCornerRadii = default!;
 #nullable restore
 #else
-        public List<double?> RectangleCornerRadii { get; set; }
+        public List<double?> RectangleCornerRadii { get => _explicitNullValueRectangleCornerRadii; set { _explicitNullValueRectangleCornerRadii = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rectangleCornerRadii"); else _explicitNullProperties?.Remove("rectangleCornerRadii"); } }
+        private List<double?> _explicitNullValueRectangleCornerRadii = default!;
 #endif
         /// <summary>A mapping of a StyleType to style ID (see Style) of styles present on this node. The style ID can be used to look up more information about the style in the top-level styles field.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.ConnectorTextBackgroundStyles? Styles { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.ConnectorTextBackgroundStyles? Styles { get => _explicitNullValueStyles; set { _explicitNullValueStyles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("styles"); else _explicitNullProperties?.Remove("styles"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.ConnectorTextBackgroundStyles? _explicitNullValueStyles = default!;
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.ConnectorTextBackgroundStyles Styles { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.ConnectorTextBackgroundStyles Styles { get => _explicitNullValueStyles; set { _explicitNullValueStyles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("styles"); else _explicitNullProperties?.Remove("styles"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.ConnectorTextBackgroundStyles _explicitNullValueStyles = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Figma.OpenApiClient.Models.ConnectorTextBackground"/> and sets the default values.
@@ -58,7 +78,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
         public static global::Soenneker.Figma.OpenApiClient.Models.ConnectorTextBackground CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Figma.OpenApiClient.Models.ConnectorTextBackground();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Figma.OpenApiClient.Models.ConnectorTextBackground(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -87,6 +107,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Figma.OpenApiClient.Models.Paint>("fills", Fills);
             writer.WriteCollectionOfPrimitiveValues<double?>("rectangleCornerRadii", RectangleCornerRadii);
             writer.WriteObjectValue<global::Soenneker.Figma.OpenApiClient.Models.ConnectorTextBackgroundStyles>("styles", Styles);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

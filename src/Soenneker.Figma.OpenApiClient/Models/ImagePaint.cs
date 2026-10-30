@@ -11,55 +11,88 @@ namespace Soenneker.Figma.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ImagePaint : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("blendMode") is { } nullNodeBlendMode && nullNodeBlendMode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BlendMode = null;
+            if (parseNode.GetChildNode("filters") is { } nullNodeFilters && nullNodeFilters.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Filters = null;
+            if (parseNode.GetChildNode("gifRef") is { } nullNodeGifRef && nullNodeGifRef.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GifRef = null;
+            if (parseNode.GetChildNode("imageRef") is { } nullNodeImageRef && nullNodeImageRef.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ImageRef = null;
+            if (parseNode.GetChildNode("imageTransform") is { } nullNodeImageTransform && nullNodeImageTransform.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ImageTransform = null;
+            if (parseNode.GetChildNode("opacity") is { } nullNodeOpacity && nullNodeOpacity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Opacity = null;
+            if (parseNode.GetChildNode("rotation") is { } nullNodeRotation && nullNodeRotation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Rotation = null;
+            if (parseNode.GetChildNode("scaleMode") is { } nullNodeScaleMode && nullNodeScaleMode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ScaleMode = null;
+            if (parseNode.GetChildNode("scalingFactor") is { } nullNodeScalingFactor && nullNodeScalingFactor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ScalingFactor = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("visible") is { } nullNodeVisible && nullNodeVisible.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Visible = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>How this node blends with nodes behind it in the scene</summary>
-        public global::Soenneker.Figma.OpenApiClient.Models.BlendMode? BlendMode { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.BlendMode? BlendMode { get => _explicitNullValueBlendMode; set { _explicitNullValueBlendMode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("blendMode"); else _explicitNullProperties?.Remove("blendMode"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.BlendMode? _explicitNullValueBlendMode = default!;
         /// <summary>Defines what image filters have been applied to this paint, if any. If this property is not defined, no filters have been applied.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.ImageFilters? Filters { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.ImageFilters? Filters { get => _explicitNullValueFilters; set { _explicitNullValueFilters = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("filters"); else _explicitNullProperties?.Remove("filters"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.ImageFilters? _explicitNullValueFilters = default!;
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.ImageFilters Filters { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.ImageFilters Filters { get => _explicitNullValueFilters; set { _explicitNullValueFilters = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("filters"); else _explicitNullProperties?.Remove("filters"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.ImageFilters _explicitNullValueFilters = default!;
 #endif
         /// <summary>A reference to an animated GIF embedded in this node. To download the image using this reference, use the `GET file images` endpoint to retrieve the mapping from image references to image URLs.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? GifRef { get; set; }
+        public string? GifRef { get => _explicitNullValueGifRef; set { _explicitNullValueGifRef = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gifRef"); else _explicitNullProperties?.Remove("gifRef"); } }
+        private string? _explicitNullValueGifRef = default!;
 #nullable restore
 #else
-        public string GifRef { get; set; }
+        public string GifRef { get => _explicitNullValueGifRef; set { _explicitNullValueGifRef = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gifRef"); else _explicitNullProperties?.Remove("gifRef"); } }
+        private string _explicitNullValueGifRef = default!;
 #endif
         /// <summary>A reference to an image embedded in this node. To download the image using this reference, use the `GET file images` endpoint to retrieve the mapping from image references to image URLs.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ImageRef { get; set; }
+        public string? ImageRef { get => _explicitNullValueImageRef; set { _explicitNullValueImageRef = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("imageRef"); else _explicitNullProperties?.Remove("imageRef"); } }
+        private string? _explicitNullValueImageRef = default!;
 #nullable restore
 #else
-        public string ImageRef { get; set; }
+        public string ImageRef { get => _explicitNullValueImageRef; set { _explicitNullValueImageRef = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("imageRef"); else _explicitNullProperties?.Remove("imageRef"); } }
+        private string _explicitNullValueImageRef = default!;
 #endif
         /// <summary>A transformation matrix is standard way in computer graphics to represent translation and rotation. These are the top two rows of a 3x3 matrix. The bottom row of the matrix is assumed to be [0, 0, 1]. This is known as an affine transform and is enough to represent translation, rotation, and skew.The identity transform is [[1, 0, 0], [0, 1, 0]].A translation matrix will typically look like:```[[1, 0, tx],  [0, 1, ty]]```and a rotation matrix will typically look like:```[[cos(angle), sin(angle), 0],  [-sin(angle), cos(angle), 0]]```Another way to think about this transform is as three vectors:- The x axis (t[0][0], t[1][0])- The y axis (t[0][1], t[1][1])- The translation offset (t[0][2], t[1][2])The most common usage of the Transform matrix is the `relativeTransform property`. This particular usage of the matrix has a few additional restrictions. The translation offset can take on any value but we do enforce that the axis vectors are unit vectors (i.e. have length 1). The axes are not required to be at 90° angles to each other.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? ImageTransform { get; set; }
+        public UntypedNode? ImageTransform { get => _explicitNullValueImageTransform; set { _explicitNullValueImageTransform = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("imageTransform"); else _explicitNullProperties?.Remove("imageTransform"); } }
+        private UntypedNode? _explicitNullValueImageTransform = default!;
 #nullable restore
 #else
-        public UntypedNode ImageTransform { get; set; }
+        public UntypedNode ImageTransform { get => _explicitNullValueImageTransform; set { _explicitNullValueImageTransform = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("imageTransform"); else _explicitNullProperties?.Remove("imageTransform"); } }
+        private UntypedNode _explicitNullValueImageTransform = default!;
 #endif
         /// <summary>Overall opacity of paint (colors within the paint can also have opacity values which would blend with this)</summary>
-        public double? Opacity { get; set; }
+        public double? Opacity { get => _explicitNullValueOpacity; set { _explicitNullValueOpacity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("opacity"); else _explicitNullProperties?.Remove("opacity"); } }
+        private double? _explicitNullValueOpacity = default!;
         /// <summary>Image rotation, in degrees.</summary>
-        public double? Rotation { get; set; }
+        public double? Rotation { get => _explicitNullValueRotation; set { _explicitNullValueRotation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rotation"); else _explicitNullProperties?.Remove("rotation"); } }
+        private double? _explicitNullValueRotation = default!;
         /// <summary>Image scaling mode.</summary>
-        public global::Soenneker.Figma.OpenApiClient.Models.ImagePaintScaleMode? ScaleMode { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.ImagePaintScaleMode? ScaleMode { get => _explicitNullValueScaleMode; set { _explicitNullValueScaleMode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scaleMode"); else _explicitNullProperties?.Remove("scaleMode"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.ImagePaintScaleMode? _explicitNullValueScaleMode = default!;
         /// <summary>Amount image is scaled by in tiling, only present if scaleMode is `TILE`.</summary>
-        public double? ScalingFactor { get; set; }
+        public double? ScalingFactor { get => _explicitNullValueScalingFactor; set { _explicitNullValueScalingFactor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scalingFactor"); else _explicitNullProperties?.Remove("scalingFactor"); } }
+        private double? _explicitNullValueScalingFactor = default!;
         /// <summary>The string literal &quot;IMAGE&quot; representing the paint&apos;s type. Always check the `type` before reading other properties.</summary>
-        public global::Soenneker.Figma.OpenApiClient.Models.ImageType? Type { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.ImageType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.ImageType? _explicitNullValueType = default!;
         /// <summary>Is the paint enabled?</summary>
-        public bool? Visible { get; set; }
+        public bool? Visible { get => _explicitNullValueVisible; set { _explicitNullValueVisible = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("visible"); else _explicitNullProperties?.Remove("visible"); } }
+        private bool? _explicitNullValueVisible = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Figma.OpenApiClient.Models.ImagePaint"/> and sets the default values.
         /// </summary>
@@ -78,7 +111,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
         public static global::Soenneker.Figma.OpenApiClient.Models.ImagePaint CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Figma.OpenApiClient.Models.ImagePaint();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Figma.OpenApiClient.Models.ImagePaint(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -119,6 +152,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
             writer.WriteDoubleValue("scalingFactor", ScalingFactor);
             writer.WriteEnumValue<global::Soenneker.Figma.OpenApiClient.Models.ImageType>("type", Type);
             writer.WriteBoolValue("visible", Visible);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

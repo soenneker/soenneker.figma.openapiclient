@@ -11,24 +11,37 @@ namespace Soenneker.Figma.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class GetWebhooksResponseResponse : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("pagination") is { } nullNodePagination && nullNodePagination.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Pagination = null;
+            if (parseNode.GetChildNode("webhooks") is { } nullNodeWebhooks && nullNodeWebhooks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Webhooks = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>If pagination is needed due to the length of the response, identifies the next and previous pages.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.ResponsePagination? Pagination { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.ResponsePagination? Pagination { get => _explicitNullValuePagination; set { _explicitNullValuePagination = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pagination"); else _explicitNullProperties?.Remove("pagination"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.ResponsePagination? _explicitNullValuePagination = default!;
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.ResponsePagination Pagination { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.ResponsePagination Pagination { get => _explicitNullValuePagination; set { _explicitNullValuePagination = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pagination"); else _explicitNullProperties?.Remove("pagination"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.ResponsePagination _explicitNullValuePagination = default!;
 #endif
         /// <summary>An array of webhooks.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Figma.OpenApiClient.Models.WebhookV2>? Webhooks { get; set; }
+        public List<global::Soenneker.Figma.OpenApiClient.Models.WebhookV2>? Webhooks { get => _explicitNullValueWebhooks; set { _explicitNullValueWebhooks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("webhooks"); else _explicitNullProperties?.Remove("webhooks"); } }
+        private List<global::Soenneker.Figma.OpenApiClient.Models.WebhookV2>? _explicitNullValueWebhooks = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Figma.OpenApiClient.Models.WebhookV2> Webhooks { get; set; }
+        public List<global::Soenneker.Figma.OpenApiClient.Models.WebhookV2> Webhooks { get => _explicitNullValueWebhooks; set { _explicitNullValueWebhooks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("webhooks"); else _explicitNullProperties?.Remove("webhooks"); } }
+        private List<global::Soenneker.Figma.OpenApiClient.Models.WebhookV2> _explicitNullValueWebhooks = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Figma.OpenApiClient.Models.GetWebhooksResponseResponse"/> and sets the default values.
@@ -45,7 +58,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
         public static global::Soenneker.Figma.OpenApiClient.Models.GetWebhooksResponseResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Figma.OpenApiClient.Models.GetWebhooksResponseResponse();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Figma.OpenApiClient.Models.GetWebhooksResponseResponse(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -68,6 +81,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Figma.OpenApiClient.Models.ResponsePagination>("pagination", Pagination);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Figma.OpenApiClient.Models.WebhookV2>("webhooks", Webhooks);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

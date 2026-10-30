@@ -12,7 +12,12 @@ namespace Soenneker.Figma.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class VariableValue : IComposedTypeWrapper, IParsable
-    {
+    , global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder {
+        // Preserve ambiguous union payloads without inventing a discriminator.
+        /// <summary>The complete payload when no unique typed union branch can be selected.</summary>
+        public global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode UnrecognizedValue { get; set; } = null!;
+        public global::System.Collections.Generic.IDictionary<string, object> AdditionalData { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
+
         /// <summary>Composed type representation for type <see cref="bool"/></summary>
         public bool? Boolean { get; set; }
         /// <summary>Composed type representation for type <see cref="double"/></summary>
@@ -77,29 +82,38 @@ namespace Soenneker.Figma.OpenApiClient.Models
             var result = new global::Soenneker.Figma.OpenApiClient.Models.VariableValue();
             if("Rgb".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.Rgb = new global::Soenneker.Figma.OpenApiClient.Models.Rgb();
+                
             }
             else if("Rgba".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.Rgba = new global::Soenneker.Figma.OpenApiClient.Models.Rgba();
+                
             }
             else if("VariableAlias".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.VariableAlias = new global::Soenneker.Figma.OpenApiClient.Models.VariableAlias();
+                
             }
-            else if(parseNode.GetBoolValue() is bool booleanValue)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedBoolean && parseNode.GetBoolValue() is bool booleanValue)
             {
                 result.Boolean = booleanValue;
             }
-            else if(parseNode.GetDoubleValue() is double doubleValue)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is (global::Microsoft.Kiota.Abstractions.Serialization.UntypedInteger or global::Microsoft.Kiota.Abstractions.Serialization.UntypedLong or global::Microsoft.Kiota.Abstractions.Serialization.UntypedFloat or global::Microsoft.Kiota.Abstractions.Serialization.UntypedDouble or global::Microsoft.Kiota.Abstractions.Serialization.UntypedDecimal) && parseNode.GetDoubleValue() is double doubleValue)
             {
                 result.Double = doubleValue;
             }
-            else if(parseNode.GetStringValue() is string stringValue)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString && parseNode.GetStringValue() is string stringValue)
             {
                 result.String = stringValue;
             }
-            return result;
+            
+            var unionPayload = parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue);
+            bool matchesUnionBranch0 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("r") != null && parseNode.GetChildNode("g") != null && parseNode.GetChildNode("b") != null))();
+            bool matchesUnionBranch1 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("r") != null && parseNode.GetChildNode("g") != null && parseNode.GetChildNode("b") != null && parseNode.GetChildNode("a") != null))();
+            bool matchesUnionBranch2 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("type") != null && (parseNode.GetChildNode("type")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag1 && ("VARIABLE_ALIAS".Equals(tag1.GetValue(), global::System.StringComparison.Ordinal))) && parseNode.GetChildNode("id") != null))();
+            if (result.Boolean == null && result.Double == null && result.Rgb == null && result.Rgba == null && result.String == null && result.VariableAlias == null && result.VariableComposedColor == null && result.VariableValueMember1 == null && matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch2) result.Rgb = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Figma.OpenApiClient.Models.Rgb(), parseNode);
+            if (result.Boolean == null && result.Double == null && result.Rgb == null && result.Rgba == null && result.String == null && result.VariableAlias == null && result.VariableComposedColor == null && result.VariableValueMember1 == null && matchesUnionBranch1 && !matchesUnionBranch0 && !matchesUnionBranch2) result.Rgba = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Figma.OpenApiClient.Models.Rgba(), parseNode);
+            if (result.Boolean == null && result.Double == null && result.Rgb == null && result.Rgba == null && result.String == null && result.VariableAlias == null && result.VariableComposedColor == null && result.VariableValueMember1 == null && matchesUnionBranch2 && !matchesUnionBranch0 && !matchesUnionBranch1) result.VariableAlias = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Figma.OpenApiClient.Models.VariableAlias(), parseNode);
+            if (result.Boolean == null && result.Double == null && result.Rgb == null && result.Rgba == null && result.String == null && result.VariableAlias == null && result.VariableComposedColor == null && result.VariableValueMember1 == null) result.UnrecognizedValue = unionPayload;
+return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -135,25 +149,36 @@ namespace Soenneker.Figma.OpenApiClient.Models
         /// <param name="writer">Serialization writer to use to serialize this model</param>
         public virtual void Serialize(ISerializationWriter writer)
         {
+            if (global::System.Object.ReferenceEquals(writer, null)) throw new global::System.ArgumentNullException(nameof(writer));
+            if (Boolean == null && Double == null && Rgb == null && Rgba == null && String == null && VariableAlias == null && VariableComposedColor == null && VariableValueMember1 == null) { if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawObject) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData, rawObject)); else if (UnrecognizedValue != null) writer.WriteObjectValue(null, UnrecognizedValue); else if (AdditionalData.Count > 0) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData)); else writer.WriteNullValue(null); return; }
+            if (Rgb != null && Boolean == null && Double == null && Rgba == null && String == null && VariableAlias == null && VariableComposedColor == null && VariableValueMember1 == null) { if (Rgb is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, Rgb); return; }
+            if (Rgba != null && Boolean == null && Double == null && Rgb == null && String == null && VariableAlias == null && VariableComposedColor == null && VariableValueMember1 == null) { if (Rgba is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, Rgba); return; }
+            if (VariableAlias != null && Boolean == null && Double == null && Rgb == null && Rgba == null && String == null && VariableComposedColor == null && VariableValueMember1 == null) { if (VariableAlias is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, VariableAlias); return; }
+
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             if(Rgb != null)
             {
+                if (Rgb is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Figma.OpenApiClient.Models.Rgb>(null, Rgb);
             }
             else if(Rgba != null)
             {
+                if (Rgba is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Figma.OpenApiClient.Models.Rgba>(null, Rgba);
             }
             else if(VariableAlias != null)
             {
+                if (VariableAlias is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Figma.OpenApiClient.Models.VariableAlias>(null, VariableAlias);
             }
             else if(VariableComposedColor != null)
             {
+                if (VariableComposedColor is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Figma.OpenApiClient.Models.VariableComposedColor>(null, VariableComposedColor);
             }
             else if(VariableValueMember1 != null)
             {
+                if (VariableValueMember1 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Figma.OpenApiClient.Models.VariableValueMember1>(null, VariableValueMember1);
             }
             else if(Boolean != null)

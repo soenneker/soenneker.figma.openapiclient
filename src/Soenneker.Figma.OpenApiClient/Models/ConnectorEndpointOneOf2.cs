@@ -11,19 +11,31 @@ namespace Soenneker.Figma.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ConnectorEndpointOneOf2 : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("endpointNodeId") is { } nullNodeEndpointNodeId && nullNodeEndpointNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EndpointNodeId = null;
+            if (parseNode.GetChildNode("magnet") is { } nullNodeMagnet && nullNodeMagnet.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Magnet = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Node ID that this endpoint attaches to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EndpointNodeId { get; set; }
+        public string? EndpointNodeId { get => _explicitNullValueEndpointNodeId; set { _explicitNullValueEndpointNodeId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("endpointNodeId"); else _explicitNullProperties?.Remove("endpointNodeId"); } }
+        private string? _explicitNullValueEndpointNodeId = default!;
 #nullable restore
 #else
-        public string EndpointNodeId { get; set; }
+        public string EndpointNodeId { get => _explicitNullValueEndpointNodeId; set { _explicitNullValueEndpointNodeId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("endpointNodeId"); else _explicitNullProperties?.Remove("endpointNodeId"); } }
+        private string _explicitNullValueEndpointNodeId = default!;
 #endif
         /// <summary>The magnet type is a string enum.</summary>
-        public global::Soenneker.Figma.OpenApiClient.Models.ConnectorEndpointOneOf2Magnet? Magnet { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.ConnectorEndpointOneOf2Magnet? Magnet { get => _explicitNullValueMagnet; set { _explicitNullValueMagnet = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("magnet"); else _explicitNullProperties?.Remove("magnet"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.ConnectorEndpointOneOf2Magnet? _explicitNullValueMagnet = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Figma.OpenApiClient.Models.ConnectorEndpointOneOf2"/> and sets the default values.
         /// </summary>
@@ -39,7 +51,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
         public static global::Soenneker.Figma.OpenApiClient.Models.ConnectorEndpointOneOf2 CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Figma.OpenApiClient.Models.ConnectorEndpointOneOf2();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Figma.OpenApiClient.Models.ConnectorEndpointOneOf2(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -62,6 +74,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("endpointNodeId", EndpointNodeId);
             writer.WriteEnumValue<global::Soenneker.Figma.OpenApiClient.Models.ConnectorEndpointOneOf2Magnet>("magnet", Magnet);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

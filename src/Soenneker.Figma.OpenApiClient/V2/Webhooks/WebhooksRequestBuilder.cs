@@ -68,6 +68,8 @@ namespace Soenneker.Figma.OpenApiClient.V2.Webhooks
             {
                 { "400", global::Soenneker.Figma.OpenApiClient.Models.BadRequestErrorResponseWithErrorBooleanResponse.CreateFromDiscriminatorValue },
                 { "403", global::Soenneker.Figma.OpenApiClient.Models.ForbiddenErrorResponseWithErrMessageResponse.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Figma.OpenApiClient.Models.GetWebhooksResponseResponse>(requestInfo, global::Soenneker.Figma.OpenApiClient.Models.GetWebhooksResponseResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -99,6 +101,8 @@ namespace Soenneker.Figma.OpenApiClient.V2.Webhooks
                 { "403", global::Soenneker.Figma.OpenApiClient.Models.ForbiddenErrorResponseWithErrMessageResponse.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Figma.OpenApiClient.Models.TooManyRequestsErrorResponseWithErrMessageResponse.CreateFromDiscriminatorValue },
                 { "500", global::Soenneker.Figma.OpenApiClient.Models.InternalServerErrorResponseWithErrMessageResponse.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Figma.OpenApiClient.Models.WebhookV2>(requestInfo, global::Soenneker.Figma.OpenApiClient.Models.WebhookV2.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

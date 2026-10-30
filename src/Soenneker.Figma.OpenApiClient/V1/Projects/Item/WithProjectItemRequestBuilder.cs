@@ -17,11 +17,13 @@ namespace Soenneker.Figma.OpenApiClient.V1.Projects.Item
     public partial class WithProjectItemRequestBuilder : BaseRequestBuilder
     {
         /// <summary>The files property</summary>
+        [Obsolete("")]
         public global::Soenneker.Figma.OpenApiClient.V1.Projects.Item.Files.FilesRequestBuilder Files
         {
             get => new global::Soenneker.Figma.OpenApiClient.V1.Projects.Item.Files.FilesRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The meta property</summary>
+        [Obsolete("")]
         public global::Soenneker.Figma.OpenApiClient.V1.Projects.Item.Meta.MetaRequestBuilder Meta
         {
             get => new global::Soenneker.Figma.OpenApiClient.V1.Projects.Item.Meta.MetaRequestBuilder(PathParameters, RequestAdapter);

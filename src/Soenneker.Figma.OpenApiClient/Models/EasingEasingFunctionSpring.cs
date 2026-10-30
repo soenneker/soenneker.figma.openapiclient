@@ -12,15 +12,28 @@ namespace Soenneker.Figma.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class EasingEasingFunctionSpring : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("damping") is { } nullNodeDamping && nullNodeDamping.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Damping = null;
+            if (parseNode.GetChildNode("mass") is { } nullNodeMass && nullNodeMass.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Mass = null;
+            if (parseNode.GetChildNode("stiffness") is { } nullNodeStiffness && nullNodeStiffness.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Stiffness = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The damping property</summary>
-        public double? Damping { get; set; }
+        public double? Damping { get => _explicitNullValueDamping; set { _explicitNullValueDamping = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("damping"); else _explicitNullProperties?.Remove("damping"); } }
+        private double? _explicitNullValueDamping = default!;
         /// <summary>The mass property</summary>
-        public double? Mass { get; set; }
+        public double? Mass { get => _explicitNullValueMass; set { _explicitNullValueMass = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mass"); else _explicitNullProperties?.Remove("mass"); } }
+        private double? _explicitNullValueMass = default!;
         /// <summary>The stiffness property</summary>
-        public double? Stiffness { get; set; }
+        public double? Stiffness { get => _explicitNullValueStiffness; set { _explicitNullValueStiffness = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stiffness"); else _explicitNullProperties?.Remove("stiffness"); } }
+        private double? _explicitNullValueStiffness = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Figma.OpenApiClient.Models.EasingEasingFunctionSpring"/> and sets the default values.
         /// </summary>
@@ -36,7 +49,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
         public static global::Soenneker.Figma.OpenApiClient.Models.EasingEasingFunctionSpring CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Figma.OpenApiClient.Models.EasingEasingFunctionSpring();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Figma.OpenApiClient.Models.EasingEasingFunctionSpring(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -61,6 +74,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
             writer.WriteDoubleValue("damping", Damping);
             writer.WriteDoubleValue("mass", Mass);
             writer.WriteDoubleValue("stiffness", Stiffness);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

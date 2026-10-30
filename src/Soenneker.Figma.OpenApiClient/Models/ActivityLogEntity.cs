@@ -12,7 +12,12 @@ namespace Soenneker.Figma.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ActivityLogEntity : IComposedTypeWrapper, IParsable
-    {
+    , global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder {
+        // Preserve ambiguous union payloads without inventing a discriminator.
+        /// <summary>The complete payload when no unique typed union branch can be selected.</summary>
+        public global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode UnrecognizedValue { get; set; } = null!;
+        public global::System.Collections.Generic.IDictionary<string, object> AdditionalData { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
+
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Figma.OpenApiClient.Models.ActivityLogFileEntity"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -93,45 +98,66 @@ namespace Soenneker.Figma.OpenApiClient.Models
         public static global::Soenneker.Figma.OpenApiClient.Models.ActivityLogEntity CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            var mappingValue = parseNode.GetChildNode("type")?.GetStringValue();
+            var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
             var result = new global::Soenneker.Figma.OpenApiClient.Models.ActivityLogEntity();
-            if("file".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            if("ActivityLogFileEntity".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.ActivityLogFileEntity = new global::Soenneker.Figma.OpenApiClient.Models.ActivityLogFileEntity();
+                
             }
-            else if("file_repo".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            else if("ActivityLogFileRepoEntity".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.ActivityLogFileRepoEntity = new global::Soenneker.Figma.OpenApiClient.Models.ActivityLogFileRepoEntity();
+                
             }
-            else if("org".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            else if("ActivityLogOrgEntity".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.ActivityLogOrgEntity = new global::Soenneker.Figma.OpenApiClient.Models.ActivityLogOrgEntity();
+                
             }
-            else if("plugin".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            else if("ActivityLogPluginEntity".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.ActivityLogPluginEntity = new global::Soenneker.Figma.OpenApiClient.Models.ActivityLogPluginEntity();
+                
             }
-            else if("project".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            else if("ActivityLogProjectEntity".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.ActivityLogProjectEntity = new global::Soenneker.Figma.OpenApiClient.Models.ActivityLogProjectEntity();
+                
             }
-            else if("team".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            else if("ActivityLogTeamEntity".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.ActivityLogTeamEntity = new global::Soenneker.Figma.OpenApiClient.Models.ActivityLogTeamEntity();
+                
             }
-            else if("user".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            else if("ActivityLogUserEntity".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.ActivityLogUserEntity = new global::Soenneker.Figma.OpenApiClient.Models.ActivityLogUserEntity();
+                
             }
-            else if("widget".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            else if("ActivityLogWidgetEntity".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.ActivityLogWidgetEntity = new global::Soenneker.Figma.OpenApiClient.Models.ActivityLogWidgetEntity();
+                
             }
-            else if("workspace".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            else if("ActivityLogWorkspaceEntity".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
-                result.ActivityLogWorkspaceEntity = new global::Soenneker.Figma.OpenApiClient.Models.ActivityLogWorkspaceEntity();
+                
             }
-            return result;
+            
+            var unionPayload = parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue);
+            bool matchesUnionBranch0 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("type") != null && (parseNode.GetChildNode("type")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag1 && ("user".Equals(tag1.GetValue(), global::System.StringComparison.Ordinal))) && parseNode.GetChildNode("id") != null && parseNode.GetChildNode("name") != null && parseNode.GetChildNode("email") != null))();
+            bool matchesUnionBranch1 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("type") != null && (parseNode.GetChildNode("type")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag1 && ("file".Equals(tag1.GetValue(), global::System.StringComparison.Ordinal))) && parseNode.GetChildNode("key") != null && parseNode.GetChildNode("name") != null && parseNode.GetChildNode("editor_type") != null && (parseNode.GetChildNode("editor_type")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag5 && ("figma".Equals(tag5.GetValue(), global::System.StringComparison.Ordinal) || "figjam".Equals(tag5.GetValue(), global::System.StringComparison.Ordinal))) && parseNode.GetChildNode("link_access") != null && (parseNode.GetChildNode("link_access")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag7 && ("view".Equals(tag7.GetValue(), global::System.StringComparison.Ordinal) || "edit".Equals(tag7.GetValue(), global::System.StringComparison.Ordinal) || "org_view".Equals(tag7.GetValue(), global::System.StringComparison.Ordinal) || "org_edit".Equals(tag7.GetValue(), global::System.StringComparison.Ordinal) || "inherit".Equals(tag7.GetValue(), global::System.StringComparison.Ordinal))) && parseNode.GetChildNode("proto_link_access") != null && (parseNode.GetChildNode("proto_link_access")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag9 && ("view".Equals(tag9.GetValue(), global::System.StringComparison.Ordinal) || "org_view".Equals(tag9.GetValue(), global::System.StringComparison.Ordinal) || "inherit".Equals(tag9.GetValue(), global::System.StringComparison.Ordinal)))))();
+            bool matchesUnionBranch2 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("type") != null && (parseNode.GetChildNode("type")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag1 && ("file_repo".Equals(tag1.GetValue(), global::System.StringComparison.Ordinal))) && parseNode.GetChildNode("id") != null && parseNode.GetChildNode("name") != null && parseNode.GetChildNode("main_file_key") != null))();
+            bool matchesUnionBranch3 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("type") != null && (parseNode.GetChildNode("type")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag1 && ("project".Equals(tag1.GetValue(), global::System.StringComparison.Ordinal))) && parseNode.GetChildNode("id") != null && parseNode.GetChildNode("name") != null))();
+            bool matchesUnionBranch4 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("type") != null && (parseNode.GetChildNode("type")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag1 && ("team".Equals(tag1.GetValue(), global::System.StringComparison.Ordinal))) && parseNode.GetChildNode("id") != null && parseNode.GetChildNode("name") != null))();
+            bool matchesUnionBranch5 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("type") != null && (parseNode.GetChildNode("type")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag1 && ("workspace".Equals(tag1.GetValue(), global::System.StringComparison.Ordinal))) && parseNode.GetChildNode("id") != null && parseNode.GetChildNode("name") != null))();
+            bool matchesUnionBranch6 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("type") != null && (parseNode.GetChildNode("type")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag1 && ("org".Equals(tag1.GetValue(), global::System.StringComparison.Ordinal))) && parseNode.GetChildNode("id") != null && parseNode.GetChildNode("name") != null))();
+            bool matchesUnionBranch7 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("type") != null && (parseNode.GetChildNode("type")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag1 && ("plugin".Equals(tag1.GetValue(), global::System.StringComparison.Ordinal))) && parseNode.GetChildNode("id") != null && parseNode.GetChildNode("name") != null && parseNode.GetChildNode("editor_type") != null && (parseNode.GetChildNode("editor_type")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag5 && ("figma".Equals(tag5.GetValue(), global::System.StringComparison.Ordinal) || "figjam".Equals(tag5.GetValue(), global::System.StringComparison.Ordinal)))))();
+            bool matchesUnionBranch8 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("type") != null && (parseNode.GetChildNode("type")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag1 && ("widget".Equals(tag1.GetValue(), global::System.StringComparison.Ordinal))) && parseNode.GetChildNode("id") != null && parseNode.GetChildNode("name") != null && parseNode.GetChildNode("editor_type") != null && (parseNode.GetChildNode("editor_type")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag5 && ("figma".Equals(tag5.GetValue(), global::System.StringComparison.Ordinal) || "figjam".Equals(tag5.GetValue(), global::System.StringComparison.Ordinal)))))();
+            if (result.ActivityLogFileEntity == null && result.ActivityLogFileRepoEntity == null && result.ActivityLogOrgEntity == null && result.ActivityLogPluginEntity == null && result.ActivityLogProjectEntity == null && result.ActivityLogTeamEntity == null && result.ActivityLogUserEntity == null && result.ActivityLogWidgetEntity == null && result.ActivityLogWorkspaceEntity == null && matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch2 && !matchesUnionBranch3 && !matchesUnionBranch4 && !matchesUnionBranch5 && !matchesUnionBranch6 && !matchesUnionBranch7 && !matchesUnionBranch8) result.ActivityLogUserEntity = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Figma.OpenApiClient.Models.ActivityLogUserEntity(), parseNode);
+            if (result.ActivityLogFileEntity == null && result.ActivityLogFileRepoEntity == null && result.ActivityLogOrgEntity == null && result.ActivityLogPluginEntity == null && result.ActivityLogProjectEntity == null && result.ActivityLogTeamEntity == null && result.ActivityLogUserEntity == null && result.ActivityLogWidgetEntity == null && result.ActivityLogWorkspaceEntity == null && matchesUnionBranch1 && !matchesUnionBranch0 && !matchesUnionBranch2 && !matchesUnionBranch3 && !matchesUnionBranch4 && !matchesUnionBranch5 && !matchesUnionBranch6 && !matchesUnionBranch7 && !matchesUnionBranch8) result.ActivityLogFileEntity = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Figma.OpenApiClient.Models.ActivityLogFileEntity(), parseNode);
+            if (result.ActivityLogFileEntity == null && result.ActivityLogFileRepoEntity == null && result.ActivityLogOrgEntity == null && result.ActivityLogPluginEntity == null && result.ActivityLogProjectEntity == null && result.ActivityLogTeamEntity == null && result.ActivityLogUserEntity == null && result.ActivityLogWidgetEntity == null && result.ActivityLogWorkspaceEntity == null && matchesUnionBranch2 && !matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch3 && !matchesUnionBranch4 && !matchesUnionBranch5 && !matchesUnionBranch6 && !matchesUnionBranch7 && !matchesUnionBranch8) result.ActivityLogFileRepoEntity = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Figma.OpenApiClient.Models.ActivityLogFileRepoEntity(), parseNode);
+            if (result.ActivityLogFileEntity == null && result.ActivityLogFileRepoEntity == null && result.ActivityLogOrgEntity == null && result.ActivityLogPluginEntity == null && result.ActivityLogProjectEntity == null && result.ActivityLogTeamEntity == null && result.ActivityLogUserEntity == null && result.ActivityLogWidgetEntity == null && result.ActivityLogWorkspaceEntity == null && matchesUnionBranch3 && !matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch2 && !matchesUnionBranch4 && !matchesUnionBranch5 && !matchesUnionBranch6 && !matchesUnionBranch7 && !matchesUnionBranch8) result.ActivityLogProjectEntity = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Figma.OpenApiClient.Models.ActivityLogProjectEntity(), parseNode);
+            if (result.ActivityLogFileEntity == null && result.ActivityLogFileRepoEntity == null && result.ActivityLogOrgEntity == null && result.ActivityLogPluginEntity == null && result.ActivityLogProjectEntity == null && result.ActivityLogTeamEntity == null && result.ActivityLogUserEntity == null && result.ActivityLogWidgetEntity == null && result.ActivityLogWorkspaceEntity == null && matchesUnionBranch4 && !matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch2 && !matchesUnionBranch3 && !matchesUnionBranch5 && !matchesUnionBranch6 && !matchesUnionBranch7 && !matchesUnionBranch8) result.ActivityLogTeamEntity = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Figma.OpenApiClient.Models.ActivityLogTeamEntity(), parseNode);
+            if (result.ActivityLogFileEntity == null && result.ActivityLogFileRepoEntity == null && result.ActivityLogOrgEntity == null && result.ActivityLogPluginEntity == null && result.ActivityLogProjectEntity == null && result.ActivityLogTeamEntity == null && result.ActivityLogUserEntity == null && result.ActivityLogWidgetEntity == null && result.ActivityLogWorkspaceEntity == null && matchesUnionBranch5 && !matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch2 && !matchesUnionBranch3 && !matchesUnionBranch4 && !matchesUnionBranch6 && !matchesUnionBranch7 && !matchesUnionBranch8) result.ActivityLogWorkspaceEntity = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Figma.OpenApiClient.Models.ActivityLogWorkspaceEntity(), parseNode);
+            if (result.ActivityLogFileEntity == null && result.ActivityLogFileRepoEntity == null && result.ActivityLogOrgEntity == null && result.ActivityLogPluginEntity == null && result.ActivityLogProjectEntity == null && result.ActivityLogTeamEntity == null && result.ActivityLogUserEntity == null && result.ActivityLogWidgetEntity == null && result.ActivityLogWorkspaceEntity == null && matchesUnionBranch6 && !matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch2 && !matchesUnionBranch3 && !matchesUnionBranch4 && !matchesUnionBranch5 && !matchesUnionBranch7 && !matchesUnionBranch8) result.ActivityLogOrgEntity = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Figma.OpenApiClient.Models.ActivityLogOrgEntity(), parseNode);
+            if (result.ActivityLogFileEntity == null && result.ActivityLogFileRepoEntity == null && result.ActivityLogOrgEntity == null && result.ActivityLogPluginEntity == null && result.ActivityLogProjectEntity == null && result.ActivityLogTeamEntity == null && result.ActivityLogUserEntity == null && result.ActivityLogWidgetEntity == null && result.ActivityLogWorkspaceEntity == null && matchesUnionBranch7 && !matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch2 && !matchesUnionBranch3 && !matchesUnionBranch4 && !matchesUnionBranch5 && !matchesUnionBranch6 && !matchesUnionBranch8) result.ActivityLogPluginEntity = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Figma.OpenApiClient.Models.ActivityLogPluginEntity(), parseNode);
+            if (result.ActivityLogFileEntity == null && result.ActivityLogFileRepoEntity == null && result.ActivityLogOrgEntity == null && result.ActivityLogPluginEntity == null && result.ActivityLogProjectEntity == null && result.ActivityLogTeamEntity == null && result.ActivityLogUserEntity == null && result.ActivityLogWidgetEntity == null && result.ActivityLogWorkspaceEntity == null && matchesUnionBranch8 && !matchesUnionBranch0 && !matchesUnionBranch1 && !matchesUnionBranch2 && !matchesUnionBranch3 && !matchesUnionBranch4 && !matchesUnionBranch5 && !matchesUnionBranch6 && !matchesUnionBranch7) result.ActivityLogWidgetEntity = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Figma.OpenApiClient.Models.ActivityLogWidgetEntity(), parseNode);
+            if (result.ActivityLogFileEntity == null && result.ActivityLogFileRepoEntity == null && result.ActivityLogOrgEntity == null && result.ActivityLogPluginEntity == null && result.ActivityLogProjectEntity == null && result.ActivityLogTeamEntity == null && result.ActivityLogUserEntity == null && result.ActivityLogWidgetEntity == null && result.ActivityLogWorkspaceEntity == null) result.UnrecognizedValue = unionPayload;
+return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -183,41 +209,62 @@ namespace Soenneker.Figma.OpenApiClient.Models
         /// <param name="writer">Serialization writer to use to serialize this model</param>
         public virtual void Serialize(ISerializationWriter writer)
         {
+            if (global::System.Object.ReferenceEquals(writer, null)) throw new global::System.ArgumentNullException(nameof(writer));
+            if (ActivityLogFileEntity == null && ActivityLogFileRepoEntity == null && ActivityLogOrgEntity == null && ActivityLogPluginEntity == null && ActivityLogProjectEntity == null && ActivityLogTeamEntity == null && ActivityLogUserEntity == null && ActivityLogWidgetEntity == null && ActivityLogWorkspaceEntity == null) { if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawObject) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData, rawObject)); else if (UnrecognizedValue != null) writer.WriteObjectValue(null, UnrecognizedValue); else if (AdditionalData.Count > 0) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData)); else writer.WriteNullValue(null); return; }
+            if (ActivityLogFileEntity != null && ActivityLogFileRepoEntity == null && ActivityLogOrgEntity == null && ActivityLogPluginEntity == null && ActivityLogProjectEntity == null && ActivityLogTeamEntity == null && ActivityLogUserEntity == null && ActivityLogWidgetEntity == null && ActivityLogWorkspaceEntity == null) { if (ActivityLogFileEntity is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, ActivityLogFileEntity); return; }
+            if (ActivityLogFileRepoEntity != null && ActivityLogFileEntity == null && ActivityLogOrgEntity == null && ActivityLogPluginEntity == null && ActivityLogProjectEntity == null && ActivityLogTeamEntity == null && ActivityLogUserEntity == null && ActivityLogWidgetEntity == null && ActivityLogWorkspaceEntity == null) { if (ActivityLogFileRepoEntity is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, ActivityLogFileRepoEntity); return; }
+            if (ActivityLogOrgEntity != null && ActivityLogFileEntity == null && ActivityLogFileRepoEntity == null && ActivityLogPluginEntity == null && ActivityLogProjectEntity == null && ActivityLogTeamEntity == null && ActivityLogUserEntity == null && ActivityLogWidgetEntity == null && ActivityLogWorkspaceEntity == null) { if (ActivityLogOrgEntity is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, ActivityLogOrgEntity); return; }
+            if (ActivityLogPluginEntity != null && ActivityLogFileEntity == null && ActivityLogFileRepoEntity == null && ActivityLogOrgEntity == null && ActivityLogProjectEntity == null && ActivityLogTeamEntity == null && ActivityLogUserEntity == null && ActivityLogWidgetEntity == null && ActivityLogWorkspaceEntity == null) { if (ActivityLogPluginEntity is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, ActivityLogPluginEntity); return; }
+            if (ActivityLogProjectEntity != null && ActivityLogFileEntity == null && ActivityLogFileRepoEntity == null && ActivityLogOrgEntity == null && ActivityLogPluginEntity == null && ActivityLogTeamEntity == null && ActivityLogUserEntity == null && ActivityLogWidgetEntity == null && ActivityLogWorkspaceEntity == null) { if (ActivityLogProjectEntity is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, ActivityLogProjectEntity); return; }
+            if (ActivityLogTeamEntity != null && ActivityLogFileEntity == null && ActivityLogFileRepoEntity == null && ActivityLogOrgEntity == null && ActivityLogPluginEntity == null && ActivityLogProjectEntity == null && ActivityLogUserEntity == null && ActivityLogWidgetEntity == null && ActivityLogWorkspaceEntity == null) { if (ActivityLogTeamEntity is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, ActivityLogTeamEntity); return; }
+            if (ActivityLogUserEntity != null && ActivityLogFileEntity == null && ActivityLogFileRepoEntity == null && ActivityLogOrgEntity == null && ActivityLogPluginEntity == null && ActivityLogProjectEntity == null && ActivityLogTeamEntity == null && ActivityLogWidgetEntity == null && ActivityLogWorkspaceEntity == null) { if (ActivityLogUserEntity is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, ActivityLogUserEntity); return; }
+            if (ActivityLogWidgetEntity != null && ActivityLogFileEntity == null && ActivityLogFileRepoEntity == null && ActivityLogOrgEntity == null && ActivityLogPluginEntity == null && ActivityLogProjectEntity == null && ActivityLogTeamEntity == null && ActivityLogUserEntity == null && ActivityLogWorkspaceEntity == null) { if (ActivityLogWidgetEntity is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, ActivityLogWidgetEntity); return; }
+            if (ActivityLogWorkspaceEntity != null && ActivityLogFileEntity == null && ActivityLogFileRepoEntity == null && ActivityLogOrgEntity == null && ActivityLogPluginEntity == null && ActivityLogProjectEntity == null && ActivityLogTeamEntity == null && ActivityLogUserEntity == null && ActivityLogWidgetEntity == null) { if (ActivityLogWorkspaceEntity is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, ActivityLogWorkspaceEntity); return; }
+
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             if(ActivityLogFileEntity != null)
             {
+                if (ActivityLogFileEntity is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Figma.OpenApiClient.Models.ActivityLogFileEntity>(null, ActivityLogFileEntity);
             }
             else if(ActivityLogFileRepoEntity != null)
             {
+                if (ActivityLogFileRepoEntity is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Figma.OpenApiClient.Models.ActivityLogFileRepoEntity>(null, ActivityLogFileRepoEntity);
             }
             else if(ActivityLogOrgEntity != null)
             {
+                if (ActivityLogOrgEntity is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Figma.OpenApiClient.Models.ActivityLogOrgEntity>(null, ActivityLogOrgEntity);
             }
             else if(ActivityLogPluginEntity != null)
             {
+                if (ActivityLogPluginEntity is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Figma.OpenApiClient.Models.ActivityLogPluginEntity>(null, ActivityLogPluginEntity);
             }
             else if(ActivityLogProjectEntity != null)
             {
+                if (ActivityLogProjectEntity is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Figma.OpenApiClient.Models.ActivityLogProjectEntity>(null, ActivityLogProjectEntity);
             }
             else if(ActivityLogTeamEntity != null)
             {
+                if (ActivityLogTeamEntity is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Figma.OpenApiClient.Models.ActivityLogTeamEntity>(null, ActivityLogTeamEntity);
             }
             else if(ActivityLogUserEntity != null)
             {
+                if (ActivityLogUserEntity is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Figma.OpenApiClient.Models.ActivityLogUserEntity>(null, ActivityLogUserEntity);
             }
             else if(ActivityLogWidgetEntity != null)
             {
+                if (ActivityLogWidgetEntity is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Figma.OpenApiClient.Models.ActivityLogWidgetEntity>(null, ActivityLogWidgetEntity);
             }
             else if(ActivityLogWorkspaceEntity != null)
             {
+                if (ActivityLogWorkspaceEntity is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
                 writer.WriteObjectValue<global::Soenneker.Figma.OpenApiClient.Models.ActivityLogWorkspaceEntity>(null, ActivityLogWorkspaceEntity);
             }
         }

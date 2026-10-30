@@ -12,17 +12,32 @@ namespace Soenneker.Figma.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class StrokeWeights : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("bottom") is { } nullNodeBottom && nullNodeBottom.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Bottom = null;
+            if (parseNode.GetChildNode("left") is { } nullNodeLeft && nullNodeLeft.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Left = null;
+            if (parseNode.GetChildNode("right") is { } nullNodeRight && nullNodeRight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Right = null;
+            if (parseNode.GetChildNode("top") is { } nullNodeTop && nullNodeTop.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Top = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The bottom stroke weight.</summary>
-        public double? Bottom { get; set; }
+        public double? Bottom { get => _explicitNullValueBottom; set { _explicitNullValueBottom = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bottom"); else _explicitNullProperties?.Remove("bottom"); } }
+        private double? _explicitNullValueBottom = default!;
         /// <summary>The left stroke weight.</summary>
-        public double? Left { get; set; }
+        public double? Left { get => _explicitNullValueLeft; set { _explicitNullValueLeft = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("left"); else _explicitNullProperties?.Remove("left"); } }
+        private double? _explicitNullValueLeft = default!;
         /// <summary>The right stroke weight.</summary>
-        public double? Right { get; set; }
+        public double? Right { get => _explicitNullValueRight; set { _explicitNullValueRight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("right"); else _explicitNullProperties?.Remove("right"); } }
+        private double? _explicitNullValueRight = default!;
         /// <summary>The top stroke weight.</summary>
-        public double? Top { get; set; }
+        public double? Top { get => _explicitNullValueTop; set { _explicitNullValueTop = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("top"); else _explicitNullProperties?.Remove("top"); } }
+        private double? _explicitNullValueTop = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Figma.OpenApiClient.Models.StrokeWeights"/> and sets the default values.
         /// </summary>
@@ -38,7 +53,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
         public static global::Soenneker.Figma.OpenApiClient.Models.StrokeWeights CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Figma.OpenApiClient.Models.StrokeWeights();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Figma.OpenApiClient.Models.StrokeWeights(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -65,6 +80,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
             writer.WriteDoubleValue("left", Left);
             writer.WriteDoubleValue("right", Right);
             writer.WriteDoubleValue("top", Top);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -12,65 +12,93 @@ namespace Soenneker.Figma.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class FrameInfo : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("backgroundColor") is { } nullNodeBackgroundColor && nullNodeBackgroundColor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BackgroundColor = null;
+            if (parseNode.GetChildNode("containingComponentSet") is { } nullNodeContainingComponentSet && nullNodeContainingComponentSet.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContainingComponentSet = null;
+            if (parseNode.GetChildNode("containingStateGroup") is { } nullNodeContainingStateGroup && nullNodeContainingStateGroup.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContainingStateGroup = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("nodeId") is { } nullNodeNodeId && nullNodeNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NodeId = null;
+            if (parseNode.GetChildNode("pageId") is { } nullNodePageId && nullNodePageId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PageId = null;
+            if (parseNode.GetChildNode("pageName") is { } nullNodePageName && nullNodePageName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PageName = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The background color of the frame node.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BackgroundColor { get; set; }
+        public string? BackgroundColor { get => _explicitNullValueBackgroundColor; set { _explicitNullValueBackgroundColor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("backgroundColor"); else _explicitNullProperties?.Remove("backgroundColor"); } }
+        private string? _explicitNullValueBackgroundColor = default!;
 #nullable restore
 #else
-        public string BackgroundColor { get; set; }
+        public string BackgroundColor { get => _explicitNullValueBackgroundColor; set { _explicitNullValueBackgroundColor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("backgroundColor"); else _explicitNullProperties?.Remove("backgroundColor"); } }
+        private string _explicitNullValueBackgroundColor = default!;
 #endif
         /// <summary>The component set node that contains the frame node.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.FrameInfoContainingComponentSet? ContainingComponentSet { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.FrameInfoContainingComponentSet? ContainingComponentSet { get => _explicitNullValueContainingComponentSet; set { _explicitNullValueContainingComponentSet = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("containingComponentSet"); else _explicitNullProperties?.Remove("containingComponentSet"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.FrameInfoContainingComponentSet? _explicitNullValueContainingComponentSet = default!;
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.FrameInfoContainingComponentSet ContainingComponentSet { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.FrameInfoContainingComponentSet ContainingComponentSet { get => _explicitNullValueContainingComponentSet; set { _explicitNullValueContainingComponentSet = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("containingComponentSet"); else _explicitNullProperties?.Remove("containingComponentSet"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.FrameInfoContainingComponentSet _explicitNullValueContainingComponentSet = default!;
 #endif
         /// <summary>Deprecated - Use containingComponentSet instead.</summary>
         [Obsolete("")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.FrameInfoContainingStateGroup? ContainingStateGroup { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.FrameInfoContainingStateGroup? ContainingStateGroup { get => _explicitNullValueContainingStateGroup; set { _explicitNullValueContainingStateGroup = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("containingStateGroup"); else _explicitNullProperties?.Remove("containingStateGroup"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.FrameInfoContainingStateGroup? _explicitNullValueContainingStateGroup = default!;
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.FrameInfoContainingStateGroup ContainingStateGroup { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.FrameInfoContainingStateGroup ContainingStateGroup { get => _explicitNullValueContainingStateGroup; set { _explicitNullValueContainingStateGroup = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("containingStateGroup"); else _explicitNullProperties?.Remove("containingStateGroup"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.FrameInfoContainingStateGroup _explicitNullValueContainingStateGroup = default!;
 #endif
         /// <summary>The name of the frame node.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>The ID of the frame node within the file.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NodeId { get; set; }
+        public string? NodeId { get => _explicitNullValueNodeId; set { _explicitNullValueNodeId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nodeId"); else _explicitNullProperties?.Remove("nodeId"); } }
+        private string? _explicitNullValueNodeId = default!;
 #nullable restore
 #else
-        public string NodeId { get; set; }
+        public string NodeId { get => _explicitNullValueNodeId; set { _explicitNullValueNodeId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nodeId"); else _explicitNullProperties?.Remove("nodeId"); } }
+        private string _explicitNullValueNodeId = default!;
 #endif
         /// <summary>The ID of the page containing the frame node.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PageId { get; set; }
+        public string? PageId { get => _explicitNullValuePageId; set { _explicitNullValuePageId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pageId"); else _explicitNullProperties?.Remove("pageId"); } }
+        private string? _explicitNullValuePageId = default!;
 #nullable restore
 #else
-        public string PageId { get; set; }
+        public string PageId { get => _explicitNullValuePageId; set { _explicitNullValuePageId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pageId"); else _explicitNullProperties?.Remove("pageId"); } }
+        private string _explicitNullValuePageId = default!;
 #endif
         /// <summary>The name of the page containing the frame node.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PageName { get; set; }
+        public string? PageName { get => _explicitNullValuePageName; set { _explicitNullValuePageName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pageName"); else _explicitNullProperties?.Remove("pageName"); } }
+        private string? _explicitNullValuePageName = default!;
 #nullable restore
 #else
-        public string PageName { get; set; }
+        public string PageName { get => _explicitNullValuePageName; set { _explicitNullValuePageName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pageName"); else _explicitNullProperties?.Remove("pageName"); } }
+        private string _explicitNullValuePageName = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Figma.OpenApiClient.Models.FrameInfo"/> and sets the default values.
@@ -87,7 +115,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
         public static global::Soenneker.Figma.OpenApiClient.Models.FrameInfo CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Figma.OpenApiClient.Models.FrameInfo();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Figma.OpenApiClient.Models.FrameInfo(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -120,6 +148,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
             writer.WriteStringValue("nodeId", NodeId);
             writer.WriteStringValue("pageId", PageId);
             writer.WriteStringValue("pageName", PageName);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -12,26 +12,41 @@ namespace Soenneker.Figma.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class SetVariableModeAction : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("variableCollectionId") is { } nullNodeVariableCollectionId && nullNodeVariableCollectionId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VariableCollectionId = null;
+            if (parseNode.GetChildNode("variableModeId") is { } nullNodeVariableModeId && nullNodeVariableModeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VariableModeId = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The type property</summary>
-        public global::Soenneker.Figma.OpenApiClient.Models.SetVariableModeType? Type { get; set; }
+        public global::Soenneker.Figma.OpenApiClient.Models.SetVariableModeType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.SetVariableModeType? _explicitNullValueType = default!;
         /// <summary>The variableCollectionId property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? VariableCollectionId { get; set; }
+        public string? VariableCollectionId { get => _explicitNullValueVariableCollectionId; set { _explicitNullValueVariableCollectionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("variableCollectionId"); else _explicitNullProperties?.Remove("variableCollectionId"); } }
+        private string? _explicitNullValueVariableCollectionId = default!;
 #nullable restore
 #else
-        public string VariableCollectionId { get; set; }
+        public string VariableCollectionId { get => _explicitNullValueVariableCollectionId; set { _explicitNullValueVariableCollectionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("variableCollectionId"); else _explicitNullProperties?.Remove("variableCollectionId"); } }
+        private string _explicitNullValueVariableCollectionId = default!;
 #endif
         /// <summary>The variableModeId property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? VariableModeId { get; set; }
+        public string? VariableModeId { get => _explicitNullValueVariableModeId; set { _explicitNullValueVariableModeId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("variableModeId"); else _explicitNullProperties?.Remove("variableModeId"); } }
+        private string? _explicitNullValueVariableModeId = default!;
 #nullable restore
 #else
-        public string VariableModeId { get; set; }
+        public string VariableModeId { get => _explicitNullValueVariableModeId; set { _explicitNullValueVariableModeId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("variableModeId"); else _explicitNullProperties?.Remove("variableModeId"); } }
+        private string _explicitNullValueVariableModeId = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Figma.OpenApiClient.Models.SetVariableModeAction"/> and sets the default values.
@@ -48,7 +63,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
         public static global::Soenneker.Figma.OpenApiClient.Models.SetVariableModeAction CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Figma.OpenApiClient.Models.SetVariableModeAction();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Figma.OpenApiClient.Models.SetVariableModeAction(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -73,6 +88,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Figma.OpenApiClient.Models.SetVariableModeType>("type", Type);
             writer.WriteStringValue("variableCollectionId", VariableCollectionId);
             writer.WriteStringValue("variableModeId", VariableModeId);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }
