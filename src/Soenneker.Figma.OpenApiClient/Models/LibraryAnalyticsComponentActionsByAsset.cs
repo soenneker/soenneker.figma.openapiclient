@@ -85,6 +85,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
                 { "component_set_name", n => { ComponentSetName = n.GetStringValue(); } },
                 { "detachments", n => { Detachments = n.GetDoubleValue(); } },
                 { "insertions", n => { Insertions = n.GetDoubleValue(); } },
+
             };
         }
         /// <summary>

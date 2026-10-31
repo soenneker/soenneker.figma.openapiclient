@@ -90,6 +90,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
                 { "collection_name", n => { CollectionName = n.GetStringValue(); } },
                 { "detachments", n => { Detachments = n.GetDoubleValue(); } },
                 { "insertions", n => { Insertions = n.GetDoubleValue(); } },
+
             };
         }
         /// <summary>

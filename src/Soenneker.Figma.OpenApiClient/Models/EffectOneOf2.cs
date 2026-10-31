@@ -9,7 +9,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class InnerShadowEffect : IAdditionalDataHolder, IParsable
+    public partial class EffectOneOf2 : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
         // Track explicitly assigned nulls separately from absent properties.
@@ -77,15 +77,15 @@ namespace Soenneker.Figma.OpenApiClient.Models
         public double? Spread { get => _explicitNullValueSpread; set { _explicitNullValueSpread = value; AdditionalData?.Remove("spread"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("spread"); else _explicitNullProperties?.Remove("spread"); } }
         private double? _explicitNullValueSpread = default!;
         /// <summary>A string literal representing the effect&apos;s type. Always check the type before reading other properties.</summary>
-        public global::Soenneker.Figma.OpenApiClient.Models.InnerShadowType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
-        private global::Soenneker.Figma.OpenApiClient.Models.InnerShadowType? _explicitNullValueType = default!;
+        public global::Soenneker.Figma.OpenApiClient.Models.EffectOneOf2_type? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.EffectOneOf2_type? _explicitNullValueType = default!;
         /// <summary>Whether this shadow is visible.</summary>
         public bool? Visible { get => _explicitNullValueVisible; set { _explicitNullValueVisible = value; AdditionalData?.Remove("visible"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("visible"); else _explicitNullProperties?.Remove("visible"); } }
         private bool? _explicitNullValueVisible = default!;
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Figma.OpenApiClient.Models.InnerShadowEffect"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Figma.OpenApiClient.Models.EffectOneOf2"/> and sets the default values.
         /// </summary>
-        public InnerShadowEffect()
+        public EffectOneOf2()
         {
             AdditionalData = new Dictionary<string, object>();
             Spread = 0;
@@ -93,12 +93,12 @@ namespace Soenneker.Figma.OpenApiClient.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Figma.OpenApiClient.Models.InnerShadowEffect"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Figma.OpenApiClient.Models.EffectOneOf2"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.Figma.OpenApiClient.Models.InnerShadowEffect CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Figma.OpenApiClient.Models.EffectOneOf2 CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Figma.OpenApiClient.Models.InnerShadowEffect(), parseNode);
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Figma.OpenApiClient.Models.EffectOneOf2(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -114,7 +114,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
                 { "offset", n => { Offset = n.GetObjectValue<global::Soenneker.Figma.OpenApiClient.Models.Vector>(global::Soenneker.Figma.OpenApiClient.Models.Vector.CreateFromDiscriminatorValue); } },
                 { "radius", n => { Radius = n.GetDoubleValue(); } },
                 { "spread", n => { Spread = n.GetDoubleValue(); } },
-                { "type", n => { var parsed = n.GetEnumValue<global::Soenneker.Figma.OpenApiClient.Models.InnerShadowType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueType = default; _explicitNullProperties?.Remove("type"); AdditionalData["type"] = unknown; } else { Type = parsed; AdditionalData.Remove("type"); } } },
+                { "type", n => { var parsed = n.GetEnumValue<global::Soenneker.Figma.OpenApiClient.Models.EffectOneOf2_type>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueType = default; _explicitNullProperties?.Remove("type"); AdditionalData["type"] = unknown; } else { Type = parsed; AdditionalData.Remove("type"); } } },
                 { "visible", n => { Visible = n.GetBoolValue(); } },
             };
         }
@@ -131,7 +131,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Figma.OpenApiClient.Models.Vector>("offset", Offset);
             writer.WriteDoubleValue("radius", Radius);
             writer.WriteDoubleValue("spread", Spread);
-            writer.WriteEnumValue<global::Soenneker.Figma.OpenApiClient.Models.InnerShadowType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Figma.OpenApiClient.Models.EffectOneOf2_type>("type", Type);
             writer.WriteBoolValue("visible", Visible);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);

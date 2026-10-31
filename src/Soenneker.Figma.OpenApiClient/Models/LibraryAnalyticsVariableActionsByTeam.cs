@@ -75,6 +75,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
                 { "workspace_name", n => { WorkspaceName = n.GetStringValue(); } },
                 { "detachments", n => { Detachments = n.GetDoubleValue(); } },
                 { "insertions", n => { Insertions = n.GetDoubleValue(); } },
+
             };
         }
         /// <summary>

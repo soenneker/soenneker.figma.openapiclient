@@ -80,6 +80,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
                 { "style_type", n => { StyleType = n.GetStringValue(); } },
                 { "detachments", n => { Detachments = n.GetDoubleValue(); } },
                 { "insertions", n => { Insertions = n.GetDoubleValue(); } },
+
             };
         }
         /// <summary>

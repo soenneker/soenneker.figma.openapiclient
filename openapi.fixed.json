@@ -15802,15 +15802,12 @@
         }
       },
       "Effect": {
-        "required": [
-          "type"
-        ],
         "oneOf": [
           {
             "$ref": "#/components/schemas/DropShadowEffect"
           },
           {
-            "$ref": "#/components/schemas/InnerShadowEffect"
+            "$ref": "#/components/schemas/EffectOneOf2"
           },
           {
             "$ref": "#/components/schemas/BlurEffect"
@@ -15819,15 +15816,10 @@
             "$ref": "#/components/schemas/TextureEffect"
           },
           {
-            "$ref": "#/components/schemas/NoiseEffect"
+            "$ref": "#/components/schemas/EffectOneOf5"
           }
         ],
-        "properties": {
-          "type": {
-            "type": "string"
-          }
-        },
-        "discriminator": {
+        "x-client-original-discriminator": {
           "propertyName": "type",
           "mapping": {
             "DROP_SHADOW": "#/components/schemas/DropShadowEffect",
@@ -30768,6 +30760,102 @@
               "name": "File"
             }
           ]
+        }
+      },
+      "EffectOneOf2": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "enum": [
+              "INNER_SHADOW"
+            ],
+            "type": "string",
+            "description": "A string literal representing the effect\u0027s type. Always check the type before reading other properties.",
+            "x-ms-enum": {
+              "name": "Type",
+              "modelAsString": false,
+              "values": [
+                {
+                  "value": "INNER_SHADOW",
+                  "name": "InnerShadow"
+                }
+              ]
+            }
+          },
+          "color": {
+            "$ref": "#/components/schemas/Rgba"
+          },
+          "blendMode": {
+            "description": "Blend mode of the shadow",
+            "$ref": "#/components/schemas/BlendMode"
+          },
+          "offset": {
+            "description": "How far the shadow is projected in the x and y directions",
+            "$ref": "#/components/schemas/Vector"
+          },
+          "radius": {
+            "minimum": 0,
+            "type": "number",
+            "description": "Radius of the blur effect (applies to shadows as well)"
+          },
+          "spread": {
+            "type": "number",
+            "description": "The distance by which to expand (or contract) the shadow.\n\nFor drop shadows, a positive \u0060spread\u0060 value creates a shadow larger than the node, whereas a negative value creates a shadow smaller than the node.\n\nFor inner shadows, a positive \u0060spread\u0060 value contracts the shadow. Spread values are only accepted on rectangles and ellipses, or on frames, components, and instances with visible fill paints and \u0060clipsContent\u0060 enabled. When left unspecified, the default value is 0.",
+            "default": 0
+          },
+          "visible": {
+            "type": "boolean",
+            "description": "Whether this shadow is visible."
+          },
+          "boundVariables": {
+            "$ref": "#/components/schemas/BaseShadowEffectBoundVariables"
+          }
+        },
+        "required": [
+          "color",
+          "blendMode",
+          "offset",
+          "radius",
+          "visible",
+          "type"
+        ]
+      },
+      "EffectOneOf3": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/NormalBlurEffect"
+          },
+          {
+            "$ref": "#/components/schemas/ProgressiveBlurEffect"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "blurType",
+          "mapping": {
+            "NORMAL": "#/components/schemas/NormalBlurEffect",
+            "PROGRESSIVE": "#/components/schemas/ProgressiveBlurEffect"
+          }
+        }
+      },
+      "EffectOneOf5": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/MonotoneNoiseEffect"
+          },
+          {
+            "$ref": "#/components/schemas/MultitoneNoiseEffect"
+          },
+          {
+            "$ref": "#/components/schemas/DuotoneNoiseEffect"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "noiseType",
+          "mapping": {
+            "MONOTONE": "#/components/schemas/MonotoneNoiseEffect",
+            "MULTITONE": "#/components/schemas/MultitoneNoiseEffect",
+            "DUOTONE": "#/components/schemas/DuotoneNoiseEffect"
+          }
         }
       }
     },

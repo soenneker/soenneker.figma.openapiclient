@@ -70,6 +70,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
                 { "team_name", n => { TeamName = n.GetStringValue(); } },
                 { "workspace_name", n => { WorkspaceName = n.GetStringValue(); } },
                 { "usages", n => { Usages = n.GetDoubleValue(); } },
+
             };
         }
         /// <summary>

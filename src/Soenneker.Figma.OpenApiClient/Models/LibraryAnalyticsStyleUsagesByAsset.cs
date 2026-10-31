@@ -80,6 +80,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
                 { "usages", n => { Usages = n.GetDoubleValue(); } },
                 { "teams_using", n => { TeamsUsing = n.GetDoubleValue(); } },
                 { "files_using", n => { FilesUsing = n.GetDoubleValue(); } },
+
             };
         }
         /// <summary>

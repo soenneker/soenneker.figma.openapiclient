@@ -5,7 +5,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
 {
     /// <summary>A string literal representing the effect&apos;s type. Always check the type before reading other properties.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public enum InnerShadowType
+    public enum EffectOneOf2_type
     {
         [EnumMember(Value = "INNER_SHADOW")]
         #pragma warning disable CS1591
