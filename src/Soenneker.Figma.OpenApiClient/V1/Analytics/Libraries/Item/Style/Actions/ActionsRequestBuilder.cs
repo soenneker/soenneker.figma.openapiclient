@@ -80,7 +80,7 @@ namespace Soenneker.Figma.OpenApiClient.V1.Analytics.Libraries.Item.Style.Action
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Figma.OpenApiClient.V1.Analytics.Libraries.Item.Style.Actions.ActionsRequestBuilder.ActionsRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve(UrlTemplate, RequestAdapter.BaseUrl, "https://api.figma.com", "/v1/analytics/libraries/{fileKey}/style/actions", PathParameters.ContainsKey("request-raw-url")), PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
