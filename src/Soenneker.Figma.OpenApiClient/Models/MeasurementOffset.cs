@@ -51,8 +51,8 @@ namespace Soenneker.Figma.OpenApiClient.Models
             var mappingValue = parseNode.GetChildNode("type")?.GetStringValue();
             return mappingValue switch
             {
-                "INNER" => new global::Soenneker.Figma.OpenApiClient.Models.MeasurementOffsetMeasurementOffsetInner(),
-                "OUTER" => new global::Soenneker.Figma.OpenApiClient.Models.MeasurementOffsetMeasurementOffsetOuter(),
+                "INNER" => new global::Soenneker.Figma.OpenApiClient.Models.MeasurementOffsetInnerVariant(),
+                "OUTER" => new global::Soenneker.Figma.OpenApiClient.Models.MeasurementOffsetOuterVariant(),
                 _ => new global::Soenneker.Figma.OpenApiClient.Models.MeasurementOffset(),
             };
         }

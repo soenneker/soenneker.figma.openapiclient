@@ -52,15 +52,15 @@ namespace Soenneker.Figma.OpenApiClient.Models
             var mappingValue = parseNode.GetChildNode("mediaAction")?.GetStringValue();
             return mappingValue switch
             {
-                "MUTE" => new global::Soenneker.Figma.OpenApiClient.Models.UpdateMediaRuntimeActionUpdateMediaRuntimeActionOneOf1(),
-                "PAUSE" => new global::Soenneker.Figma.OpenApiClient.Models.UpdateMediaRuntimeActionUpdateMediaRuntimeActionOneOf1(),
-                "PLAY" => new global::Soenneker.Figma.OpenApiClient.Models.UpdateMediaRuntimeActionUpdateMediaRuntimeActionOneOf1(),
-                "SKIP_BACKWARD" => new global::Soenneker.Figma.OpenApiClient.Models.UpdateMediaRuntimeActionUpdateMediaRuntimeActionOneOf2(),
-                "SKIP_FORWARD" => new global::Soenneker.Figma.OpenApiClient.Models.UpdateMediaRuntimeActionUpdateMediaRuntimeActionOneOf2(),
-                "SKIP_TO" => new global::Soenneker.Figma.OpenApiClient.Models.UpdateMediaRuntimeActionUpdateMediaRuntimeActionOneOf3(),
-                "TOGGLE_MUTE_UNMUTE" => new global::Soenneker.Figma.OpenApiClient.Models.UpdateMediaRuntimeActionUpdateMediaRuntimeActionOneOf1(),
-                "TOGGLE_PLAY_PAUSE" => new global::Soenneker.Figma.OpenApiClient.Models.UpdateMediaRuntimeActionUpdateMediaRuntimeActionOneOf1(),
-                "UNMUTE" => new global::Soenneker.Figma.OpenApiClient.Models.UpdateMediaRuntimeActionUpdateMediaRuntimeActionOneOf1(),
+                "MUTE" => new global::Soenneker.Figma.OpenApiClient.Models.UpdateMediaRuntimeActionOneOf1Variant(),
+                "PAUSE" => new global::Soenneker.Figma.OpenApiClient.Models.UpdateMediaRuntimeActionOneOf1Variant(),
+                "PLAY" => new global::Soenneker.Figma.OpenApiClient.Models.UpdateMediaRuntimeActionOneOf1Variant(),
+                "SKIP_BACKWARD" => new global::Soenneker.Figma.OpenApiClient.Models.UpdateMediaRuntimeActionOneOf2Variant(),
+                "SKIP_FORWARD" => new global::Soenneker.Figma.OpenApiClient.Models.UpdateMediaRuntimeActionOneOf2Variant(),
+                "SKIP_TO" => new global::Soenneker.Figma.OpenApiClient.Models.UpdateMediaRuntimeActionOneOf3Variant(),
+                "TOGGLE_MUTE_UNMUTE" => new global::Soenneker.Figma.OpenApiClient.Models.UpdateMediaRuntimeActionOneOf1Variant(),
+                "TOGGLE_PLAY_PAUSE" => new global::Soenneker.Figma.OpenApiClient.Models.UpdateMediaRuntimeActionOneOf1Variant(),
+                "UNMUTE" => new global::Soenneker.Figma.OpenApiClient.Models.UpdateMediaRuntimeActionOneOf1Variant(),
                 _ => new global::Soenneker.Figma.OpenApiClient.Models.UpdateMediaRuntimeAction(),
             };
         }

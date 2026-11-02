@@ -14541,18 +14541,18 @@
         "discriminator": {
           "propertyName": "type",
           "mapping": {
-            "ON_CLICK": "#/components/schemas/TriggerTriggerOneOf1",
-            "ON_HOVER": "#/components/schemas/TriggerTriggerOneOf1",
-            "ON_PRESS": "#/components/schemas/TriggerTriggerOneOf1",
-            "ON_DRAG": "#/components/schemas/TriggerTriggerOneOf1",
+            "ON_CLICK": "#/components/schemas/TriggerOneOf1Variant",
+            "ON_HOVER": "#/components/schemas/TriggerOneOf1Variant",
+            "ON_PRESS": "#/components/schemas/TriggerOneOf1Variant",
+            "ON_DRAG": "#/components/schemas/TriggerOneOf1Variant",
             "AFTER_TIMEOUT": "#/components/schemas/TriggerAfterTimeoutTrigger",
-            "MOUSE_ENTER": "#/components/schemas/TriggerTriggerOneOf3",
-            "MOUSE_LEAVE": "#/components/schemas/TriggerTriggerOneOf3",
-            "MOUSE_UP": "#/components/schemas/TriggerTriggerOneOf3",
-            "MOUSE_DOWN": "#/components/schemas/TriggerTriggerOneOf3",
+            "MOUSE_ENTER": "#/components/schemas/TriggerOneOf3Variant",
+            "MOUSE_LEAVE": "#/components/schemas/TriggerOneOf3Variant",
+            "MOUSE_UP": "#/components/schemas/TriggerOneOf3Variant",
+            "MOUSE_DOWN": "#/components/schemas/TriggerOneOf3Variant",
             "ON_KEY_DOWN": "#/components/schemas/TriggerOnKeyDownTrigger",
             "ON_MEDIA_HIT": "#/components/schemas/TriggerOnMediaHitTrigger",
-            "ON_MEDIA_END": "#/components/schemas/TriggerTriggerOneOf6"
+            "ON_MEDIA_END": "#/components/schemas/TriggerOneOf6Variant"
           }
         },
         "x-client-original-tagged-union": {
@@ -14652,15 +14652,15 @@
         "discriminator": {
           "propertyName": "mediaAction",
           "mapping": {
-            "PLAY": "#/components/schemas/UpdateMediaRuntimeActionUpdateMediaRuntimeActionOneOf1",
-            "PAUSE": "#/components/schemas/UpdateMediaRuntimeActionUpdateMediaRuntimeActionOneOf1",
-            "TOGGLE_PLAY_PAUSE": "#/components/schemas/UpdateMediaRuntimeActionUpdateMediaRuntimeActionOneOf1",
-            "MUTE": "#/components/schemas/UpdateMediaRuntimeActionUpdateMediaRuntimeActionOneOf1",
-            "UNMUTE": "#/components/schemas/UpdateMediaRuntimeActionUpdateMediaRuntimeActionOneOf1",
-            "TOGGLE_MUTE_UNMUTE": "#/components/schemas/UpdateMediaRuntimeActionUpdateMediaRuntimeActionOneOf1",
-            "SKIP_FORWARD": "#/components/schemas/UpdateMediaRuntimeActionUpdateMediaRuntimeActionOneOf2",
-            "SKIP_BACKWARD": "#/components/schemas/UpdateMediaRuntimeActionUpdateMediaRuntimeActionOneOf2",
-            "SKIP_TO": "#/components/schemas/UpdateMediaRuntimeActionUpdateMediaRuntimeActionOneOf3"
+            "PLAY": "#/components/schemas/UpdateMediaRuntimeActionOneOf1Variant",
+            "PAUSE": "#/components/schemas/UpdateMediaRuntimeActionOneOf1Variant",
+            "TOGGLE_PLAY_PAUSE": "#/components/schemas/UpdateMediaRuntimeActionOneOf1Variant",
+            "MUTE": "#/components/schemas/UpdateMediaRuntimeActionOneOf1Variant",
+            "UNMUTE": "#/components/schemas/UpdateMediaRuntimeActionOneOf1Variant",
+            "TOGGLE_MUTE_UNMUTE": "#/components/schemas/UpdateMediaRuntimeActionOneOf1Variant",
+            "SKIP_FORWARD": "#/components/schemas/UpdateMediaRuntimeActionOneOf2Variant",
+            "SKIP_BACKWARD": "#/components/schemas/UpdateMediaRuntimeActionOneOf2Variant",
+            "SKIP_TO": "#/components/schemas/UpdateMediaRuntimeActionOneOf3Variant"
           }
         },
         "x-client-original-tagged-union": {
@@ -19654,8 +19654,8 @@
         "discriminator": {
           "propertyName": "type",
           "mapping": {
-            "INNER": "#/components/schemas/MeasurementOffsetMeasurementOffsetInner",
-            "OUTER": "#/components/schemas/MeasurementOffsetMeasurementOffsetOuter"
+            "INNER": "#/components/schemas/MeasurementOffsetInnerVariant",
+            "OUTER": "#/components/schemas/MeasurementOffsetOuterVariant"
           }
         },
         "x-client-original-tagged-union": {
@@ -34590,7 +34590,7 @@
           }
         ]
       },
-      "TriggerTriggerOneOf1": {
+      "TriggerOneOf1Variant": {
         "allOf": [
           {
             "$ref": "#/components/schemas/Trigger"
@@ -34630,7 +34630,7 @@
           }
         ]
       },
-      "TriggerTriggerOneOf3": {
+      "TriggerOneOf3Variant": {
         "allOf": [
           {
             "$ref": "#/components/schemas/Trigger"
@@ -34707,7 +34707,7 @@
           }
         ]
       },
-      "TriggerTriggerOneOf6": {
+      "TriggerOneOf6Variant": {
         "allOf": [
           {
             "$ref": "#/components/schemas/Trigger"
@@ -34725,7 +34725,7 @@
           }
         ]
       },
-      "UpdateMediaRuntimeActionUpdateMediaRuntimeActionOneOf1": {
+      "UpdateMediaRuntimeActionOneOf1Variant": {
         "allOf": [
           {
             "$ref": "#/components/schemas/UpdateMediaRuntimeAction"
@@ -34755,7 +34755,7 @@
           }
         ]
       },
-      "UpdateMediaRuntimeActionUpdateMediaRuntimeActionOneOf2": {
+      "UpdateMediaRuntimeActionOneOf2Variant": {
         "allOf": [
           {
             "$ref": "#/components/schemas/UpdateMediaRuntimeAction"
@@ -34788,7 +34788,7 @@
           }
         ]
       },
-      "UpdateMediaRuntimeActionUpdateMediaRuntimeActionOneOf3": {
+      "UpdateMediaRuntimeActionOneOf3Variant": {
         "allOf": [
           {
             "$ref": "#/components/schemas/UpdateMediaRuntimeAction"
@@ -35208,7 +35208,7 @@
           }
         ]
       },
-      "MeasurementOffsetMeasurementOffsetInner": {
+      "MeasurementOffsetInnerVariant": {
         "allOf": [
           {
             "$ref": "#/components/schemas/MeasurementOffset"
@@ -35231,7 +35231,7 @@
           }
         ]
       },
-      "MeasurementOffsetMeasurementOffsetOuter": {
+      "MeasurementOffsetOuterVariant": {
         "allOf": [
           {
             "$ref": "#/components/schemas/MeasurementOffset"

@@ -53,17 +53,17 @@ namespace Soenneker.Figma.OpenApiClient.Models
             return mappingValue switch
             {
                 "AFTER_TIMEOUT" => new global::Soenneker.Figma.OpenApiClient.Models.TriggerAfterTimeoutTrigger(),
-                "MOUSE_DOWN" => new global::Soenneker.Figma.OpenApiClient.Models.TriggerTriggerOneOf3(),
-                "MOUSE_ENTER" => new global::Soenneker.Figma.OpenApiClient.Models.TriggerTriggerOneOf3(),
-                "MOUSE_LEAVE" => new global::Soenneker.Figma.OpenApiClient.Models.TriggerTriggerOneOf3(),
-                "MOUSE_UP" => new global::Soenneker.Figma.OpenApiClient.Models.TriggerTriggerOneOf3(),
-                "ON_CLICK" => new global::Soenneker.Figma.OpenApiClient.Models.TriggerTriggerOneOf1(),
-                "ON_DRAG" => new global::Soenneker.Figma.OpenApiClient.Models.TriggerTriggerOneOf1(),
-                "ON_HOVER" => new global::Soenneker.Figma.OpenApiClient.Models.TriggerTriggerOneOf1(),
+                "MOUSE_DOWN" => new global::Soenneker.Figma.OpenApiClient.Models.TriggerOneOf3Variant(),
+                "MOUSE_ENTER" => new global::Soenneker.Figma.OpenApiClient.Models.TriggerOneOf3Variant(),
+                "MOUSE_LEAVE" => new global::Soenneker.Figma.OpenApiClient.Models.TriggerOneOf3Variant(),
+                "MOUSE_UP" => new global::Soenneker.Figma.OpenApiClient.Models.TriggerOneOf3Variant(),
+                "ON_CLICK" => new global::Soenneker.Figma.OpenApiClient.Models.TriggerOneOf1Variant(),
+                "ON_DRAG" => new global::Soenneker.Figma.OpenApiClient.Models.TriggerOneOf1Variant(),
+                "ON_HOVER" => new global::Soenneker.Figma.OpenApiClient.Models.TriggerOneOf1Variant(),
                 "ON_KEY_DOWN" => new global::Soenneker.Figma.OpenApiClient.Models.TriggerOnKeyDownTrigger(),
-                "ON_MEDIA_END" => new global::Soenneker.Figma.OpenApiClient.Models.TriggerTriggerOneOf6(),
+                "ON_MEDIA_END" => new global::Soenneker.Figma.OpenApiClient.Models.TriggerOneOf6Variant(),
                 "ON_MEDIA_HIT" => new global::Soenneker.Figma.OpenApiClient.Models.TriggerOnMediaHitTrigger(),
-                "ON_PRESS" => new global::Soenneker.Figma.OpenApiClient.Models.TriggerTriggerOneOf1(),
+                "ON_PRESS" => new global::Soenneker.Figma.OpenApiClient.Models.TriggerOneOf1Variant(),
                 _ => new global::Soenneker.Figma.OpenApiClient.Models.Trigger(),
             };
         }

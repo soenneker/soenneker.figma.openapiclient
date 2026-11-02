@@ -8,10 +8,10 @@ using System;
 namespace Soenneker.Figma.OpenApiClient.Models
 {
     /// <summary>
-    /// An action that updates the runtime of a media node by skipping forward or backward.The `destinationId` is the node ID of the media node to update. If `destinationId` is `null`, the action will update the media node that contains the action.The `mediaAction` is the action to perform on the media node.The `amountToSkip` is the amount of time to skip in seconds.
+    /// An action that updates the runtime of a media node by skipping to a specific time.The `destinationId` is the node ID of the media node to update. If `destinationId` is `null`, the action will update the media node that contains the action.The `mediaAction` is the action to perform on the media node.The `newTimestamp` is the new time to skip to in seconds.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class UpdateMediaRuntimeActionUpdateMediaRuntimeActionOneOf2 : global::Soenneker.Figma.OpenApiClient.Models.UpdateMediaRuntimeAction, IParsable
+    public partial class UpdateMediaRuntimeActionOneOf3Variant : global::Soenneker.Figma.OpenApiClient.Models.UpdateMediaRuntimeAction, IParsable
     {
         // Track explicitly assigned nulls separately from absent properties.
         private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
@@ -19,17 +19,14 @@ namespace Soenneker.Figma.OpenApiClient.Models
         public override void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
             base.CaptureExplicitNulls(parseNode);
-            if (parseNode.GetChildNode("amountToSkip") is null) { _explicitNullValueAmountToSkip = default!; _explicitNullProperties?.Remove("amountToSkip"); }
-            else if (parseNode.GetChildNode("amountToSkip") is { } nullNodeAmountToSkip && nullNodeAmountToSkip.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AmountToSkip = null;
             if (parseNode.GetChildNode("destinationId") is null) { _explicitNullValueDestinationId = default!; _explicitNullProperties?.Remove("destinationId"); }
             else if (parseNode.GetChildNode("destinationId") is { } nullNodeDestinationId && nullNodeDestinationId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DestinationId = null;
+            if (parseNode.GetChildNode("newTimestamp") is null) { _explicitNullValueNewTimestamp = default!; _explicitNullProperties?.Remove("newTimestamp"); }
+            else if (parseNode.GetChildNode("newTimestamp") is { } nullNodeNewTimestamp && nullNodeNewTimestamp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NewTimestamp = null;
             if (parseNode.GetChildNode("type") is null) { _explicitNullValueType = default!; _explicitNullProperties?.Remove("type"); }
             else if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
         }
 
-        /// <summary>The amountToSkip property</summary>
-        public double? AmountToSkip { get => _explicitNullValueAmountToSkip; set { _explicitNullValueAmountToSkip = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("amountToSkip"); else _explicitNullProperties?.Remove("amountToSkip"); } }
-        private double? _explicitNullValueAmountToSkip = default!;
         /// <summary>The destinationId property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -40,18 +37,21 @@ namespace Soenneker.Figma.OpenApiClient.Models
         public string DestinationId { get => _explicitNullValueDestinationId; set { _explicitNullValueDestinationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("destinationId"); else _explicitNullProperties?.Remove("destinationId"); } }
         private string _explicitNullValueDestinationId = default!;
 #endif
+        /// <summary>The newTimestamp property</summary>
+        public double? NewTimestamp { get => _explicitNullValueNewTimestamp; set { _explicitNullValueNewTimestamp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("newTimestamp"); else _explicitNullProperties?.Remove("newTimestamp"); } }
+        private double? _explicitNullValueNewTimestamp = default!;
         /// <summary>The type property</summary>
         public global::Soenneker.Figma.OpenApiClient.Models.UpdateMediaRuntimeType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
         private global::Soenneker.Figma.OpenApiClient.Models.UpdateMediaRuntimeType? _explicitNullValueType = default!;
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Figma.OpenApiClient.Models.UpdateMediaRuntimeActionUpdateMediaRuntimeActionOneOf2"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Figma.OpenApiClient.Models.UpdateMediaRuntimeActionOneOf3Variant"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static new global::Soenneker.Figma.OpenApiClient.Models.UpdateMediaRuntimeActionUpdateMediaRuntimeActionOneOf2 CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static new global::Soenneker.Figma.OpenApiClient.Models.UpdateMediaRuntimeActionOneOf3Variant CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Figma.OpenApiClient.Models.UpdateMediaRuntimeActionUpdateMediaRuntimeActionOneOf2(), parseNode);
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Figma.OpenApiClient.Models.UpdateMediaRuntimeActionOneOf3Variant(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -61,8 +61,8 @@ namespace Soenneker.Figma.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>(base.GetFieldDeserializers())
             {
-                { "amountToSkip", n => { AmountToSkip = n.GetDoubleValue(); } },
                 { "destinationId", n => { DestinationId = n.GetStringValue(); } },
+                { "newTimestamp", n => { NewTimestamp = n.GetDoubleValue(); } },
                 { "type", n => { Type = n.GetEnumValue<global::Soenneker.Figma.OpenApiClient.Models.UpdateMediaRuntimeType>(); } },
             };
         }
@@ -74,8 +74,8 @@ namespace Soenneker.Figma.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             base.Serialize(writer);
-            writer.WriteDoubleValue("amountToSkip", AmountToSkip);
             writer.WriteStringValue("destinationId", DestinationId);
+            writer.WriteDoubleValue("newTimestamp", NewTimestamp);
             writer.WriteEnumValue<global::Soenneker.Figma.OpenApiClient.Models.UpdateMediaRuntimeType>("type", Type);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             
         }

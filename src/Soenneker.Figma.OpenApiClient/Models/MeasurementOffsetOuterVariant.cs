@@ -7,10 +7,11 @@ using System.IO;
 using System;
 namespace Soenneker.Figma.OpenApiClient.Models
 {
+    /// <summary>
+    /// Measurement offset relative to the outside of the start node
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
-    public partial class TriggerTriggerOneOf1 : global::Soenneker.Figma.OpenApiClient.Models.Trigger, IParsable
-    #pragma warning restore CS1591
+    public partial class MeasurementOffsetOuterVariant : global::Soenneker.Figma.OpenApiClient.Models.MeasurementOffset, IParsable
     {
         // Track explicitly assigned nulls separately from absent properties.
         private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
@@ -18,17 +19,22 @@ namespace Soenneker.Figma.OpenApiClient.Models
         public override void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
             base.CaptureExplicitNulls(parseNode);
+            if (parseNode.GetChildNode("fixed") is null) { _explicitNullValueFixed = default!; _explicitNullProperties?.Remove("fixed"); }
+            else if (parseNode.GetChildNode("fixed") is { } nullNodeFixed && nullNodeFixed.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Fixed = null;
         }
 
+        /// <summary>The fixed property</summary>
+        public double? Fixed { get => _explicitNullValueFixed; set { _explicitNullValueFixed = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fixed"); else _explicitNullProperties?.Remove("fixed"); } }
+        private double? _explicitNullValueFixed = default!;
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Figma.OpenApiClient.Models.TriggerTriggerOneOf1"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Figma.OpenApiClient.Models.MeasurementOffsetOuterVariant"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static new global::Soenneker.Figma.OpenApiClient.Models.TriggerTriggerOneOf1 CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static new global::Soenneker.Figma.OpenApiClient.Models.MeasurementOffsetOuterVariant CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Figma.OpenApiClient.Models.TriggerTriggerOneOf1(), parseNode);
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Figma.OpenApiClient.Models.MeasurementOffsetOuterVariant(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -38,6 +44,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>(base.GetFieldDeserializers())
             {
+                { "fixed", n => { Fixed = n.GetDoubleValue(); } },
             };
         }
         /// <summary>
@@ -47,7 +54,8 @@ namespace Soenneker.Figma.OpenApiClient.Models
         public override void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            base.Serialize(writer);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            base.Serialize(writer);
+            writer.WriteDoubleValue("fixed", Fixed);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             
         }
     }
