@@ -51,8 +51,15 @@ namespace Soenneker.Figma.OpenApiClient.Models
         private string _explicitNullValueName = default!;
 #endif
         /// <summary>Whether organization members can discover an invite-only team. Required for invite_only and not accepted for other audiences.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
         public global::Soenneker.Figma.OpenApiClient.Models.CreateTeamRequestOrgDiscoverability? OrgDiscoverability { get => _explicitNullValueOrgDiscoverability; set { _explicitNullValueOrgDiscoverability = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("org_discoverability"); else _explicitNullProperties?.Remove("org_discoverability"); } }
         private global::Soenneker.Figma.OpenApiClient.Models.CreateTeamRequestOrgDiscoverability? _explicitNullValueOrgDiscoverability = default!;
+#nullable restore
+#else
+        public global::Soenneker.Figma.OpenApiClient.Models.CreateTeamRequestOrgDiscoverability OrgDiscoverability { get => _explicitNullValueOrgDiscoverability; set { _explicitNullValueOrgDiscoverability = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("org_discoverability"); else _explicitNullProperties?.Remove("org_discoverability"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.CreateTeamRequestOrgDiscoverability _explicitNullValueOrgDiscoverability = default!;
+#endif
         /// <summary>The audience that can discover and join the team. Workspace audiences require a workspace_id.</summary>
         public global::Soenneker.Figma.OpenApiClient.Models.CreateTeamRequestSharingAudienceControl? SharingAudienceControl { get => _explicitNullValueSharingAudienceControl; set { _explicitNullValueSharingAudienceControl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sharing_audience_control"); else _explicitNullProperties?.Remove("sharing_audience_control"); } }
         private global::Soenneker.Figma.OpenApiClient.Models.CreateTeamRequestSharingAudienceControl? _explicitNullValueSharingAudienceControl = default!;
@@ -86,7 +93,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
             {
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "org_discoverability", n => { OrgDiscoverability = n.GetEnumValue<global::Soenneker.Figma.OpenApiClient.Models.CreateTeamRequestOrgDiscoverability>(); } },
+                { "org_discoverability", n => { OrgDiscoverability = n.GetObjectValue<global::Soenneker.Figma.OpenApiClient.Models.CreateTeamRequestOrgDiscoverability>(global::Soenneker.Figma.OpenApiClient.Models.CreateTeamRequestOrgDiscoverability.CreateFromDiscriminatorValue); } },
                 { "sharing_audience_control", n => { SharingAudienceControl = n.GetEnumValue<global::Soenneker.Figma.OpenApiClient.Models.CreateTeamRequestSharingAudienceControl>(); } },
                 { "workspace_id", n => { WorkspaceId = n.GetStringValue(); } },
             };
@@ -100,7 +107,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("description", Description);
             writer.WriteStringValue("name", Name);
-            writer.WriteEnumValue<global::Soenneker.Figma.OpenApiClient.Models.CreateTeamRequestOrgDiscoverability>("org_discoverability", OrgDiscoverability);
+            writer.WriteObjectValue<global::Soenneker.Figma.OpenApiClient.Models.CreateTeamRequestOrgDiscoverability>("org_discoverability", OrgDiscoverability);
             writer.WriteEnumValue<global::Soenneker.Figma.OpenApiClient.Models.CreateTeamRequestSharingAudienceControl>("sharing_audience_control", SharingAudienceControl);
             writer.WriteStringValue("workspace_id", WorkspaceId);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             

@@ -41,6 +41,11 @@ namespace Soenneker.Figma.OpenApiClient.V1.Teams.Item.Invites
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Figma.OpenApiClient.Models.PostTeamInvites400Response">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.Figma.OpenApiClient.Models.PostTeamInvitesErrorResponseResponseError">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Figma.OpenApiClient.Models.PostTeamInvitesErrorResponseResponseError">When receiving a 403 status code</exception>
+        /// <exception cref="global::Soenneker.Figma.OpenApiClient.Models.PostTeamInvitesErrorResponseResponseError">When receiving a 404 status code</exception>
+        /// <exception cref="global::Soenneker.Figma.OpenApiClient.Models.PostTeamInvitesErrorResponseResponseError">When receiving a 429 status code</exception>
+        /// <exception cref="global::Soenneker.Figma.OpenApiClient.Models.PostTeamInvitesErrorResponseResponseError">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Figma.OpenApiClient.Models.InviteTeamMembersResponseResponse?> PostAsync(global::Soenneker.Figma.OpenApiClient.Models.InviteTeamMembersRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -55,6 +60,11 @@ namespace Soenneker.Figma.OpenApiClient.V1.Teams.Item.Invites
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
                 { "400", global::Soenneker.Figma.OpenApiClient.Models.PostTeamInvites400Response.CreateFromDiscriminatorValue },
+                { "401", global::Soenneker.Figma.OpenApiClient.Models.PostTeamInvitesErrorResponseResponseError.CreateFromDiscriminatorValue },
+                { "403", global::Soenneker.Figma.OpenApiClient.Models.PostTeamInvitesErrorResponseResponseError.CreateFromDiscriminatorValue },
+                { "404", global::Soenneker.Figma.OpenApiClient.Models.PostTeamInvitesErrorResponseResponseError.CreateFromDiscriminatorValue },
+                { "429", global::Soenneker.Figma.OpenApiClient.Models.PostTeamInvitesErrorResponseResponseError.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Figma.OpenApiClient.Models.PostTeamInvitesErrorResponseResponseError.CreateFromDiscriminatorValue },
                 { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
                 { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };

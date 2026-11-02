@@ -7,33 +7,39 @@ using System.IO;
 using System;
 namespace Soenneker.Figma.OpenApiClient.Models
 {
-    /// <summary>
-    /// Composed type wrapper for classes <see cref="global::Soenneker.Figma.OpenApiClient.Models.MeasurementOffsetInner"/>, <see cref="global::Soenneker.Figma.OpenApiClient.Models.MeasurementOffsetOuter"/>
-    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class MeasurementOffset : IComposedTypeWrapper, IParsable
-    , global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder {
-        // Preserve ambiguous union payloads without inventing a discriminator.
-        /// <summary>The complete payload when no unique typed union branch can be selected.</summary>
-        public global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode UnrecognizedValue { get; set; } = null!;
-        public global::System.Collections.Generic.IDictionary<string, object> AdditionalData { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
+    #pragma warning disable CS1591
+    public partial class MeasurementOffset : IAdditionalDataHolder, IParsable
+    #pragma warning restore CS1591
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
 
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Figma.OpenApiClient.Models.MeasurementOffsetInner"/></summary>
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("type") is null) { _explicitNullValueType = default!; _explicitNullProperties?.Remove("type"); }
+            else if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+        }
+
+        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
+        public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.MeasurementOffsetInner? MeasurementOffsetInner { get; set; }
+        public string? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private string? _explicitNullValueType = default!;
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.MeasurementOffsetInner MeasurementOffsetInner { get; set; }
+        public string Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private string _explicitNullValueType = default!;
 #endif
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.Figma.OpenApiClient.Models.MeasurementOffsetOuter"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.MeasurementOffsetOuter? MeasurementOffsetOuter { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Figma.OpenApiClient.Models.MeasurementOffsetOuter MeasurementOffsetOuter { get; set; }
-#endif
+        /// <summary>
+        /// Instantiates a new <see cref="global::Soenneker.Figma.OpenApiClient.Models.MeasurementOffset"/> and sets the default values.
+        /// </summary>
+        public MeasurementOffset()
+        {
+            AdditionalData = new Dictionary<string, object>();
+        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -43,27 +49,12 @@ namespace Soenneker.Figma.OpenApiClient.Models
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             var mappingValue = parseNode.GetChildNode("type")?.GetStringValue();
-            var result = new global::Soenneker.Figma.OpenApiClient.Models.MeasurementOffset();
-            if("INNER".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            return mappingValue switch
             {
-                
-            }
-            else if("OUTER".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-            {
-                
-            }
-            
-            var unionPayload = parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue);
-            bool matchesUnionBranch0 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => ((unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject)) && (unionPayload is not global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject shapeObject0 || (shapeObject0.GetValue() is var shapeMembers1 && (shapeMembers1.ContainsKey("type") && shapeMembers1.ContainsKey("relative") && (!shapeMembers1.ContainsKey("type") || (((shapeMembers1["type"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString)) && ((shapeMembers1["type"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal2 && "INNER".Equals(literal2.GetValue(), global::System.StringComparison.Ordinal))))) && (!shapeMembers1.ContainsKey("relative") || (((shapeMembers1["relative"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedInteger or global::Microsoft.Kiota.Abstractions.Serialization.UntypedLong or global::Microsoft.Kiota.Abstractions.Serialization.UntypedFloat or global::Microsoft.Kiota.Abstractions.Serialization.UntypedDouble or global::Microsoft.Kiota.Abstractions.Serialization.UntypedDecimal)))))))))();
-            bool matchesUnionBranch1 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => ((unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject)) && (unionPayload is not global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject shapeObject0 || (shapeObject0.GetValue() is var shapeMembers1 && (shapeMembers1.ContainsKey("type") && shapeMembers1.ContainsKey("fixed") && (!shapeMembers1.ContainsKey("type") || (((shapeMembers1["type"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString)) && ((shapeMembers1["type"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString literal2 && "OUTER".Equals(literal2.GetValue(), global::System.StringComparison.Ordinal))))) && (!shapeMembers1.ContainsKey("fixed") || (((shapeMembers1["fixed"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedInteger or global::Microsoft.Kiota.Abstractions.Serialization.UntypedLong or global::Microsoft.Kiota.Abstractions.Serialization.UntypedFloat or global::Microsoft.Kiota.Abstractions.Serialization.UntypedDouble or global::Microsoft.Kiota.Abstractions.Serialization.UntypedDecimal)))))))))();
-            int matchingUnionBranches = 0;
-            if (matchesUnionBranch0) matchingUnionBranches++;
-            if (matchesUnionBranch1) matchingUnionBranches++;
-            bool noSelectedUnionBranch = result.MeasurementOffsetInner == null && result.MeasurementOffsetOuter == null;
-            if (noSelectedUnionBranch && matchesUnionBranch0 && matchingUnionBranches == 1) result.MeasurementOffsetInner = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Figma.OpenApiClient.Models.MeasurementOffsetInner(), parseNode);
-            if (noSelectedUnionBranch && matchesUnionBranch1 && matchingUnionBranches == 1) result.MeasurementOffsetOuter = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Figma.OpenApiClient.Models.MeasurementOffsetOuter(), parseNode);
-            if (result.MeasurementOffsetInner == null && result.MeasurementOffsetOuter == null) result.UnrecognizedValue = unionPayload;
-return result;
+                "INNER" => new global::Soenneker.Figma.OpenApiClient.Models.MeasurementOffsetMeasurementOffsetInner(),
+                "OUTER" => new global::Soenneker.Figma.OpenApiClient.Models.MeasurementOffsetMeasurementOffsetOuter(),
+                _ => new global::Soenneker.Figma.OpenApiClient.Models.MeasurementOffset(),
+            };
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -71,17 +62,10 @@ return result;
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawFields) { var fields = new global::System.Collections.Generic.Dictionary<string, global::System.Action<IParseNode>>(); foreach (var entry in rawFields.GetValue()) fields[entry.Key] = _ => { }; return fields; }
-
-            if(MeasurementOffsetInner != null)
+            return new Dictionary<string, Action<IParseNode>>
             {
-                return MeasurementOffsetInner.GetFieldDeserializers();
-            }
-            else if(MeasurementOffsetOuter != null)
-            {
-                return MeasurementOffsetOuter.GetFieldDeserializers();
-            }
-            return new Dictionary<string, Action<IParseNode>>();
+                { "type", n => { Type = n.GetStringValue(); } },
+            };
         }
         /// <summary>
         /// Serializes information the current object
@@ -89,25 +73,10 @@ return result;
         /// <param name="writer">Serialization writer to use to serialize this model</param>
         public virtual void Serialize(ISerializationWriter writer)
         {
-            if (global::System.Object.ReferenceEquals(writer, null)) throw new global::System.ArgumentNullException(nameof(writer));
-            if (MeasurementOffsetInner == null && MeasurementOffsetOuter == null) { if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawObject) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData, rawObject)); else if (UnrecognizedValue != null) writer.WriteObjectValue(null, UnrecognizedValue); else if (AdditionalData.Count > 0) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData)); else writer.WriteNullValue(null); return; }
-            int selectedUnionBranches = 0;
-            if (MeasurementOffsetInner != null) selectedUnionBranches++;
-            if (MeasurementOffsetOuter != null) selectedUnionBranches++;
-            if (MeasurementOffsetInner != null && selectedUnionBranches == 1) { if (MeasurementOffsetInner is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, MeasurementOffsetInner); return; }
-            if (MeasurementOffsetOuter != null && selectedUnionBranches == 1) { if (MeasurementOffsetOuter is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, MeasurementOffsetOuter); return; }
-
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            if(MeasurementOffsetInner != null)
-            {
-                if (MeasurementOffsetInner is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
-                writer.WriteObjectValue<global::Soenneker.Figma.OpenApiClient.Models.MeasurementOffsetInner>(null, MeasurementOffsetInner);
-            }
-            else if(MeasurementOffsetOuter != null)
-            {
-                if (MeasurementOffsetOuter is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder unionData) foreach (var entry in AdditionalData) unionData.AdditionalData[entry.Key] = entry.Value;
-                writer.WriteObjectValue<global::Soenneker.Figma.OpenApiClient.Models.MeasurementOffsetOuter>(null, MeasurementOffsetOuter);
-            }
+            writer.WriteStringValue("type", Type);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            writer.WriteAdditionalData(AdditionalData);
         }
     }
 }

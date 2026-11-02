@@ -41,6 +41,11 @@ namespace Soenneker.Figma.OpenApiClient.V1.Files.Item.Duplicate
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Figma.OpenApiClient.Models.BadRequestErrorResponseWithErrorBooleanResponse">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.Figma.OpenApiClient.Models.PostFileDuplicateErrorResponseResponseError">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Figma.OpenApiClient.Models.PostFileDuplicateErrorResponseResponseError">When receiving a 403 status code</exception>
+        /// <exception cref="global::Soenneker.Figma.OpenApiClient.Models.PostFileDuplicateErrorResponseResponseError">When receiving a 404 status code</exception>
+        /// <exception cref="global::Soenneker.Figma.OpenApiClient.Models.PostFileDuplicateErrorResponseResponseError">When receiving a 429 status code</exception>
+        /// <exception cref="global::Soenneker.Figma.OpenApiClient.Models.PostFileDuplicateErrorResponseResponseError">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Figma.OpenApiClient.Models.PostFileDuplicateResponseResponse?> PostAsync(global::Soenneker.Figma.OpenApiClient.Models.PostFileDuplicateRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -55,6 +60,11 @@ namespace Soenneker.Figma.OpenApiClient.V1.Files.Item.Duplicate
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
                 { "400", global::Soenneker.Figma.OpenApiClient.Models.BadRequestErrorResponseWithErrorBooleanResponse.CreateFromDiscriminatorValue },
+                { "401", global::Soenneker.Figma.OpenApiClient.Models.PostFileDuplicateErrorResponseResponseError.CreateFromDiscriminatorValue },
+                { "403", global::Soenneker.Figma.OpenApiClient.Models.PostFileDuplicateErrorResponseResponseError.CreateFromDiscriminatorValue },
+                { "404", global::Soenneker.Figma.OpenApiClient.Models.PostFileDuplicateErrorResponseResponseError.CreateFromDiscriminatorValue },
+                { "429", global::Soenneker.Figma.OpenApiClient.Models.PostFileDuplicateErrorResponseResponseError.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Figma.OpenApiClient.Models.PostFileDuplicateErrorResponseResponseError.CreateFromDiscriminatorValue },
                 { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
                 { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };

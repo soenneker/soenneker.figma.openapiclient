@@ -81,7 +81,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
             if (parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) return new global::Soenneker.Figma.OpenApiClient.Models.ActionObject();
 
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
+            var mappingValue = parseNode.GetChildNode("mediaAction")?.GetStringValue();
             var result = new global::Soenneker.Figma.OpenApiClient.Models.ActionObject();
             if("ActionOneOf1".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {

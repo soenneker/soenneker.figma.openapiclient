@@ -200,22 +200,22 @@ namespace Soenneker.Figma.OpenApiClient.Models
         /// <summary>Bounding box of the node in absolute space coordinates.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.Rectangle? AbsoluteBoundingBox { get => _explicitNullValueAbsoluteBoundingBox; set { _explicitNullValueAbsoluteBoundingBox = value; AdditionalData?.Remove("absoluteBoundingBox"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("absoluteBoundingBox"); else _explicitNullProperties?.Remove("absoluteBoundingBox"); } }
-        private global::Soenneker.Figma.OpenApiClient.Models.Rectangle? _explicitNullValueAbsoluteBoundingBox = default!;
+        public global::Soenneker.Figma.OpenApiClient.Models.HasLayoutTraitAbsoluteBoundingBox? AbsoluteBoundingBox { get => _explicitNullValueAbsoluteBoundingBox; set { _explicitNullValueAbsoluteBoundingBox = value; AdditionalData?.Remove("absoluteBoundingBox"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("absoluteBoundingBox"); else _explicitNullProperties?.Remove("absoluteBoundingBox"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.HasLayoutTraitAbsoluteBoundingBox? _explicitNullValueAbsoluteBoundingBox = default!;
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.Rectangle AbsoluteBoundingBox { get => _explicitNullValueAbsoluteBoundingBox; set { _explicitNullValueAbsoluteBoundingBox = value; AdditionalData?.Remove("absoluteBoundingBox"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("absoluteBoundingBox"); else _explicitNullProperties?.Remove("absoluteBoundingBox"); } }
-        private global::Soenneker.Figma.OpenApiClient.Models.Rectangle _explicitNullValueAbsoluteBoundingBox = default!;
+        public global::Soenneker.Figma.OpenApiClient.Models.HasLayoutTraitAbsoluteBoundingBox AbsoluteBoundingBox { get => _explicitNullValueAbsoluteBoundingBox; set { _explicitNullValueAbsoluteBoundingBox = value; AdditionalData?.Remove("absoluteBoundingBox"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("absoluteBoundingBox"); else _explicitNullProperties?.Remove("absoluteBoundingBox"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.HasLayoutTraitAbsoluteBoundingBox _explicitNullValueAbsoluteBoundingBox = default!;
 #endif
         /// <summary>The actual bounds of a node accounting for drop shadows, thick strokes, and anything else that may fall outside the node&apos;s regular bounding box defined in `x`, `y`, `width`, and `height`. The `x` and `y` inside this property represent the absolute position of the node on the page. This value will be `null` if the node is invisible.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Figma.OpenApiClient.Models.Rectangle? AbsoluteRenderBounds { get => _explicitNullValueAbsoluteRenderBounds; set { _explicitNullValueAbsoluteRenderBounds = value; AdditionalData?.Remove("absoluteRenderBounds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("absoluteRenderBounds"); else _explicitNullProperties?.Remove("absoluteRenderBounds"); } }
-        private global::Soenneker.Figma.OpenApiClient.Models.Rectangle? _explicitNullValueAbsoluteRenderBounds = default!;
+        public global::Soenneker.Figma.OpenApiClient.Models.HasLayoutTraitAbsoluteRenderBounds? AbsoluteRenderBounds { get => _explicitNullValueAbsoluteRenderBounds; set { _explicitNullValueAbsoluteRenderBounds = value; AdditionalData?.Remove("absoluteRenderBounds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("absoluteRenderBounds"); else _explicitNullProperties?.Remove("absoluteRenderBounds"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.HasLayoutTraitAbsoluteRenderBounds? _explicitNullValueAbsoluteRenderBounds = default!;
 #nullable restore
 #else
-        public global::Soenneker.Figma.OpenApiClient.Models.Rectangle AbsoluteRenderBounds { get => _explicitNullValueAbsoluteRenderBounds; set { _explicitNullValueAbsoluteRenderBounds = value; AdditionalData?.Remove("absoluteRenderBounds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("absoluteRenderBounds"); else _explicitNullProperties?.Remove("absoluteRenderBounds"); } }
-        private global::Soenneker.Figma.OpenApiClient.Models.Rectangle _explicitNullValueAbsoluteRenderBounds = default!;
+        public global::Soenneker.Figma.OpenApiClient.Models.HasLayoutTraitAbsoluteRenderBounds AbsoluteRenderBounds { get => _explicitNullValueAbsoluteRenderBounds; set { _explicitNullValueAbsoluteRenderBounds = value; AdditionalData?.Remove("absoluteRenderBounds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("absoluteRenderBounds"); else _explicitNullProperties?.Remove("absoluteRenderBounds"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.HasLayoutTraitAbsoluteRenderBounds _explicitNullValueAbsoluteRenderBounds = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
@@ -747,8 +747,8 @@ namespace Soenneker.Figma.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "absoluteBoundingBox", n => { AbsoluteBoundingBox = n.GetObjectValue<global::Soenneker.Figma.OpenApiClient.Models.Rectangle>(global::Soenneker.Figma.OpenApiClient.Models.Rectangle.CreateFromDiscriminatorValue); } },
-                { "absoluteRenderBounds", n => { AbsoluteRenderBounds = n.GetObjectValue<global::Soenneker.Figma.OpenApiClient.Models.Rectangle>(global::Soenneker.Figma.OpenApiClient.Models.Rectangle.CreateFromDiscriminatorValue); } },
+                { "absoluteBoundingBox", n => { AbsoluteBoundingBox = n.GetObjectValue<global::Soenneker.Figma.OpenApiClient.Models.HasLayoutTraitAbsoluteBoundingBox>(global::Soenneker.Figma.OpenApiClient.Models.HasLayoutTraitAbsoluteBoundingBox.CreateFromDiscriminatorValue); } },
+                { "absoluteRenderBounds", n => { AbsoluteRenderBounds = n.GetObjectValue<global::Soenneker.Figma.OpenApiClient.Models.HasLayoutTraitAbsoluteRenderBounds>(global::Soenneker.Figma.OpenApiClient.Models.HasLayoutTraitAbsoluteRenderBounds.CreateFromDiscriminatorValue); } },
                 { "background", n => { Background = n.GetCollectionOfObjectValues<global::Soenneker.Figma.OpenApiClient.Models.Paint>(global::Soenneker.Figma.OpenApiClient.Models.Paint.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "backgroundColor", n => { BackgroundColor = n.GetObjectValue<global::Soenneker.Figma.OpenApiClient.Models.Rgba>(global::Soenneker.Figma.OpenApiClient.Models.Rgba.CreateFromDiscriminatorValue); } },
                 { "blendMode", n => { var parsed = n.GetEnumValue<global::Soenneker.Figma.OpenApiClient.Models.BlendMode>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueBlendMode = default; _explicitNullProperties?.Remove("blendMode"); AdditionalData["blendMode"] = unknown; } else { BlendMode = parsed; AdditionalData.Remove("blendMode"); } } },
@@ -845,8 +845,8 @@ namespace Soenneker.Figma.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Figma.OpenApiClient.Models.Rectangle>("absoluteBoundingBox", AbsoluteBoundingBox);
-            writer.WriteObjectValue<global::Soenneker.Figma.OpenApiClient.Models.Rectangle>("absoluteRenderBounds", AbsoluteRenderBounds);
+            writer.WriteObjectValue<global::Soenneker.Figma.OpenApiClient.Models.HasLayoutTraitAbsoluteBoundingBox>("absoluteBoundingBox", AbsoluteBoundingBox);
+            writer.WriteObjectValue<global::Soenneker.Figma.OpenApiClient.Models.HasLayoutTraitAbsoluteRenderBounds>("absoluteRenderBounds", AbsoluteRenderBounds);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Figma.OpenApiClient.Models.Paint>("background", Background);
             writer.WriteObjectValue<global::Soenneker.Figma.OpenApiClient.Models.Rgba>("backgroundColor", BackgroundColor);
             writer.WriteEnumValue<global::Soenneker.Figma.OpenApiClient.Models.BlendMode>("blendMode", BlendMode);

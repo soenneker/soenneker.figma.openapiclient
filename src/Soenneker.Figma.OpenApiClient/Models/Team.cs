@@ -72,8 +72,15 @@ namespace Soenneker.Figma.OpenApiClient.Models
         private string _explicitNullValueName = default!;
 #endif
         /// <summary>Whether organization members can discover an invite-only team.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
         public global::Soenneker.Figma.OpenApiClient.Models.TeamOrgDiscoverability? OrgDiscoverability { get => _explicitNullValueOrgDiscoverability; set { _explicitNullValueOrgDiscoverability = value; AdditionalData?.Remove("org_discoverability"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("org_discoverability"); else _explicitNullProperties?.Remove("org_discoverability"); } }
         private global::Soenneker.Figma.OpenApiClient.Models.TeamOrgDiscoverability? _explicitNullValueOrgDiscoverability = default!;
+#nullable restore
+#else
+        public global::Soenneker.Figma.OpenApiClient.Models.TeamOrgDiscoverability OrgDiscoverability { get => _explicitNullValueOrgDiscoverability; set { _explicitNullValueOrgDiscoverability = value; AdditionalData?.Remove("org_discoverability"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("org_discoverability"); else _explicitNullProperties?.Remove("org_discoverability"); } }
+        private global::Soenneker.Figma.OpenApiClient.Models.TeamOrgDiscoverability _explicitNullValueOrgDiscoverability = default!;
+#endif
         /// <summary>The ID of the user who owns the team.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -126,7 +133,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "org_discoverability", n => { var parsed = n.GetEnumValue<global::Soenneker.Figma.OpenApiClient.Models.TeamOrgDiscoverability>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueOrgDiscoverability = default; _explicitNullProperties?.Remove("org_discoverability"); AdditionalData["org_discoverability"] = unknown; } else { OrgDiscoverability = parsed; AdditionalData.Remove("org_discoverability"); } } },
+                { "org_discoverability", n => { OrgDiscoverability = n.GetObjectValue<global::Soenneker.Figma.OpenApiClient.Models.TeamOrgDiscoverability>(global::Soenneker.Figma.OpenApiClient.Models.TeamOrgDiscoverability.CreateFromDiscriminatorValue); } },
                 { "owner_user_id", n => { OwnerUserId = n.GetStringValue(); } },
                 { "sharing_audience_control", n => { var parsed = n.GetEnumValue<global::Soenneker.Figma.OpenApiClient.Models.TeamSharingAudienceControl>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueSharingAudienceControl = default; _explicitNullProperties?.Remove("sharing_audience_control"); AdditionalData["sharing_audience_control"] = unknown; } else { SharingAudienceControl = parsed; AdditionalData.Remove("sharing_audience_control"); } } },
                 { "workspace_id", n => { WorkspaceId = n.GetStringValue(); } },
@@ -143,7 +150,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
             writer.WriteStringValue("description", Description);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("name", Name);
-            writer.WriteEnumValue<global::Soenneker.Figma.OpenApiClient.Models.TeamOrgDiscoverability>("org_discoverability", OrgDiscoverability);
+            writer.WriteObjectValue<global::Soenneker.Figma.OpenApiClient.Models.TeamOrgDiscoverability>("org_discoverability", OrgDiscoverability);
             writer.WriteStringValue("owner_user_id", OwnerUserId);
             writer.WriteEnumValue<global::Soenneker.Figma.OpenApiClient.Models.TeamSharingAudienceControl>("sharing_audience_control", SharingAudienceControl);
             writer.WriteStringValue("workspace_id", WorkspaceId);
