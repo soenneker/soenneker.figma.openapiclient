@@ -2,7 +2,7 @@
   "descriptionHash": "57F74E3CC1F02EAA9AEB1EB4A8025CA213D65B270537F5B22AB79B1C0AE3D5A63AA5EF6F5817D9DDC641B7278BD83706FF41D33008EC6D74201B638DBFAE4F5C",
   "descriptionLocation": "../../openapi.fixed.json",
   "lockFileVersion": "1.0.0",
-  "kiotaVersion": "1.37.0",
+  "kiotaVersion": "1.38.0",
   "clientClassName": "FigmaOpenApiClient",
   "typeAccessModifier": "Public",
   "clientNamespaceName": "Soenneker.Figma.OpenApiClient",
