@@ -175,7 +175,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(14)
             {
                 { "boundVariables", n => { BoundVariables = n.GetObjectValue<global::Soenneker.Figma.OpenApiClient.Models.IsLayerTraitBoundVariables>(global::Soenneker.Figma.OpenApiClient.Models.IsLayerTraitBoundVariables.CreateFromDiscriminatorValue); } },
                 { "children", n => { Children = n.GetCollectionOfObjectValues<global::Soenneker.Figma.OpenApiClient.Models.CanvasNode>(global::Soenneker.Figma.OpenApiClient.Models.CanvasNode.CreateFromDiscriminatorValue)?.AsList(); } },

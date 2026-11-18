@@ -179,7 +179,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(17)
             {
                 { "boundVariables", n => { BoundVariables = n.GetObjectValue<global::Soenneker.Figma.OpenApiClient.Models.TextPathTypeStyleAllOf1BoundVariables>(global::Soenneker.Figma.OpenApiClient.Models.TextPathTypeStyleAllOf1BoundVariables.CreateFromDiscriminatorValue); } },
                 { "fills", n => { Fills = n.GetCollectionOfObjectValues<global::Soenneker.Figma.OpenApiClient.Models.Paint>(global::Soenneker.Figma.OpenApiClient.Models.Paint.CreateFromDiscriminatorValue)?.AsList(); } },

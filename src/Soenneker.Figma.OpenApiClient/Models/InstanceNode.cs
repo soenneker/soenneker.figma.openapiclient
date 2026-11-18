@@ -799,7 +799,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(94)
             {
                 { "absoluteBoundingBox", n => { AbsoluteBoundingBox = n.GetObjectValue<global::Soenneker.Figma.OpenApiClient.Models.HasLayoutTraitAbsoluteBoundingBox>(global::Soenneker.Figma.OpenApiClient.Models.HasLayoutTraitAbsoluteBoundingBox.CreateFromDiscriminatorValue); } },
                 { "absoluteRenderBounds", n => { AbsoluteRenderBounds = n.GetObjectValue<global::Soenneker.Figma.OpenApiClient.Models.HasLayoutTraitAbsoluteRenderBounds>(global::Soenneker.Figma.OpenApiClient.Models.HasLayoutTraitAbsoluteRenderBounds.CreateFromDiscriminatorValue); } },

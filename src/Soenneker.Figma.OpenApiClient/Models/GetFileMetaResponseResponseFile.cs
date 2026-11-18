@@ -149,7 +149,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(11)
             {
                 { "creator", n => { Creator = n.GetObjectValue<global::Soenneker.Figma.OpenApiClient.Models.User>(global::Soenneker.Figma.OpenApiClient.Models.User.CreateFromDiscriminatorValue); } },
                 { "editorType", n => { var parsed = n.GetEnumValue<global::Soenneker.Figma.OpenApiClient.Models.GetFileMetaResponseResponseFileEditorType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueEditorType = default; _explicitNullProperties?.Remove("editorType"); AdditionalData["editorType"] = unknown; } else { EditorType = parsed; AdditionalData.Remove("editorType"); } } },

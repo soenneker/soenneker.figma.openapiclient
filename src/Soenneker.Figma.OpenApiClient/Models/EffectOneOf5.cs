@@ -105,7 +105,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(9)
             {
                 { "blendMode", n => { var parsed = n.GetEnumValue<global::Soenneker.Figma.OpenApiClient.Models.BlendMode>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueBlendMode = default; _explicitNullProperties?.Remove("blendMode"); AdditionalData["blendMode"] = unknown; } else { BlendMode = parsed; AdditionalData.Remove("blendMode"); } } },
                 { "color", n => { Color = n.GetObjectValue<global::Soenneker.Figma.OpenApiClient.Models.Rgba>(global::Soenneker.Figma.OpenApiClient.Models.Rgba.CreateFromDiscriminatorValue); } },

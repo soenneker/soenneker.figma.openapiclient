@@ -110,7 +110,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(6)
             {
                 { "action", n => { Action = n.GetObjectValue<global::Soenneker.Figma.OpenApiClient.Models.ActivityLogAction>(global::Soenneker.Figma.OpenApiClient.Models.ActivityLogAction.CreateFromDiscriminatorValue); } },
                 { "actor", n => { Actor = n.GetObjectValue<global::Soenneker.Figma.OpenApiClient.Models.ActivityLogActor>(global::Soenneker.Figma.OpenApiClient.Models.ActivityLogActor.CreateFromDiscriminatorValue); } },

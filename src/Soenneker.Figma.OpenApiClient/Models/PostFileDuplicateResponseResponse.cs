@@ -90,7 +90,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(5)
             {
                 { "created_at", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
                 { "editor_type", n => { var parsed = n.GetEnumValue<global::Soenneker.Figma.OpenApiClient.Models.PostFileDuplicateResponseResponseEditorType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueEditorType = default; _explicitNullProperties?.Remove("editor_type"); AdditionalData["editor_type"] = unknown; } else { EditorType = parsed; AdditionalData.Remove("editor_type"); } } },

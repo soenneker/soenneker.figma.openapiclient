@@ -70,7 +70,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(5)
             {
                 { "comment_pin_corner", n => { var parsed = n.GetEnumValue<global::Soenneker.Figma.OpenApiClient.Models.RegionCommentPinCorner>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueCommentPinCorner = default; _explicitNullProperties?.Remove("comment_pin_corner"); AdditionalData["comment_pin_corner"] = unknown; } else { CommentPinCorner = parsed; AdditionalData.Remove("comment_pin_corner"); } } },
                 { "region_height", n => { RegionHeight = n.GetDoubleValue(); } },

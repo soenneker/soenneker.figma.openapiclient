@@ -93,7 +93,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(4)
             {
                 { "gutterSize", n => { GutterSize = n.GetObjectValue<global::Soenneker.Figma.OpenApiClient.Models.VariableAlias>(global::Soenneker.Figma.OpenApiClient.Models.VariableAlias.CreateFromDiscriminatorValue); } },
                 { "numSections", n => { NumSections = n.GetObjectValue<global::Soenneker.Figma.OpenApiClient.Models.VariableAlias>(global::Soenneker.Figma.OpenApiClient.Models.VariableAlias.CreateFromDiscriminatorValue); } },

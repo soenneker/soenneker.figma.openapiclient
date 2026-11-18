@@ -92,7 +92,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(4)
             {
                 { "variableCollections", n => { VariableCollections = n.GetCollectionOfObjectValues<global::Soenneker.Figma.OpenApiClient.Models.VariableCollectionChange>(global::Soenneker.Figma.OpenApiClient.Models.VariableCollectionChange.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "variableModeValues", n => { VariableModeValues = n.GetCollectionOfObjectValues<global::Soenneker.Figma.OpenApiClient.Models.VariableModeValue>(global::Soenneker.Figma.OpenApiClient.Models.VariableModeValue.CreateFromDiscriminatorValue)?.AsList(); } },

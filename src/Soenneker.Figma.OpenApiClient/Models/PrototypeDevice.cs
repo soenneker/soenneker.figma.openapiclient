@@ -79,7 +79,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(4)
             {
                 { "presetIdentifier", n => { PresetIdentifier = n.GetStringValue(); } },
                 { "rotation", n => { var parsed = n.GetEnumValue<global::Soenneker.Figma.OpenApiClient.Models.PrototypeDeviceRotation>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueRotation = default; _explicitNullProperties?.Remove("rotation"); AdditionalData["rotation"] = unknown; } else { Rotation = parsed; AdditionalData.Remove("rotation"); } } },

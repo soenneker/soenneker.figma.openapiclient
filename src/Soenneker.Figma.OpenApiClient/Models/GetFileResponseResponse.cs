@@ -185,7 +185,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(14)
             {
                 { "branches", n => { Branches = n.GetCollectionOfObjectValues<global::Soenneker.Figma.OpenApiClient.Models.GetFileResponseResponseBranchesItem>(global::Soenneker.Figma.OpenApiClient.Models.GetFileResponseResponseBranchesItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "componentSets", n => { ComponentSets = n.GetObjectValue<global::Soenneker.Figma.OpenApiClient.Models.GetFileResponseResponseComponentSetsProperty>(global::Soenneker.Figma.OpenApiClient.Models.GetFileResponseResponseComponentSetsProperty.CreateFromDiscriminatorValue); } },

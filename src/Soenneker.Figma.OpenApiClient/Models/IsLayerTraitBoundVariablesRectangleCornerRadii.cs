@@ -92,7 +92,7 @@ namespace Soenneker.Figma.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(4)
             {
                 { "RECTANGLE_BOTTOM_LEFT_CORNER_RADIUS", n => { RECTANGLEBOTTOMLEFTCORNERRADIUS = n.GetObjectValue<global::Soenneker.Figma.OpenApiClient.Models.VariableAlias>(global::Soenneker.Figma.OpenApiClient.Models.VariableAlias.CreateFromDiscriminatorValue); } },
                 { "RECTANGLE_BOTTOM_RIGHT_CORNER_RADIUS", n => { RECTANGLEBOTTOMRIGHTCORNERRADIUS = n.GetObjectValue<global::Soenneker.Figma.OpenApiClient.Models.VariableAlias>(global::Soenneker.Figma.OpenApiClient.Models.VariableAlias.CreateFromDiscriminatorValue); } },
